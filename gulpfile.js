@@ -195,7 +195,7 @@ gulp.task(
 gulp.task("compress", function () {
 	return gulp
 		.src("./public/**")
-		.pipe(zip("html-barsgroup.zip"))
+		.pipe(zip("html-mega24.zip"))
 		.pipe(gulp.dest("./public/"));
 });
 
@@ -205,7 +205,7 @@ gulp.task("deploy", function () {
 			root: "public/",
 			hostname: "ildar-meyker.ru",
 			destination:
-				"/home/users/i/ildar-meyker/domains/ildar-meyker.ru/html/markweber/barsgroup/",
+				"/home/users/i/ildar-meyker/domains/ildar-meyker.ru/html/leeft/mega24/",
 		})
 	);
 });

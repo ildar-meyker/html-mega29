@@ -1,5 +1,6 @@
 // vendor
 @import "../../node_modules/destyle.css/destyle";
+@import "vendor/spinners";
 
 // sprites
 .icon {
@@ -11,10 +12,10 @@
 
 // partials
 @import "_fonts";
-@import "_mixins";
 @import "_vendor-fix";
 @import "_defaults";
 
 // blocks
 @import "blocks/page";
 @import "blocks/footer";
+@import "blocks/button";

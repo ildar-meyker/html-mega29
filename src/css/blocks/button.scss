@@ -1,0 +1,111 @@
+.button {
+	transition: all 0.2s;
+	position: relative;
+	display: inline-block;
+	border: 1px solid transparent;
+	padding: 11px 15px;
+	min-width: 90px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: 4px;
+
+	.spinner-border {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 1.4em;
+		height: 1.4em;
+		margin: -0.7em 0 0 -0.7em;
+		display: none;
+	}
+
+	&--disabled {
+		background: $body-gray !important;
+		border-color: $light-gray !important;
+		box-shadow: none !important;
+		color: $light-gray !important;
+		cursor: default;
+	}
+
+	&--loading {
+		.spinner-border {
+			display: block;
+		}
+		.button__text {
+			opacity: 0;
+		}
+	}
+
+	&--full {
+		display: block;
+	}
+}
+
+.button-green {
+	background: $light-green;
+	color: #fff;
+
+	&:hover,
+	&--hover {
+		background: $dark-green;
+	}
+
+	&:active,
+	&--active {
+		background: $dark-green;
+		box-shadow: inset 0 4px 4px rgba(#000, 0.3);
+	}
+}
+
+.button-outline-green {
+	border-color: $light-green;
+	color: $light-green;
+
+	&:hover,
+	&--hover {
+		background: $light-green;
+		color: #fff;
+	}
+
+	&:active,
+	&--active {
+		background: $light-green;
+		box-shadow: inset 0 4px 4px rgba(#000, 0.3);
+		color: #fff;
+	}
+}
+
+.button-orange {
+	background: $light-orange;
+	color: #fff;
+
+	&:hover,
+	&--hover {
+		background: $dark-orange;
+	}
+
+	&:active,
+	&--active {
+		background: $dark-orange;
+		box-shadow: inset 0 4px 4px rgba(#000, 0.3);
+	}
+}
+
+.button-outline-orange {
+	border-color: $light-orange;
+	color: $light-orange;
+
+	&:hover,
+	&--hover {
+		background: $light-orange;
+		color: #fff;
+	}
+
+	&:active,
+	&--active {
+		background: $light-orange;
+		box-shadow: inset 0 4px 4px rgba(#000, 0.3);
+		color: #fff;
+	}
+}

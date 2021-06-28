@@ -4,84 +4,274 @@ layout: default.hbs
 ---
 
 <style>
-	.samples__space {
-		height: 100px;
+	.elems-h1 {
+		margin-bottom: 1em;
+		font-size: 30px;
+		font-weight: 700;
 	}
 
-	.samples__group {
-		padding: 20px;
-		background: #fff;
-	}
-
-	.samples__group--dark {
-		padding: 20px;
-		background: #000;
-	}
-
-	.samples__group__name {
-		margin-bottom: 20px;
-		text-align: center;
-		font-size: 22px;
-		font-weight: 600;
-		color: #000;
-	}
-
-	.samples__group__help {
-		margin-bottom: 20px;
-		text-align: center;
+	.elems-h2 {
+		margin-bottom: 0.5em;
 		font-size: 18px;
-		color: #000;
+		font-weight: 700;
 	}
 
-	.samples__item {
-		margin-bottom: 50px;
+	.elems-wrapper {
+		padding: 50px 20px;
 	}
 
-	.samples__item:last-child {
-		margin-bottom: 0;
+	.elems-section {
+		margin-top: 50px;
 	}
 
-	.samples__item__name {
-		margin-bottom: 20px;
-		font-size: 22px;
-		font-weight: 600;
-		color: #000;
+	.elems-section:first-child {
+		margin-top: 0;
 	}
 
-	.samples__color-white {
-		color: #fff;
+	.elems-row {
+		margin-top: 20px;
+	}
+
+	.elems-row:first-child {
+		margin-top: 0;
+	}
+
+	.elems-item {
+		float: left;
+		margin: 0 20px 20px 0;
+	}
+
+	.elems-color {
+		float: left;
+		margin: 0 20px 20px 0;
+	}
+
+	.elems-color__square {
+		width: 60px;
+		height: 60px;
 	}
 </style>
 
-<div class="samples__group">
-	<div class="samples__group__name">Demo actions</div>
 
-	<div class="samples__item">
-		<a href="#" class="js-popup-open" data-src="#text-popup">Попап-статья</a>
-		<a href="#" class="js-popup-open" data-src="#form-popup">Попап-форма</a>
-	</div>
 
-</div>
+<div class="elems-wrapper">
 
-<div class="samples__space"></div>
+	<section class="elems-section">
+		
+		<h1 class="elems-h1">Colors</h1>
 
-<div class="samples__group samples__group--dark">
+		<div class="clearfix">
 
-	<div class="samples__group__name samples__color-white">Arrows</div>
-	<div class="samples__group__help samples__color-white">Female Names For C</div>
+			<div class="elems-color">
+				<div class="elems-color__square" style="background-color: #007334;"></div>
+				<div class="elems-color__value">#007334</div>
+			</div>
+			
+			<div class="elems-color">
+				<div class="elems-color__square" style="background-color: #21a73f;"></div>
+				<div class="elems-color__value">#21a73f</div>
+			</div>
+			
+			<div class="elems-color">
+				<div class="elems-color__square" style="background-color: #ea5e20;"></div>
+				<div class="elems-color__value">#ea5e20</div>
+			</div>
+			
+			<div class="elems-color">
+				<div class="elems-color__square" style="background-color: #ef7f1a;"></div>
+				<div class="elems-color__value">#ef7f1a</div>
+			</div>
+			
+			<div class="elems-color">
+				<div class="elems-color__square" style="background-color: #727271;"></div>
+				<div class="elems-color__value">#727271</div>
+			</div>
+			
+			<div class="elems-color">
+				<div class="elems-color__square" style="background-color: #b2b3b3;"></div>
+				<div class="elems-color__value">#b2b3b3</div>
+			</div>
+			
+			<div class="elems-color">
+				<div class="elems-color__square" style="background-color: #e7e7e8;"></div>
+				<div class="elems-color__value">#e7e7e8</div>
+			</div>
+			
+			<div class="elems-color">
+				<div class="elems-color__square" style="background-color: #f2f3f5;"></div>
+				<div class="elems-color__value">#f2f3f5</div>
+			</div>
 
-	<div class="samples__item">
-		<div class="samples__item__name samples__color-white">arrow-ciara</div>
-		<a href="#" class="arrow-ciara">
-			<span></span>
-		</a>
-	</div>
+			<div class="elems-color">
+				<div class="elems-color__square" style="background-color: #fafafa;"></div>
+				<div class="elems-color__value">#fafafa</div>
+			</div>
 
-	<div class="samples__item">
-		<div class="samples__item__name samples__color-white">arrow-carina</div>
-		<a href="#" class="arrow-carina">
-			<span></span>
-		</a>
-	</div>
+		</div>
 
+	</section>
+
+
+	<section class="elems-section">
+
+		<h1 class="elems-h1">
+			Buttons
+		</h1>
+
+		<div class="elems-row">
+			<h2 class="elems-h2">Default</h2>
+			
+			<div class="clearfix">
+				<div class="elems-item">
+					<button class="button button-green">
+						<span class="spinner-border"></span>
+						<span class="button__text">Кнопка</span>
+					</button>
+				</div>
+				<div class="elems-item">
+					<button class="button button-orange">
+						<span class="spinner-border"></span>
+						<span class="button__text">Кнопка</span>
+					</button>
+				</div>
+				<div class="elems-item">
+					<button class="button button-outline-green">
+						<span class="spinner-border"></span>
+						<span class="button__text">Кнопка</span>
+					</button>
+				</div>
+				<div class="elems-item">
+					<button class="button button-outline-orange">
+						<span class="spinner-border"></span>
+						<span class="button__text">Кнопка</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="elems-row">
+			<h2 class="elems-h2">Hover</h2>
+			
+			<div class="clearfix">
+				<div class="elems-item">
+					<button class="button button-green button-green--hover">
+						<span class="spinner-border"></span>
+						<span class="button__text">Кнопка</span>
+					</button>
+				</div>
+				<div class="elems-item">
+					<button class="button button-orange button-orange--hover">
+						<span class="spinner-border"></span>
+						<span class="button__text">Кнопка</span>
+					</button>
+				</div>
+				<div class="elems-item">
+					<button class="button button-outline-green button-outline-green--hover">
+						<span class="spinner-border"></span>
+						<span class="button__text">Кнопка</span>
+					</button>
+				</div>
+				<div class="elems-item">
+					<button class="button button-outline-orange button-outline-orange--hover">
+						<span class="spinner-border"></span>
+						<span class="button__text">Кнопка</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="elems-row">
+			<h2 class="elems-h2">Active</h2>
+			
+			<div class="clearfix">
+				<div class="elems-item">
+					<button class="button button-green button-green--active">
+						<span class="spinner-border"></span>
+						<span class="button__text">Кнопка</span>
+					</button>
+				</div>
+				<div class="elems-item">
+					<button class="button button-orange button-orange--active">
+						<span class="spinner-border"></span>
+						<span class="button__text">Кнопка</span>
+					</button>
+				</div>
+				<div class="elems-item">
+					<button class="button button-outline-green button-outline-green--active">
+						<span class="spinner-border"></span>
+						<span class="button__text">Кнопка</span>
+					</button>
+				</div>
+				<div class="elems-item">
+					<button class="button button-outline-orange button-outline-orange--active">
+						<span class="spinner-border"></span>
+						<span class="button__text">Кнопка</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="elems-row">
+			<h2 class="elems-h2">Disabled</h2>
+			
+			<div class="clearfix">
+				<div class="elems-item">
+					<button class="button button-green button--disabled">
+						<span class="spinner-border"></span>
+						<span class="button__text">Кнопка</span>
+					</button>
+				</div>
+				<div class="elems-item">
+					<button class="button button-orange button--disabled">
+						<span class="spinner-border"></span>
+						<span class="button__text">Кнопка</span>
+					</button>
+				</div>
+				<div class="elems-item">
+					<button class="button button-outline-green button--disabled">
+						<span class="spinner-border"></span>
+						<span class="button__text">Кнопка</span>
+					</button>
+				</div>
+				<div class="elems-item">
+					<button class="button button-outline-orange button--disabled">
+						<span class="spinner-border"></span>
+						<span class="button__text">Кнопка</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="elems-row">
+			<h2 class="elems-h2">Loading</h2>
+			
+			<div class="clearfix">
+				<div class="elems-item">
+					<button class="button button-green button-green--active button--loading" disabled>
+						<span class="spinner-border"></span>
+						<span class="button__text">Кнопка</span>
+					</button>
+				</div>
+				<div class="elems-item">
+					<button class="button button-orange button-orange--active button--loading" disabled>
+						<span class="spinner-border"></span>
+						<span class="button__text">Кнопка</span>
+					</button>
+				</div>
+				<div class="elems-item">
+					<button class="button button-outline-green button-outline-green--active button--loading" disabled>
+						<span class="spinner-border"></span>
+						<span class="button__text">Кнопка</span>
+					</button>
+				</div>
+				<div class="elems-item">
+					<button class="button button-outline-orange button-outline-orange--active button--loading" disabled>
+						<span class="spinner-border"></span>
+						<span class="button__text">Кнопка</span>
+					</button>
+				</div>
+			</div>
+		</div>
+
+	</section>
 </div>
