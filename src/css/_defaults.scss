@@ -1,0 +1,51 @@
+$dark-green: #007334;
+$light-green: #21a73f;
+
+$dark-orange: #ea5e20;
+$light-orange: #ef7f1a;
+
+$dark-gray: #727271;
+$light-gray: #b2b3b3;
+
+::-ms-clear {
+	display: none;
+	width: 0;
+	height: 0;
+}
+::-ms-reveal {
+	display: none;
+	width: 0;
+	height: 0;
+}
+::-webkit-search-decoration,
+::-webkit-search-cancel-button,
+::-webkit-search-results-button,
+::-webkit-search-results-decoration {
+	display: none;
+}
+
+*:focus {
+	outline: none;
+}
+
+.clearfix {
+	&::after {
+		display: block;
+		clear: both;
+		content: "";
+	}
+}
+
+.is-flipped-x {
+	transform: scaleX(-1);
+}
+
+body {
+	font-family: "KievitPro", sans-serif;
+	line-height: 1.2;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}

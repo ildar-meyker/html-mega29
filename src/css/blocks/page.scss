@@ -1,0 +1,8 @@
+.page {
+	&__center {
+		box-sizing: content-box;
+		padding: 0 25px;
+		max-width: 1180px;
+		margin: 0 auto;
+	}
+}

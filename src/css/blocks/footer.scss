@@ -1,0 +1,179 @@
+.footer {
+	background: $light-green;
+	color: #fff;
+
+	&__contacts {
+		text-align: center;
+		padding: 40px 0;
+	}
+
+	&__call {
+		font-feature-settings: "pnum" on, "lnum" on;
+
+		&__phone {
+			white-space: nowrap;
+			font-size: 32px;
+			font-weight: 700;
+
+			i {
+				font-size: 0.75em;
+				margin-right: 6px;
+			}
+		}
+
+		&__desc {
+			font-size: 22px;
+		}
+	}
+
+	&__social {
+		font-size: 0;
+		margin: 25px 0;
+
+		&__link {
+			display: inline-block;
+			width: 70px;
+			margin: 0 5px;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	&__pay {
+		margin-top: -10px;
+
+		&__title {
+			margin-bottom: 0.2em;
+			font-size: 26px;
+			font-weight: 500;
+		}
+
+		&__cards {
+			font-size: 0;
+
+			img {
+				vertical-align: middle;
+				margin: 2px;
+				width: 47px;
+			}
+		}
+	}
+
+	&__apps {
+		margin-top: -10px;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		&__link {
+			margin: 10px 5px 0 5px;
+			width: 260px;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	&__author {
+		margin: 30px 0;
+		text-transform: uppercase;
+		font-feature-settings: "pnum" on, "lnum" on;
+		font-size: 20px;
+		font-weight: 700;
+	}
+}
+
+@media (min-width: 992px) {
+	.footer {
+		padding: 55px 0;
+
+		&__center {
+			display: flex;
+			flex-direction: row-reverse;
+		}
+
+		&__contacts {
+			flex: 0 0 230px;
+			max-width: 230px;
+			padding: 0;
+		}
+
+		&__links {
+			display: flex;
+			flex-grow: 1;
+			padding-top: 10px;
+
+			&__group {
+				padding-left: 25px;
+				flex-grow: 1;
+			}
+
+			&__title {
+				text-transform: uppercase;
+				font-size: 13px;
+				font-weight: 800;
+			}
+
+			&__list {
+				font-size: 13px;
+				font-weight: 500;
+
+				div {
+					margin-top: 12px;
+				}
+			}
+		}
+
+		&__call {
+			&__phone {
+				font-size: 21px;
+			}
+
+			&__desc {
+				font-size: 15px;
+				font-weight: 700;
+			}
+		}
+
+		&__social {
+			margin: 11px 0;
+
+			&__link {
+				width: 44px;
+				margin: 0 3px;
+			}
+		}
+
+		&__pay {
+			margin-top: -3px;
+
+			&__title {
+				font-size: 17px;
+			}
+
+			&__cards {
+				img {
+					margin: 1px;
+					width: 30px;
+				}
+			}
+		}
+
+		&__author {
+			margin: 15px 0;
+			font-size: 13px;
+		}
+
+		&__apps {
+			margin-top: -5px;
+
+			&__link {
+				margin-top: 5px;
+				width: 120px;
+			}
+		}
+	}
+}

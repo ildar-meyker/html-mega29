@@ -1,0 +1,20 @@
+// vendor
+@import "../../node_modules/destyle.css/destyle";
+
+// sprites
+.icon {
+	display: inline-block;
+}
+
+@import "../../temp/css/sprite";
+@include retina-sprites($retina-groups);
+
+// partials
+@import "_fonts";
+@import "_mixins";
+@import "_vendor-fix";
+@import "_defaults";
+
+// blocks
+@import "blocks/page";
+@import "blocks/footer";
