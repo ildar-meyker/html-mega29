@@ -19,7 +19,7 @@
 		max-width: 65%;
 		margin: 0 auto;
 
-		&__item {
+		> * {
 			margin-top: 6px;
 		}
 	}
@@ -37,7 +37,7 @@
 		}
 
 		&__links {
-			&__item {
+			> * {
 				font-size: 24px;
 				padding-bottom: 15px;
 				padding-top: 15px;
@@ -53,14 +53,18 @@
 			align-items: center;
 		}
 
-		&__left {
+		&__left,
+		&__right {
 			display: block;
+			flex: 0 0 50%;
+			padding: 0 15px;
 		}
 
-		&__image {
-			display: none;
+		&__right {
+			&__image {
+				display: none;
+			}
 		}
-
 		&__links {
 			margin-top: 16px;
 		}
