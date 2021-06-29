@@ -1,0 +1,114 @@
+.subscribe {
+	padding: 30px 0;
+
+	&__h1 {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+
+		&__icon {
+			flex: 0 0 11%;
+			min-width: 40px;
+			max-width: 80px;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		&__text {
+			padding-left: 20px;
+			font-size: 19px;
+			font-weight: 700;
+		}
+	}
+
+	&__submit {
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.subscribe {
+		&__input {
+			padding-top: 16px;
+			padding-bottom: 16px;
+		}
+	}
+}
+
+@media (max-width: 991.98px) {
+	.subscribe {
+		&__button {
+			padding-top: 13px;
+			padding-bottom: 13px;
+			font-size: 19px;
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.subscribe {
+		&__center {
+			padding: 0 25px;
+		}
+
+		&__h1 {
+			margin-bottom: 40px;
+
+			&__text {
+				padding-left: 35px;
+				font-size: 24px;
+			}
+		}
+
+		&__input {
+			padding-top: 8px;
+			padding-bottom: 8px;
+			font-size: 27px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.subscribe {
+		&__center {
+			display: flex;
+			align-items: center;
+			padding: 0 25px;
+		}
+
+		&__h1 {
+			flex: 0 1 auto;
+			margin-bottom: 0;
+
+			&__icon {
+				max-width: 40px;
+			}
+
+			&__text {
+				font-size: 24px;
+				font-weight: 400;
+			}
+		}
+
+		&__form {
+			position: relative;
+			flex: 1 0 auto;
+			padding-left: 20px;
+		}
+
+		&__submit {
+			margin: 5px 5px 0 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+
+		&__button {
+			min-width: 150px;
+			padding-bottom: 6px;
+			padding-top: 6px;
+		}
+	}
+}

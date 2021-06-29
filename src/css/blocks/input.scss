@@ -1,0 +1,26 @@
+.input {
+	transition: all 0.2s;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+.input--full {
+	display: block;
+	width: 100%;
+}
+
+.input-default {
+	padding: 11px 10px;
+	border-color: $object-hover-gray;
+	background: $body-gray;
+	color: $dark-gray;
+
+	&:focus {
+		border-color: $light-gray;
+	}
+
+	&::placeholder {
+		color: $light-gray;
+	}
+}
