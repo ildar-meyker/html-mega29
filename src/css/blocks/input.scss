@@ -12,15 +12,15 @@
 
 .input-default {
 	padding: 11px 10px;
-	border-color: $object-hover-gray;
-	background: $body-gray;
-	color: $dark-gray;
+	border-color: #e7e7e8;
+	background: #fafafa;
+	color: #727271;
 
 	&:focus {
-		border-color: $light-gray;
+		border-color: #b2b3b3;
 	}
 
 	&::placeholder {
-		color: $light-gray;
+		color: #b2b3b3;
 	}
 }

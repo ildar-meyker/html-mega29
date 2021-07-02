@@ -1,5 +1,5 @@
 .footer {
-	background: $light-green;
+	background: #21a73f;
 	color: #fff;
 
 	&__contacts {
@@ -90,7 +90,7 @@
 	.footer {
 		&__links {
 			&__group {
-				border-bottom: 1px solid rgba($body-gray, 0.8);
+				border-bottom: 1px solid rgba(#fafafa, 0.8);
 				padding: 0 15px;
 			}
 

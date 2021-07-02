@@ -1,5 +1,5 @@
 .error-404 {
-	padding: 90px 0;
+	padding: 75px 0;
 
 	&__left {
 		display: none;
@@ -27,6 +27,8 @@
 
 @media (min-width: 768px) and (max-width: 991.98px) {
 	.error-404 {
+		padding: 150px 0;
+
 		&__h1 {
 			margin-bottom: 25px;
 			font-size: 56px;
@@ -48,6 +50,9 @@
 
 @media (min-width: 992px) {
 	.error-404 {
+		padding-top: 110px;
+		padding-bottom: 40px;
+
 		&__center {
 			display: flex;
 			align-items: center;

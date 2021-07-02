@@ -21,10 +21,10 @@
 	}
 
 	&--disabled {
-		background: $body-gray !important;
-		border-color: $light-gray !important;
+		background: #fafafa !important;
+		border-color: #b2b3b3 !important;
 		box-shadow: none !important;
-		color: $light-gray !important;
+		color: #b2b3b3 !important;
 		cursor: default;
 	}
 
@@ -41,71 +41,95 @@
 		display: block;
 		width: 100%;
 	}
+
+	&--small {
+		padding: 7px 10px;
+		font-weight: 400;
+		font-size: 12px;
+	}
 }
 
 .button-green {
-	background: $light-green;
+	background: #21a73f;
 	color: #fff;
 
 	&:hover,
 	&--hover {
-		background: $dark-green;
+		background: #007334;
 	}
 
 	&:active,
 	&--active {
-		background: $dark-green;
+		background: #007334;
 		box-shadow: inset 0 4px 4px rgba(#000, 0.3);
 	}
 }
 
 .button-outline-green {
-	border-color: $light-green;
-	color: $light-green;
+	border-color: #21a73f;
+	color: #21a73f;
 
 	&:hover,
 	&--hover {
-		background: $light-green;
+		background: #21a73f;
 		color: #fff;
 	}
 
 	&:active,
 	&--active {
-		background: $light-green;
+		background: #21a73f;
 		box-shadow: inset 0 4px 4px rgba(#000, 0.3);
 		color: #fff;
 	}
 }
 
 .button-orange {
-	background: $light-orange;
+	background: #ef7f1a;
 	color: #fff;
 
 	&:hover,
 	&--hover {
-		background: $dark-orange;
+		background: #ea5e20;
 	}
 
 	&:active,
 	&--active {
-		background: $dark-orange;
+		background: #ea5e20;
 		box-shadow: inset 0 4px 4px rgba(#000, 0.3);
 	}
 }
 
 .button-outline-orange {
-	border-color: $light-orange;
-	color: $light-orange;
+	border-color: #ef7f1a;
+	color: #ef7f1a;
 
 	&:hover,
 	&--hover {
-		background: $light-orange;
+		background: #ef7f1a;
 		color: #fff;
 	}
 
 	&:active,
 	&--active {
-		background: $light-orange;
+		background: #ef7f1a;
+		box-shadow: inset 0 4px 4px rgba(#000, 0.3);
+		color: #fff;
+	}
+}
+
+.button-outline-black {
+	border-color: #2e2e2e;
+	color: #2e2e2e;
+
+	&:hover,
+	&--hover {
+		background: #2e2e2e;
+		color: #fff;
+	}
+
+	&:active,
+	&--active {
+		background: #2e2e2e;
 		box-shadow: inset 0 4px 4px rgba(#000, 0.3);
 		color: #fff;
 	}

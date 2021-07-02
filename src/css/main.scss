@@ -4,6 +4,7 @@
 @import "../../node_modules/bootstrap/scss/_variables";
 @import "../../node_modules/bootstrap/scss/_mixins";
 @import "../../node_modules/bootstrap/scss/_transitions";
+@import "../../node_modules/simplebar/dist/simplebar.css";
 @import "vendor/spinners";
 
 // sprites
@@ -26,3 +27,4 @@
 @import "blocks/input";
 @import "blocks/error-404";
 @import "blocks/subscribe";
+@import "blocks/advantages";
