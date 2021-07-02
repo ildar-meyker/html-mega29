@@ -5,6 +5,7 @@
 @import "../../node_modules/bootstrap/scss/_mixins";
 @import "../../node_modules/bootstrap/scss/_transitions";
 @import "../../node_modules/simplebar/dist/simplebar.css";
+@import "vendor/hamburgers";
 @import "vendor/spinners";
 
 // sprites
@@ -28,3 +29,4 @@
 @import "blocks/error-404";
 @import "blocks/subscribe";
 @import "blocks/advantages";
+@import "blocks/header";

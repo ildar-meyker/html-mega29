@@ -8,8 +8,6 @@
 	}
 
 	&__call {
-		font-feature-settings: "pnum" on, "lnum" on;
-
 		&__phone {
 			white-space: nowrap;
 			font-size: 32px;
@@ -80,7 +78,6 @@
 	&__author {
 		margin: 30px 0;
 		text-transform: uppercase;
-		font-feature-settings: "pnum" on, "lnum" on;
 		font-size: 20px;
 		font-weight: 700;
 	}
@@ -148,11 +145,13 @@
 		&__links {
 			display: flex;
 			flex-grow: 1;
+			flex-wrap: wrap;
 			padding-top: 10px;
 
 			&__group {
 				padding-left: 25px;
-				flex-grow: 1;
+				margin-bottom: 30px;
+				flex-basis: 190px;
 			}
 
 			&__title {
@@ -173,6 +172,12 @@
 
 				div {
 					margin-top: 12px;
+				}
+
+				a {
+					&:hover {
+						border-bottom: 1px solid rgba(#fff, 0.5);
+					}
 				}
 			}
 		}

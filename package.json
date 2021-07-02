@@ -13,8 +13,7 @@
     "dev": "gulp clean && grunt modernizr && gulp build && gulp browser"
   },
   "browserslist": [
-    "last 2 versions",
-    ">1%"
+    "defaults"
   ],
   "devDependencies": {
     "@babel/core": "^7.5.5",
