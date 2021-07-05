@@ -685,13 +685,17 @@ template {
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1); }
 
+.text-left {
+  text-align: left !important; }
+
 body {
   background: #fafafa;
   min-width: 415px;
   font-family: "KievitPro", sans-serif;
   -webkit-font-feature-settings: "pnum" on, "lnum" on;
           font-feature-settings: "pnum" on, "lnum" on;
-  line-height: 1.2; }
+  line-height: 1.2;
+  color: #000; }
 
 img {
   max-width: 100%;
@@ -1314,3 +1318,69 @@ img {
     max-width: 100px; }
   .header__main__search-btn {
     font-size: 20px; } }
+
+.t-areas {
+  overflow: auto; }
+  .t-areas table {
+    min-width: 900px;
+    width: 100%; }
+  .t-areas__col-30 {
+    width: 30%; }
+  .t-areas__col-20 {
+    width: 20%; }
+  .t-areas td {
+    padding: 10px 25px;
+    height: 75px;
+    border: 1px solid #f2f3f5;
+    vertical-align: middle;
+    text-align: center; }
+  .t-areas__head td {
+    background: #fafafa;
+    font-weight: 700; }
+  .t-areas__head--small td {
+    font-size: 0.875em;
+    font-weight: 500;
+    height: auto; }
+  .t-areas__desc {
+    font-size: 0.625em; }
+  .t-areas__total {
+    font-size: 0.75em; }
+  .t-areas__num {
+    display: inline-block;
+    width: 20px;
+    padding: 1px 0;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: 700;
+    color: #fff; }
+    .t-areas__num--1 {
+      background: #21a73f; }
+    .t-areas__num--2 {
+      background: #f2c94c; }
+    .t-areas__num--3 {
+      background: #2d9cdb; }
+    .t-areas__num--4 {
+      background: #bb6bd9; }
+    .t-areas__num--5 {
+      background: #eb5757; }
+  .t-areas__map {
+    margin-top: 25px; }
+    .t-areas__map__header {
+      display: flex;
+      margin-bottom: 8px; }
+    .t-areas__map__title {
+      flex-grow: 1;
+      font-size: 1.25em;
+      font-weight: 700; }
+    .t-areas__map__demo {
+      height: 250px;
+      background: #f3f3f3; }
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .t-areas {
+    font-size: 14px; } }
+
+@media (min-width: 992px) {
+  .t-areas__map__demo {
+    height: 400px; } }

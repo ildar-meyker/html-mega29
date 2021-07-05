@@ -31,12 +31,17 @@
 	transform: scaleX(-1);
 }
 
+.text-left {
+	text-align: left !important;
+}
+
 body {
 	background: #fafafa;
 	min-width: 415px;
 	font-family: "KievitPro", sans-serif;
 	font-feature-settings: "pnum" on, "lnum" on;
 	line-height: 1.2;
+	color: #000;
 }
 
 img {
