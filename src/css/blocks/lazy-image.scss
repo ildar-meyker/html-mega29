@@ -1,4 +1,7 @@
 .lazy-image {
+	overflow: hidden;
+	border-radius: 4px;
+
 	&.inited {
 		.lazy-image__loader {
 			display: none;
