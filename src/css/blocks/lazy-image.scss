@@ -1,0 +1,58 @@
+.lazy-image {
+	&.inited {
+		.lazy-image__loader {
+			display: none;
+		}
+	}
+
+	&__loader {
+		position: relative;
+		background: #f2f3f5;
+		padding-top: 50%;
+		font-size: 15px;
+		font-weight: 500;
+
+		> div {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+
+			> div {
+				width: 30%;
+				max-width: 260px;
+				background: url(../images/no-image.svg) no-repeat 50% 50%;
+				background-size: cover;
+				border-radius: 0.3em;
+				margin-bottom: 0.5em;
+
+				&:before {
+					content: " ";
+					display: block;
+					padding-top: 75%;
+				}
+			}
+
+			&:after {
+				content: "Изображение скоро появится";
+			}
+		}
+	}
+
+	img {
+		display: none;
+	}
+}
+
+@media (min-width: 768px) {
+	.lazy-image {
+		&__loader {
+			font-size: 28px;
+		}
+	}
+}
