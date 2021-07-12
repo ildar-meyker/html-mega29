@@ -16,4 +16,30 @@
 			padding: 10px;
 		}
 	}
+
+	&__content {
+		display: flex;
+
+		&__side {
+			display: none;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.page {
+		&__content {
+			display: flex;
+
+			&__side {
+				display: block;
+				flex: 0 0 230px;
+			}
+
+			&__main {
+				flex-grow: 1;
+				padding-left: 17px;
+			}
+		}
+	}
 }

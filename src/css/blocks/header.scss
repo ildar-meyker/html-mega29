@@ -201,24 +201,6 @@
 			color: #007334;
 		}
 	}
-
-	&__path {
-		margin-top: 15px;
-
-		a {
-			font-size: 14px;
-			color: #2e2e2e;
-
-			&:hover {
-				border-bottom: 1px solid rgba(#2e2e2e, 0.5);
-			}
-		}
-
-		i {
-			margin: 0 5px;
-			font-size: 10px;
-		}
-	}
 }
 
 @media (max-width: 991.98px) {
@@ -257,10 +239,6 @@
 				display: block;
 				font-size: 24px;
 			}
-		}
-
-		&__path {
-			margin-top: 20px;
 		}
 	}
 }
