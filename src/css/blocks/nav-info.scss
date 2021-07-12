@@ -1,0 +1,143 @@
+@media (max-width: 991.98px) {
+	.nav-info {
+		&__data {
+			margin: 10px 0;
+		}
+
+		&__group {
+			margin: -2px 0;
+		}
+
+		&__title {
+			position: relative;
+			display: block;
+			padding: 16px 18px;
+			border: 2px solid #f2f3f5;
+			border-radius: 4px;
+			background: #fff;
+			font-size: 20px;
+			font-weight: 500;
+			color: #21a73f;
+
+			&:before {
+				content: " ";
+				position: absolute;
+				top: 0;
+				height: 100%;
+				left: -2px;
+				border-left: 4px solid #21a73f;
+				border-radius: 4px 0 0 4px;
+			}
+
+			&.collapsed {
+				color: #2e2e2e;
+
+				&:before {
+					display: none;
+				}
+
+				i {
+					transform: rotate(0);
+				}
+			}
+
+			i {
+				transition: all 0.2s;
+				transform: rotate(180deg);
+				position: absolute;
+				top: 50%;
+				margin-top: -0.5em;
+				right: 18px;
+				font-size: 0.7em;
+				color: #2e2e2e;
+			}
+		}
+
+		&__list {
+			padding: 10px 0;
+		}
+
+		&__tabs {
+			display: none;
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.nav-info {
+		&__data {
+			margin: 20px 0;
+		}
+
+		&__title {
+			font-size: 36px;
+			padding: 18px 35px;
+
+			i {
+				right: 35px;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.nav-info {
+		&__tabs {
+			position: relative;
+			z-index: 10;
+			display: flex;
+			border: 2px solid #f2f3f5;
+			border-bottom: 0;
+			background: #fff;
+			margin: 20px 0 -22px 0;
+			border-radius: 4px 4px 0 0;
+			font-size: 14px;
+			font-weight: 500;
+			text-align: center;
+
+			&__item {
+				position: relative;
+				display: flex;
+				align-items: center;
+				flex-grow: 1;
+				padding: 20px;
+				border-bottom: 2px solid #f2f3f5;
+				color: #2e2e2e;
+
+				&.active {
+					border-color: #21a73f;
+					color: #21a73f;
+				}
+			}
+		}
+
+		&__data {
+			position: relative;
+			margin: 20px 0;
+		}
+
+		&__group {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			visibility: hidden;
+			opacity: 0;
+
+			&.active {
+				transition: all 0.2s;
+				position: static;
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+
+		&__crop {
+			display: block !important;
+		}
+
+		&__title {
+			display: none;
+		}
+	}
+}

@@ -15,11 +15,11 @@ layout: default.hbs
 		</div>
 	</nav>
 
-	<section>
+	<section class="content">
 		<div class="page__center">
+			<div class="content__center">
+				<div class="content__side">
 
-			<div class="page__content">
-				<div class="page__content__side">
 					<nav class="nav-side" id="nav-side">
 						<div class="nav-side__group">
 							<a href="#" class="nav-side__title" data-bs-toggle="collapse" data-bs-target="#nav-side-1">
@@ -127,156 +127,429 @@ layout: default.hbs
 						</div>
 						
 					</nav>
-				</div>
-				<div class="page__content__main">
 
-					<div class="lazy-image">
-						<div class="lazy-image__loader"><div><div></div></div></div>
-						<img alt="" data-src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.heartlandtv.com%2Fimages%2Ffood%2Bfinders%2Btruck00000000.jpg&f=1&nofb=1">
+				</div>
+				<div class="content__main">
+
+					<div class="content__image">
+						<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.heartlandtv.com%2Fimages%2Ffood%2Bfinders%2Btruck00000000.jpg&f=1&nofb=1"  alt="">
 					</div>
+
+					<section class="nav-info" id="nav-info">
+
+						<nav class="nav-info__tabs">
+							<a href="#" class="nav-info__tabs__item active">Единые правила доставки</a>
+							<a href="#" class="nav-info__tabs__item">Цены в Архангельске</a>
+							<a href="#" class="nav-info__tabs__item">Цены в Северодвинске</a>
+							<a href="#" class="nav-info__tabs__item">Цены в Сыктывкаре</a>
+							<a href="#" class="nav-info__tabs__item">Самовывоз</a>
+						</nav>
+
+						<div class="nav-info__data">
+							<div class="nav-info__group active">
+								<a href="#" class="nav-info__title" data-bs-toggle="collapse" data-bs-target="#nav-info-1">
+									<span>Единые правила доставки</span>
+									<i class="icon-arrow-down"></i>
+								</a>
+								<div class="nav-info__crop collapse show" id="nav-info-1">
+									<div class="nav-info__list">
+										<div class="page__paper">
+											<article class="article">
+												<p>
+													Если Вам удобнее забрать товар в магазине, то при оформлении заказа выберите <b>Самовывоз.</b>
+													<br>Получив смс о том, что Ваш заказ собран, Вы сможете забрать его в ТК Мега, пр. Московский, 25, корп.3. с 09:00 до 21:00.
+												</p>
+												<p>
+													Для получения заказа:
+													<br> 1. Подойдите к стойке самовывоза/инфостойке, которая расположена напротив кафе Дача.
+													<br> 2. Вам подготовят товар и распечатают необходимые для получения документы.
+												</p>
+
+												<h3>Оплата:</h3>
+												<ul>
+													<li>По банковской карте в Интернет-магазине – сообщите менеджеру выдачи смс код для подтверждения права на получение заказа.</li>
+													<li>Наличными – менеджер выдачи передаст Вам товарную накладную, оплата по ней производится на кассе, после чего можно получить товар.</li>
+												</ul>
+
+												<h3>Проверка товара на наличие и качество:</h3>
+												<ul>
+													<li>Мелкиий товар – проверка производится покупателем на стойке самовывоза до момента оплаты.</li>
+													<li>Крупногабаритный товар – проверка производится после оплаты, в буферной зоне ТК (карта проезда прилагается). Вам обязательно помогут его погрузить.</li>
+												</ul>
+
+												<h3>Получение:</h3>
+												<ul>
+													<li>Мелкий товар – получение производится на стойке самовывоза после оплаты.</li>
+													<li>Крупногабаритный товар – производится после оплаты, в буферной зоне ТК (карта проезда прилагается). Вам обязательно помогут его погрузить. Для получения заказа менеджер выдачи даст вам Товарную накладную, карточку и схему проезда на буферную зону. После предъявлении этих документов, вам будет выдан заказ.</li>
+												</ul>
+											</article>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="nav-info__group">
+								<a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-2">
+									<span>Цены в Архангельске</span>
+									<i class="icon-arrow-down"></i>
+								</a>
+								<div class="nav-info__crop collapse" id="nav-info-2">
+									<div class="nav-info__list">
+										<div class="page__paper page__paper--compact">
+											<div class="table-areas" data-simplebar="">
+												<table>
+													<colgroup>
+														<col>
+														<col class="table-areas__col-30">
+														<col class="table-areas__col-20">
+														<col class="table-areas__col-20">
+														<col class="table-areas__col-20">
+													</colgroup>
+													<tr class="table-areas__head">
+														<td rowspan="2">№</td>
+														<td rowspan="2">Зона доставки</td>
+														<td rowspan="2">Зона доставки</td>
+														<td colspan="2">Доставка при сумме покупки</td>
+													</tr>
+													<tr class="table-areas__head table-areas__head--small">
+														<td>При сумме < 3000 р.</td>
+														<td>При сумме > 3000 р.</td>
+													</tr>
+													<tr class="table-areas__data">
+														<td><span class="table-areas__num table-areas__num--1">1</span></td>
+														<td class="table-areas__desc">г. Северодвинск, ГСК в черте города Подводников, 22</td>
+														<td class="table-areas__desc"><b>500 ₽</b></td>
+														<td class="table-areas__total"><b>300 ₽</b></td>
+														<td class="table-areas__total"><b>Бесплатно</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td><span class="table-areas__num table-areas__num--2">2</span></td>
+														<td class="table-areas__desc">Водогон, пос. ГСК: 14 (Подводников 4), Автомобилист, Беломорец, Водоснабженец, Волна, Двина, Звезда, Кардан, Коммунальник, Контакт, Марьяна, Машиностроитель, Мечта, Моряк, Моряна, Мотор, На Октябрьской, Параниха, Прибой, Приморье, Строитель, Темп, Чайка, Чаячий, Лодочная станция у ГСК "Чайка", Старое кладбище</td>
+														<td class="table-areas__desc"><b>950 ₽</b></td>
+														<td class="table-areas__total"><b>450 ₽</b></td>
+														<td class="table-areas__total"><b>400 ₽</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td><span class="table-areas__num table-areas__num--3">3</span></td>
+														<td class="table-areas__desc">Дачи: Автомобилист, Березка, Большая Кудьма, Волна,Гавань, Двина-1, Двина-2, Космос, Космос-1, Космос-2,Лая, Кудьма, Лисьи борки, Медик, Отрада, Пеньки,Поморочка, Приозерный, Радуга, Родник, Рябинушка, Северное Сияние, Спектр, Таборы, Тайга-1, Тайга-2, Тайга-3, Три сосны, Уйма, Шихириха</td>
+														<td class="table-areas__desc"><b>500 ₽</b></td>
+														<td class="table-areas__total"><b>300 ₽</b></td>
+														<td class="table-areas__total"><b>900 ₽</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td><span class="table-areas__num table-areas__num--4">4</span></td>
+														<td class="table-areas__desc">Рикасиха станция (по 104), Дачи: Беломор, Высота, Дружба, Зеленый бор, Зеленый бор-2, Лайское, Лесная поляна, Малиновка, Надежда, Никольский, Никольское, Онега, Онежский тракт, Песчаный, Пихталы, Полярные зори, Север, Солза (до моста), Строитель, Теремок-1, Теремок-2, Ягринское</td>
+														<td class="table-areas__desc"><b>500 ₽</b></td>
+														<td class="table-areas__total"><b>300 ₽</b></td>
+														<td class="table-areas__total"><b>1000 ₽</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td><span class="table-areas__num table-areas__num--5">5</span></td>
+														<td class="table-areas__desc">Архангельск, Новодвинск, Рикасиха, Сот Рикасиха (по Арх.), Лайский Док, Цигломень</td>
+														<td class="table-areas__desc"><b>500 ₽</b></td>
+														<td class="table-areas__total"><b>300 ₽</b></td>
+														<td class="table-areas__total"><b>1300 ₽</b></td>
+													</tr>
+													<tr class="table-areas__head">
+														<td colspan="5" class="text-left">Дополнительные услуги</td>
+													</tr>
+													<tr class="table-areas__data">
+														<td colspan="2" class="table-areas__desc">Доставка "точно в срок" интервал ожидания 10 минут! (доплата)</td>
+														<td class="table-areas__desc"><b>500 ₽</b></td>
+														<td class="table-areas__total"><b>300 ₽</b></td>
+														<td class="table-areas__total"><b>1300 ₽</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td colspan="2" class="table-areas__desc">Доставка длинномерных пиломатериалов (более 4 м. доплата)</td>
+														<td class="table-areas__desc"><b>500 ₽</b></td>
+														<td class="table-areas__total"><b>300 ₽</b></td>
+														<td class="table-areas__total"><b>1300 ₽</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td colspan="2" class="table-areas__desc">Подъем товара</td>
+														<td colspan="3" class="table-areas__total"><b>1,5 ₽*1КГ*1 ЭТАЖ; МИНИМАЛЬНАЯ СУММА 250 ₽.</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td colspan="2" class="table-areas__desc">Пронос товара (расчитывается также как подъем, 10 метров=1 этаж)</td>
+														<td colspan="3" class="table-areas__total"><b>1,5 ₽*1КГ*10 МЕТРОВ; МИНИМАЛЬНАЯ СУММА 250 ₽.</b></td>
+													</tr>
+												</table>
+											</div>
+
+											<div class="table-areas__map">
+												<div class="table-areas__map__header">
+													<div class="table-areas__map__title">Северодвинск</div>
+													<div class="table-areas__map__nums">
+														<a href="#" class="table-areas__num table-areas__num--1">1</a>
+														<a href="#" class="table-areas__num table-areas__num--2">2</a>
+														<a href="#" class="table-areas__num table-areas__num--3">3</a>
+														<a href="#" class="table-areas__num table-areas__num--4">4</a>
+														<a href="#" class="table-areas__num table-areas__num--5">5</a>
+													</div>
+												</div>
+												<div class="table-areas__map__demo"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="nav-info__group">
+								<a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-3">
+									<span>Цены в Северодвинске</span>
+									<i class="icon-arrow-down"></i>
+								</a>
+								<div class="nav-info__crop collapse" id="nav-info-3">
+									<div class="nav-info__list">
+										<div class="page__paper page__paper--compact">
+											<div class="table-areas" data-simplebar="">
+												<table>
+													<colgroup>
+														<col>
+														<col class="table-areas__col-30">
+														<col class="table-areas__col-20">
+														<col class="table-areas__col-20">
+														<col class="table-areas__col-20">
+													</colgroup>
+													<tr class="table-areas__head">
+														<td rowspan="2">№</td>
+														<td rowspan="2">Зона доставки</td>
+														<td rowspan="2">Зона доставки</td>
+														<td colspan="2">Доставка при сумме покупки</td>
+													</tr>
+													<tr class="table-areas__head table-areas__head--small">
+														<td>При сумме < 3000 р.</td>
+														<td>При сумме > 3000 р.</td>
+													</tr>
+													<tr class="table-areas__data">
+														<td><span class="table-areas__num table-areas__num--1">1</span></td>
+														<td class="table-areas__desc">г. Северодвинск, ГСК в черте города Подводников, 22</td>
+														<td class="table-areas__desc"><b>500 ₽</b></td>
+														<td class="table-areas__total"><b>300 ₽</b></td>
+														<td class="table-areas__total"><b>Бесплатно</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td><span class="table-areas__num table-areas__num--2">2</span></td>
+														<td class="table-areas__desc">Водогон, пос. ГСК: 14 (Подводников 4), Автомобилист, Беломорец, Водоснабженец, Волна, Двина, Звезда, Кардан, Коммунальник, Контакт, Марьяна, Машиностроитель, Мечта, Моряк, Моряна, Мотор, На Октябрьской, Параниха, Прибой, Приморье, Строитель, Темп, Чайка, Чаячий, Лодочная станция у ГСК "Чайка", Старое кладбище</td>
+														<td class="table-areas__desc"><b>950 ₽</b></td>
+														<td class="table-areas__total"><b>450 ₽</b></td>
+														<td class="table-areas__total"><b>400 ₽</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td><span class="table-areas__num table-areas__num--3">3</span></td>
+														<td class="table-areas__desc">Дачи: Автомобилист, Березка, Большая Кудьма, Волна,Гавань, Двина-1, Двина-2, Космос, Космос-1, Космос-2,Лая, Кудьма, Лисьи борки, Медик, Отрада, Пеньки,Поморочка, Приозерный, Радуга, Родник, Рябинушка, Северное Сияние, Спектр, Таборы, Тайга-1, Тайга-2, Тайга-3, Три сосны, Уйма, Шихириха</td>
+														<td class="table-areas__desc"><b>500 ₽</b></td>
+														<td class="table-areas__total"><b>300 ₽</b></td>
+														<td class="table-areas__total"><b>900 ₽</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td><span class="table-areas__num table-areas__num--4">4</span></td>
+														<td class="table-areas__desc">Рикасиха станция (по 104), Дачи: Беломор, Высота, Дружба, Зеленый бор, Зеленый бор-2, Лайское, Лесная поляна, Малиновка, Надежда, Никольский, Никольское, Онега, Онежский тракт, Песчаный, Пихталы, Полярные зори, Север, Солза (до моста), Строитель, Теремок-1, Теремок-2, Ягринское</td>
+														<td class="table-areas__desc"><b>500 ₽</b></td>
+														<td class="table-areas__total"><b>300 ₽</b></td>
+														<td class="table-areas__total"><b>1000 ₽</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td><span class="table-areas__num table-areas__num--5">5</span></td>
+														<td class="table-areas__desc">Архангельск, Новодвинск, Рикасиха, Сот Рикасиха (по Арх.), Лайский Док, Цигломень</td>
+														<td class="table-areas__desc"><b>500 ₽</b></td>
+														<td class="table-areas__total"><b>300 ₽</b></td>
+														<td class="table-areas__total"><b>1300 ₽</b></td>
+													</tr>
+													<tr class="table-areas__head">
+														<td colspan="5" class="text-left">Дополнительные услуги</td>
+													</tr>
+													<tr class="table-areas__data">
+														<td colspan="2" class="table-areas__desc">Доставка "точно в срок" интервал ожидания 10 минут! (доплата)</td>
+														<td class="table-areas__desc"><b>500 ₽</b></td>
+														<td class="table-areas__total"><b>300 ₽</b></td>
+														<td class="table-areas__total"><b>1300 ₽</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td colspan="2" class="table-areas__desc">Доставка длинномерных пиломатериалов (более 4 м. доплата)</td>
+														<td class="table-areas__desc"><b>500 ₽</b></td>
+														<td class="table-areas__total"><b>300 ₽</b></td>
+														<td class="table-areas__total"><b>1300 ₽</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td colspan="2" class="table-areas__desc">Подъем товара</td>
+														<td colspan="3" class="table-areas__total"><b>1,5 ₽*1КГ*1 ЭТАЖ; МИНИМАЛЬНАЯ СУММА 250 ₽.</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td colspan="2" class="table-areas__desc">Пронос товара (расчитывается также как подъем, 10 метров=1 этаж)</td>
+														<td colspan="3" class="table-areas__total"><b>1,5 ₽*1КГ*10 МЕТРОВ; МИНИМАЛЬНАЯ СУММА 250 ₽.</b></td>
+													</tr>
+												</table>
+											</div>
+
+											<div class="table-areas__map">
+												<div class="table-areas__map__header">
+													<div class="table-areas__map__title">Северодвинск</div>
+													<div class="table-areas__map__nums">
+														<a href="#" class="table-areas__num table-areas__num--1">1</a>
+														<a href="#" class="table-areas__num table-areas__num--2">2</a>
+														<a href="#" class="table-areas__num table-areas__num--3">3</a>
+														<a href="#" class="table-areas__num table-areas__num--4">4</a>
+														<a href="#" class="table-areas__num table-areas__num--5">5</a>
+													</div>
+												</div>
+												<div class="table-areas__map__demo"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="nav-info__group">
+								<a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-4">
+									<span>Цены в Сыктывкаре</span>
+									<i class="icon-arrow-down"></i>
+								</a>
+								<div class="nav-info__crop collapse" id="nav-info-4">
+									<div class="nav-info__list">
+										<div class="page__paper page__paper--compact">
+											<div class="table-areas" data-simplebar="">
+												<table>
+													<colgroup>
+														<col>
+														<col class="table-areas__col-30">
+														<col class="table-areas__col-20">
+														<col class="table-areas__col-20">
+														<col class="table-areas__col-20">
+													</colgroup>
+													<tr class="table-areas__head">
+														<td rowspan="2">№</td>
+														<td rowspan="2">Зона доставки</td>
+														<td rowspan="2">Зона доставки</td>
+														<td colspan="2">Доставка при сумме покупки</td>
+													</tr>
+													<tr class="table-areas__head table-areas__head--small">
+														<td>При сумме < 3000 р.</td>
+														<td>При сумме > 3000 р.</td>
+													</tr>
+													<tr class="table-areas__data">
+														<td><span class="table-areas__num table-areas__num--1">1</span></td>
+														<td class="table-areas__desc">г. Северодвинск, ГСК в черте города Подводников, 22</td>
+														<td class="table-areas__desc"><b>500 ₽</b></td>
+														<td class="table-areas__total"><b>300 ₽</b></td>
+														<td class="table-areas__total"><b>Бесплатно</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td><span class="table-areas__num table-areas__num--2">2</span></td>
+														<td class="table-areas__desc">Водогон, пос. ГСК: 14 (Подводников 4), Автомобилист, Беломорец, Водоснабженец, Волна, Двина, Звезда, Кардан, Коммунальник, Контакт, Марьяна, Машиностроитель, Мечта, Моряк, Моряна, Мотор, На Октябрьской, Параниха, Прибой, Приморье, Строитель, Темп, Чайка, Чаячий, Лодочная станция у ГСК "Чайка", Старое кладбище</td>
+														<td class="table-areas__desc"><b>950 ₽</b></td>
+														<td class="table-areas__total"><b>450 ₽</b></td>
+														<td class="table-areas__total"><b>400 ₽</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td><span class="table-areas__num table-areas__num--3">3</span></td>
+														<td class="table-areas__desc">Дачи: Автомобилист, Березка, Большая Кудьма, Волна,Гавань, Двина-1, Двина-2, Космос, Космос-1, Космос-2,Лая, Кудьма, Лисьи борки, Медик, Отрада, Пеньки,Поморочка, Приозерный, Радуга, Родник, Рябинушка, Северное Сияние, Спектр, Таборы, Тайга-1, Тайга-2, Тайга-3, Три сосны, Уйма, Шихириха</td>
+														<td class="table-areas__desc"><b>500 ₽</b></td>
+														<td class="table-areas__total"><b>300 ₽</b></td>
+														<td class="table-areas__total"><b>900 ₽</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td><span class="table-areas__num table-areas__num--4">4</span></td>
+														<td class="table-areas__desc">Рикасиха станция (по 104), Дачи: Беломор, Высота, Дружба, Зеленый бор, Зеленый бор-2, Лайское, Лесная поляна, Малиновка, Надежда, Никольский, Никольское, Онега, Онежский тракт, Песчаный, Пихталы, Полярные зори, Север, Солза (до моста), Строитель, Теремок-1, Теремок-2, Ягринское</td>
+														<td class="table-areas__desc"><b>500 ₽</b></td>
+														<td class="table-areas__total"><b>300 ₽</b></td>
+														<td class="table-areas__total"><b>1000 ₽</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td><span class="table-areas__num table-areas__num--5">5</span></td>
+														<td class="table-areas__desc">Архангельск, Новодвинск, Рикасиха, Сот Рикасиха (по Арх.), Лайский Док, Цигломень</td>
+														<td class="table-areas__desc"><b>500 ₽</b></td>
+														<td class="table-areas__total"><b>300 ₽</b></td>
+														<td class="table-areas__total"><b>1300 ₽</b></td>
+													</tr>
+													<tr class="table-areas__head">
+														<td colspan="5" class="text-left">Дополнительные услуги</td>
+													</tr>
+													<tr class="table-areas__data">
+														<td colspan="2" class="table-areas__desc">Доставка "точно в срок" интервал ожидания 10 минут! (доплата)</td>
+														<td class="table-areas__desc"><b>500 ₽</b></td>
+														<td class="table-areas__total"><b>300 ₽</b></td>
+														<td class="table-areas__total"><b>1300 ₽</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td colspan="2" class="table-areas__desc">Доставка длинномерных пиломатериалов (более 4 м. доплата)</td>
+														<td class="table-areas__desc"><b>500 ₽</b></td>
+														<td class="table-areas__total"><b>300 ₽</b></td>
+														<td class="table-areas__total"><b>1300 ₽</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td colspan="2" class="table-areas__desc">Подъем товара</td>
+														<td colspan="3" class="table-areas__total"><b>1,5 ₽*1КГ*1 ЭТАЖ; МИНИМАЛЬНАЯ СУММА 250 ₽.</b></td>
+													</tr>
+													<tr class="table-areas__data">
+														<td colspan="2" class="table-areas__desc">Пронос товара (расчитывается также как подъем, 10 метров=1 этаж)</td>
+														<td colspan="3" class="table-areas__total"><b>1,5 ₽*1КГ*10 МЕТРОВ; МИНИМАЛЬНАЯ СУММА 250 ₽.</b></td>
+													</tr>
+												</table>
+											</div>
+
+											<div class="table-areas__map">
+												<div class="table-areas__map__header">
+													<div class="table-areas__map__title">Северодвинск</div>
+													<div class="table-areas__map__nums">
+														<a href="#" class="table-areas__num table-areas__num--1">1</a>
+														<a href="#" class="table-areas__num table-areas__num--2">2</a>
+														<a href="#" class="table-areas__num table-areas__num--3">3</a>
+														<a href="#" class="table-areas__num table-areas__num--4">4</a>
+														<a href="#" class="table-areas__num table-areas__num--5">5</a>
+													</div>
+												</div>
+												<div class="table-areas__map__demo"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="nav-info__group">
+								<a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-5">
+									<span>Самовывоз</span>
+									<i class="icon-arrow-down"></i>
+								</a>
+								<div class="nav-info__crop collapse" id="nav-info-5">
+									<div class="nav-info__list">
+										<div class="page__paper">
+											<article class="article">
+												<p>
+													Если Вам удобнее забрать товар в магазине, то при оформлении заказа выберите <b>Самовывоз.</b>
+													<br>Получив смс о том, что Ваш заказ собран, Вы сможете забрать его в ТК Мега, пр. Московский, 25, корп.3. с 09:00 до 21:00.
+												</p>
+												<p>
+													Для получения заказа:
+													<br> 1. Подойдите к стойке самовывоза/инфостойке, которая расположена напротив кафе Дача.
+													<br> 2. Вам подготовят товар и распечатают необходимые для получения документы.
+												</p>
+
+												<h3>Оплата:</h3>
+												<ul>
+													<li>По банковской карте в Интернет-магазине – сообщите менеджеру выдачи смс код для подтверждения права на получение заказа.</li>
+													<li>Наличными – менеджер выдачи передаст Вам товарную накладную, оплата по ней производится на кассе, после чего можно получить товар.</li>
+												</ul>
+
+												<h3>Проверка товара на наличие и качество:</h3>
+												<ul>
+													<li>Мелкиий товар – проверка производится покупателем на стойке самовывоза до момента оплаты.</li>
+													<li>Крупногабаритный товар – проверка производится после оплаты, в буферной зоне ТК (карта проезда прилагается). Вам обязательно помогут его погрузить.</li>
+												</ul>
+
+												<h3>Получение:</h3>
+												<ul>
+													<li>Мелкий товар – получение производится на стойке самовывоза после оплаты.</li>
+													<li>Крупногабаритный товар – производится после оплаты, в буферной зоне ТК (карта проезда прилагается). Вам обязательно помогут его погрузить. Для получения заказа менеджер выдачи даст вам Товарную накладную, карточку и схему проезда на буферную зону. После предъявлении этих документов, вам будет выдан заказ.</li>
+												</ul>
+											</article>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
 					
 				</div>
 			</div>
-
-
-
-			Единые правила доставки
-			Цены в Архангельске
-			Цены в Северодвинске
-			Цены в Сыктывкаре
-			Самовывоз
-			
-			<div class="page__paper">
-				<article class="article">
-					<p>
-						Если Вам удобнее забрать товар в магазине, то при оформлении заказа выберите <b>Самовывоз.</b>
-						<br>Получив смс о том, что Ваш заказ собран, Вы сможете забрать его в ТК Мега, пр. Московский, 25, корп.3. с 09:00 до 21:00.
-					</p>
-					<p>
-						Для получения заказа:
-						<br> 1. Подойдите к стойке самовывоза/инфостойке, которая расположена напротив кафе Дача.
-						<br> 2. Вам подготовят товар и распечатают необходимые для получения документы.
-					</p>
-
-					<h3>Оплата:</h3>
-					<ul>
-						<li>По банковской карте в Интернет-магазине – сообщите менеджеру выдачи смс код для подтверждения права на получение заказа.</li>
-						<li>Наличными – менеджер выдачи передаст Вам товарную накладную, оплата по ней производится на кассе, после чего можно получить товар.</li>
-					</ul>
-
-					<h3>Проверка товара на наличие и качество:</h3>
-					<ul>
-						<li>Мелкиий товар – проверка производится покупателем на стойке самовывоза до момента оплаты.</li>
-						<li>Крупногабаритный товар – проверка производится после оплаты, в буферной зоне ТК (карта проезда прилагается). Вам обязательно помогут его погрузить.</li>
-					</ul>
-
-					<h3>Получение:</h3>
-					<ul>
-						<li>Мелкий товар – получение производится на стойке самовывоза после оплаты.</li>
-						<li>Крупногабаритный товар – производится после оплаты, в буферной зоне ТК (карта проезда прилагается). Вам обязательно помогут его погрузить. Для получения заказа менеджер выдачи даст вам Товарную накладную, карточку и схему проезда на буферную зону. После предъявлении этих документов, вам будет выдан заказ.</li>
-					</ul>
-				</article>
-			</div>
-
-			<div class="page__paper page__paper--sm-offset">
-				<div class="t-areas" data-simplebar="">
-					<table>
-						<colgroup>
-							<col>
-							<col class="t-areas__col-30">
-							<col class="t-areas__col-20">
-							<col class="t-areas__col-20">
-							<col class="t-areas__col-20">
-						</colgroup>
-						<tr class="t-areas__head">
-							<td rowspan="2">№</td>
-							<td rowspan="2">Зона доставки</td>
-							<td rowspan="2">Зона доставки</td>
-							<td colspan="2">Доставка при сумме покупки</td>
-						</tr>
-						<tr class="t-areas__head t-areas__head--small">
-							<td>При сумме < 3000 р.</td>
-							<td>При сумме > 3000 р.</td>
-						</tr>
-						<tr class="t-areas__data">
-							<td><span class="t-areas__num t-areas__num--1">1</span></td>
-							<td class="t-areas__desc">г. Северодвинск, ГСК в черте города Подводников, 22</td>
-							<td class="t-areas__desc"><b>500 ₽</b></td>
-							<td class="t-areas__total"><b>300 ₽</b></td>
-							<td class="t-areas__total"><b>Бесплатно</b></td>
-						</tr>
-						<tr class="t-areas__data">
-							<td><span class="t-areas__num t-areas__num--2">2</span></td>
-							<td class="t-areas__desc">Водогон, пос. ГСК: 14 (Подводников 4), Автомобилист, Беломорец, Водоснабженец, Волна, Двина, Звезда, Кардан, Коммунальник, Контакт, Марьяна, Машиностроитель, Мечта, Моряк, Моряна, Мотор, На Октябрьской, Параниха, Прибой, Приморье, Строитель, Темп, Чайка, Чаячий, Лодочная станция у ГСК "Чайка", Старое кладбище</td>
-							<td class="t-areas__desc"><b>950 ₽</b></td>
-							<td class="t-areas__total"><b>450 ₽</b></td>
-							<td class="t-areas__total"><b>400 ₽</b></td>
-						</tr>
-						<tr class="t-areas__data">
-							<td><span class="t-areas__num t-areas__num--3">3</span></td>
-							<td class="t-areas__desc">Дачи: Автомобилист, Березка, Большая Кудьма, Волна,Гавань, Двина-1, Двина-2, Космос, Космос-1, Космос-2,Лая, Кудьма, Лисьи борки, Медик, Отрада, Пеньки,Поморочка, Приозерный, Радуга, Родник, Рябинушка, Северное Сияние, Спектр, Таборы, Тайга-1, Тайга-2, Тайга-3, Три сосны, Уйма, Шихириха</td>
-							<td class="t-areas__desc"><b>500 ₽</b></td>
-							<td class="t-areas__total"><b>300 ₽</b></td>
-							<td class="t-areas__total"><b>900 ₽</b></td>
-						</tr>
-						<tr class="t-areas__data">
-							<td><span class="t-areas__num t-areas__num--4">4</span></td>
-							<td class="t-areas__desc">Рикасиха станция (по 104), Дачи: Беломор, Высота, Дружба, Зеленый бор, Зеленый бор-2, Лайское, Лесная поляна, Малиновка, Надежда, Никольский, Никольское, Онега, Онежский тракт, Песчаный, Пихталы, Полярные зори, Север, Солза (до моста), Строитель, Теремок-1, Теремок-2, Ягринское</td>
-							<td class="t-areas__desc"><b>500 ₽</b></td>
-							<td class="t-areas__total"><b>300 ₽</b></td>
-							<td class="t-areas__total"><b>1000 ₽</b></td>
-						</tr>
-						<tr class="t-areas__data">
-							<td><span class="t-areas__num t-areas__num--5">5</span></td>
-							<td class="t-areas__desc">Архангельск, Новодвинск, Рикасиха, Сот Рикасиха (по Арх.), Лайский Док, Цигломень</td>
-							<td class="t-areas__desc"><b>500 ₽</b></td>
-							<td class="t-areas__total"><b>300 ₽</b></td>
-							<td class="t-areas__total"><b>1300 ₽</b></td>
-						</tr>
-						<tr class="t-areas__head">
-							<td colspan="5" class="text-left">Дополнительные услуги</td>
-						</tr>
-						<tr class="t-areas__data">
-							<td colspan="2" class="t-areas__desc">Доставка "точно в срок" интервал ожидания 10 минут! (доплата)</td>
-							<td class="t-areas__desc"><b>500 ₽</b></td>
-							<td class="t-areas__total"><b>300 ₽</b></td>
-							<td class="t-areas__total"><b>1300 ₽</b></td>
-						</tr>
-						<tr class="t-areas__data">
-							<td colspan="2" class="t-areas__desc">Доставка длинномерных пиломатериалов (более 4 м. доплата)</td>
-							<td class="t-areas__desc"><b>500 ₽</b></td>
-							<td class="t-areas__total"><b>300 ₽</b></td>
-							<td class="t-areas__total"><b>1300 ₽</b></td>
-						</tr>
-						<tr class="t-areas__data">
-							<td colspan="2" class="t-areas__desc">Подъем товара</td>
-							<td colspan="3" class="t-areas__total"><b>1,5 ₽*1КГ*1 ЭТАЖ; МИНИМАЛЬНАЯ СУММА 250 ₽.</b></td>
-						</tr>
-						<tr class="t-areas__data">
-							<td colspan="2" class="t-areas__desc">Пронос товара (расчитывается также как подъем, 10 метров=1 этаж)</td>
-							<td colspan="3" class="t-areas__total"><b>1,5 ₽*1КГ*10 МЕТРОВ; МИНИМАЛЬНАЯ СУММА 250 ₽.</b></td>
-						</tr>
-					</table>
-				</div>
-
-				<div class="t-areas__map">
-					<div class="t-areas__map__header">
-						<div class="t-areas__map__title">Северодвинск</div>
-						<div class="t-areas__map__nums">
-							<a href="#" class="t-areas__num t-areas__num--1">1</a>
-							<a href="#" class="t-areas__num t-areas__num--2">2</a>
-							<a href="#" class="t-areas__num t-areas__num--3">3</a>
-							<a href="#" class="t-areas__num t-areas__num--4">4</a>
-							<a href="#" class="t-areas__num t-areas__num--5">5</a>
-						</div>
-					</div>
-					<div class="t-areas__map__demo"></div>
-				</div>
-			</div>
-			
 		</div>
 	</section>
-
 	
 	<section class="advantages">
 		<div class="page__center">

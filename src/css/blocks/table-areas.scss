@@ -1,8 +1,8 @@
-.t-areas {
+.table-areas {
 	overflow: auto;
 
 	table {
-		min-width: 900px;
+		min-width: 800px;
 		width: 100%;
 	}
 
@@ -98,13 +98,13 @@
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-	.t-areas {
+	.table-areas {
 		font-size: 14px;
 	}
 }
 
 @media (min-width: 992px) {
-	.t-areas {
+	.table-areas {
 		&__map {
 			&__demo {
 				height: 400px;
