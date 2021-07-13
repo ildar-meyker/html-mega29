@@ -2,10 +2,8 @@
 
 const isProduction = process.env.NODE_ENV == "production";
 
-const browserify = require("browserify");
-const babelify = require("babelify");
-const source = require("vinyl-source-stream");
-const buffer = require("vinyl-buffer");
+const webpack = require("webpack-stream");
+const compiler = require("webpack");
 
 const gulp = require("gulp");
 const gulpif = require("gulp-if");
@@ -49,29 +47,17 @@ gulp.task("filelist", function () {
 /*----------  Scripts  ----------*/
 
 gulp.task("scripts", function () {
-	var result = browserify("./src/js/main.js")
-		.transform(babelify, { presets: ["@babel/preset-env"] })
-		.bundle()
-		.pipe(source("main.js"))
-		.pipe(buffer());
-
-	if (isProduction) {
-		result = result
-			.pipe(sourcemaps.init())
-			.pipe(uglify())
-			.pipe(sourcemaps.write("./"));
-	}
-
-	result = result.pipe(gulp.dest("public/js/"));
-
-	return result;
+	return gulp
+		.src("src/js/main.js")
+		.pipe(webpack(require("./webpack.config.js"), compiler))
+		.pipe(gulp.dest("public/js/"));
 });
 
 /*----------  Styles  ----------*/
 
 gulp.task("styles", function () {
 	return gulp
-		.src(["src/css/*.*", "!src/css/_*.*"])
+		.src(["src/styles/*.*", "!src/styles/_*.*"])
 		.pipe(gulpif("*.scss", sass().on("error", sass.logError)))
 		.pipe(gulpif("*.less", less()))
 		.pipe(postcss([autoprefixer()]))
@@ -151,7 +137,7 @@ gulp.task("watch", function () {
 		"src/templates/**/*",
 		gulp.series("filelist", "grunt-assemble", "reload")
 	);
-	gulp.watch("src/css/**/*", gulp.series("sprite", "styles"));
+	gulp.watch("src/styles/**/*", gulp.series("sprite", "styles"));
 	gulp.watch("src/js/**", gulp.series("scripts", "reload"));
 	gulp.watch("src/images/**", gulp.series("images", "reload"));
 	gulp.watch("src/uploads/**", gulp.series("uploads", "reload"));

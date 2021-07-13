@@ -1,0 +1,39 @@
+.sorting {
+	margin-bottom: 15px;
+	display: flex;
+	align-items: center;
+
+	&__left {
+		flex-grow: 1;
+
+		select {
+			width: 240px;
+		}
+	}
+
+	&__modes {
+		display: flex;
+		padding: 4px;
+		background: #e7e7e8;
+		border-radius: 8px;
+
+		&__item {
+			padding: 7px;
+			font-size: 18px;
+			line-height: 0;
+			border-radius: 5px;
+			color: #323232;
+
+			&.active {
+				background: #fff;
+				color: #21a73f;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.sorting {
+		margin-bottom: 20px;
+	}
+}

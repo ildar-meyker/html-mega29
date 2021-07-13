@@ -1,0 +1,57 @@
+.content {
+	padding-bottom: 20px;
+
+	&__side {
+		display: none;
+	}
+
+	&__image {
+		overflow: hidden;
+		border-radius: 4px;
+		line-height: 0;
+
+		&--empty {
+			padding-top: 50%;
+			background: #f2f3f5 url(../images/no-image.svg) no-repeat 50% 50%;
+			background-size: 54% auto;
+			border-radius: 4px;
+		}
+
+		&--rect {
+			border-radius: 0;
+		}
+	}
+
+	&__more {
+		margin: 20px 0;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.content {
+		&__more {
+			button {
+				padding: 20px 15px;
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.content {
+		&__center {
+			display: flex;
+		}
+
+		&__side {
+			display: block;
+			flex: 0 0 230px;
+		}
+
+		&__main {
+			flex-grow: 1;
+			padding-left: 17px;
+		}
+	}
+}

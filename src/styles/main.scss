@@ -4,7 +4,8 @@
 @import "../../node_modules/bootstrap/scss/_variables";
 @import "../../node_modules/bootstrap/scss/_mixins";
 @import "../../node_modules/bootstrap/scss/_transitions";
-@import "../../node_modules/simplebar/dist/simplebar.css";
+@import "../../node_modules/simplebar/dist/simplebar";
+@import "vendor/select2";
 @import "vendor/hamburgers";
 @import "vendor/spinners";
 
@@ -18,7 +19,7 @@
 
 // partials
 @import "_fonts";
-@import "_vendor-fix";
+@import "_fix-vendors";
 @import "_defaults";
 
 // blocks
@@ -32,8 +33,9 @@
 @import "blocks/header";
 @import "blocks/table-areas";
 @import "blocks/article";
-@import "blocks/no-image";
 @import "blocks/nav-path";
 @import "blocks/nav-side";
 @import "blocks/nav-info";
 @import "blocks/content";
+@import "blocks/sorting";
+@import "blocks/news";

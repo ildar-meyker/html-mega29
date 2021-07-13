@@ -1,4 +1,4 @@
-const $ = require("jquery");
+import $ from "jquery";
 
 const NavInfo = {
 	$root: $(),
@@ -32,4 +32,4 @@ const NavInfo = {
 	},
 };
 
-module.exports = NavInfo;
+export default NavInfo;

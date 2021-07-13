@@ -1,7 +1,16 @@
-const $ = (global.$ = global.jQuery = require("jquery"));
-require("bootstrap/js/dist/collapse");
-require("simplebar");
+import $ from "jquery";
+window.$ = window.jQuery = $;
 
-const NavInfo = require("./modules/NavInfo");
+import "bootstrap/js/dist/collapse";
+import "simplebar";
+import "select2";
 
-NavInfo.init();
+import NavInfo from "./modules/NavInfo";
+
+$(function () {
+	NavInfo.init();
+
+	$("select").select2({
+		minimumResultsForSearch: -1,
+	});
+});

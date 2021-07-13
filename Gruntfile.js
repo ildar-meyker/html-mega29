@@ -1,50 +1,35 @@
-'use strict';
+"use strict";
 
-module.exports = function(grunt) {
-
-	grunt.loadNpmTasks('grunt-assemble');
+module.exports = function (grunt) {
+	grunt.loadNpmTasks("grunt-assemble");
 	grunt.loadNpmTasks("grunt-modernizr");
 	grunt.loadNpmTasks("grunt-responsive-images");
 
 	grunt.initConfig({
-		
 		assemble: {
 			options: {
-				helpers: [
-					'handlebars-helpers',
-					'handlebars-helper-repeat'
-				],
-				partials: 'src/templates/partials/**/*.hbs',
-				layoutdir: 'src/templates/layouts',
-				ext: '.html'
+				helpers: ["handlebars-helpers", "handlebars-helper-repeat"],
+				partials: "src/templates/partials/**/*.hbs",
+				layoutdir: "src/templates/layouts",
+				ext: ".html",
 			},
 			site: {
 				expand: true,
-				cwd: 'src/templates/pages',
-				src: ['**/*.hbs'],
-				dest: 'public/'
-			}
+				cwd: "src/templates/pages",
+				src: ["**/*.hbs"],
+				dest: "public/",
+			},
 		},
 
 		modernizr: {
 			dist: {
-				"crawl": false,
-				"customTests": [],
-				"dest": "./public/js/modernizr-output.js",
-				"tests": [
-					"touchevents",
-					"video",
-					"lowbandwidth",
-					"csspointerevents",
-					"hiddenscroll",
-					"objectfit",
-					"requestanimationframe"
-				],
-				"options": [
-					"setClasses"
-				],
-				"uglify": true
-			}
+				crawl: false,
+				customTests: [],
+				dest: "./public/js/modernizr-output.js",
+				tests: [],
+				options: ["setClasses"],
+				uglify: true,
+			},
 		},
 
 		// responsive_images: {
@@ -77,7 +62,5 @@ module.exports = function(grunt) {
 		//       }]
 		//     }
 		//   },
-
 	});
-
 };
