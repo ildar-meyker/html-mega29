@@ -2081,61 +2081,61 @@ a {
     padding-top: 0;
     margin-top: -10px; } }
 
-.advantages {
+.pros {
   padding: 10px 0;
   background: #fff; }
-  .advantages__center {
+  .pros__center {
     position: relative; }
-  .advantages__see-all {
+  .pros__see-all {
     position: absolute;
     right: 0;
     top: 5px; }
-  .advantages__h1 {
+  .pros__h1 {
     margin-bottom: 40px;
     font-size: 28px;
     font-weight: 700;
     color: #2e2e2e; }
-  .advantages__window {
+  .pros__window {
     overflow: auto;
     margin: 0 -20px; }
-  .advantages__list {
+  .pros__list {
     display: flex;
     margin-bottom: 30px; }
-  .advantages__item {
+  .pros__item {
     flex: 0 0 260px;
     max-width: 260px;
     padding: 0 20px;
     text-align: center; }
-    .advantages__item__icon {
+    .pros__item__icon {
       height: 90px; }
-      .advantages__item__icon--return-box {
+      .pros__item__icon--return-box {
         padding-bottom: 10px; }
-      .advantages__item__icon img {
+      .pros__item__icon img {
         max-height: 100%;
         width: auto; }
-    .advantages__item__title {
+    .pros__item__title {
       font-size: 20px;
       font-weight: 500; }
-    .advantages__item__desc {
+    .pros__item__desc {
       font-size: 15px; }
-  .advantages__sep {
+  .pros__sep {
     border-left: 1px solid #727271;
     margin-top: 20px;
     height: 85px; }
-  .advantages .simplebar-horizontal {
+  .pros .simplebar-horizontal {
     margin: 0 20px; }
 
 @media (min-width: 992px) {
-  .advantages__h1 {
+  .pros__h1 {
     margin-bottom: 20px;
     font-size: 32px; }
-  .advantages__item__title {
+  .pros__item__title {
     font-size: 18px; }
-  .advantages__item__desc {
+  .pros__item__desc {
     font-size: 13px; } }
 
 @media (min-width: 1200px) {
-  .advantages__item {
+  .pros__item {
     flex: 1 0 19%; } }
 
 .header__topbar {

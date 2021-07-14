@@ -1,4 +1,4 @@
-.advantages {
+.pros {
 	padding: 10px 0;
 	background: #fff;
 
@@ -70,7 +70,7 @@
 }
 
 @media (min-width: 992px) {
-	.advantages {
+	.pros {
 		&__h1 {
 			margin-bottom: 20px;
 			font-size: 32px;
@@ -88,7 +88,7 @@
 }
 
 @media (min-width: 1200px) {
-	.advantages {
+	.pros {
 		&__item {
 			flex: 1 0 19%;
 		}
