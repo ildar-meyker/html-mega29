@@ -1,0 +1,5 @@
+@for $i from 1 through 20 {
+	.spacer-#{$i*5} {
+		height: #{$i * 5}px;
+	}
+}
