@@ -3,6 +3,25 @@
 	flex-wrap: wrap;
 	margin: -6px -5px 0 -5px;
 
+	&--list {
+		.news__col {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+
+		.news__tags__item {
+			font-size: 13px;
+		}
+
+		.news__title {
+			font-size: 18px;
+		}
+
+		.news__date {
+			font-size: 13px;
+		}
+	}
+
 	&__col {
 		margin-top: 6px;
 		display: flex;
@@ -48,6 +67,30 @@
 		margin-top: 5px;
 		font-size: 2vw;
 		text-align: right;
+	}
+}
+
+@media (min-width: 768px) {
+	.news {
+		&--list {
+			.news__item {
+				display: flex;
+			}
+
+			.news__image {
+				flex: 0 0 300px;
+			}
+
+			.news__desc {
+				display: flex;
+				flex-direction: column;
+				flex-grow: 1;
+			}
+
+			.news__title {
+				flex-grow: 1;
+			}
+		}
 	}
 }
 

@@ -26140,6 +26140,11 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()("select").select2({
     minimumResultsForSearch: -1
   });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".sorting__modes__item", function () {
+    var mode = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data("mode");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).siblings().removeClass("active").end().addClass("active");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#news").toggleClass("news--list", mode === "list");
+  });
 });
 
 /***/ }),
