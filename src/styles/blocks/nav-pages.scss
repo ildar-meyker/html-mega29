@@ -1,0 +1,39 @@
+.nav-pages {
+	margin: 25px 0;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+
+	&__link,
+	&__text {
+		margin: 0 5px;
+		height: 30px;
+		min-width: 30px;
+		padding: 0 5px;
+		line-height: 30px;
+	}
+
+	&__link {
+		border-radius: 5px;
+		border: 1px solid #b2b3b3;
+		font-size: 12px;
+		color: #b2b3b3;
+
+		&:hover {
+			border-color: transparent;
+			background: #21a73f;
+			color: #fff;
+		}
+	}
+
+	&__text {
+		font-size: 24px;
+		font-weight: 500;
+		color: #000;
+
+		&--sep {
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
