@@ -1,13 +1,18 @@
 .nav-info {
+	margin-top: 10px;
+	margin-bottom: 30px;
+	padding-bottom: 2px;
 	overflow: hidden;
+}
+
+@media (min-width: 768px) {
+	.nav-info {
+		margin-top: 20px;
+	}
 }
 
 @media (max-width: 991.98px) {
 	.nav-info {
-		&__data {
-			margin: 10px 0;
-		}
-
 		&__group {
 			margin: -2px 0;
 		}
@@ -69,10 +74,6 @@
 
 @media (min-width: 768px) and (max-width: 991.98px) {
 	.nav-info {
-		&__data {
-			margin: 20px 0;
-		}
-
 		&__title {
 			font-size: 36px;
 			padding: 18px 35px;
@@ -93,7 +94,7 @@
 			border: 2px solid #f2f3f5;
 			border-bottom: 0;
 			background: #fff;
-			margin: 20px 0 -22px 0;
+			margin-bottom: -2px;
 			border-radius: 4px 4px 0 0;
 			font-size: 14px;
 			font-weight: 500;
@@ -117,7 +118,6 @@
 
 		&__data {
 			position: relative;
-			margin: 20px 0;
 		}
 
 		&__group {

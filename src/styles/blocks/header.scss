@@ -46,7 +46,8 @@
 		color: #2e2e2e;
 
 		&__logo {
-			flex: 0 0 120px;
+			flex: 0 0 auto;
+			width: 120px;
 			margin: 0 2%;
 
 			img {

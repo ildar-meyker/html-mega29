@@ -9,7 +9,8 @@
 		margin-bottom: 20px;
 
 		&__icon {
-			flex: 0 0 11%;
+			flex: 0 0 auto;
+			width: 11%;
 			min-width: 40px;
 			max-width: 80px;
 

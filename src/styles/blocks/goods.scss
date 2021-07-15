@@ -1,9 +1,23 @@
 .goods {
-	&__h1 {
+	&--nowrap {
+		margin: 30px 0;
+
+		.goods__list {
+			flex-wrap: nowrap;
+		}
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		margin-bottom: 10px;
-		font-size: 24px;
-		font-weight: 700;
-		color: #2e2e2e;
+	}
+
+	&__window {
+		overflow: auto;
+		padding: 0 2px 12px 2px;
+		margin: 0 -2px;
 	}
 
 	&__list {
@@ -15,8 +29,8 @@
 	&__col {
 		display: flex;
 		flex-direction: column;
-		flex: 0 0 50%;
-		max-width: 50%;
+		flex: 0 0 auto;
+		width: 50%;
 		margin-top: 4px;
 		padding: 0 2px;
 	}
@@ -35,8 +49,15 @@
 	&__image {
 		display: block;
 		position: relative;
-		background: #f2f3f5;
-		padding-top: 90%;
+		padding-top: 100%;
+
+		.backgroundblendmode &--gray {
+			background: #f2f3f5;
+
+			img {
+				mix-blend-mode: multiply;
+			}
+		}
 
 		div {
 			position: absolute;
@@ -48,17 +69,22 @@
 			justify-content: center;
 			align-items: center;
 		}
+
+		img {
+			max-width: 80%;
+			max-height: 80%;
+		}
 	}
 
 	&__ctrl {
 		position: absolute;
-		top: 10px;
-		right: 8px;
+		top: 3px;
+		right: 3px;
 
 		&__item {
 			display: block;
-			margin-bottom: 13px;
-			font-size: 24px;
+			padding: 7px;
+			font-size: 16px;
 			line-height: 0;
 			color: #b2b3b3;
 		}
@@ -67,24 +93,33 @@
 	&__labels {
 		position: absolute;
 		top: 10px;
-		left: 8px;
+		left: 10px;
 		width: 10px;
 		line-height: 0;
 
 		&__item {
 			margin-bottom: 4px;
 			display: inline-block;
-			padding: 9px 10px;
+			padding: 10px;
 			background: #fff;
-			box-shadow: 0px 3.37931px 3.37931px rgba(0, 0, 0, 0.1);
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 			border-radius: 3px;
-			font-size: 9px;
+			font-size: 10px;
 			font-weight: 700;
 			white-space: nowrap;
 			color: #2f80ed;
 
 			&--red {
 				color: #ef1a1a;
+			}
+
+			&--orange {
+				background: #ef7f1a;
+				color: #fff;
+			}
+
+			&--green {
+				color: #21a73f;
 			}
 		}
 	}
@@ -122,12 +157,13 @@
 	&__rate {
 		display: flex;
 		justify-content: center;
+		align-items: center;
 
 		&__stars {
 			background: url("../images/goods/outline-star.png") repeat-x;
 			background-size: auto 100%;
-			width: 96px;
-			height: 16px;
+			width: 6em;
+			height: 1em;
 
 			div {
 				background: url("../images/goods/filled-star.png") repeat-x;
@@ -139,7 +175,7 @@
 
 		&__count {
 			margin-left: 5px;
-			font-size: 13px;
+			font-size: 0.8em;
 			color: #b2b3b3;
 		}
 	}
@@ -161,28 +197,28 @@
 @media (min-width: 600px) {
 	.goods {
 		&__col {
-			flex: 0 0 33.33%;
-			max-width: 33.33%;
+			width: 33.33%;
 		}
 	}
 }
 @media (min-width: 768px) {
 	.goods {
-		&__h1 {
-			font-size: 46px;
+		&__header {
+			margin-bottom: 15px;
 		}
 
 		&__col {
-			flex: 0 0 25%;
-			max-width: 25%;
+			width: 25%;
 		}
 	}
 }
 
 @media (min-width: 992px) {
 	.goods {
-		&__h1 {
-			font-size: 32px;
+		&--nowrap {
+			.goods__col {
+				width: 20%;
+			}
 		}
 	}
 }

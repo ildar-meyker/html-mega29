@@ -26,7 +26,7 @@ module.exports = function (grunt) {
 				crawl: false,
 				customTests: [],
 				dest: "./public/js/modernizr-output.js",
-				tests: [],
+				tests: ["backgroundblendmode"],
 				options: ["setClasses"],
 				uglify: true,
 			},

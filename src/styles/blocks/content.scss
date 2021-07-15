@@ -1,7 +1,4 @@
 .content {
-	padding-bottom: 20px;
-	margin-top: 15px;
-
 	&__side {
 		display: none;
 	}
@@ -57,7 +54,8 @@
 
 		&__side {
 			display: block;
-			flex: 0 0 230px;
+			flex: 0 0 auto;
+			width: 230px;
 		}
 
 		&__main {

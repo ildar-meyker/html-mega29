@@ -1,0 +1,27 @@
+.clearfix {
+	&::after {
+		display: block;
+		clear: both;
+		content: "";
+	}
+}
+
+.is-flipped-x {
+	transform: scaleX(-1);
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
+.mb-0 {
+	margin-bottom: 0 !important;
+}
+
+.mt-0 {
+	margin-top: 0 !important;
+}
