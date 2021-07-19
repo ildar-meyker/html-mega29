@@ -25,7 +25,12 @@ body {
 	font-family: "KievitPro", sans-serif;
 	font-feature-settings: "pnum" on, "lnum" on;
 	line-height: 1.2;
-	color: #000;
+	color: #2e2e2e;
+}
+
+textarea {
+	resize: vertical;
+	min-height: 6em;
 }
 
 img {
@@ -37,15 +42,28 @@ a {
 	transition: all 0.2s;
 }
 
+.zoom-for-tablet {
+	font-size: 3.9vw;
+}
+
 .h1 {
 	margin-bottom: 15px;
 	font-size: 24px;
 	font-weight: 700;
-	color: #2e2e2e;
 }
 
 @media (min-width: 768px) {
+	.zoom-for-tablet {
+		font-size: 30px;
+	}
+
 	.h1 {
 		font-size: 32px;
+	}
+}
+
+@media (min-width: 992px) {
+	.zoom-for-tablet {
+		font-size: 16px;
 	}
 }

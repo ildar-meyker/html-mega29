@@ -1,0 +1,84 @@
+.cart-total {
+	margin-top: 20/16 + em;
+	background: #fff;
+	border: (1/16) + em solid #f2f3f5;
+	border-radius: (4/16) + em;
+	box-shadow: 0px 0px (5/16) + em rgba(51, 51, 51, 0.04),
+		0px 0px (20/16) + em rgba(51, 51, 51, 0.08);
+
+	&__title {
+		padding: (13/22) + em (25/22) + em;
+		border-bottom: (1/22) + em solid #f2f3f5;
+		font-size: (22/16) + em;
+		font-weight: 700;
+		text-align: center;
+	}
+
+	&__body {
+		padding: (25/16) + em;
+	}
+
+	&__offer {
+		margin: (8/16) + em 0 (40/16) + em 0;
+		font-weight: 700;
+		text-align: center;
+		color: #21a73f;
+	}
+
+	&__props {
+		margin-top: (30/16) + em;
+	}
+
+	&__prop {
+		margin-top: (4/16) + em;
+		display: flex;
+		justify-content: space-between;
+		font-weight: 500;
+	}
+
+	&__coupon {
+		margin-top: (20/16) + em;
+		display: flex;
+
+		input {
+			flex: 0 0 auto;
+			width: 50%;
+			border-color: #ef7f1a;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			font-size: (17/16) + em;
+			font-weight: 700;
+
+			&:focus {
+				border-color: #ef7f1a;
+			}
+		}
+
+		button {
+			flex: 0 0 auto;
+			width: 50%;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+			font-size: (17/16) + em;
+		}
+	}
+
+	&__order {
+		margin-top: 1.13em;
+
+		button {
+			margin-top: (6/17) + em;
+			font-size: (17/16) + em;
+		}
+
+		&__1-click {
+			font-weight: 500;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.cart-total {
+		margin-top: 0;
+	}
+}

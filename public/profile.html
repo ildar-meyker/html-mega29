@@ -8,7 +8,7 @@
 	
 	<title> МЕГА, Новости</title>
 
-	<link rel="stylesheet" href="https://i.icomoon.io/public/temp/876f22d68e/html-mega29/style.css">
+	<link rel="stylesheet" href="https://i.icomoon.io/public/temp/19fec0e064/html-mega29/style.css">
 	<link rel="stylesheet" href="css/main.min.css">
 	
 	<script src="js/modernizr-output.js"></script>
@@ -113,230 +113,154 @@
 		<div class="page__center">
 			<a href="#">Главная</a>
             <i class="icon-arrow-right"></i>
-            <a href="#">Корзина</a>
+            <a href="#">Мой кабинет</a>
 		</div>
 	</nav>
+    
+    <div class="page__center">
+        <div class="layout-basic__center">
+            <div class="layout-basic__side">
+                
+                <nav class="nav-profile">
+                    <a href="#" class="nav-profile__item active">Личный кабинет</a>
+                    <a href="#" class="nav-profile__item">Смена пароля</a>
+                    <a href="#" class="nav-profile__item">Избранное</a>
+                    <a href="#" class="nav-profile__item">История заказов</a>
+                    <a href="#" class="nav-profile__item">Карты</a>
+                </nav>
 
-    <section class="cart">
-        <div class="page__center">
-            <div class="cart__center">
-                <div class="cart__main">
+                <div class="gap-5"></div>
 
-                    <div class="cart__header">
-                        <h1 class="cart__header__title">В корзине</h1>
-                        <a href="#" class="button button-outline-black button--size-1">
-                            Очистить
-                        </a>
-                    </div>
-                    <div class="cart__list">
-                        <div class="cart__item">
-                            <div class="cart__image">
-                                <div class="goods__image goods__image--gray">
-                                    <div><img src="images/temp/goods/1.jpeg" alt=""></div>
-                                </div>
-                            </div>
-                            <div class="cart__desc">
-                                <div class="cart__code">Артикул: 897-356</div>
-                                <div class="cart__title">
-                                    <a href="#">Дрель AEК BE 750 R 449160</a>
-                                </div>
-                                <div class="goods__rate cart__rate">
-                                    <div class="goods__rate__stars">
-                                        <div style="width: 68%;"></div>
+                <a href="#" class="button button-outline-green button--full">Выйти</a>
+
+            </div>
+            <div class="layout-basic__main">
+
+                <section class="nav-info" id="nav-info">
+
+                    <div class="nav-info__data">
+                        <div class="nav-info__group active">
+                            <a href="#" class="nav-info__title" data-bs-toggle="collapse" data-bs-target="#nav-info-1">
+                                <span>Личный кабинет</span>
+                                <i class="icon-arrow-down"></i>
+                            </a>
+                            <div class="nav-info__crop collapse show" id="nav-info-1">
+                                <div class="nav-info__list">
+                                    
+                                    <div class="form-panel">
+                                        <div class="form-panel__header">
+                                            <div class="form-panel__title">Ваши данные</div>
+                                        </div>
+                                        <div class="form-panel__body">
+                                            <div class="form-panel__item form-panel__item--col">
+                                                <label class="form-panel__label">Имя</label>
+                                                <input type="text" class="input input-default input--full" placeholder="Ваше имя">
+                                            </div>
+                                            
+                                            <div class="form-panel__item form-panel__item--col">
+                                                <label class="form-panel__label">Фамилия</label>
+                                                <input type="text" class="input input-default input--full" placeholder="Ваша фамилия">
+                                            </div>
+                                            
+                                            <div class="form-panel__item form-panel__item--col">
+                                                <label class="form-panel__label">Номер телефона</label>
+                                                <input type="text" class="input input-default input--full" placeholder="Ваш номер телефона">
+                                            </div>
+                                            
+                                            <div class="form-panel__item form-panel__item--col">
+                                                <label class="form-panel__label">E-mail</label>
+                                                <input type="text" class="input input-default input--full" placeholder="Ваш e-mail">
+                                            </div>
+                                            
+                                            <div class="form-panel__item">
+                                                <label class="form-panel__label">Адрес</label>
+                                                <input type="text" class="input input-default input--full" placeholder="Ваш адрес">
+                                            </div>
+
+                                            <div class="form-panel__item">
+                                                <label class="form-panel__radio">
+                                                    <input type="checkbox">
+                                                    <span>Я согласен с <a href="#" target="_blank">обработку персональных данных</a></span>
+                                                </label>
+                                            </div>
+
+                                            <div class="form-panel__sep"></div>
+
+                                            <div class="form-panel__auth">
+                                                <div class="form-panel__auth__text">
+                                                    Вы можете связать свой профиль с профилями в социальных сетях и сервисах:
+                                                </div>
+                                                <div class="form-panel__auth__icons">
+                                                    <a href="#">
+                                                        <i class="icon-vk-share"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
                                     </div>
-                                    <div class="goods__rate__count">(23)</div>
-                                </div>
-                                <button type="button" class="cart__close">
-                                    <i class="icon-close"></i>
-                                </button>
-                            </div>
-                            <div class="cart__props">
-                                <div class="cart__props__inner">
-                                    <div class="cart__prop">
-                                        <div>В наличии</div>
-                                        <div>7 шт</div>
-                                    </div>
-                                    <div class="cart__prop">
-                                        <div>Доставка</div>
-                                        <div>завтра</div>
-                                    </div>
-                                    <div class="cart__prop">
-                                        <div>Самовывоз</div>
-                                        <div>сегодня</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cart__rest">
-                                <div class="cart__price"><span>5 120</span> ₽ / шт</div>
-                                <div class="cart__points"><span>+42</span> балла на карту</div>
-                                <div class="cart__count">
-                                    <button type="button">-</button>
-                                    <input type="text" value="2">
-                                    <button type="button">+</button>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="cart__item">
-                            <div class="cart__image">
-                                <div class="goods__image goods__image--gray">
-                                    <div><img src="images/temp/goods/2.jpeg" alt=""></div>
-                                </div>
-                            </div>
-                            <div class="cart__desc">
-                                <div class="cart__code">Артикул: 897-356</div>
-                                <div class="cart__title">
-                                    <a href="#">Дрель AEК BE 750 R 449160</a>
-                                </div>
-                                <div class="goods__rate cart__rate">
-                                    <div class="goods__rate__stars">
-                                        <div style="width: 68%;"></div>
-                                    </div>
-                                    <div class="goods__rate__count">(23)</div>
-                                </div>
-                                <button type="button" class="cart__close">
-                                    <i class="icon-close"></i>
-                                </button>
-                            </div>
-                            <div class="cart__props">
-                                <div class="cart__props__inner">
-                                    <div class="cart__prop">
-                                        <div>В наличии</div>
-                                        <div>7 шт</div>
-                                    </div>
-                                    <div class="cart__prop">
-                                        <div>Доставка</div>
-                                        <div>завтра</div>
-                                    </div>
-                                    <div class="cart__prop">
-                                        <div>Самовывоз</div>
-                                        <div>сегодня</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="cart__rest">
-                                <div class="cart__price"><span>5 120</span> ₽ / шт</div>
-                                <div class="cart__points"><span>+42</span> балла на карту</div>
-                                <div class="cart__count">
-                                    <button type="button">-</button>
-                                    <input type="text" value="2">
-                                    <button type="button">+</button>
+                        <div class="nav-info__group">
+                            <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-2">
+                                <span>Смена пароля</span>
+                                <i class="icon-arrow-down"></i>
+                            </a>
+                            <div class="nav-info__crop collapse" id="nav-info-2">
+                                <div class="nav-info__list">
+                                    
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, enim pariatur, vero ab repudiandae unde cum iure numquam quisquam earum aperiam molestiae asperiores accusantium facilis, ad tenetur commodi delectus nostrum!
+                                    
                                 </div>
                             </div>
                         </div>
-
-                        <div class="cart__item">
-                            <div class="cart__image">
-                                <div class="goods__image goods__image--gray">
-                                    <div><img src="images/temp/goods/3.png" alt=""></div>
+                        <div class="nav-info__group">
+                            <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-3">
+                                <span>Избранное</span>
+                                <i class="icon-arrow-down"></i>
+                            </a>
+                            <div class="nav-info__crop collapse" id="nav-info-3">
+                                <div class="nav-info__list">
+                                    
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, enim pariatur, vero ab repudiandae unde cum iure numquam quisquam earum aperiam molestiae asperiores accusantium facilis, ad tenetur commodi delectus nostrum!
+                                    
                                 </div>
                             </div>
-                            <div class="cart__desc">
-                                <div class="cart__code">Артикул: 897-356</div>
-                                <div class="cart__title">
-                                    <a href="#">Ударная дрель Boss ДЭУ-6500 </a>
-                                </div>
-                                <div class="goods__rate cart__rate">
-                                    <div class="goods__rate__stars">
-                                        <div style="width: 68%;"></div>
-                                    </div>
-                                    <div class="goods__rate__count">(23)</div>
-                                </div>
-                                <button type="button" class="cart__close">
-                                    <i class="icon-close"></i>
-                                </button>
-                            </div>
-                            <div class="cart__props">
-                                <div class="cart__props__inner">
-                                    <div class="cart__prop">
-                                        <div>В наличии</div>
-                                        <div>7 шт</div>
-                                    </div>
-                                    <div class="cart__prop">
-                                        <div>Доставка</div>
-                                        <div>завтра</div>
-                                    </div>
-                                    <div class="cart__prop">
-                                        <div>Самовывоз</div>
-                                        <div>сегодня</div>
-                                    </div>
+                        </div>
+                        <div class="nav-info__group">
+                            <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-4">
+                                <span>История заказов</span>
+                                <i class="icon-arrow-down"></i>
+                            </a>
+                            <div class="nav-info__crop collapse" id="nav-info-4">
+                                <div class="nav-info__list">
+                                    
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, enim pariatur, vero ab repudiandae unde cum iure numquam quisquam earum aperiam molestiae asperiores accusantium facilis, ad tenetur commodi delectus nostrum!
+                                    
                                 </div>
                             </div>
-                            <div class="cart__rest">
-                                <div class="cart__price"><span>5 120</span> ₽ / шт</div>
-                                <div class="cart__points"><span>+42</span> балла на карту</div>
-                                <div class="cart__count">
-                                    <button type="button">-</button>
-                                    <input type="text" value="2">
-                                    <button type="button">+</button>
+                        </div>
+                        <div class="nav-info__group">
+                            <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-5">
+                                <span>Карты</span>
+                                <i class="icon-arrow-down"></i>
+                            </a>
+                            <div class="nav-info__crop collapse" id="nav-info-5">
+                                <div class="nav-info__list">
+                                    
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, enim pariatur, vero ab repudiandae unde cum iure numquam quisquam earum aperiam molestiae asperiores accusantium facilis, ad tenetur commodi delectus nostrum!
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
+                </section>
 
-                </div>
-                <div class="cart__side">
-
-                    <section class="cart__total">
-                        <h3  class="cart__total__title">Ваш заказ</h3>
-                        <div class="cart__total__body">
-                            <div class="cart__total__offer">При заказе от 3 000 ₽ — доставка бесплатно!</div>
-                            
-                            <div class="cart__total__props">
-                                <div class="cart__total__prop">
-                                    <div>Товаров</div>
-                                    <div>3 шт</div>
-                                </div>
-                                <div class="cart__total__prop">
-                                    <div>Общий вес</div>
-                                    <div>8,5 кг</div>
-                                </div>
-                            </div>
-                            
-                            <div class="cart__total__props">
-                                <div class="cart__total__prop cart__total__prop--bonuses">
-                                    <div>Товаров</div>
-                                    <div>3 шт</div>
-                                </div>
-                                <div class="cart__total__prop cart__total__prop--total">
-                                    <div>Общий вес</div>
-                                    <div>8,5 кг</div>
-                                </div>
-                            </div>
-
-                            <div class="cart__total__coupon">
-                                <input type="text" class="input input-default input--full" placeholder="Ваш промокод">
-                                <button type="button" class="button button-orange button--full">
-                                    Применить
-                                </button>
-                            </div>
-
-                            <div class="cart__total__order">
-                                <button type="button" class="button button-green button--full">
-                                    Оформить заказ
-                                </button>
-                                <button type="button" class="button button-outline-green button--full cart__total__order__1-click">
-                                    Купить в 1 клик
-                                </button>
-                            </div>
-                        </div>
-                    </section>
-                    
-                    <aside class="cart__promo">
-                        <h3 class="cart__promo__title">
-                            Нашли дешевле?
-                            <br> Cнизим цену!
-                        </h3>
-                        <a href="#" class="button button-outline-white cart__promo__button">
-                            <span>Подробнее</span>
-                            <i class="icon-arrow-forward"></i>
-                        </a>
-                    </aside>
-
-                </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <section class="goods goods--nowrap">
         <div class="page__center">

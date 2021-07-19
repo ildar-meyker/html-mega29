@@ -17,10 +17,31 @@
 	color: #727271;
 
 	&:focus {
-		border-color: #b2b3b3;
+		border-color: #21a73f;
 	}
 
 	&::placeholder {
 		color: #b2b3b3;
+	}
+}
+
+.input-datepicker {
+	position: relative;
+	background: #fafafa;
+
+	input {
+		position: relative;
+		z-index: 1;
+		padding-right: 35/16 + em;
+		background: transparent;
+	}
+
+	i {
+		position: absolute;
+		top: 50%;
+		right: 10/16 + em;
+		margin-top: -0.5em;
+		font-size: 14/16 + em;
+		color: rgba(0, 32, 51, 0.35);
 	}
 }

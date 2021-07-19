@@ -1,0 +1,38 @@
+.form-card {
+	border: 1/16 + em solid #e7e7e8;
+	border-radius: 4/16 + em;
+	padding: 15/16 + em;
+
+	&__icons {
+		display: flex;
+		justify-content: flex-end;
+
+		img {
+			margin-left: 3/16 + em;
+			width: 47/16 + em;
+		}
+	}
+
+	&__fields {
+		display: flex;
+		margin: 0 -20/16 + em;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		margin-top: 30/16 + em;
+		padding: 0 20/16 + em;
+		flex: 0 0 auto;
+		width: 100%;
+
+		&--date,
+		&--cvc {
+			margin-top: 10/16 + em;
+			width: 50%;
+		}
+
+		&--num {
+			margin-top: 25/16 + em;
+		}
+	}
+}

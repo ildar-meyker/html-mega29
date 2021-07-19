@@ -5,9 +5,11 @@
 @import "../../node_modules/bootstrap/scss/_mixins";
 @import "../../node_modules/bootstrap/scss/_transitions";
 @import "../../node_modules/simplebar/dist/simplebar";
+@import "../../node_modules/js-datepicker/dist/datepicker.min";
 @import "vendor/select2";
 @import "vendor/hamburgers";
 @import "vendor/spinners";
+@import "vendor/icheck-flat";
 
 // sprites
 .icon {
@@ -20,8 +22,8 @@
 // partials
 @import "_fonts";
 @import "_fix-vendors";
-@import "_defaults";
 @import "_helpers";
+@import "_common";
 
 // blocks
 @import "blocks/page";
@@ -29,7 +31,6 @@
 @import "blocks/button";
 @import "blocks/input";
 @import "blocks/article";
-@import "blocks/spacer";
 @import "blocks/header";
 @import "blocks/footer";
 @import "blocks/error-404";
@@ -44,5 +45,13 @@
 @import "blocks/nav-side";
 @import "blocks/nav-info";
 @import "blocks/nav-pages";
+@import "blocks/nav-profile";
 @import "blocks/goods";
-@import "blocks/cart";
+@import "blocks/layout-basic";
+@import "blocks/layout-order";
+@import "blocks/form-panel";
+@import "blocks/form-card";
+@import "blocks/cart-goods";
+@import "blocks/cart-promo";
+@import "blocks/cart-total";
+@import "blocks/order-complete";

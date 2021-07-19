@@ -49,13 +49,13 @@
     "webpack-stream": "^6.1.2"
   },
   "dependencies": {
-    "@fancyapps/fancybox": "^3.5.7",
     "autosize": "^4.0.2",
     "bootstrap": "^5.0.2",
     "destyle.css": "^1.0.9",
     "icheck": "^1.0.2",
     "jquery": "^1.12.4",
     "jquery-validation": "^1.19.1",
+    "js-datepicker": "^5.18.0",
     "notifyjs-browser": "^0.4.2",
     "select2": "^4.1.0-rc.0",
     "simplebar": "^5.3.4"

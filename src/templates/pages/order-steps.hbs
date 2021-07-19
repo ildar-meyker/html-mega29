@@ -1,0 +1,657 @@
+---
+title: Новости
+layout: default.hbs
+---
+
+<div class="page__wrapper" id="wrapper">
+
+	{{> header }}
+
+	<nav class="nav-path">
+		<div class="page__center">
+			<a href="#">Главная</a>
+            <i class="icon-arrow-right"></i>
+            <a href="#">Корзина</a>
+		</div>
+	</nav>
+    
+    <div class="page__center">
+        <div class="layout-order__center">
+            <div class="layout-order__main">
+
+                <section class="zoom-for-tablet">
+
+                    <h1 class="h1">Оформление заказа</h1>
+
+                    {{!--  step 1 --}}
+                    <div class="form-panel">
+                        <div class="form-panel__header">
+                            <div class="form-panel__title">Контактная информация</div>
+                            <div class="form-panel__step">Шаг 1 / 4</div>
+                        </div>
+                        <div class="form-panel__body">
+                            <div class="form-panel__item form-panel__item--col">
+                                <label class="form-panel__label">Имя</label>
+                                <input type="text" class="input input-default input--full" placeholder="Ваше имя">
+                            </div>
+                            
+                            <div class="form-panel__item form-panel__item--col">
+                                <label class="form-panel__label">Фамилия</label>
+                                <input type="text" class="input input-default input--full" placeholder="Ваша фамилия">
+                            </div>
+                            
+                            <div class="form-panel__item form-panel__item--col">
+                                <label class="form-panel__label">Номер телефона</label>
+                                <input type="text" class="input input-default input--full" placeholder="Ваш номер телефона">
+                            </div>
+                            
+                            <div class="form-panel__item form-panel__item--col">
+                                <label class="form-panel__label">E-mail</label>
+                                <input type="text" class="input input-default input--full" placeholder="Ваш e-mail">
+                            </div>
+                            
+                            <div class="form-panel__item">
+                                <label class="form-panel__label">Адрес</label>
+                                <input type="text" class="input input-default input--full" placeholder="Ваш адрес">
+                            </div>
+                        </div>
+
+                    </div>
+                    {{!-- /step 1 --}}
+
+                    {{!--  step 2 --}}
+                    <div class="form-panel">
+                        <div class="form-panel__header">
+                            <div class="form-panel__title">Выберите способ доставки</div>
+                            <div class="form-panel__step">Шаг 2 / 4</div>
+                        </div>
+                        <div class="form-panel__body">
+
+                            <div class="form-panel__item">
+                                <label class="form-panel__check form-panel__check--radio">
+                                    <input type="radio" name="radio1" checked>
+                                    <span>Доставка</span>
+                                </label>
+                                <label class="form-panel__check form-panel__check--radio">
+                                    <input type="radio" name="radio1">
+                                    <span>Доставка на основе зон в Яндекс картах (Архангельск до 5 000 ₽ )</span>
+                                </label>
+                                <label class="form-panel__check form-panel__check--radio">
+                                    <input type="radio" name="radio1">
+                                    <span>Самовывоз</span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-panel__sep"></div>
+
+                            <div class="form-panel__item mt-0">
+                                <div class="form-panel__label-lg">Выберите дату доставки</div>
+                                <label class="form-panel__check form-panel__check--radio">
+                                    <input type="radio" name="radio2" checked>
+                                    <span>Сегодня</span>
+                                </label>
+                                <label class="form-panel__check form-panel__check--radio">
+                                    <input type="radio" name="radio2">
+                                    <span>Завтра</span>
+                                </label>
+                                <label class="form-panel__check form-panel__check--radio">
+                                    <input type="radio" name="radio2">
+                                    <span>Выбрать</span>
+                                </label>
+                            </div>
+                            
+                            <div class="form-panel__date">
+                                <div class="input-datepicker">
+                                    <input type="text" class="input input-default input--full" placeholder="ДД.ММ.ГГ">
+                                    <i class="icon-calendar"></i>
+                                </div>
+                                
+                            </div>
+
+                            <div class="form-panel__total">
+                                Стоимость доставки составит: <span>650 <span>₽</span></span>
+                            </div>
+                            
+                            <div class="form-panel__sep"></div>
+
+                            <div class="form-panel__attn">
+                                <span>Важно:</span> получателю необходимо иметь при себе документ удостоверяющий личность.
+                            </div>
+                        </div>
+                    </div>
+                    {{!-- /step 2 --}}
+
+                    {{!--  step 3 --}}
+                    <div class="form-panel">
+                        <div class="form-panel__header">
+                            <div class="form-panel__title">Выберите способ оплаты</div>
+                            <div class="form-panel__step">Шаг 3 / 4</div>
+                        </div>
+                        <div class="form-panel__body">
+
+                            <div class="form-panel__item">
+                                <label class="form-panel__check form-panel__check--radio">
+                                    <input type="radio" name="radio3" checked>
+                                    <span>Безналичная оплата при получении</span>
+                                </label>
+                                <label class="form-panel__check form-panel__check--radio">
+                                    <input type="radio" name="radio3">
+                                    <span>Онлайн</span>
+                                </label>
+                            </div>
+
+                            <div class="form-panel__item">
+                                <div class="form-card">
+                                    <div class="form-card__icons">
+                                        <img src="images/footer/pay-cards/mir.svg" alt="Мир">
+                                        <img src="images/footer/pay-cards/visa.svg" alt="Visa">
+                                        <img src="images/footer/pay-cards/maestro.svg" alt="Maestro">
+                                        <img src="images/footer/pay-cards/master-card.svg" alt="MasterCard">
+                                    </div>
+                                    <div class="form-card__fields">
+                                        <div class="form-card__item form-card__item--num">
+                                            <label class="form-panel__label">Номер карты</label>
+                                            <input type="text" class="input input-default input--full" placeholder="Номер карты">
+                                        </div>
+                                        <div class="form-card__item form-card__item--name">
+                                            <label class="form-panel__label">Владелец карты</label>
+                                            <input type="text" class="input input-default input--full" placeholder="Номер карты">
+                                        </div>
+                                        <div class="form-card__item form-card__item--date">
+                                            <label class="form-panel__label">Дата</label>
+                                            <input type="text" class="input input-default input--full" placeholder="__/__/__">
+                                        </div>
+                                        <div class="form-card__item form-card__item--cvc">
+                                            <label class="form-panel__label">CVC</label>
+                                            <input type="password" class="input input-default input--full" placeholder="CVC">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-panel__item">
+                                <div class="form-panel__label-lg">Бонусы</div>
+                                <label class="form-panel__check">
+                                    <input type="checkbox">
+                                    <span></span>Применить бонусы</span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    {{!-- /step 3 --}}
+
+                    {{!--  step 4 --}}
+                    <div class="form-panel">
+                        <div class="form-panel__header">
+                            <div class="form-panel__title">Комменатрий к заказу</div>
+                            <div class="form-panel__step">Шаг 4 / 4</div>
+                        </div>
+                        <div class="form-panel__body">
+
+                            <div class="form-panel__item">
+                                <textarea class="input input-default input--full" placeholder="Ваш комментарий"></textarea>
+                            </div>
+
+                            <div class="form-panel__item">
+                                <label class="form-panel__check">
+                                    <input type="checkbox">
+                                    <span>Я согласен с <a href="#" target="_blank">публичной офертой</a></span>
+                                </label>
+                                <label class="form-panel__check">
+                                    <input type="checkbox">
+                                    <span>Я согласен на <a href="#" target="_blank">обработку персональных данных</a></span>
+                                </label>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    {{!-- /step 4 --}}
+
+                </section>
+
+            </div>
+            <div class="layout-order__side">
+
+                <section class="cart-total zoom-for-tablet">
+                    <h3  class="cart-total__title">Ваш заказ</h3>
+                    <div class="cart-total__body">
+                        <div class="cart-total__offer">При заказе от 3 000 ₽ — доставка бесплатно!</div>
+                        
+                        <div class="cart-total__props">
+                            <div class="cart-total__prop">
+                                <div>Товаров</div>
+                                <div>3 шт</div>
+                            </div>
+                            <div class="cart-total__prop">
+                                <div>Общий вес</div>
+                                <div>8,5 кг</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-total__props">
+                            <div class="cart-total__prop cart-total__prop--bonuses">
+                                <div>Товаров</div>
+                                <div>3 шт</div>
+                            </div>
+                            <div class="cart-total__prop cart-total__prop--total">
+                                <div>Общий вес</div>
+                                <div>8,5 кг</div>
+                            </div>
+                        </div>
+
+                        <div class="cart-total__coupon">
+                            <input type="text" class="input input-default input--full" placeholder="Ваш промокод">
+                            <button type="button" class="button button-orange button--full">
+                                Применить
+                            </button>
+                        </div>
+
+                        <div class="cart-total__order">
+                            <button type="button" class="button button-green button--full">
+                                Оформить заказ
+                            </button>
+                            <button type="button" class="button button-outline-green button--full cart-total__order__1-click">
+                                Купить в 1 клик
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                
+                <aside class="cart-promo zoom-for-tablet">
+                    <h3 class="cart-promo__title">
+                        Нашли дешевле?
+                        <br> Cнизим цену!
+                    </h3>
+                    <a href="#" class="button button-outline-white cart-promo__button">
+                        <span>Подробнее</span>
+                        <i class="icon-arrow-forward"></i>
+                    </a>
+                </aside>
+
+            </div>
+        </div>
+    </div>
+
+    <section class="goods goods--nowrap">
+        <div class="page__center">
+            <div class="goods__header">
+                <h3 class="h1 mb-0">В избранном</h3>
+                <a href="#" class="button button-outline-black button--size-1">
+                    Смотреть все
+                </a>
+            </div>
+            <div class="goods__window" data-simplebar>
+                <div class="goods__list ">
+                    <div class="goods__col">
+                        <div class="goods__item">
+                            <a href="#" class="goods__image goods__image--gray">
+                                <div><img src="images/temp/goods/1/14.png" alt=""></div>
+                            </a>
+                            <div class="goods__desc">
+                                <div class="goods__code">Артикул: 134-331</div>
+                                <div class="goods__title">
+                                    <a href="#">
+                                        Теплоизоляционная плита ПЕНОПЛЭКС Комфорт 50 мм
+                                    </a>
+                                </div>
+                                <div class="goods__rate">
+                                    <div class="goods__rate__stars">
+                                        <div style="width: 68%;"></div>
+                                    </div>
+                                    <div class="goods__rate__count">(23)</div>
+                                </div>
+                                <div class="goods__price"><span>284</span> ₽ / шт</div>
+                                <button class="button button-outline-green button--full button--size-2">
+                                    <span class="spinner-border"></span>
+                                    <span class="button__text">В корзину</span>
+                                </button>
+                            </div>
+                            <div class="goods__ctrl">
+                                <button type="button" class="goods__ctrl__item">
+                                    <i class="icon-heart"></i>
+                                </button>
+                                <button type="button" class="goods__ctrl__item">
+                                    <i class="icon-stats"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goods__col">
+                        <div class="goods__item">
+                            <a href="#" class="goods__image goods__image--gray">
+                                <div><img src="images/temp/goods/1/15.png" alt=""></div>
+                            </a>
+                            <div class="goods__desc">
+                                <div class="goods__code">Артикул: 134-331</div>
+                                <div class="goods__title">
+                                    <a href="#">Пена монтажная Формула мастера  350г</a>
+                                </div>
+                                <div class="goods__rate">
+                                    <div class="goods__rate__stars">
+                                        <div style="width: 68%;"></div>
+                                    </div>
+                                    <div class="goods__rate__count">(23)</div>
+                                </div>
+                                <div class="goods__price"><span>146</span> ₽ / шт</div>
+                                <button class="button button-outline-green button--full button--size-2">
+                                    <span class="spinner-border"></span>
+                                    <span class="button__text">В корзину</span>
+                                </button>
+                            </div>
+                            <div class="goods__ctrl">
+                                <button type="button" class="goods__ctrl__item">
+                                    <i class="icon-heart"></i>
+                                </button>
+                                <button type="button" class="goods__ctrl__item">
+                                    <i class="icon-stats"></i>
+                                </button>
+                            </div>
+                            <div class="goods__labels">
+                                <div class="goods__labels__item goods__labels__item--orange">
+                                    Выбор покупателя
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goods__col">
+                        <div class="goods__item">
+                            <a href="#" class="goods__image goods__image--gray">
+                                <div><img src="images/temp/goods/1/16.png" alt=""></div>
+                            </a>
+                            <div class="goods__desc">
+                                <div class="goods__code">Артикул: 136-681</div>
+                                <div class="goods__title">
+                                    <a href="#">Дрель Skills DP 4010</a>
+                                </div>
+                                <div class="goods__rate">
+                                    <div class="goods__rate__stars">
+                                        <div style="width: 68%;"></div>
+                                    </div>
+                                    <div class="goods__rate__count">(21)</div>
+                                </div>
+                                <div class="goods__price"><span>3 450</span> ₽ / шт</div>
+                                <button class="button button-outline-green button--full button--size-2">
+                                    <span class="spinner-border"></span>
+                                    <span class="button__text">В корзину</span>
+                                </button>
+                            </div>
+                            <div class="goods__ctrl">
+                                <button type="button" class="goods__ctrl__item">
+                                    <i class="icon-heart"></i>
+                                </button>
+                                <button type="button" class="goods__ctrl__item">
+                                    <i class="icon-stats"></i>
+                                </button>
+                            </div>
+                            <div class="goods__labels">
+                                <div class="goods__labels__item goods__labels__item--green">
+                                    Товар месяца
+                                </div>
+                                <div class="goods__labels__item goods__labels__item--red">
+                                    Скидка
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goods__col">
+                        <div class="goods__item">
+                            <a href="#" class="goods__image goods__image--gray">
+                                <div><img src="images/temp/goods/1/17.png" alt=""></div>
+                            </a>
+                            <div class="goods__desc">
+                                <div class="goods__code">Артикул: 134-331</div>
+                                <div class="goods__title">
+                                    <a href="#">Мойка кухонная MILENA 50DG</a>
+                                </div>
+                                <div class="goods__rate">
+                                    <div class="goods__rate__stars">
+                                        <div style="width: 68%;"></div>
+                                    </div>
+                                    <div class="goods__rate__count">(21)</div>
+                                </div>
+                                <div class="goods__price"><span>2 787</span> ₽ / шт</div>
+                                <button class="button button-outline-orange button--full">
+                                    <span class="spinner-border"></span>
+                                    <span class="button__text">Под заказ</span>
+                                </button>
+                            </div>
+                            <div class="goods__ctrl">
+                                <button type="button" class="goods__ctrl__item">
+                                    <i class="icon-heart"></i>
+                                </button>
+                                <button type="button" class="goods__ctrl__item">
+                                    <i class="icon-stats"></i>
+                                </button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="goods__col">
+                        <div class="goods__item">
+                            <a href="#" class="goods__image goods__image--gray">
+                                <div><img src="images/temp/goods/1/18.png" alt=""></div>
+                            </a>
+                            <div class="goods__desc">
+                                <div class="goods__code">Артикул: 134-331</div>
+                                <div class="goods__title">
+                                    <a href="#">Смеситель для ванны Valta D1109500</a>
+                                </div>
+                                <div class="goods__rate">
+                                    <div class="goods__rate__stars">
+                                        <div style="width: 68%;"></div>
+                                    </div>
+                                    <div class="goods__rate__count">(21)</div>
+                                </div>
+                                <div class="goods__price"><span>5 120</span> ₽ / шт</div>
+                                <button class="button button-outline-green button--full button--size-2">
+                                    <span class="spinner-border"></span>
+                                    <span class="button__text">В корзину</span>
+                                </button>
+                            </div>
+                            <div class="goods__ctrl">
+                                <button type="button" class="goods__ctrl__item">
+                                    <i class="icon-heart"></i>
+                                </button>
+                                <button type="button" class="goods__ctrl__item">
+                                    <i class="icon-stats"></i>
+                                </button>
+                            </div>
+                            <div class="goods__labels">
+                                <div class="goods__labels__item goods__labels__item--green">
+                                    Выбор покупателя
+                                </div>
+                                <div class="goods__labels__item">
+                                    Только онлайн
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="goods goods--nowrap">
+        <div class="page__center">
+            <div class="goods__header">
+                <h3 class="h1 mb-0">Вам понадобится</h3>
+                <a href="#" class="button button-outline-black button--size-1">
+                    Смотреть все
+                </a>
+            </div>
+            <div class="goods__window" data-simplebar>
+                <div class="goods__list">
+                    <div class="goods__col">
+                        <div class="goods__item">
+                            <a href="#" class="goods__image goods__image--gray">
+                                <div><img src="images/temp/goods/1/9.png" alt=""></div>
+                            </a>
+                            <div class="goods__desc">
+                                <div class="goods__code">Артикул: 134-331</div>
+                                <div class="goods__title">
+                                    <a href="#">Набор бит Boss PP-963</a>
+                                </div>
+                                <div class="goods__rate">
+                                    <div class="goods__rate__stars">
+                                        <div style="width: 68%;"></div>
+                                    </div>
+                                    <div class="goods__rate__count">(23)</div>
+                                </div>
+                                <div class="goods__price"><span>1 740</span> ₽ / шт</div>
+                                <button class="button button-outline-green button--full button--size-2">
+                                    <span class="spinner-border"></span>
+                                    <span class="button__text">В корзину</span>
+                                </button>
+                            </div>
+                            <div class="goods__ctrl">
+                                <button type="button" class="goods__ctrl__item">
+                                    <i class="icon-heart"></i>
+                                </button>
+                                <button type="button" class="goods__ctrl__item">
+                                    <i class="icon-stats"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goods__col">
+                        <div class="goods__item">
+                            <a href="#" class="goods__image goods__image--gray">
+                                <div><img src="images/temp/goods/1/10.png" alt=""></div>
+                            </a>
+                            <div class="goods__desc">
+                                <div class="goods__code">Артикул: 134-331</div>
+                                <div class="goods__title">
+                                    <a href="#">Ящик для инструментов ReWalt 40”</a>
+                                </div>
+                                <div class="goods__rate">
+                                    <div class="goods__rate__stars">
+                                        <div style="width: 68%;"></div>
+                                    </div>
+                                    <div class="goods__rate__count">(23)</div>
+                                </div>
+                                <div class="goods__price"><span>2 120</span> ₽ / шт</div>
+                                <button class="button button-outline-green button--full button--size-2">
+                                    <span class="spinner-border"></span>
+                                    <span class="button__text">В корзину</span>
+                                </button>
+                            </div>
+                            <div class="goods__ctrl">
+                                <button type="button" class="goods__ctrl__item">
+                                    <i class="icon-heart"></i>
+                                </button>
+                                <button type="button" class="goods__ctrl__item">
+                                    <i class="icon-stats"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goods__col">
+                        <div class="goods__item">
+                            <a href="#" class="goods__image goods__image--gray">
+                                <div><img src="images/temp/goods/1/11.png" alt=""></div>
+                            </a>
+                            <div class="goods__desc">
+                                <div class="goods__code">Артикул: 136-681</div>
+                                <div class="goods__title">
+                                    <a href="#">Насадки Boss WS96-04 8 штук</a>
+                                </div>
+                                <div class="goods__rate">
+                                    <div class="goods__rate__stars">
+                                        <div style="width: 68%;"></div>
+                                    </div>
+                                    <div class="goods__rate__count">(21)</div>
+                                </div>
+                                <div class="goods__price"><span>1 778</span> ₽ / шт</div>
+                                <button class="button button-outline-green button--full button--size-2">
+                                    <span class="spinner-border"></span>
+                                    <span class="button__text">В корзину</span>
+                                </button>
+                            </div>
+                            <div class="goods__ctrl">
+                                <button type="button" class="goods__ctrl__item">
+                                    <i class="icon-heart"></i>
+                                </button>
+                                <button type="button" class="goods__ctrl__item">
+                                    <i class="icon-stats"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goods__col">
+                        <div class="goods__item">
+                            <a href="#" class="goods__image goods__image--gray">
+                                <div><img src="images/temp/goods/1/12.png" alt=""></div>
+                            </a>
+                            <div class="goods__desc">
+                                <div class="goods__code">Артикул: 134-331</div>
+                                <div class="goods__title">
+                                    <a href="#">Набор инструментов Makita 42 предмета</a>
+                                </div>
+                                <div class="goods__rate">
+                                    <div class="goods__rate__stars">
+                                        <div style="width: 68%;"></div>
+                                    </div>
+                                    <div class="goods__rate__count">(21)</div>
+                                </div>
+                                <div class="goods__price"><span>1 778</span> ₽ / шт</div>
+                                <button class="button button-outline-green button--full button--size-2">
+                                    <span class="spinner-border"></span>
+                                    <span class="button__text">В корзину</span>
+                                </button>
+                            </div>
+                            <div class="goods__ctrl">
+                                <button type="button" class="goods__ctrl__item">
+                                    <i class="icon-heart"></i>
+                                </button>
+                                <button type="button" class="goods__ctrl__item">
+                                    <i class="icon-stats"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="goods__col">
+                        <div class="goods__item">
+                            <a href="#" class="goods__image goods__image--gray">
+                                <div><img src="images/temp/goods/1/13.png" alt=""></div>
+                            </a>
+                            <div class="goods__desc">
+                                <div class="goods__code">Артикул: 134-331</div>
+                                <div class="goods__title">
+                                    <a href="#">Ключи из нержавеюще стали Hatter 5 штук</a>
+                                </div>
+                                <div class="goods__rate">
+                                    <div class="goods__rate__stars">
+                                        <div style="width: 68%;"></div>
+                                    </div>
+                                    <div class="goods__rate__count">(21)</div>
+                                </div>
+                                <div class="goods__price"><span>985</span> ₽ / шт</div>
+                                <button class="button button-outline-green button--full button--size-2">
+                                    <span class="spinner-border"></span>
+                                    <span class="button__text">В корзину</span>
+                                </button>
+                            </div>
+                            <div class="goods__ctrl">
+                                <button type="button" class="goods__ctrl__item">
+                                    <i class="icon-heart"></i>
+                                </button>
+                                <button type="button" class="goods__ctrl__item">
+                                    <i class="icon-stats"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	{{> pros }}
+
+	{{> subscribe }}
+
+	{{> footer }}
+
+</div>

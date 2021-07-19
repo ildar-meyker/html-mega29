@@ -1,9 +1,12 @@
 [
   "_elements.html",
+  "cart.html",
   "delivery.html",
   "index.html",
   "news--list.html",
   "news-item.html",
   "news.html",
-  "ordering-cart.html"
+  "order-complete.html",
+  "order-steps.html",
+  "profile.html"
 ]

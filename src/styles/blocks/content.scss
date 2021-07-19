@@ -1,8 +1,4 @@
 .content {
-	&__side {
-		display: none;
-	}
-
 	&__image {
 		overflow: hidden;
 		border-radius: 4px;
@@ -42,25 +38,6 @@
 				padding: 20px 15px;
 				font-size: 16px;
 			}
-		}
-	}
-}
-
-@media (min-width: 992px) {
-	.content {
-		&__center {
-			display: flex;
-		}
-
-		&__side {
-			display: block;
-			flex: 0 0 auto;
-			width: 230px;
-		}
-
-		&__main {
-			flex-grow: 1;
-			padding-left: 17px;
 		}
 	}
 }

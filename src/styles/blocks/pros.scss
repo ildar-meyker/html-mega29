@@ -16,7 +16,6 @@
 		margin-bottom: 40px;
 		font-size: 28px;
 		font-weight: 700;
-		color: #2e2e2e;
 	}
 
 	&__window {
@@ -27,6 +26,7 @@
 	&__list {
 		display: flex;
 		margin-bottom: 30px;
+		color: #000;
 	}
 
 	&__item {

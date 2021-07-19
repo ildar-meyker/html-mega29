@@ -1,0 +1,34 @@
+.nav-profile {
+	border: 1/16 + em solid #f2f3f5;
+	border-radius: 4/16 + em;
+	background: #fff;
+	overflow: hidden;
+
+	&__item {
+		position: relative;
+		border-top: 1/13 + em solid #f2f3f5;
+		display: block;
+		padding: 12/13 + em 14/13 + em;
+		font-size: 13/16 + em;
+		font-weight: 700;
+
+		&:first-child {
+			border-top: 0;
+		}
+
+		&.active,
+		&:hover {
+			color: #21a73f;
+
+			&:before {
+				content: " ";
+				width: 2/13 + em;
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				background: #21a73f;
+			}
+		}
+	}
+}

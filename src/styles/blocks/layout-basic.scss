@@ -1,0 +1,24 @@
+.layout-basic {
+	&__side {
+		display: none;
+	}
+}
+
+@media (min-width: 992px) {
+	.layout-basic {
+		&__center {
+			display: flex;
+		}
+
+		&__side {
+			display: block;
+			flex: 0 0 auto;
+			width: 230px;
+		}
+
+		&__main {
+			flex-grow: 1;
+			padding-left: 17px;
+		}
+	}
+}
