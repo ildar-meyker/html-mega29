@@ -63,16 +63,12 @@
 		}
 	}
 
-	&__order {
+	&__actions {
 		margin-top: 1.13em;
 
 		button {
 			margin-top: (6/17) + em;
 			font-size: (17/16) + em;
-		}
-
-		&__1-click {
-			font-weight: 500;
 		}
 	}
 }
@@ -80,5 +76,22 @@
 @media (min-width: 992px) {
 	.cart-total {
 		margin-top: 0;
+
+		&__coupon {
+			input {
+				font-size: 14px;
+			}
+
+			button {
+				font-size: 14px;
+			}
+		}
+
+		&__actions {
+			button {
+				padding: (10/16) + em (45/16) + em;
+				font-size: 16px;
+			}
+		}
 	}
 }

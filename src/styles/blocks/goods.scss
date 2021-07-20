@@ -192,6 +192,14 @@
 	}
 }
 
+@media (max-width: 767.98px) {
+	.goods {
+		&__add-to-cart {
+			padding: (8/14) + em (15/14) + em;
+		}
+	}
+}
+
 @media (min-width: 600px) {
 	.goods {
 		&__col {

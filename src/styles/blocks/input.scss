@@ -1,8 +1,5 @@
 .input {
 	transition: all 0.2s;
-	border: (1/14) + em solid transparent;
-	border-radius: (4/14) + em;
-	font-size: (14/16) + em;
 }
 
 .input--full {
@@ -11,6 +8,9 @@
 }
 
 .input-default {
+	border: (1/14) + em solid transparent;
+	border-radius: (4/14) + em;
+	font-size: (14/16) + em;
 	padding: (11/14) + em (10/14) + em;
 	border-color: #e7e7e8;
 	background: #fafafa;
@@ -23,6 +23,17 @@
 	&::placeholder {
 		color: #b2b3b3;
 	}
+}
+
+.input-readonly {
+	border: (1/18) + em solid transparent;
+	border-radius: (4/18) + em;
+	font-size: (18/16) + em;
+	font-weight: 700;
+	padding: (9/18) + em (10/18) + em;
+	border-color: #e7e7e8;
+	background: #fafafa;
+	color: #2e2e2e;
 }
 
 .input-datepicker {

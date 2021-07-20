@@ -36,3 +36,28 @@
 		}
 	}
 }
+
+@media (min-width: 992px) {
+	.form-card {
+		margin-right: 70px;
+
+		&__fields {
+			margin: 0 -10/16 + em;
+		}
+
+		&__item {
+			padding: 0 10/16 + em;
+
+			&--name {
+				width: 60%;
+				padding-right: 30/16 + em;
+			}
+
+			&--date,
+			&--cvc {
+				margin-top: 30/16 + em;
+				width: 20%;
+			}
+		}
+	}
+}

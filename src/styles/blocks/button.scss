@@ -37,6 +37,10 @@
 		}
 	}
 
+	&--light {
+		font-weight: 500;
+	}
+
 	&--full {
 		display: block;
 		width: 100%;
@@ -150,13 +154,5 @@
 		background: #fff;
 		box-shadow: inset 0 (4/14) + em (4/14) + em rgba(#000, 0.3);
 		color: #2e2e2e;
-	}
-}
-
-@media (max-width: 767.98px) {
-	.button {
-		&--size-2 {
-			padding: (8/14) + em (15/14) + em;
-		}
 	}
 }

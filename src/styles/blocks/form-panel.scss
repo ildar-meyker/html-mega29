@@ -12,13 +12,13 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 20/16 + em 14/16 + em;
+		padding: 0 14/16 + em;
+		height: 60/16 + em;
 		border-bottom: 1/16 + em solid #f2f3f5;
 		font-weight: 700;
 	}
 
 	&__step {
-		font-size: 17/16 + em;
 		color: #e7e7e8;
 	}
 
@@ -67,12 +67,22 @@
 		}
 	}
 
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__col {
+		flex: 0 0 auto;
+		width: 100%;
+	}
+
+	&__list {
+		margin-top: -30/16 + em;
+	}
+
 	&__item {
 		margin-top: 30/16 + em;
-
-		&:first-child {
-			margin-top: 0;
-		}
 	}
 
 	&__sep {
@@ -104,6 +114,69 @@
 
 		span {
 			color: #ef1a1a;
+		}
+	}
+
+	&__actions {
+		margin-top: 30/16 + em;
+
+		button {
+			display: block;
+			width: 100%;
+			margin-top: (6/17) + em;
+			font-size: 17/16 + em;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.form-panel {
+		&__header {
+			height: 64px;
+		}
+
+		&__title {
+			font-size: 24px;
+		}
+
+		&__step {
+			font-size: 18px;
+		}
+
+		&__row {
+			padding-right: 30px;
+		}
+
+		&__col {
+			padding-right: 40px;
+
+			&--6 {
+				width: 50% !important;
+			}
+		}
+
+		&__check {
+			font-size: 18px;
+		}
+
+		&__label-lg {
+			font-size: 24px;
+		}
+
+		&__attn {
+			font-size: 18px;
+		}
+
+		&__actions {
+			display: flex;
+
+			button {
+				padding: (10/16) + em (45/16) + em;
+				width: auto;
+				margin-right: 12px;
+				margin-top: 0;
+				font-size: 16px;
+			}
 		}
 	}
 }

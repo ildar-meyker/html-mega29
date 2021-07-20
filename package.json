@@ -1,14 +1,10 @@
 {
-  "name": "html-barsgroup",
+  "name": "html-mega29",
   "version": "0.0.1",
   "description": "",
   "author": "",
-  "repository": {
-    "type": "git",
-    "url": "git@bitbucket.org:ildar-meyker/html-barsgroup.git"
-  },
   "scripts": {
-    "deploy": "gulp compress && gulp deploy && rm public/html-barsgroup.zip",
+    "deploy": "gulp compress && gulp deploy && rm public/html-mega29.zip",
     "build": "export NODE_ENV=production gulp clean && grunt modernizr && gulp build",
     "dev": "gulp clean && grunt modernizr && gulp build && gulp browser"
   },
