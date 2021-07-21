@@ -19,12 +19,12 @@ layout: default.hbs
         <div class="layout-basic__center">
             <div class="layout-basic__side">
                 
-                <nav class="nav-profile">
-                    <a href="#" class="nav-profile__item active">Личный кабинет</a>
-                    <a href="#" class="nav-profile__item">Смена пароля</a>
-                    <a href="#" class="nav-profile__item">Избранное</a>
-                    <a href="#" class="nav-profile__item">История заказов</a>
-                    <a href="#" class="nav-profile__item">Карты</a>
+                <nav class="nav-profile" id="nav-info-tabs">
+                    <a href="#" class="nav-profile__item js-nav-info-tab active">Личный кабинет</a>
+                    <a href="#" class="nav-profile__item js-nav-info-tab">Смена пароля</a>
+                    <a href="#" class="nav-profile__item js-nav-info-tab">Избранное</a>
+                    <a href="#" class="nav-profile__item js-nav-info-tab">История заказов</a>
+                    <a href="#" class="nav-profile__item js-nav-info-tab">Карты</a>
                 </nav>
 
                 <div class="gap-5"></div>
@@ -34,7 +34,7 @@ layout: default.hbs
             </div>
             <div class="layout-basic__main">
 
-                <section class="nav-info" id="nav-info">
+                <section class="nav-info mt-0 mb-0" id="nav-info">
 
                     <div class="nav-info__data">
                         <div class="nav-info__group active">
@@ -45,54 +45,66 @@ layout: default.hbs
                             <div class="nav-info__crop collapse show" id="nav-info-1">
                                 <div class="nav-info__list">
                                     
-                                    <div class="form-panel">
+                                    <div class="form-panel zoom-for-tablet">
                                         <div class="form-panel__header">
                                             <div class="form-panel__title">Ваши данные</div>
                                         </div>
                                         <div class="form-panel__body">
-                                            <div class="form-panel__item form-panel__item--col">
-                                                <label class="form-panel__label">Имя</label>
-                                                <input type="text" class="input input-default input--full" placeholder="Ваше имя">
-                                            </div>
-                                            
-                                            <div class="form-panel__item form-panel__item--col">
-                                                <label class="form-panel__label">Фамилия</label>
-                                                <input type="text" class="input input-default input--full" placeholder="Ваша фамилия">
-                                            </div>
-                                            
-                                            <div class="form-panel__item form-panel__item--col">
-                                                <label class="form-panel__label">Номер телефона</label>
-                                                <input type="text" class="input input-default input--full" placeholder="Ваш номер телефона">
-                                            </div>
-                                            
-                                            <div class="form-panel__item form-panel__item--col">
-                                                <label class="form-panel__label">E-mail</label>
-                                                <input type="text" class="input input-default input--full" placeholder="Ваш e-mail">
-                                            </div>
-                                            
-                                            <div class="form-panel__item">
-                                                <label class="form-panel__label">Адрес</label>
-                                                <input type="text" class="input input-default input--full" placeholder="Ваш адрес">
-                                            </div>
+                                            <div class="form-panel__list">
 
-                                            <div class="form-panel__item">
-                                                <label class="form-panel__radio">
-                                                    <input type="checkbox">
-                                                    <span>Я согласен с <a href="#" target="_blank">обработку персональных данных</a></span>
-                                                </label>
-                                            </div>
-
-                                            <div class="form-panel__sep"></div>
-
-                                            <div class="form-panel__auth">
-                                                <div class="form-panel__auth__text">
-                                                    Вы можете связать свой профиль с профилями в социальных сетях и сервисах:
+                                                <div class="form-panel__row">
+                                                    <div class="form-panel__item form-panel__col form-panel__col--6">
+                                                        <label class="form-panel__label">Имя</label>
+                                                        <input type="text" class="input input-default input--full" placeholder="Ваше имя">
+                                                    </div>
+                                                    
+                                                    <div class="form-panel__item form-panel__col form-panel__col--6">
+                                                        <label class="form-panel__label">Фамилия</label>
+                                                        <input type="text" class="input input-default input--full" placeholder="Ваша фамилия">
+                                                    </div>
+                                                    
+                                                    <div class="form-panel__item form-panel__col form-panel__col--6">
+                                                        <label class="form-panel__label">Номер телефона</label>
+                                                        <input type="text" class="input input-default input--full" placeholder="Ваш номер телефона">
+                                                    </div>
+                                                    
+                                                    <div class="form-panel__item form-panel__col form-panel__col--6">
+                                                        <label class="form-panel__label">E-mail</label>
+                                                        <input type="text" class="input input-default input--full" placeholder="Ваш e-mail">
+                                                    </div>
+                                                    
+                                                    <div class="form-panel__item form-panel__col">
+                                                        <label class="form-panel__label">Адрес</label>
+                                                        <input type="text" class="input input-default input--full" placeholder="Ваш адрес">
+                                                    </div>
                                                 </div>
-                                                <div class="form-panel__auth__icons">
-                                                    <a href="#">
-                                                        <i class="icon-vk-share"></i>
-                                                    </a>
+
+                                                <div class="form-panel__item">
+                                                    <label class="form-panel__check form-panel__check--agree">
+                                                        <input type="checkbox">
+                                                        <span>Я согласен с <a href="#" target="_blank">обработку персональных данных</a></span>
+                                                    </label>
                                                 </div>
+
+                                                <div class="form-panel__actions">
+                                                    <button type="button" class="button button-green">
+                                                        Сохранить изменения
+                                                    </button>
+                                                </div>
+
+                                                <div class="form-panel__sep"></div>
+
+                                                <div class="form-panel__auth">
+                                                    <div class="form-panel__auth__desc">
+                                                        Вы можете связать свой профиль с профилями в социальных сетях и сервисах:
+                                                    </div>
+                                                    <div class="form-panel__auth__icons">
+                                                        <a href="#" class="form-panel__auth__icons__item form-panel__auth__icons__item--vk">
+                                                            <i class="icon-vk-share"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
                                             </div>
 
                                         </div>
@@ -154,14 +166,19 @@ layout: default.hbs
                             </div>
                         </div>
                     </div>
+
+                    <div class="zoom-for-tablet">
+                        <a href="#" class="button button-outline-green nav-info__quit">Выйти</a>
+                    </div>
+
                 </section>
 
             </div>
         </div>
     </div>
 
-    {{> goods }}
-	
+    <div class="gap-30"></div>
+
 	{{> pros }}
 
 	{{> subscribe }}

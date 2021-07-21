@@ -26982,21 +26982,25 @@ $(function () {
     $(this).closest("label").toggleClass("active", isChecked);
   }); // datepicker
 
-  js_datepicker__WEBPACK_IMPORTED_MODULE_6___default()(".input-datepicker input", {
-    customDays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
-    customMonths: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
-    formatter: function formatter(input, date, instance) {
-      var value = new Intl.DateTimeFormat("ru-RU", {
-        day: "2-digit",
-        month: "2-digit",
-        year: "2-digit"
-      }).format(date);
-      input.value = value;
-    },
-    overlayButton: "Применить",
-    overlayPlaceholder: "Введите год",
-    showAllDates: true
-  }); // sorting
+  if ($(".input-datepicker input").length) {
+    // throws error if element not found
+    js_datepicker__WEBPACK_IMPORTED_MODULE_6___default()(".input-datepicker input", {
+      customDays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+      customMonths: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+      formatter: function formatter(input, date, instance) {
+        var value = new Intl.DateTimeFormat("ru-RU", {
+          day: "2-digit",
+          month: "2-digit",
+          year: "2-digit"
+        }).format(date);
+        input.value = value;
+      },
+      overlayButton: "Применить",
+      overlayPlaceholder: "Введите год",
+      showAllDates: true
+    });
+  } // sorting
+
 
   $(document).on("click", ".sorting__modes__item", function () {
     var mode = $(this).data("mode");
@@ -27024,13 +27028,13 @@ var NavInfo = {
   handleTabClick: function handleTabClick(e) {
     e.preventDefault();
     var index = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).index();
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nav-info__tabs__item", this.$root).removeClass("active").eq(index).addClass("active");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#nav-info-tabs .js-nav-info-tab").removeClass("active").eq(index).addClass("active");
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nav-info__group", this.$root).removeClass("active").eq(index).addClass("active");
   },
   init: function init() {
     if (!jquery__WEBPACK_IMPORTED_MODULE_0___default()("#nav-info").length) return;
     this.$root = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#nav-info");
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".nav-info__tabs__item", this.handleTabClick.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-nav-info-tab", this.handleTabClick.bind(this));
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (NavInfo);

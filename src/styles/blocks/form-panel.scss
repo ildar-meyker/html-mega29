@@ -57,6 +57,13 @@
 			}
 		}
 
+		&--agree {
+			span {
+				font-size: 12/16 + em;
+				font-weight: 400;
+			}
+		}
+
 		input {
 			position: absolute;
 			opacity: 0;
@@ -78,11 +85,11 @@
 	}
 
 	&__list {
-		margin-top: -30/16 + em;
+		margin-top: -20/16 + em;
 	}
 
 	&__item {
-		margin-top: 30/16 + em;
+		margin-top: 20/16 + em;
 	}
 
 	&__sep {
@@ -118,13 +125,35 @@
 	}
 
 	&__actions {
-		margin-top: 30/16 + em;
+		margin-top: 20/16 + em;
 
 		button {
 			display: block;
 			width: 100%;
 			margin-top: (6/17) + em;
+			padding: (9/17) + em (15/17) + em;
 			font-size: 17/16 + em;
+		}
+	}
+
+	&__auth {
+		&__desc {
+			font-size: 12/16 + em;
+		}
+
+		&__icons {
+			display: flex;
+			margin-top: 7px;
+
+			&__item {
+				padding: 10/22 + em;
+				font-size: 22/16 + em;
+				line-height: 0;
+
+				&--vk {
+					color: #627da1;
+				}
+			}
 		}
 	}
 }
@@ -176,6 +205,12 @@
 				margin-right: 12px;
 				margin-top: 0;
 				font-size: 16px;
+			}
+		}
+
+		&__auth {
+			&__desc {
+				font-size: 14px;
 			}
 		}
 	}

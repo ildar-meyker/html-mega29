@@ -8,7 +8,7 @@ const NavInfo = {
 
 		const index = $(e.currentTarget).index();
 
-		$(".nav-info__tabs__item", this.$root)
+		$("#nav-info-tabs .js-nav-info-tab")
 			.removeClass("active")
 			.eq(index)
 			.addClass("active");
@@ -26,7 +26,7 @@ const NavInfo = {
 
 		$(document).on(
 			"click",
-			".nav-info__tabs__item",
+			".js-nav-info-tab",
 			this.handleTabClick.bind(this)
 		);
 	},

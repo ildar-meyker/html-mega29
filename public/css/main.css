@@ -3254,6 +3254,10 @@ a {
   margin-bottom: 30px;
   padding-bottom: 2px;
   overflow: hidden; }
+  .nav-info__quit {
+    display: block;
+    margin-top: 0.625em;
+    width: 100%; }
 
 @media (min-width: 768px) {
   .nav-info {
@@ -3349,6 +3353,8 @@ a {
   .nav-info__crop {
     display: block !important; }
   .nav-info__title {
+    display: none; }
+  .nav-info__quit {
     display: none; } }
 
 .nav-pages {
@@ -3632,6 +3638,9 @@ a {
       margin-top: 0; }
     .form-panel__check--radio.active {
       color: #21a73f; }
+    .form-panel__check--agree span {
+      font-size: 0.75em;
+      font-weight: 400; }
     .form-panel__check input {
       position: absolute;
       opacity: 0; }
@@ -3644,9 +3653,9 @@ a {
     flex: 0 0 auto;
     width: 100%; }
   .form-panel__list {
-    margin-top: -1.875em; }
+    margin-top: -1.25em; }
   .form-panel__item {
-    margin-top: 1.875em; }
+    margin-top: 1.25em; }
   .form-panel__sep {
     border-top: 0.0625em solid #f2f3f5;
     margin: 1.25em -0.875em; }
@@ -3666,12 +3675,24 @@ a {
     .form-panel__attn span {
       color: #ef1a1a; }
   .form-panel__actions {
-    margin-top: 1.875em; }
+    margin-top: 1.25em; }
     .form-panel__actions button {
       display: block;
       width: 100%;
       margin-top: 0.35294em;
+      padding: 0.52941em 0.88235em;
       font-size: 1.0625em; }
+  .form-panel__auth__desc {
+    font-size: 0.75em; }
+  .form-panel__auth__icons {
+    display: flex;
+    margin-top: 7px; }
+    .form-panel__auth__icons__item {
+      padding: 0.45455em;
+      font-size: 1.375em;
+      line-height: 0; }
+      .form-panel__auth__icons__item--vk {
+        color: #627da1; }
 
 @media (min-width: 992px) {
   .form-panel__header {
@@ -3699,7 +3720,9 @@ a {
       width: auto;
       margin-right: 12px;
       margin-top: 0;
-      font-size: 16px; } }
+      font-size: 16px; }
+  .form-panel__auth__desc {
+    font-size: 14px; } }
 
 .form-card {
   border: 0.0625em solid #e7e7e8;

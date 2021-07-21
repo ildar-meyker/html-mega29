@@ -29,35 +29,38 @@ $(function () {
 	});
 
 	// datepicker
-	datepicker(".input-datepicker input", {
-		customDays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
-		customMonths: [
-			"Январь",
-			"Февраль",
-			"Март",
-			"Апрель",
-			"Май",
-			"Июнь",
-			"Июль",
-			"Август",
-			"Сентябрь",
-			"Октябрь",
-			"Ноябрь",
-			"Декабрь",
-		],
-		formatter: (input, date, instance) => {
-			const value = new Intl.DateTimeFormat("ru-RU", {
-				day: "2-digit",
-				month: "2-digit",
-				year: "2-digit",
-			}).format(date);
+	if ($(".input-datepicker input").length) {
+		// throws error if element not found
+		datepicker(".input-datepicker input", {
+			customDays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+			customMonths: [
+				"Январь",
+				"Февраль",
+				"Март",
+				"Апрель",
+				"Май",
+				"Июнь",
+				"Июль",
+				"Август",
+				"Сентябрь",
+				"Октябрь",
+				"Ноябрь",
+				"Декабрь",
+			],
+			formatter: (input, date, instance) => {
+				const value = new Intl.DateTimeFormat("ru-RU", {
+					day: "2-digit",
+					month: "2-digit",
+					year: "2-digit",
+				}).format(date);
 
-			input.value = value;
-		},
-		overlayButton: "Применить",
-		overlayPlaceholder: "Введите год",
-		showAllDates: true,
-	});
+				input.value = value;
+			},
+			overlayButton: "Применить",
+			overlayPlaceholder: "Введите год",
+			showAllDates: true,
+		});
+	}
 
 	// sorting
 	$(document).on("click", ".sorting__modes__item", function () {
