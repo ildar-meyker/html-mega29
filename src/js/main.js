@@ -1,5 +1,6 @@
 import "./modules/globals";
 import "bootstrap/js/dist/collapse";
+import "jquery-mask-plugin";
 import "simplebar";
 import "select2";
 import "icheck";
