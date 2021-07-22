@@ -3795,16 +3795,16 @@ a {
         margin-top: 1.875em;
         width: 20%; } }
 
-.cart-goods__header {
+.my-goods__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.625em; }
-  .cart-goods__header__title {
+  .my-goods__header__title {
     font-weight: 700;
     font-size: 1.5em; }
 
-.cart-goods__item {
+.my-goods__item {
   margin-top: 0.625em;
   display: flex;
   align-items: center;
@@ -3812,18 +3812,18 @@ a {
   border: 0.0625em solid #f2f3f5;
   border-radius: 0.25em;
   background: #fff; }
-  .cart-goods__item > div {
+  .my-goods__item > div {
     flex: 0 0 auto; }
 
-.cart-goods__image {
+.my-goods__image {
   width: 30%; }
 
-.cart-goods__desc {
+.my-goods__desc {
   width: 70%;
   position: relative;
   padding: 0 2.5em 0 1.25em; }
 
-.cart-goods__close {
+.my-goods__close {
   position: absolute;
   top: 50%;
   right: 0.625em;
@@ -3832,67 +3832,67 @@ a {
   line-height: 0;
   color: #323232; }
 
-.cart-goods__code {
+.my-goods__code {
   font-size: 0.875em;
   color: #b2b3b3; }
 
-.cart-goods__title {
+.my-goods__title {
   display: flex;
   align-items: center;
   min-height: 3em; }
-  .cart-goods__title a {
+  .my-goods__title a {
     font-size: 0.875em;
     font-weight: 700; }
 
-.cart-goods__rate {
+.my-goods__rate {
   justify-content: left;
   font-size: 1.1875em; }
 
-.cart-goods__props {
+.my-goods__props {
   width: 55%;
   padding: 0.4em;
   padding-right: 0;
   font-size: 0.9375em; }
-  .cart-goods__props__inner {
+  .my-goods__props__inner {
     background: #fafafa;
     padding: 1.06667em 0.73333em; }
 
-.cart-goods__prop {
+.my-goods__prop {
   display: flex;
   justify-content: space-between; }
 
-.cart-goods__rest {
+.my-goods__rest {
   width: 45%;
   padding: 0.375em 1.25em; }
 
-.cart-goods__price {
+.my-goods__price {
   font-size: 0.875em;
   font-weight: 700; }
-  .cart-goods__price span {
+  .my-goods__price span {
     font-size: 1.71429em;
     font-weight: 500; }
 
-.cart-goods__points {
+.my-goods__points {
   font-size: 0.9375em; }
-  .cart-goods__points span {
+  .my-goods__points span {
     color: #21a73f; }
 
-.cart-goods__count {
+.my-goods__count {
   margin-top: 0.25em;
   display: flex;
   height: 1.625em; }
-  .cart-goods__count > * {
+  .my-goods__count > * {
     font-weight: 700;
     text-align: center;
     color: #2e2e2e; }
-  .cart-goods__count button {
+  .my-goods__count button {
     width: 1.625em;
     background: #e7e7e8; }
-    .cart-goods__count button:first-child {
+    .my-goods__count button:first-child {
       border-radius: 0.25em 0 0 0.25em; }
-    .cart-goods__count button:last-child {
+    .my-goods__count button:last-child {
       border-radius: 0 0.25em 0.25em 0; }
-  .cart-goods__count input {
+  .my-goods__count input {
     position: relative;
     width: 4.16667em;
     padding: 0 0.83333em;
@@ -3900,77 +3900,77 @@ a {
     background: #fff;
     font-size: 0.75em; }
 
-.cart-goods__buttons {
+.my-goods__buttons {
   margin-top: 0.5em; }
-  .cart-goods__buttons--col {
+  .my-goods__buttons--col {
     display: none; }
-  .cart-goods__buttons button {
+  .my-goods__buttons button {
     min-width: 10em;
     padding: 0.72727em 1.36364em;
     font-size: 0.6875em; }
 
-.cart-goods__remove {
+.my-goods__remove {
   margin-top: 0.625em;
   text-align: center; }
-  .cart-goods__remove button {
+  .my-goods__remove button {
     min-width: 10em;
     padding: 0.72727em 1.36364em;
     font-size: 0.6875em; }
 
 @media (min-width: 992px) {
-  .cart-goods__header {
+  .my-goods__header {
     margin-bottom: 20px; }
-    .cart-goods__header__title {
+    .my-goods__header__title {
       font-size: 32px; }
-  .cart-goods__image {
+  .my-goods__image {
     align-self: flex-start;
     width: 15%; }
-  .cart-goods__desc {
+  .my-goods__desc {
     width: 85%; }
-  .cart-goods__buttons button {
+  .my-goods__buttons button {
     padding: 0.78571em 1.07143em;
     font-size: 0.875em; }
-  .cart-goods__remove {
+  .my-goods__remove {
     text-align: right; }
-    .cart-goods__remove button {
+    .my-goods__remove button {
       min-width: 91px;
       padding: 0.58333em 0.83333em;
       font-weight: 400;
       font-size: 0.75em; } }
 
 @media (min-width: 1200px) {
-  .cart-goods__item {
+  .my-goods__item {
     position: relative;
     align-items: center; }
-    .cart-goods__item--favorites .cart-goods__desc {
+    .my-goods__item--favorites .my-goods__desc {
       width: 25%; }
-    .cart-goods__item--favorites .cart-goods__props,
-    .cart-goods__item--favorites .cart-goods__rest {
+    .my-goods__item--favorites .my-goods__props,
+    .my-goods__item--favorites .my-goods__rest {
       width: 20%; }
-    .cart-goods__item--favorites .cart-goods__buttons {
+    .my-goods__item--favorites .my-goods__buttons {
       width: 15%; }
-  .cart-goods__image {
+  .my-goods__image {
     width: 14%; }
-  .cart-goods__desc {
+  .my-goods__desc {
     position: static;
     width: 28%;
     padding-right: 1.25em; }
-  .cart-goods__props {
+  .my-goods__props {
     width: 28%; }
-  .cart-goods__rest {
+  .my-goods__rest {
     width: 28%; }
-  .cart-goods__buttons {
+  .my-goods__buttons {
     display: none;
     margin-top: 0; }
-    .cart-goods__buttons--col {
+    .my-goods__buttons--col {
       display: block; }
-    .cart-goods__buttons button {
+    .my-goods__buttons button {
       display: block;
       width: 100%;
       margin-top: 4px; } }
 
 @media (max-width: 991.98px) {
-  .cart-goods--panel {
+  .my-goods--panel {
     padding: 0.875em;
     border: 0.0625em solid #f2f3f5;
     border-radius: 0.25em;

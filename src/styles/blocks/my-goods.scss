@@ -1,4 +1,4 @@
-.cart-goods {
+.my-goods {
 	&__header {
 		display: flex;
 		justify-content: space-between;
@@ -167,7 +167,7 @@
 }
 
 @media (min-width: 992px) {
-	.cart-goods {
+	.my-goods {
 		&__header {
 			margin-bottom: 20px;
 
@@ -206,20 +206,20 @@
 }
 
 @media (min-width: 1200px) {
-	.cart-goods {
+	.my-goods {
 		&__item {
 			position: relative;
 			align-items: center;
 
 			&--favorites {
-				.cart-goods__desc {
+				.my-goods__desc {
 					width: 25%;
 				}
-				.cart-goods__props,
-				.cart-goods__rest {
+				.my-goods__props,
+				.my-goods__rest {
 					width: 20%;
 				}
-				.cart-goods__buttons {
+				.my-goods__buttons {
 					width: 15%;
 				}
 			}
@@ -261,7 +261,7 @@
 }
 
 @media (max-width: 991.98px) {
-	.cart-goods {
+	.my-goods {
 		&--panel {
 			padding: 14/16 + em;
 			border: 1/16 + em solid #f2f3f5;
