@@ -27593,13 +27593,13 @@ $(function () {
     });
   }); // icheck
 
-  $("input").iCheck({
-    checkboxClass: "icheckbox_flat",
-    radioClass: "iradio_flat"
-  });
   $(document).on("ifCreated ifToggled", "input", function () {
     var isChecked = $(this).prop("checked");
     $(this).closest("label").toggleClass("active", isChecked);
+  });
+  $("input").iCheck({
+    checkboxClass: "icheckbox_flat",
+    radioClass: "iradio_flat"
   }); // datepicker
 
   if ($(".input-datepicker input").length) {

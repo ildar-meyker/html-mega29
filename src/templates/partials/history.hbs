@@ -1,0 +1,115 @@
+
+
+
+
+<div class="order-info zoom-for-tablet">
+
+    <aside class="sorting">
+        <div class="sorting__left">
+            <select>
+                <option>Все</option>
+                <option>Исполняемые</option>
+                <option>Выполненные</option>
+            </select>
+        </div>
+        <div class="sorting__right">
+            <div class="sorting__count">Заказов: <span class="sorting__count__value">2</span></div>
+        </div>
+    </aside>
+
+    <div class="order-info__list">
+
+        <div class="order-info__item">
+            <div class="order-info__table">
+                <div class="order-info__row">
+                    <div class="order-info__prop">№ заказа</div>
+                    <div class="order-info__data">165-963</div>
+                </div>
+                <div class="order-info__row">
+                    <div class="order-info__prop">Дата создания</div>
+                    <div class="order-info__data">5.06.2021</div>
+                </div>
+                <div class="order-info__row">
+                    <div class="order-info__prop">Товары</div>
+                    <div class="order-info__data">5 шт</div>
+                </div>
+                <div class="order-info__row">
+                    <div class="order-info__prop">Сумма</div>
+                    <div class="order-info__data">
+                        <div class="order-info__price">7 965 <i>₽</i></div>
+                    </div>
+                </div>
+                <div class="order-info__row">
+                    <div class="order-info__prop">Статус</div>
+                    <div class="order-info__data">
+                        <div class="order-info__progress">Исполняется</div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-info__control">
+                <button type="button" class="order-info__toggle" data-bs-toggle="collapse" data-bs-target="#order-info-1">
+                    <span>Подробная информация</span>
+                    <i class="icon-arrow-down"></i>
+                </button>
+                <div class="order-info__menu">
+                    <a href="#"><i class="icon-print"></i></a>
+                    <a href="#"><i class="icon-email"></i></a>
+                    <a href="#"><i class="icon-download"></i></a>
+                </div>
+            </div>
+            <div class="order-info__crop collapse show" id="order-info-1">
+                <div class="order-info__body">
+                    {{> order-details }}
+                </div>
+            </div>
+        </div>
+
+        <div class="order-info__item">
+            <div class="order-info__table">
+                <div class="order-info__row">
+                    <div class="order-info__prop">№ заказа</div>
+                    <div class="order-info__data">165-963</div>
+                </div>
+                <div class="order-info__row">
+                    <div class="order-info__prop">Дата создания</div>
+                    <div class="order-info__data">5.06.2021</div>
+                </div>
+                <div class="order-info__row">
+                    <div class="order-info__prop">Товары</div>
+                    <div class="order-info__data">5 шт</div>
+                </div>
+                <div class="order-info__row">
+                    <div class="order-info__prop">Сумма</div>
+                    <div class="order-info__data">
+                        <div class="order-info__price">7 965 <i>₽</i></div>
+                    </div>
+                </div>
+                <div class="order-info__row">
+                    <div class="order-info__prop">Статус</div>
+                    <div class="order-info__data">
+                        <div class="order-info__completed">Выполнен</div>
+                    </div>
+                </div>
+            </div>
+            <div class="order-info__control">
+                <button type="button" class="order-info__toggle collapsed" data-bs-toggle="collapse" data-bs-target="#order-info-2">
+                    <span>Подробная информация</span>
+                    <i class="icon-arrow-down"></i>
+                </button>
+                <div class="order-info__menu">
+                    <a href="#"><i class="icon-print"></i></a>
+                    <a href="#"><i class="icon-email"></i></a>
+                    <a href="#"><i class="icon-download"></i></a>
+                </div>
+            </div>
+            <div class="order-info__crop collapse" id="order-info-2">
+                <div class="order-info__body">
+                    {{> order-details }}
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+

@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<title> История заказов</title>
+
+	<link rel="stylesheet" href="https://i.icomoon.io/public/temp/bcf5be276e/html-mega29/style.css">
+	<link rel="stylesheet" href="css/main.min.css">
+	
+	<script src="js/modernizr-output.js"></script>
+</head>
+
+<body>
+
+	
+
+<div class="page__wrapper" id="wrapper">
+
+	
+	<header class="header">
+	    <div class="page__center">
+	        <div class="header__topbar">
+	            <div class="header__topbar__left">
+	                <b>Присоединяйтесь</b>
+	                <nav class="header__topbar__social">
+	                    <a href="#"><i class="icon-vk"></i></a>
+	                    <a href="#"><i class="icon-instagram"></i></a>
+	                </nav>
+	            </div>
+	            <div class="header__topbar__right">
+	                <a href="#">О компании</a>
+	                <a href="#">Об интернет-магазине</a>
+	            </div>
+	        </div>
+	
+	        <div class="header__main">
+	            <div class="header__main__burger">
+	                <button class="hamburger hamburger--squeeze" type="button">
+	                    <span class="hamburger-box">
+	                        <span class="hamburger-inner"></span>
+	                    </span>
+	                </button>
+	            </div>
+	            <div class="header__main__logo">
+	                <img src="images/header/mega-logo.svg" alt="Мега">
+	            </div>
+	            <div class="header__main__city">
+	                <div class="header__main__city__label">Ваш город</div>
+	                <div class="header__main__city__name">
+	                    <a href="#">
+	                        <i class="icon-location"></i>
+	                        <span>Архангельск</span>
+	                    </a>
+	                </div>
+	            </div>
+	            <div class="header__main__search-area">
+	                <i class="icon-search"></i>
+	                <input type="text" class="input input-default input--full" placeholder="Что Вы ищете?">
+	                <button type="submit" class="button button-orange">
+	                    Найти
+	                </button>
+	            </div>
+	            <div class="header__main__call">
+	                <div class="header__main__call__phone">
+	                    <i class="icon-phone"></i>
+	                    <span>8-800-222-12-40</span>
+	                </div>
+	                <div class="header__main__call__time">
+	                    Мы работаем с 8:00 до 21:00
+	                </div>
+	            </div>
+	            <nav class="header__main__own">
+	                <a href="#">
+	                    <i class="icon-heart"></i>
+	                    <span>5</span>
+	                </a>
+	                <a href="#">
+	                    <i class="icon-shopping-cart"></i>
+	                    <span>3</span>
+	                </a>
+	                <a href="#">
+	                    <i class="icon-person"></i>
+	                </a>
+	            </nav>
+	            <div class="header__main__search-btn">
+	                <button type="button">
+	                    <i class="icon-search"></i>
+	                </button>
+	            </div>
+	        </div>
+	
+	        <nav class="header__menu">
+	            <a href="#">
+	                <i class="icon-menu"></i>
+	                <span>Каталог</span>
+	            </a>
+	            <a href="#">Доставка</a>
+	            <a href="#">Сервисы</a>
+	            <a href="#">Мега Клуб</a>
+	            <a href="#">Блог</a>
+	            <a href="#">Магазины</a>
+	            <a href="#">Партнёрство</a>
+	        </nav>
+	
+	        
+	    </div>
+	</header>
+	<nav class="nav-path">
+		<div class="page__center">
+			<a href="#">Главная</a>
+            <i class="icon-arrow-right"></i>
+            <a href="#">Мой кабинет</a>
+            <i class="icon-arrow-right"></i>
+            <a href="#">История заказов</a>
+		</div>
+	</nav>
+    
+    <div class="page__center">
+        <div class="layout-profile__center">
+            <div class="layout-profile__side">
+                
+                <nav class="nav-profile" id="nav-info-tabs">
+                    <a href="#" class="nav-profile__item js-nav-info-tab">Личный кабинет</a>
+                    <a href="#" class="nav-profile__item js-nav-info-tab">Смена пароля</a>
+                    <a href="#" class="nav-profile__item js-nav-info-tab">Избранное</a>
+                    <a href="#" class="nav-profile__item js-nav-info-tab active">История заказов</a>
+                    <a href="#" class="nav-profile__item js-nav-info-tab">Карты</a>
+                </nav>
+
+                <div class="gap-5"></div>
+
+                <a href="#" class="button button-outline-green button--full">Выйти</a>
+
+            </div>
+            <div class="layout-profile__main">
+
+                <section class="nav-info mt-0 mb-0" id="nav-info">
+
+                    <div class="nav-info__data">
+                        <div class="nav-info__group">
+                            <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-1">
+                                <span>Личный кабинет</span>
+                                <i class="icon-arrow-down"></i>
+                            </a>
+                            <div class="nav-info__crop collapse" id="nav-info-1">
+                                <div class="nav-info__list">
+                                    
+                                    <div class="form-history zoom-for-tablet">
+                                        <div class="form-history__header">
+                                            <div class="form-history__title">Ваши данные</div>
+                                        </div>
+                                        <div class="form-history__body">
+                                            <div class="form-history__list">
+
+                                                <div class="form-history__row">
+                                                    <div class="form-history__item form-history__col form-history__col--6">
+                                                        <label class="form-history__label">Имя</label>
+                                                        <input type="text" class="input input-default input--full" placeholder="Ваше имя">
+                                                    </div>
+                                                    
+                                                    <div class="form-history__item form-history__col form-history__col--6">
+                                                        <label class="form-history__label">Фамилия</label>
+                                                        <input type="text" class="input input-default input--full" placeholder="Ваша фамилия">
+                                                    </div>
+                                                    
+                                                    <div class="form-history__item form-history__col form-history__col--6">
+                                                        <label class="form-history__label">Номер телефона</label>
+                                                        <input type="text" class="input input-default input--full" placeholder="+7(___)___-__-__" data-mask="+7(000)000-00-00">
+                                                    </div>
+                                                    
+                                                    <div class="form-history__item form-history__col form-history__col--6">
+                                                        <label class="form-history__label">E-mail</label>
+                                                        <input type="text" class="input input-default input--full" placeholder="Ваш e-mail">
+                                                    </div>
+                                                    
+                                                    <div class="form-history__item form-history__col">
+                                                        <label class="form-history__label">Адрес</label>
+                                                        <input type="text" class="input input-default input--full" placeholder="Ваш адрес">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-history__item">
+                                                    <label class="form-history__check form-history__check--agree">
+                                                        <input type="checkbox">
+                                                        <span>Я согласен с <a href="#" target="_blank">обработку персональных данных</a></span>
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-history__actions">
+                                                    <button type="button" class="button button-green">
+                                                        Сохранить изменения
+                                                    </button>
+                                                </div>
+
+                                                <div class="form-history__sep"></div>
+
+                                                <div class="form-history__auth">
+                                                    <div class="form-history__auth__desc">
+                                                        Вы можете связать свой профиль с профилями в социальных сетях и сервисах:
+                                                    </div>
+                                                    <div class="form-history__auth__icons">
+                                                        <a href="#" class="form-history__auth__icons__item form-history__auth__icons__item--vk">
+                                                            <i class="icon-vk-share"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-info__group">
+                            <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-2">
+                                <span>Смена пароля</span>
+                                <i class="icon-arrow-down"></i>
+                            </a>
+                            <div class="nav-info__crop collapse" id="nav-info-2">
+                                <div class="nav-info__list">
+                                    
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, enim pariatur, vero ab repudiandae unde cum iure numquam quisquam earum aperiam molestiae asperiores accusantium facilis, ad tenetur commodi delectus nostrum!
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-info__group">
+                            <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-3">
+                                <span>Избранное</span>
+                                <i class="icon-arrow-down"></i>
+                            </a>
+                            <div class="nav-info__crop collapse" id="nav-info-3">
+                                <div class="nav-info__list">
+                                    
+                                    <div class="my-goods my-goods--panel zoom-for-tablet">
+                                            
+                                        <aside class="sorting">
+                                            <div class="sorting__left">
+                                                <select>
+                                                    <option>По популярности (убывание)</option>
+                                                    <option>По популярности (возрастание)</option>
+                                                    <option>По рейтингу (убывание)</option>
+                                                    <option>По рейтингу (возрастание)</option>
+                                                    <option>По цене (убывание)</option>
+                                                    <option>По цене (возрастание)</option>
+                                                </select>
+                                            </div>
+                                            <div class="sorting__right">
+                                                <div class="sorting__count">Товаров: <span class="sorting__count__value">5</span></div>
+                                            </div>
+                                        </aside>
+
+                                        <div class="my-goods__list">
+                                            <div class="my-goods__item my-goods__item--favorites">
+                                                <div class="my-goods__image">
+                                                    <div class="goods__image goods__image--gray">
+                                                        <div><img src="images/temp/goods/1.jpeg" alt=""></div>
+                                                    </div>
+                                                </div>
+                                                <div class="my-goods__desc">
+                                                    <div class="my-goods__code">Артикул: 897-356</div>
+                                                    <div class="my-goods__title">
+                                                        <a href="#">Дрель AEК BE 750 R 449160</a>
+                                                    </div>
+                                                    <div class="goods__rate my-goods__rate">
+                                                        <div class="goods__rate__stars">
+                                                            <div style="width: 68%;"></div>
+                                                        </div>
+                                                        <div class="goods__rate__count">(23)</div>
+                                                    </div>
+                                                    <button type="button" class="my-goods__close">
+                                                        <i class="icon-close"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="my-goods__props">
+                                                    <div class="my-goods__props__inner">
+                                                        <div class="my-goods__prop">
+                                                            <div>В наличии</div>
+                                                            <div>7 шт</div>
+                                                        </div>
+                                                        <div class="my-goods__prop">
+                                                            <div>Доставка</div>
+                                                            <div>завтра</div>
+                                                        </div>
+                                                        <div class="my-goods__prop">
+                                                            <div>Самовывоз</div>
+                                                            <div>сегодня</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="my-goods__rest">
+                                                    <div class="my-goods__price"><span>5 120</span> ₽ / шт</div>
+                                                    <div class="my-goods__points"><span>+42</span> балла на карту</div>
+                                                    <div class="my-goods__buttons">
+                                                        <button type="button" class="button button-outline-green">В корзину</button>
+                                                    </div>
+                                                </div>
+                                                <div class="my-goods__buttons my-goods__buttons--col">
+                                                    <button type="button" class="button button-outline-green">В корзину</button>
+                                                    <button type="button" class="button button-green">Купить в 1 клик</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="my-goods__item my-goods__item--favorites">
+                                                <div class="my-goods__image">
+                                                    <div class="goods__image goods__image--gray">
+                                                        <div><img src="images/temp/goods/2.jpeg" alt=""></div>
+                                                    </div>
+                                                </div>
+                                                <div class="my-goods__desc">
+                                                    <div class="my-goods__code">Артикул: 897-356</div>
+                                                    <div class="my-goods__title">
+                                                        <a href="#">Дрель AEК BE 750 R 449160</a>
+                                                    </div>
+                                                    <div class="goods__rate my-goods__rate">
+                                                        <div class="goods__rate__stars">
+                                                            <div style="width: 68%;"></div>
+                                                        </div>
+                                                        <div class="goods__rate__count">(23)</div>
+                                                    </div>
+                                                    <button type="button" class="my-goods__close">
+                                                        <i class="icon-close"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="my-goods__props">
+                                                    <div class="my-goods__props__inner">
+                                                        <div class="my-goods__prop">
+                                                            <div>В наличии</div>
+                                                            <div>7 шт</div>
+                                                        </div>
+                                                        <div class="my-goods__prop">
+                                                            <div>Доставка</div>
+                                                            <div>завтра</div>
+                                                        </div>
+                                                        <div class="my-goods__prop">
+                                                            <div>Самовывоз</div>
+                                                            <div>сегодня</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="my-goods__rest">
+                                                    <div class="my-goods__price"><span>5 120</span> ₽ / шт</div>
+                                                    <div class="my-goods__points"><span>+42</span> балла на карту</div>
+                                                    <div class="my-goods__buttons">
+                                                        <button type="button" class="button button-outline-green">В корзину</button>
+                                                    </div>
+                                                </div>
+                                                <div class="my-goods__buttons my-goods__buttons--col">
+                                                    <button type="button" class="button button-outline-green">В корзину</button>
+                                                    <button type="button" class="button button-green">Купить в 1 клик</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="my-goods__item my-goods__item--favorites">
+                                                <div class="my-goods__image">
+                                                    <div class="goods__image goods__image--gray">
+                                                        <div><img src="images/temp/goods/3.png" alt=""></div>
+                                                    </div>
+                                                </div>
+                                                <div class="my-goods__desc">
+                                                    <div class="my-goods__code">Артикул: 897-356</div>
+                                                    <div class="my-goods__title">
+                                                        <a href="#">Ударная дрель Boss ДЭУ-6500 </a>
+                                                    </div>
+                                                    <div class="goods__rate my-goods__rate">
+                                                        <div class="goods__rate__stars">
+                                                            <div style="width: 68%;"></div>
+                                                        </div>
+                                                        <div class="goods__rate__count">(23)</div>
+                                                    </div>
+                                                    <button type="button" class="my-goods__close">
+                                                        <i class="icon-close"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="my-goods__props">
+                                                    <div class="my-goods__props__inner">
+                                                        <div class="my-goods__prop">
+                                                            <div>В наличии</div>
+                                                            <div>7 шт</div>
+                                                        </div>
+                                                        <div class="my-goods__prop">
+                                                            <div>Доставка</div>
+                                                            <div>завтра</div>
+                                                        </div>
+                                                        <div class="my-goods__prop">
+                                                            <div>Самовывоз</div>
+                                                            <div>сегодня</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="my-goods__rest">
+                                                    <div class="my-goods__price"><span>5 120</span> ₽ / шт</div>
+                                                    <div class="my-goods__points"><span>+42</span> балла на карту</div>
+                                                    <div class="my-goods__buttons">
+                                                        <button type="button" class="button button-outline-green">В корзину</button>
+                                                    </div>
+                                                </div>
+                                                <div class="my-goods__buttons my-goods__buttons--col">
+                                                    <button type="button" class="button button-outline-green">В корзину</button>
+                                                    <button type="button" class="button button-green">Купить в 1 клик</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="my-goods__remove">
+                                            <button class="button button-outline-black">Удалить все</button>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-info__group active">
+                            <a href="#" class="nav-info__title" data-bs-toggle="collapse" data-bs-target="#nav-info-4">
+                                <span>История заказов</span>
+                                <i class="icon-arrow-down"></i>
+                            </a>
+                            <div class="nav-info__crop collapse show" id="nav-info-4">
+                                <div class="nav-info__list">
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    <div class="order-info zoom-for-tablet">
+                                    
+                                        <aside class="sorting">
+                                            <div class="sorting__left">
+                                                <select>
+                                                    <option>Все</option>
+                                                    <option>Исполняемые</option>
+                                                    <option>Выполненные</option>
+                                                </select>
+                                            </div>
+                                            <div class="sorting__right">
+                                                <div class="sorting__count">Заказов: <span class="sorting__count__value">2</span></div>
+                                            </div>
+                                        </aside>
+                                    
+                                        <div class="order-info__list">
+                                    
+                                            <div class="order-info__item">
+                                                <div class="order-info__table">
+                                                    <div class="order-info__row">
+                                                        <div class="order-info__prop">№ заказа</div>
+                                                        <div class="order-info__data">165-963</div>
+                                                    </div>
+                                                    <div class="order-info__row">
+                                                        <div class="order-info__prop">Дата создания</div>
+                                                        <div class="order-info__data">5.06.2021</div>
+                                                    </div>
+                                                    <div class="order-info__row">
+                                                        <div class="order-info__prop">Товары</div>
+                                                        <div class="order-info__data">5 шт</div>
+                                                    </div>
+                                                    <div class="order-info__row">
+                                                        <div class="order-info__prop">Сумма</div>
+                                                        <div class="order-info__data">
+                                                            <div class="order-info__price">7 965 <i>₽</i></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="order-info__row">
+                                                        <div class="order-info__prop">Статус</div>
+                                                        <div class="order-info__data">
+                                                            <div class="order-info__progress">Исполняется</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="order-info__control">
+                                                    <button type="button" class="order-info__toggle" data-bs-toggle="collapse" data-bs-target="#order-info-1">
+                                                        <span>Подробная информация</span>
+                                                        <i class="icon-arrow-down"></i>
+                                                    </button>
+                                                    <div class="order-info__menu">
+                                                        <a href="#"><i class="icon-print"></i></a>
+                                                        <a href="#"><i class="icon-email"></i></a>
+                                                        <a href="#"><i class="icon-download"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="order-info__crop collapse show" id="order-info-1">
+                                                    <div class="order-info__body">
+                                                        <form action="#" class="order-details">
+                                                            <div class="order-details__header">
+                                                                <div class="order-details__title">Контактная информация</div>
+                                                            </div>
+                                                            <div class="order-details__body">
+                                                                <div class="order-details__list order-details__row">
+                                                                    <div class="order-details__item order-details__col order-details__col--6">
+                                                                        <label class="order-details__label">Имя</label>
+                                                                        <input type="text" class="input input-default input--full" value="Елена" readonly>
+                                                                    </div>
+                                                                    
+                                                                    <div class="order-details__item order-details__col order-details__col--6">
+                                                                        <label class="order-details__label">Фамилия</label>
+                                                                        <input type="text" class="input input-default input--full" value="Кочеткова" readonly>
+                                                                    </div>
+                                                                    
+                                                                    <div class="order-details__item order-details__col order-details__col--6">
+                                                                        <label class="order-details__label">Номер телефона</label>
+                                                                        <input type="text" class="input input-default input--full" value="+79297287334" readonly>
+                                                                    </div>
+                                                                    
+                                                                    <div class="order-details__item order-details__col order-details__col--6">
+                                                                        <label class="order-details__label">E-mail</label>
+                                                                        <input type="text" class="input input-default input--full" value="elena.kochenkova@gmail.com" readonly>
+                                                                    </div>
+                                                                    
+                                                                    <div class="order-details__item order-details__col">
+                                                                        <label class="order-details__label">Адрес</label>
+                                                                        <input type="text" class="input input-default input--full" value="г. Москва, Строителей 56-377" readonly>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                        
+                                                        <form action="#" class="order-details">
+                                                            <div class="order-details__header">
+                                                                <div class="order-details__title">Способ доставки</div>
+                                                            </div>
+                                                            <div class="order-details__body">
+                                                        
+                                                                <div class="order-details__list">
+                                                                    <div class="order-details__item">
+                                                                        <label class="order-details__check order-details__check--radio">
+                                                                            <input type="radio" name="radio1" checked>
+                                                                            <span>Доставка</span>
+                                                                        </label>
+                                                                    </div>
+                                                        
+                                                                    <div class="order-details__item">
+                                                                        <div class="order-details__label-lg">Дата доставки</div>
+                                                                        <input type="text" class="input input-default input--full" value="12.05.2021" readonly>
+                                                                    </div>
+                                                        
+                                                                    <div class="order-details__total">
+                                                                        Стоимость доставки: <strong>бесплатно</strong>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                        
+                                                            </div>
+                                                        </form>
+                                                        
+                                                        <form action="#" class="order-details">
+                                                            <div class="order-details__header">
+                                                                <div class="order-details__title">Способ оплаты</div>
+                                                            </div>
+                                                            <div class="order-details__body">
+                                                                
+                                                                <div class="order-details__list">
+                                                                    <div class="order-details__item">
+                                                                        <label class="order-details__check order-details__check--radio">
+                                                                            <input type="radio" name="radio3" checked>
+                                                                            <span>Безналичная оплата при получении</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                        
+                                                            </div>
+                                                        
+                                                        </form>
+                                                        
+                                                        <form action="#" class="order-details">
+                                                            <div class="order-details__header">
+                                                                <div class="order-details__title">Комментарий к заказу</div>
+                                                            </div>
+                                                            <div class="order-details__body">
+                                                        
+                                                                <div class="order-details__list">
+                                                        
+                                                                    <div class="order-details__item">
+                                                                        <textarea class="input input-default input--full" placeholder="Ваш комментарий"></textarea>
+                                                                    </div>
+                                                        
+                                                                    <div class="order-details__actions">
+                                                                        <button type="button" class="button button-green">
+                                                                            Повторить заказ
+                                                                        </button>
+                                                                        <button type="button" class="button button-outline-green button--light">
+                                                                            Купить в 1 клик
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            
+                                                            </div>
+                                                        </form>                </div>
+                                                </div>
+                                            </div>
+                                    
+                                            <div class="order-info__item">
+                                                <div class="order-info__table">
+                                                    <div class="order-info__row">
+                                                        <div class="order-info__prop">№ заказа</div>
+                                                        <div class="order-info__data">165-963</div>
+                                                    </div>
+                                                    <div class="order-info__row">
+                                                        <div class="order-info__prop">Дата создания</div>
+                                                        <div class="order-info__data">5.06.2021</div>
+                                                    </div>
+                                                    <div class="order-info__row">
+                                                        <div class="order-info__prop">Товары</div>
+                                                        <div class="order-info__data">5 шт</div>
+                                                    </div>
+                                                    <div class="order-info__row">
+                                                        <div class="order-info__prop">Сумма</div>
+                                                        <div class="order-info__data">
+                                                            <div class="order-info__price">7 965 <i>₽</i></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="order-info__row">
+                                                        <div class="order-info__prop">Статус</div>
+                                                        <div class="order-info__data">
+                                                            <div class="order-info__completed">Выполнен</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="order-info__control">
+                                                    <button type="button" class="order-info__toggle collapsed" data-bs-toggle="collapse" data-bs-target="#order-info-2">
+                                                        <span>Подробная информация</span>
+                                                        <i class="icon-arrow-down"></i>
+                                                    </button>
+                                                    <div class="order-info__menu">
+                                                        <a href="#"><i class="icon-print"></i></a>
+                                                        <a href="#"><i class="icon-email"></i></a>
+                                                        <a href="#"><i class="icon-download"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div class="order-info__crop collapse" id="order-info-2">
+                                                    <div class="order-info__body">
+                                                        <form action="#" class="order-details">
+                                                            <div class="order-details__header">
+                                                                <div class="order-details__title">Контактная информация</div>
+                                                            </div>
+                                                            <div class="order-details__body">
+                                                                <div class="order-details__list order-details__row">
+                                                                    <div class="order-details__item order-details__col order-details__col--6">
+                                                                        <label class="order-details__label">Имя</label>
+                                                                        <input type="text" class="input input-default input--full" value="Елена" readonly>
+                                                                    </div>
+                                                                    
+                                                                    <div class="order-details__item order-details__col order-details__col--6">
+                                                                        <label class="order-details__label">Фамилия</label>
+                                                                        <input type="text" class="input input-default input--full" value="Кочеткова" readonly>
+                                                                    </div>
+                                                                    
+                                                                    <div class="order-details__item order-details__col order-details__col--6">
+                                                                        <label class="order-details__label">Номер телефона</label>
+                                                                        <input type="text" class="input input-default input--full" value="+79297287334" readonly>
+                                                                    </div>
+                                                                    
+                                                                    <div class="order-details__item order-details__col order-details__col--6">
+                                                                        <label class="order-details__label">E-mail</label>
+                                                                        <input type="text" class="input input-default input--full" value="elena.kochenkova@gmail.com" readonly>
+                                                                    </div>
+                                                                    
+                                                                    <div class="order-details__item order-details__col">
+                                                                        <label class="order-details__label">Адрес</label>
+                                                                        <input type="text" class="input input-default input--full" value="г. Москва, Строителей 56-377" readonly>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                        
+                                                        <form action="#" class="order-details">
+                                                            <div class="order-details__header">
+                                                                <div class="order-details__title">Способ доставки</div>
+                                                            </div>
+                                                            <div class="order-details__body">
+                                                        
+                                                                <div class="order-details__list">
+                                                                    <div class="order-details__item">
+                                                                        <label class="order-details__check order-details__check--radio">
+                                                                            <input type="radio" name="radio1" checked>
+                                                                            <span>Доставка</span>
+                                                                        </label>
+                                                                    </div>
+                                                        
+                                                                    <div class="order-details__item">
+                                                                        <div class="order-details__label-lg">Дата доставки</div>
+                                                                        <input type="text" class="input input-default input--full" value="12.05.2021" readonly>
+                                                                    </div>
+                                                        
+                                                                    <div class="order-details__total">
+                                                                        Стоимость доставки: <strong>бесплатно</strong>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                        
+                                                            </div>
+                                                        </form>
+                                                        
+                                                        <form action="#" class="order-details">
+                                                            <div class="order-details__header">
+                                                                <div class="order-details__title">Способ оплаты</div>
+                                                            </div>
+                                                            <div class="order-details__body">
+                                                                
+                                                                <div class="order-details__list">
+                                                                    <div class="order-details__item">
+                                                                        <label class="order-details__check order-details__check--radio">
+                                                                            <input type="radio" name="radio3" checked>
+                                                                            <span>Безналичная оплата при получении</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                        
+                                                            </div>
+                                                        
+                                                        </form>
+                                                        
+                                                        <form action="#" class="order-details">
+                                                            <div class="order-details__header">
+                                                                <div class="order-details__title">Комментарий к заказу</div>
+                                                            </div>
+                                                            <div class="order-details__body">
+                                                        
+                                                                <div class="order-details__list">
+                                                        
+                                                                    <div class="order-details__item">
+                                                                        <textarea class="input input-default input--full" placeholder="Ваш комментарий"></textarea>
+                                                                    </div>
+                                                        
+                                                                    <div class="order-details__actions">
+                                                                        <button type="button" class="button button-green">
+                                                                            Повторить заказ
+                                                                        </button>
+                                                                        <button type="button" class="button button-outline-green button--light">
+                                                                            Купить в 1 клик
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            
+                                                            </div>
+                                                        </form>                </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-info__group">
+                            <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-5">
+                                <span>Карты</span>
+                                <i class="icon-arrow-down"></i>
+                            </a>
+                            <div class="nav-info__crop collapse" id="nav-info-5">
+                                <div class="nav-info__list">
+                                    
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, enim pariatur, vero ab repudiandae unde cum iure numquam quisquam earum aperiam molestiae asperiores accusantium facilis, ad tenetur commodi delectus nostrum!
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="zoom-for-tablet">
+                        <a href="#" class="button button-outline-green nav-info__quit">Выйти</a>
+                    </div>
+
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="gap-30"></div>
+
+	<section class="pros">
+	    <div class="page__center">
+	        <div class="pros__center">
+	            <h3 class="pros__h1">Наши преимущества</h3>
+	            <div class="pros__window" data-simplebar>
+	                <div class="pros__list">
+	                    <div class="pros__item">
+	                        <div class="pros__item__icon">
+	                            <img src="images/pros/shopping-cart.svg" alt="">
+	                        </div>
+	                        <div class="pros__item__title">Широкий ассортимент</div>
+	                        <div class="pros__item__desc">Свыше 300.000 товаров</div>
+	                    </div>
+	                    <div class="pros__sep"></div>
+	                    <div class="pros__item">
+	                        <div class="pros__item__icon">
+	                            <img src="images/pros/insurance.svg" alt="">
+	                        </div>
+	                        <div class="pros__item__title">Гарантия низких цен</div>
+	                        <div class="pros__item__desc">Нашли дешевле - вернем 150% разницы</div>
+	                    </div>
+	                    <div class="pros__sep"></div>
+	                    <div class="pros__item">
+	                        <div class="pros__item__icon">
+	                            <img src="images/pros/delivery-truck.svg" alt="">
+	                        </div>
+	                        <div class="pros__item__title">Бесплатная доставка</div>
+	                        <div class="pros__item__desc">Бесплатная доставка по городу при покупке от 3 000 рублей</div>
+	                    </div>
+	                    <div class="pros__sep"></div>
+	                    <div class="pros__item">
+	                        <div class="pros__item__icon">
+	                            <img src="images/pros/real-estate.svg" alt="">
+	                        </div>
+	                        <div class="pros__item__title">Скидки новоселам</div>
+	                        <div class="pros__item__desc">Карта со скидкой до 5% на ассортимент</div>
+	                    </div>
+	                    <div class="pros__sep"></div>
+	                    <div class="pros__item">
+	                        <div class="pros__item__icon pros__item__icon--return-box">
+	                            <img src="images/pros/return-box.svg" alt="">
+	                        </div>
+	                        <div class="pros__item__title">Легкий возврат</div>
+	                        <div class="pros__item__desc">Возврат в течении 120 дней</div>
+	                    </div>
+	                </div>
+	            </div>
+	            <a href="#" class="button button-outline-black button--size-1 pros__see-all">
+	                Смотреть все
+	            </a>
+	        </div>
+	    </div>
+	</section>
+	<section class="subscribe">
+	    <div class="page__center">
+	        <div class="subscribe__center">
+	            <h3 class="subscribe__h1">
+	                <div class="subscribe__h1__icon">
+	                    <img src="images/subscribe/email.svg" alt="">
+	                </div>
+	                <div class="subscribe__h1__text">
+	                    Подпишись на новости, скидки и акции компании 
+	                </div>
+	            </h3>
+	            <div class="subscribe__form">
+	                <div class="subscribe__fields">
+	                    <input type="text" class="input input-default input--full subscribe__input" placeholder="Ваш email">
+	                </div>
+	                <div class="subscribe__submit">
+	                    <button type="button" class="button button-orange button--full subscribe__button">
+	                        Подписаться
+	                    </button>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</section>
+	<footer class="footer">
+	    <div class="page__center">
+	        <div class="footer__center">
+	
+	            <nav class="footer__links" id="footer-links">
+	
+	                <div class="footer__links__group">
+	                    <div class="footer__links__title collapsed" data-bs-toggle="collapse" data-bs-target='#footer-links-1'>
+	                        <i class="icon-arrow-down"></i>
+	                        <span>Интернет-магазин</span>
+	                    </div>
+	                    <div class="footer__links__list collapse" data-bs-parent="#footer-links" id="footer-links-1">
+	                        <div>
+	                            <div><a href="#">О магазине</a></div>
+	                            <div><a href="#">Оплата</a></div>
+	                            <div><a href="#">Гарантия</a></div>
+	                            <div><a href="#">Доставка</a></div>
+	                            <div><a href="#">Товары под заказ</a></div>
+	                            <div><a href="#">Помощь покупателю</a></div>
+	                            <div><a href="#">Персональные данные</a></div>
+	                            <div><a href="#">Договор оферты</a></div>
+	                            <div><a href="#">Вопросы</a></div>
+	                        </div>
+	                    </div>
+	                </div>
+	
+	                <div class="footer__links__group">
+	                    <div class="footer__links__title collapsed" data-bs-toggle="collapse" data-bs-target='#footer-links-2'>
+	                        <i class="icon-arrow-down"></i>
+	                        <span>Cервисы</span>
+	                    </div>
+	                    <div class="footer__links__list collapse" data-bs-parent="#footer-links" id="footer-links-2">
+	                        <div>
+	                            <div><a href="#">Новосёл</a></div>
+	                            <div><a href="#">Мега-Клуб</a></div>
+	                            <div><a href="#">Подарочные карты</a></div>
+	                            <div><a href="#">Колеровка краски</a></div>
+	                            <div><a href="#">Установка</a></div>
+	                            <div><a href="#">Центр кровли и фасадов</a></div>
+	                            <div><a href="#">Возврат</a></div>
+	                            <div><a href="#">Кредит и рассрочка</a></div>
+	                        </div>
+	                    </div>
+	                </div>
+	
+	                <div class="footer__links__group">
+	                    <div class="footer__links__title collapsed" data-bs-toggle="collapse" data-bs-target='#footer-links-3'>
+	                        <i class="icon-arrow-down"></i>
+	                        <span>Компания</span>
+	                    </div>
+	                    <div class="footer__links__list collapse" data-bs-parent="#footer-links" id="footer-links-3">
+	                        <div>
+	                            <div><a href="#">О компании</a></div>
+	                            <div><a href="#">Магазины</a></div>
+	                            <div><a href="#">Вакансии</a></div>
+	                            <div><a href="#">Истории успеха</a></div>
+	                            <div><a href="#">Новости</a></div>
+	                            <div><a href="#">Контакты</a></div>
+	                        </div>
+	                    </div>
+	                </div>
+	
+	                <div class="footer__links__group">
+	                    <div class="footer__links__title collapsed" data-bs-toggle="collapse" data-bs-target='#footer-links-4'>
+	                        <i class="icon-arrow-down"></i>
+	                        <span>Cоветы</span>
+	                    </div>
+	                    <div class="footer__links__list collapse" data-bs-parent="#footer-links" id="footer-links-4">
+	                        <div>
+	                            <div><a href="#">Строительные</a></div>
+	                            <div><a href="#">Отделочные</a></div>
+	                            <div><a href="#">По инструменту</a></div>
+	                            <div><a href="#">По даче и саду</a></div>
+	                            <div><a href="#">Для дома</a></div>
+	                        </div>
+	                    </div>
+	                </div>
+	
+	                <div class="footer__links__group">
+	                    <div class="footer__links__title collapsed" data-bs-toggle="collapse" data-bs-target='#footer-links-5'>
+	                        <i class="icon-arrow-down"></i>
+	                        <span>Партнерство</span>
+	                    </div>
+	                    <div class="footer__links__list collapse" data-bs-parent="#footer-links" id="footer-links-5">
+	                        <div>
+	                            <div><a href="#">Оптовикам</a></div>
+	                            <div><a href="#">Поставщикам</a></div>
+	                            <div><a href="#">Арендаторам</a></div>
+	                            <div><a href="#">Перевозчикам</a></div>
+	                        </div>
+	                    </div>
+	                </div>
+	
+	            </nav>
+	            
+	            <div class="footer__contacts">
+	
+	                <div class="footer__call">
+	                    <div class="footer__call__phone">
+	                        <i class="icon-phone"></i> 8-800-222-12-40
+	                    </div>
+	                    <div class="footer__call__desc">Мы работаем с 8:00 до 21:00</div>
+	                </div>
+	
+	                <nav class="footer__social">
+	                    <a href="#" class="footer__social__link">
+	                        <img src="images/footer/social/vk.svg" alt="Вконтакте">
+	                    </a>
+	                    <a href="#" class="footer__social__link">
+	                        <img src="images/footer/social/instagram.svg" alt="Instagram">
+	                    </a>
+	                </nav>
+	
+	                <div class="footer__pay">
+	                    <div class="footer__pay__title">Мы принимаем к оплате</div>
+	                    <div class="footer__pay__cards">
+	                        <img src="images/footer/pay-cards/google-pay.svg" alt="Google Pay">
+	                        <img src="images/footer/pay-cards/apple-pay.svg" alt="Apple Pay">
+	                        <img src="images/footer/pay-cards/mir.svg" alt="Мир">
+	                        <img src="images/footer/pay-cards/visa.svg" alt="Visa">
+	                        <img src="images/footer/pay-cards/maestro.svg" alt="Maestro">
+	                        <img src="images/footer/pay-cards/master-card.svg" alt="MasterCard">
+	                    </div>
+	                </div>
+	
+	                <div class="footer__author">
+	                    2021 © ооо «блеск»
+	                </div>
+	
+	                <nav class="footer__apps">
+	                    <a href="#" class="footer__apps__link">
+	                        <img src="/images/footer/google-play.svg" alt="Google Play">
+	                    </a>
+	                    <a href="#" class="footer__apps__link">
+	                        <img src="/images/footer/app-store.svg" alt="App Store">
+	                    </a>
+	                </nav>
+	
+	            </div>
+	            
+	        </div>
+	    </div>
+	</footer>
+</div>
+
+	<script src="js/bundle.js"></script>
+
+	
+	<style type="text/css">
+		
+		.filelist {
+			position: absolute;
+			z-index: 999999;
+			top: 0;
+			left: 0;
+			font-size: 18px;
+			color: #fff;
+		}
+	
+		.filelist._hidden {
+			display: none;
+		}
+	
+		.filelist._active .filelist__body {
+			display: block;
+		}
+	
+		.filelist span {
+			display: inline-block;
+			padding: 9px 20px;
+			background: #000;
+		}
+	
+		.filelist__body {
+			display: none;
+			background: #000;
+		}
+	
+		.filelist__nav {
+			border-top: 1px dashed rgba(255, 255, 255, .2);
+			padding: 9px 0;
+		}
+	
+		.filelist__tip {
+			border-top: 1px dashed rgba(255, 255, 255, .2);
+			padding: 20px;
+			font-size: 12px;
+			line-height: 1.4;
+		}
+	
+		.filelist__text {
+			max-width: 200px;
+		}
+	
+		.filelist__nav:first-child {
+			border-top: 0;
+		}
+	
+		.filelist__nav a {
+			display: block;
+			padding: 9px 20px;
+			color: #fff !important;
+		}
+	
+		.filelist__nav a:hover {
+			background: #fff;
+			color: #000 !important;
+		}
+	
+		.filelist__nav .filelist__zip {
+			background: #5c905a;
+			color: #fff !important;
+		}
+	
+		.filelist__nav .filelist__zip:hover {
+			background: #6ca86a;
+			color: #fff !important;
+		}
+	
+	</style>
+	
+	<script type="text/javascript">
+		
+		(function () {
+	
+			var Filelist = {
+	
+				createHtml: function () {
+	
+					var $filelist = $('<div class="filelist" id="filelist">' +
+							'<span></span>' +
+							'<div class="filelist__body">' + 
+								'<div class="filelist__nav">' + 
+									'<a href="http://ildar-meyker.ru/html/leeft/mega29/html-mega29.zip" target="_blank" class="filelist__zip">Скачать архив</a>' +
+									'<a href="#" class="js-filelist-hide">Скрыть</a>' +
+								'</div>' + 
+								'<div class="filelist__tip">' +
+									'<div class="filelist__text">' + 
+										'Можно щелкнуть мышкой дважды в любом месте, ' +
+										'чтобы скрыть или показать.' +
+									'</div>' +
+								'</div>' +
+							'</div>' + 
+						'</div>'),
+	
+						$label = $filelist.find('span'),
+	
+						$body  = $filelist.find('.filelist__body');
+	
+					$.ajax('filelist.json', {cache: false})
+						.done(function (data) {
+							$label.text('Pages count: ' + data.length);
+	
+							var $pages = $('<div class="filelist__nav"></div>');
+							data.forEach(function (filename) {
+								$('<a href="' + filename + '">' + 
+									filename + 
+								'</a>').appendTo($pages);
+							});
+							$pages.prependTo($body);
+						})
+						.fail(function () {
+							$label.text('Filelist failed.');
+						})
+						.always(function () {
+							$filelist.appendTo($('body'));
+						});
+	
+				},
+	
+				_handleSpanClick: function (e) {
+					var self = e.data.self;
+	
+					$('#filelist').toggleClass('_active');
+				},
+	
+				_handleDocumentClick: function (e) {
+					var self = e.data.self;
+	
+					if ( $(e.target).closest('.filelist').length > 0 ) return;
+					$('#filelist').removeClass('_active');
+				},
+	
+				_handleDoubleClick: function (e) {
+					var self = e.data.self;
+	
+					$('#filelist').toggleClass('_hidden');
+				},
+	
+				_handleHideClick: function (e) {
+					var self = e.data.self;
+	
+					$('#filelist').addClass('_hidden');
+				},
+	
+				_bindUI: function () {
+					var self = this;
+	
+					$(document).on('dblclick', {self: self}, self._handleDoubleClick);
+					$(document).on('click', '.js-filelist-hide', {self: self}, self._handleHideClick);
+					$(document).on('click', '.filelist > span', {self: self}, self._handleSpanClick);
+					$(document).on('click', {self: self}, self._handleDocumentClick);
+				},
+	
+				init: function () {
+					var self = this;
+	
+					self._bindUI();
+					self.createHtml();
+				}
+	
+			};
+	
+			Filelist.init();
+	
+		}());
+	
+	</script></body>
+
+</html>

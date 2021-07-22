@@ -2,12 +2,13 @@
   "_elements.html",
   "cart.html",
   "delivery.html",
-  "favorites.html",
   "index.html",
+  "my-favorites.html",
+  "my-history.html",
+  "my-profile.html",
   "news--list.html",
   "news-item.html",
   "news.html",
   "order-complete.html",
-  "order-steps.html",
-  "profile.html"
+  "order-steps.html"
 ]

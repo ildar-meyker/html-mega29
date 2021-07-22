@@ -16,7 +16,7 @@
 	background: #fafafa;
 	color: #2e2e2e;
 
-	&:focus {
+	&:not(:read-only):focus {
 		border-color: #21a73f;
 	}
 

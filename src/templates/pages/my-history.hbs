@@ -1,5 +1,5 @@
 ---
-title: Избранное
+title: История заказов
 layout: default.hbs
 ---
 
@@ -12,6 +12,8 @@ layout: default.hbs
 			<a href="#">Главная</a>
             <i class="icon-arrow-right"></i>
             <a href="#">Мой кабинет</a>
+            <i class="icon-arrow-right"></i>
+            <a href="#">История заказов</a>
 		</div>
 	</nav>
     
@@ -22,8 +24,8 @@ layout: default.hbs
                 <nav class="nav-profile" id="nav-info-tabs">
                     <a href="#" class="nav-profile__item js-nav-info-tab">Личный кабинет</a>
                     <a href="#" class="nav-profile__item js-nav-info-tab">Смена пароля</a>
-                    <a href="#" class="nav-profile__item js-nav-info-tab active">Избранное</a>
-                    <a href="#" class="nav-profile__item js-nav-info-tab">История заказов</a>
+                    <a href="#" class="nav-profile__item js-nav-info-tab">Избранное</a>
+                    <a href="#" class="nav-profile__item js-nav-info-tab active">История заказов</a>
                     <a href="#" class="nav-profile__item js-nav-info-tab">Карты</a>
                 </nav>
 
@@ -45,61 +47,61 @@ layout: default.hbs
                             <div class="nav-info__crop collapse" id="nav-info-1">
                                 <div class="nav-info__list">
                                     
-                                    <div class="form-panel zoom-for-tablet">
-                                        <div class="form-panel__header">
-                                            <div class="form-panel__title">Ваши данные</div>
+                                    <div class="form-history zoom-for-tablet">
+                                        <div class="form-history__header">
+                                            <div class="form-history__title">Ваши данные</div>
                                         </div>
-                                        <div class="form-panel__body">
-                                            <div class="form-panel__list">
+                                        <div class="form-history__body">
+                                            <div class="form-history__list">
 
-                                                <div class="form-panel__row">
-                                                    <div class="form-panel__item form-panel__col form-panel__col--6">
-                                                        <label class="form-panel__label">Имя</label>
+                                                <div class="form-history__row">
+                                                    <div class="form-history__item form-history__col form-history__col--6">
+                                                        <label class="form-history__label">Имя</label>
                                                         <input type="text" class="input input-default input--full" placeholder="Ваше имя">
                                                     </div>
                                                     
-                                                    <div class="form-panel__item form-panel__col form-panel__col--6">
-                                                        <label class="form-panel__label">Фамилия</label>
+                                                    <div class="form-history__item form-history__col form-history__col--6">
+                                                        <label class="form-history__label">Фамилия</label>
                                                         <input type="text" class="input input-default input--full" placeholder="Ваша фамилия">
                                                     </div>
                                                     
-                                                    <div class="form-panel__item form-panel__col form-panel__col--6">
-                                                        <label class="form-panel__label">Номер телефона</label>
+                                                    <div class="form-history__item form-history__col form-history__col--6">
+                                                        <label class="form-history__label">Номер телефона</label>
                                                         <input type="text" class="input input-default input--full" placeholder="+7(___)___-__-__" data-mask="+7(000)000-00-00">
                                                     </div>
                                                     
-                                                    <div class="form-panel__item form-panel__col form-panel__col--6">
-                                                        <label class="form-panel__label">E-mail</label>
+                                                    <div class="form-history__item form-history__col form-history__col--6">
+                                                        <label class="form-history__label">E-mail</label>
                                                         <input type="text" class="input input-default input--full" placeholder="Ваш e-mail">
                                                     </div>
                                                     
-                                                    <div class="form-panel__item form-panel__col">
-                                                        <label class="form-panel__label">Адрес</label>
+                                                    <div class="form-history__item form-history__col">
+                                                        <label class="form-history__label">Адрес</label>
                                                         <input type="text" class="input input-default input--full" placeholder="Ваш адрес">
                                                     </div>
                                                 </div>
 
-                                                <div class="form-panel__item">
-                                                    <label class="form-panel__check form-panel__check--agree">
+                                                <div class="form-history__item">
+                                                    <label class="form-history__check form-history__check--agree">
                                                         <input type="checkbox">
                                                         <span>Я согласен с <a href="#" target="_blank">обработку персональных данных</a></span>
                                                     </label>
                                                 </div>
 
-                                                <div class="form-panel__actions">
+                                                <div class="form-history__actions">
                                                     <button type="button" class="button button-green">
                                                         Сохранить изменения
                                                     </button>
                                                 </div>
 
-                                                <div class="form-panel__sep"></div>
+                                                <div class="form-history__sep"></div>
 
-                                                <div class="form-panel__auth">
-                                                    <div class="form-panel__auth__desc">
+                                                <div class="form-history__auth">
+                                                    <div class="form-history__auth__desc">
                                                         Вы можете связать свой профиль с профилями в социальных сетях и сервисах:
                                                     </div>
-                                                    <div class="form-panel__auth__icons">
-                                                        <a href="#" class="form-panel__auth__icons__item form-panel__auth__icons__item--vk">
+                                                    <div class="form-history__auth__icons">
+                                                        <a href="#" class="form-history__auth__icons__item form-history__auth__icons__item--vk">
                                                             <i class="icon-vk-share"></i>
                                                         </a>
                                                     </div>
@@ -126,12 +128,12 @@ layout: default.hbs
                                 </div>
                             </div>
                         </div>
-                        <div class="nav-info__group active">
-                            <a href="#" class="nav-info__title" data-bs-toggle="collapse" data-bs-target="#nav-info-3">
+                        <div class="nav-info__group">
+                            <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-3">
                                 <span>Избранное</span>
                                 <i class="icon-arrow-down"></i>
                             </a>
-                            <div class="nav-info__crop collapse show" id="nav-info-3">
+                            <div class="nav-info__crop collapse" id="nav-info-3">
                                 <div class="nav-info__list">
                                     
                                     <div class="my-goods my-goods--panel zoom-for-tablet">
@@ -313,15 +315,15 @@ layout: default.hbs
                                 </div>
                             </div>
                         </div>
-                        <div class="nav-info__group">
-                            <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-4">
+                        <div class="nav-info__group active">
+                            <a href="#" class="nav-info__title" data-bs-toggle="collapse" data-bs-target="#nav-info-4">
                                 <span>История заказов</span>
                                 <i class="icon-arrow-down"></i>
                             </a>
-                            <div class="nav-info__crop collapse" id="nav-info-4">
+                            <div class="nav-info__crop collapse show" id="nav-info-4">
                                 <div class="nav-info__list">
                                     
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, enim pariatur, vero ab repudiandae unde cum iure numquam quisquam earum aperiam molestiae asperiores accusantium facilis, ad tenetur commodi delectus nostrum!
+                                    {{> history }}
                                     
                                 </div>
                             </div>
