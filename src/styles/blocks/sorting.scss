@@ -1,14 +1,10 @@
 .sorting {
 	margin-bottom: 15px;
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 
 	&__left {
-		flex-grow: 1;
-
-		select {
-			width: 240px;
-		}
 	}
 
 	&__modes {
@@ -31,10 +27,29 @@
 			}
 		}
 	}
+
+	&__count {
+		font-size: 13/16 + em;
+		font-weight: 700;
+		color: #000;
+
+		&__value {
+			padding-left: 0.3em;
+			color: #21a73f;
+		}
+	}
 }
 
 @media (min-width: 768px) {
 	.sorting {
 		margin-bottom: 20px;
+	}
+}
+
+@media (min-width: 992px) {
+	.sorting {
+		&__count {
+			font-size: 14px;
+		}
 	}
 }

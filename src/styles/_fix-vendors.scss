@@ -13,32 +13,39 @@
 }
 
 // select2
+.select2-container {
+	width: auto !important;
+}
 .select2-container--default .select2-selection--single {
 	border-color: #f2f3f5;
-	border-radius: 4px !important;
+	border-radius: 4/16 + em !important;
 }
 
 .select2-container .select2-selection--single {
-	height: 40px;
+	height: auto;
 }
 
 .select2-container--default
 	.select2-selection--single
 	.select2-selection__rendered {
-	font-size: 12px;
-	padding: 5px 20px;
+	font-size: 12/16 + em;
+	padding: 10/12 + em 40/12 + em 10/12 + em 20/12 + em;
+	line-height: 1;
 	color: #000;
 }
 
 .select2-container--default
 	.select2-selection--single
 	.select2-selection__arrow {
+	width: auto;
+	height: auto;
 	transition: all 0.2s;
 	top: 50%;
-	margin-top: -13px;
-	right: 10px;
-	width: auto;
-	line-height: 26px;
+	margin-top: -0.5em;
+	right: 10/12 + em;
+	font-family: "icomoon" !important;
+	font-size: 12/16 + em;
+	line-height: 1;
 }
 
 .select2-container--default.select2-container--open
@@ -50,8 +57,6 @@
 .select2-container--default
 	.select2-selection--single
 	.select2-selection__arrow::before {
-	font-family: "icomoon" !important;
-	font-size: 12px;
 	content: "\e901";
 }
 
@@ -61,10 +66,13 @@
 	b {
 	display: none;
 }
+.select2-container--default .select2-results > .select2-results__options {
+	max-height: 400/16 + em;
+}
 
 .select2-container--default .select2-results__option {
-	padding: 13px 21px;
-	font-size: 12px;
+	padding: 13/12 + em 21/12 + em;
+	font-size: 12/16 + em;
 }
 
 .select2-container--default .select2-results__option:hover {
@@ -81,18 +89,18 @@
 	position: absolute;
 	top: 50%;
 	margin-top: -0.5em;
-	right: 10px;
+	right: 1em;
 	content: "\e90c";
 	font-family: icomoon !important;
-	font-size: 10px;
+	font-size: 10/12 + em;
 }
 
 .select2-container--default .select2-dropdown {
 	border: none;
-	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.04),
-		0px 5px 15px rgba(0, 0, 0, 0.12);
+	box-shadow: 0px 3/16 + em 3/16 + em rgba(0, 0, 0, 0.04),
+		0px 5/16 + em 15/16 + em rgba(0, 0, 0, 0.12);
 	overflow: hidden;
-	border-radius: 4px !important;
+	border-radius: 4/16 + em !important;
 }
 
 // ya share

@@ -1,7 +1,7 @@
 .page {
 	&__center {
 		box-sizing: content-box;
-		padding: 0 20px;
+		padding: 0 10px;
 		max-width: 1180px;
 		margin: 0 auto;
 	}
@@ -26,6 +26,9 @@
 
 @media (min-width: 768px) {
 	.page {
+		&__center {
+			padding: 0 20px;
+		}
 		&__paper {
 			padding: 30px;
 		}

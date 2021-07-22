@@ -1,7 +1,7 @@
 import "./modules/globals";
 import "bootstrap/js/dist/collapse";
 import "jquery-mask-plugin";
-import "simplebar";
+import SimpleBar from "simplebar";
 import "select2";
 import "icheck";
 
@@ -14,8 +14,11 @@ $(function () {
 
 	autosize($("textarea"));
 
-	$("select").select2({
-		minimumResultsForSearch: -1,
+	$("select").each(function () {
+		$(this).select2({
+			minimumResultsForSearch: -1,
+			dropdownParent: $(this).parent(),
+		});
 	});
 
 	// icheck

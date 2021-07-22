@@ -27586,8 +27586,11 @@ __webpack_require__.r(__webpack_exports__);
 $(function () {
   _modules_NavInfo__WEBPACK_IMPORTED_MODULE_8__["default"].init();
   autosize__WEBPACK_IMPORTED_MODULE_6___default()($("textarea"));
-  $("select").select2({
-    minimumResultsForSearch: -1
+  $("select").each(function () {
+    $(this).select2({
+      minimumResultsForSearch: -1,
+      dropdownParent: $(this).parent()
+    });
   }); // icheck
 
   $("input").iCheck({

@@ -1,0 +1,24 @@
+.layout-profile {
+	&__side {
+		display: none;
+	}
+}
+
+@media (min-width: 992px) {
+	.layout-profile {
+		&__center {
+			display: flex;
+		}
+
+		&__side {
+			display: block;
+			flex: 0 0 auto;
+			width: 180px;
+		}
+
+		&__main {
+			flex-grow: 1;
+			padding-left: 17px;
+		}
+	}
+}

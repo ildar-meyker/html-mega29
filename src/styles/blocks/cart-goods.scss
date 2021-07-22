@@ -12,31 +12,33 @@
 	}
 
 	&__item {
-		margin-top: (8/16) + em;
+		margin-top: (10/16) + em;
 		display: flex;
+		align-items: center;
 		flex-wrap: wrap;
 		border: (1/16) + em solid #f2f3f5;
 		border-radius: (4/16) + em;
 		background: #fff;
+
+		> div {
+			flex: 0 0 auto;
+		}
 	}
 
 	&__image {
-		flex: 0 0 auto;
 		width: 30%;
 	}
 
 	&__desc {
-		flex: 0 0 auto;
-		align-self: center;
 		width: 70%;
 		position: relative;
-		padding: 0 (60/16) + em 0 (30/16) + em;
+		padding: 0 (40/16) + em 0 (20/16) + em;
 	}
 
 	&__close {
 		position: absolute;
 		top: 50%;
-		right: (15/16) + em;
+		right: (10/16) + em;
 		margin-top: -1em;
 		padding: 0.5em;
 		line-height: 0;
@@ -65,9 +67,9 @@
 	}
 
 	&__props {
-		flex: 0 0 auto;
 		width: 55%;
-		padding: (10/15) + em (6/15) + em;
+		padding: (6/15) + em;
+		padding-right: 0;
 		font-size: (15/16) + em;
 
 		&__inner {
@@ -82,10 +84,8 @@
 	}
 
 	&__rest {
-		flex: 0 0 auto;
 		width: 45%;
-		align-self: center;
-		padding: 0 (20/16) + em;
+		padding: 6/16 + em (20/16) + em;
 	}
 
 	&__price {
@@ -139,6 +139,31 @@
 			font-size: (12/16) + em;
 		}
 	}
+
+	&__buttons {
+		margin-top: 8/16 + em;
+
+		&--col {
+			display: none;
+		}
+
+		button {
+			min-width: 10em;
+			padding: 8/11 + em 15/11 + em;
+			font-size: 11/16 + em;
+		}
+	}
+
+	&__remove {
+		margin-top: 10/16 + em;
+		text-align: center;
+
+		button {
+			min-width: 10em;
+			padding: 8/11 + em 15/11 + em;
+			font-size: 11/16 + em;
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -159,6 +184,24 @@
 		&__desc {
 			width: 85%;
 		}
+
+		&__buttons {
+			button {
+				padding: (11/14) + em (15/14) + em;
+				font-size: (14/16) + em;
+			}
+		}
+
+		&__remove {
+			text-align: right;
+
+			button {
+				min-width: 91px;
+				padding: (7/12) + em (10/12) + em;
+				font-weight: 400;
+				font-size: (12/16) + em;
+			}
+		}
 	}
 }
 
@@ -167,6 +210,19 @@
 		&__item {
 			position: relative;
 			align-items: center;
+
+			&--favorites {
+				.cart-goods__desc {
+					width: 25%;
+				}
+				.cart-goods__props,
+				.cart-goods__rest {
+					width: 20%;
+				}
+				.cart-goods__buttons {
+					width: 15%;
+				}
+			}
 		}
 
 		&__image {
@@ -176,7 +232,7 @@
 		&__desc {
 			position: static;
 			width: 28%;
-			padding-right: (30/16) + em;
+			padding-right: (20/16) + em;
 		}
 
 		&__props {
@@ -185,11 +241,32 @@
 
 		&__rest {
 			width: 28%;
-			padding: 0 (40/16) + em;
 		}
 
-		&__close {
-			right: (32/16) + em;
+		&__buttons {
+			display: none;
+			margin-top: 0;
+
+			&--col {
+				display: block;
+			}
+
+			button {
+				display: block;
+				width: 100%;
+				margin-top: 4px;
+			}
+		}
+	}
+}
+
+@media (max-width: 991.98px) {
+	.cart-goods {
+		&--panel {
+			padding: 14/16 + em;
+			border: 1/16 + em solid #f2f3f5;
+			border-radius: 4/16 + em;
+			background: #fff;
 		}
 	}
 }

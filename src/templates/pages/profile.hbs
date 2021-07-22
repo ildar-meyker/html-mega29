@@ -16,8 +16,8 @@ layout: default.hbs
 	</nav>
     
     <div class="page__center">
-        <div class="layout-basic__center">
-            <div class="layout-basic__side">
+        <div class="layout-profile__center">
+            <div class="layout-profile__side">
                 
                 <nav class="nav-profile" id="nav-info-tabs">
                     <a href="#" class="nav-profile__item js-nav-info-tab active">Личный кабинет</a>
@@ -32,7 +32,7 @@ layout: default.hbs
                 <a href="#" class="button button-outline-green button--full">Выйти</a>
 
             </div>
-            <div class="layout-basic__main">
+            <div class="layout-profile__main">
 
                 <section class="nav-info mt-0 mb-0" id="nav-info">
 
@@ -134,8 +134,179 @@ layout: default.hbs
                             <div class="nav-info__crop collapse" id="nav-info-3">
                                 <div class="nav-info__list">
                                     
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, enim pariatur, vero ab repudiandae unde cum iure numquam quisquam earum aperiam molestiae asperiores accusantium facilis, ad tenetur commodi delectus nostrum!
-                                    
+                                    <div class="form-panel zoom-for-tablet">
+                                        <div class="form-panel__body">
+                                            
+                                            <aside class="sorting">
+                                                <div class="sorting__left">
+                                                    <select>
+                                                        <option>По популярности (убывание)</option>
+                                                        <option>По популярности (возрастание)</option>
+                                                        <option>По рейтингу (убывание)</option>
+                                                        <option>По рейтингу (возрастание)</option>
+                                                        <option>По цене (убывание)</option>
+                                                        <option>По цене (возрастание)</option>
+                                                    </select>
+                                                </div>
+                                                <div class="sorting__right">
+                                                    <div class="sorting__count">Товаров: <span class="sorting__count__value">5</span></div>
+                                                </div>
+                                            </aside>
+
+                                            <div class="cart-goods__list">
+                                                <div class="cart-goods__item cart-goods__item--favorites">
+                                                    <div class="cart-goods__image">
+                                                        <div class="goods__image goods__image--gray">
+                                                            <div><img src="images/temp/goods/1.jpeg" alt=""></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart-goods__desc">
+                                                        <div class="cart-goods__code">Артикул: 897-356</div>
+                                                        <div class="cart-goods__title">
+                                                            <a href="#">Дрель AEК BE 750 R 449160</a>
+                                                        </div>
+                                                        <div class="goods__rate cart-goods__rate">
+                                                            <div class="goods__rate__stars">
+                                                                <div style="width: 68%;"></div>
+                                                            </div>
+                                                            <div class="goods__rate__count">(23)</div>
+                                                        </div>
+                                                        <button type="button" class="cart-goods__close">
+                                                            <i class="icon-close"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="cart-goods__props">
+                                                        <div class="cart-goods__props__inner">
+                                                            <div class="cart-goods__prop">
+                                                                <div>В наличии</div>
+                                                                <div>7 шт</div>
+                                                            </div>
+                                                            <div class="cart-goods__prop">
+                                                                <div>Доставка</div>
+                                                                <div>завтра</div>
+                                                            </div>
+                                                            <div class="cart-goods__prop">
+                                                                <div>Самовывоз</div>
+                                                                <div>сегодня</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart-goods__rest">
+                                                        <div class="cart-goods__price"><span>5 120</span> ₽ / шт</div>
+                                                        <div class="cart-goods__points"><span>+42</span> балла на карту</div>
+                                                        <div class="cart-goods__buttons">
+                                                            <button type="button" class="button button-outline-green">В корзину</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart-goods__buttons cart-goods__buttons--col">
+                                                        <button type="button" class="button button-outline-green">В корзину</button>
+                                                        <button type="button" class="button button-green">Купить в 1 клик</button>
+                                                    </div>
+                                                </div>
+
+                                                <div class="cart-goods__item cart-goods__item--favorites">
+                                                    <div class="cart-goods__image">
+                                                        <div class="goods__image goods__image--gray">
+                                                            <div><img src="images/temp/goods/2.jpeg" alt=""></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart-goods__desc">
+                                                        <div class="cart-goods__code">Артикул: 897-356</div>
+                                                        <div class="cart-goods__title">
+                                                            <a href="#">Дрель AEК BE 750 R 449160</a>
+                                                        </div>
+                                                        <div class="goods__rate cart-goods__rate">
+                                                            <div class="goods__rate__stars">
+                                                                <div style="width: 68%;"></div>
+                                                            </div>
+                                                            <div class="goods__rate__count">(23)</div>
+                                                        </div>
+                                                        <button type="button" class="cart-goods__close">
+                                                            <i class="icon-close"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="cart-goods__props">
+                                                        <div class="cart-goods__props__inner">
+                                                            <div class="cart-goods__prop">
+                                                                <div>В наличии</div>
+                                                                <div>7 шт</div>
+                                                            </div>
+                                                            <div class="cart-goods__prop">
+                                                                <div>Доставка</div>
+                                                                <div>завтра</div>
+                                                            </div>
+                                                            <div class="cart-goods__prop">
+                                                                <div>Самовывоз</div>
+                                                                <div>сегодня</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart-goods__rest">
+                                                        <div class="cart-goods__price"><span>5 120</span> ₽ / шт</div>
+                                                        <div class="cart-goods__points"><span>+42</span> балла на карту</div>
+                                                        <div class="cart-goods__buttons">
+                                                            <button type="button" class="button button-outline-green">В корзину</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart-goods__buttons cart-goods__buttons--col">
+                                                        <button type="button" class="button button-outline-green">В корзину</button>
+                                                        <button type="button" class="button button-green">Купить в 1 клик</button>
+                                                    </div>
+                                                </div>
+
+                                                <div class="cart-goods__item cart-goods__item--favorites">
+                                                    <div class="cart-goods__image">
+                                                        <div class="goods__image goods__image--gray">
+                                                            <div><img src="images/temp/goods/3.png" alt=""></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart-goods__desc">
+                                                        <div class="cart-goods__code">Артикул: 897-356</div>
+                                                        <div class="cart-goods__title">
+                                                            <a href="#">Ударная дрель Boss ДЭУ-6500 </a>
+                                                        </div>
+                                                        <div class="goods__rate cart-goods__rate">
+                                                            <div class="goods__rate__stars">
+                                                                <div style="width: 68%;"></div>
+                                                            </div>
+                                                            <div class="goods__rate__count">(23)</div>
+                                                        </div>
+                                                        <button type="button" class="cart-goods__close">
+                                                            <i class="icon-close"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="cart-goods__props">
+                                                        <div class="cart-goods__props__inner">
+                                                            <div class="cart-goods__prop">
+                                                                <div>В наличии</div>
+                                                                <div>7 шт</div>
+                                                            </div>
+                                                            <div class="cart-goods__prop">
+                                                                <div>Доставка</div>
+                                                                <div>завтра</div>
+                                                            </div>
+                                                            <div class="cart-goods__prop">
+                                                                <div>Самовывоз</div>
+                                                                <div>сегодня</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart-goods__rest">
+                                                        <div class="cart-goods__price"><span>5 120</span> ₽ / шт</div>
+                                                        <div class="cart-goods__points"><span>+42</span> балла на карту</div>
+                                                        <div class="cart-goods__buttons">
+                                                            <button type="button" class="button button-outline-green">В корзину</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart-goods__buttons cart-goods__buttons--col">
+                                                        <button type="button" class="button button-outline-green">В корзину</button>
+                                                        <button type="button" class="button button-green">Купить в 1 клик</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>
