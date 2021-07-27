@@ -1,0 +1,127 @@
+.my-purchases {
+	margin-top: 25/16 + em;
+	padding: 0 10/16 + em;
+
+	&__title {
+		margin-bottom: 15/18 + em;
+		font-size: 18/16 + em;
+		font-weight: 700;
+	}
+
+	&__panel {
+	}
+
+	&__header {
+		margin-bottom: 15/16 + em;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__select {
+		margin-right: 5/16 + em;
+	}
+
+	&__body {
+	}
+
+	&__list {
+	}
+
+	&__item {
+		padding: 30/24 + em 20/24 + em;
+		border-radius: 11/24 + em;
+		font-size: 24/16 + em;
+		margin-top: 17/24 + em;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:nth-child(odd) {
+			background: #fafafa;
+		}
+	}
+
+	&__name {
+	}
+
+	&__date {
+		margin: 15/16 + em 0;
+		color: #adb5bd;
+	}
+
+	&__sum {
+	}
+
+	&__footer {
+		text-align: right;
+	}
+
+	&__show-more {
+		border: 0;
+		font-size: 18/16 + em;
+		color: #21a73f;
+	}
+}
+
+@media (min-width: 992px) {
+	.my-purchases {
+		padding: 0;
+
+		&__title {
+			margin-bottom: 7px;
+		}
+
+		&__select {
+			font-size: 19px;
+		}
+
+		&__header {
+			padding: 11px;
+			border: 1px solid #f2f3f5;
+			border-radius: 4px 4px 0 0;
+			background: #fff;
+			margin: 0;
+		}
+
+		&__body {
+			padding: 16px 11px;
+			border: 1px solid #f2f3f5;
+			border-width: 0 1px;
+			background: #fff;
+		}
+
+		&__footer {
+			padding: 11px;
+			padding-top: 0;
+			border: 1px solid #f2f3f5;
+			border-radius: 0 0 4px 4px;
+			border-top: 0;
+			background: #fff;
+		}
+
+		&__item {
+			display: flex;
+			padding: 3px 7px;
+			border-radius: 4px;
+			font-size: 12px;
+		}
+
+		&__name {
+			flex: 0 0 auto;
+			width: 40%;
+		}
+
+		&__date {
+			margin: 0;
+		}
+
+		&__sum {
+			margin-left: auto;
+		}
+
+		&__show-more {
+			font-size: 10px;
+		}
+	}
+}

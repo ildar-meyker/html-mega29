@@ -42,7 +42,7 @@ a {
 	transition: all 0.2s;
 }
 
-.zoom-for-tablet {
+.scale-with-window {
 	font-size: 3.9vw;
 }
 
@@ -53,7 +53,7 @@ a {
 }
 
 @media (min-width: 768px) {
-	.zoom-for-tablet {
+	.scale-with-window {
 		font-size: 30px;
 	}
 
@@ -63,7 +63,7 @@ a {
 }
 
 @media (min-width: 992px) {
-	.zoom-for-tablet {
+	.scale-with-window {
 		font-size: 16px;
 	}
 }
