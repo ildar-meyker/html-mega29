@@ -55,6 +55,7 @@
     "js-datepicker": "^5.18.0",
     "notifyjs-browser": "^0.4.2",
     "select2": "^4.1.0-rc.0",
-    "simplebar": "^5.3.4"
+    "simplebar": "^5.3.4",
+    "tooltipster": "^4.2.8"
   }
 }

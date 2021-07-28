@@ -1,0 +1,138 @@
+.order {
+	padding: 30/16 + em;
+	border-radius: 6/16 + em;
+	box-shadow: 0px 0px 4/16 + em rgba(51, 51, 51, 0.04),
+		0px 0px 16/16 + em rgba(51, 51, 51, 0.08);
+	background: #fff;
+
+	&__code {
+		font-size: 17/16 + em;
+		color: #727271;
+	}
+
+	&__rating {
+		margin-top: 33/30 + em;
+		justify-content: flex-start;
+		font-size: 30/16 + em;
+	}
+
+	&__labels {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 25/16 + em;
+
+		&__blue,
+		&__red,
+		&__orange,
+		&__green {
+			margin: 0 12/20 + em 12/20 + em 0;
+			padding: 9/20 + em 13/20 + em;
+			border-radius: 8/20 + em;
+			background: #fff;
+			box-shadow: 0px 0px 6/20 + em rgba(51, 51, 51, 0.04),
+				0px 0px 24/20 + em rgba(51, 51, 51, 0.08);
+			font-size: 20/16 + em;
+			font-weight: 500;
+		}
+
+		&__blue {
+			color: #2f80ed;
+		}
+
+		&__red {
+			color: #ef1a1a;
+		}
+
+		&__orange {
+			background: #ef7f1a;
+			color: #fff;
+		}
+
+		&__green {
+			color: #21a73f;
+		}
+	}
+
+	&__price {
+		margin-top: 25/36 + em;
+		font-size: 36/16 + em;
+		font-weight: 800;
+		line-height: 0.7;
+
+		&__rubl {
+			font-size: 0.5em;
+		}
+	}
+
+	&__score {
+		margin-top: 15/23 + em;
+		font-size: 23/16 + em;
+
+		&__value {
+			font-weight: 500;
+			color: #21a73f;
+		}
+	}
+
+	&__buttons {
+		margin-top: 35/16 + em;
+
+		&__item {
+			display: block;
+			width: 100%;
+			margin-top: 10/28 + em;
+			padding: 12/28 + em 20/28 + em;
+			font-size: 28/16 + em;
+		}
+	}
+
+	&__actions {
+		display: flex;
+		margin: 15/16 + em 0;
+
+		&__item {
+			flex: 0 0 auto;
+			width: 50%;
+		}
+
+		&__button {
+			padding: 10/18 + em 0;
+			font-size: 18/16 + em;
+
+			> * {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			i {
+				margin-right: 3/25 + em;
+				font-size: 25/18 + em;
+			}
+		}
+	}
+
+	&__info {
+		padding: 14/28 + em 18/28 + em;
+		border-radius: 4/28 + em;
+		background: #fafafa;
+		font-size: 28/16 + em;
+
+		&__line {
+			display: flex;
+
+			> div:first-child {
+				flex: 0 0 auto;
+				margin-right: auto;
+				width: 50%;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.order {
+		&__price {
+			font-size: 3.4em;
+		}
+	}
+}

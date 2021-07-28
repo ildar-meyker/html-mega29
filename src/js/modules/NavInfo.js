@@ -3,7 +3,7 @@ import $ from "jquery";
 const NavInfo = {
 	$root: $(),
 
-	handleTabClick(e) {
+	_handleTabClick(e) {
 		e.preventDefault();
 
 		const index = $(e.currentTarget).index();
@@ -27,7 +27,7 @@ const NavInfo = {
 		$(document).on(
 			"click",
 			".js-nav-info-tab",
-			this.handleTabClick.bind(this)
+			this._handleTabClick.bind(this)
 		);
 	},
 };

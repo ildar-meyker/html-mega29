@@ -235,3 +235,22 @@
 	opacity: 1;
 	color: rgba(0, 32, 51, 0.26);
 }
+
+// tooltipster
+.tooltipster-sidetip .tooltipster-box {
+	border-color: #fff;
+	box-shadow: 0 5/16 + em 10/16 + em rgba(#000, 0.2);
+	background: #fff;
+}
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-border {
+	border-top-color: #fff;
+}
+
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-background {
+	border-top-color: #fff;
+}
+.tooltipster-sidetip .tooltipster-content {
+	font-size: 13/16 + em;
+	padding: 12/13 + em 16/13 + em;
+	color: #111111;
+}

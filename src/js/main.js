@@ -1,18 +1,23 @@
 import "./modules/globals";
 import "bootstrap/js/dist/collapse";
 import "jquery-mask-plugin";
-import SimpleBar from "simplebar";
+import "tooltipster";
 import "select2";
 import "icheck";
+import "simplebar";
 
 import autosize from "autosize";
 import datepicker from "js-datepicker";
 import NavInfo from "./modules/NavInfo";
+import Gallery from "./modules/Gallery";
 
 $(function () {
 	NavInfo.init();
+	Gallery.init();
 
 	autosize($("textarea"));
+
+	$(".js-tooltip").tooltipster();
 
 	$("select").each(function () {
 		$(this).select2({

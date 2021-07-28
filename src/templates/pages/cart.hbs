@@ -19,7 +19,7 @@ layout: default.hbs
         <div class="layout-order__center">
             <div class="layout-order__main">
 
-                <section class="scale-with-window">
+                <section class="scale-mobile">
                     <div class="my-goods__header">
                         <h1 class="my-goods__header__title">В корзине</h1>
                         <a href="#" class="button button-outline-black button--size-1">
@@ -178,13 +178,14 @@ layout: default.hbs
 
                 {{> cart-total }}
                 
-                {{> cart-promo }}
+                {{> promo-best-price }}
 
             </div>
         </div>
     </div>
 
-    {{> goods }}
+    {{> goods--favorites }}
+    {{> goods--handy }}
 	
 	{{> pros }}
 

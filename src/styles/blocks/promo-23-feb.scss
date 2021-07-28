@@ -1,0 +1,33 @@
+.promo-23-feb {
+	margin: 30/16 + em 0;
+	padding: 0 25/16 + em;
+	border-radius: 4/16 + em;
+	background: #ef1a1a;
+	color: #fff;
+
+	&__center {
+		position: relative;
+		padding: 15/16 + em 0;
+		display: flex;
+		align-items: center;
+	}
+
+	&__desc {
+		padding-left: 10/16 + em;
+	}
+
+	&__image {
+		margin-left: auto;
+		flex: 0 0 auto;
+		width: 30%;
+	}
+
+	&__title {
+		font-size: 21/16 + em;
+		font-weight: 700;
+	}
+
+	&__text {
+		font-size: 13/16 + em;
+	}
+}
