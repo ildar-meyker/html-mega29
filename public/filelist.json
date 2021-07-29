@@ -3,14 +3,15 @@
   "cart.html",
   "delivery.html",
   "index.html",
-  "my-cards.html",
-  "my-favorites.html",
-  "my-history.html",
-  "my-profile.html",
   "news--list.html",
   "news-item.html",
   "news.html",
   "order-complete.html",
   "order-steps.html",
-  "product.html"
+  "product--reviews.html",
+  "product.html",
+  "profile--cards.html",
+  "profile--favorites.html",
+  "profile--history.html",
+  "profile.html"
 ]

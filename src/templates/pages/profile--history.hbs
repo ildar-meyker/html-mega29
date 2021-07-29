@@ -1,5 +1,5 @@
 ---
-title: Личный кабинет
+title: История заказов
 layout: default.hbs
 ---
 
@@ -12,6 +12,8 @@ layout: default.hbs
 			<a href="#">Главная</a>
             <i class="icon-arrow-right"></i>
             <a href="#">Мой кабинет</a>
+            <i class="icon-arrow-right"></i>
+            <a href="#">История заказов</a>
 		</div>
 	</nav>
     
@@ -20,10 +22,10 @@ layout: default.hbs
             <div class="layout-profile__side">
                 
                 <nav class="nav-profile" id="nav-info-tabs">
-                    <a href="#" class="nav-profile__item js-nav-info-tab active">Личный кабинет</a>
+                    <a href="#" class="nav-profile__item js-nav-info-tab">Личный кабинет</a>
                     <a href="#" class="nav-profile__item js-nav-info-tab">Смена пароля</a>
                     <a href="#" class="nav-profile__item js-nav-info-tab">Избранное</a>
-                    <a href="#" class="nav-profile__item js-nav-info-tab">История заказов</a>
+                    <a href="#" class="nav-profile__item js-nav-info-tab active">История заказов</a>
                     <a href="#" class="nav-profile__item js-nav-info-tab">Карты</a>
                 </nav>
 
@@ -37,15 +39,15 @@ layout: default.hbs
                 <section class="nav-info mt-0 mb-0" id="nav-info">
 
                     <div class="nav-info__data">
-                        <div class="nav-info__group active">
-                            <a href="#" class="nav-info__title" data-bs-toggle="collapse" data-bs-target="#nav-info-1">
+                        <div class="nav-info__group">
+                            <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-1">
                                 <span>Личный кабинет</span>
                                 <i class="icon-arrow-down"></i>
                             </a>
-                            <div class="nav-info__crop collapse show" id="nav-info-1">
+                            <div class="nav-info__crop collapse" id="nav-info-1">
                                 <div class="nav-info__list">
                                     
-                                    {{> profile }}
+                                    {{> profile-account }}
 
                                 </div>
                             </div>
@@ -71,20 +73,20 @@ layout: default.hbs
                             <div class="nav-info__crop collapse" id="nav-info-3">
                                 <div class="nav-info__list">
                                     
-                                    {{> favorites }}
+                                    {{> profile-favorites }}
 
                                 </div>
                             </div>
                         </div>
-                        <div class="nav-info__group">
-                            <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-4">
+                        <div class="nav-info__group active">
+                            <a href="#" class="nav-info__title" data-bs-toggle="collapse" data-bs-target="#nav-info-4">
                                 <span>История заказов</span>
                                 <i class="icon-arrow-down"></i>
                             </a>
-                            <div class="nav-info__crop collapse" id="nav-info-4">
+                            <div class="nav-info__crop collapse show" id="nav-info-4">
                                 <div class="nav-info__list">
                                     
-                                    {{> history }}
+                                    {{> profile-history }}
                                     
                                 </div>
                             </div>
@@ -97,7 +99,7 @@ layout: default.hbs
                             <div class="nav-info__crop collapse" id="nav-info-5">
                                 <div class="nav-info__list">
                                     
-                                    {{> cards }}
+                                    {{> profile-cards }}
                                     
                                 </div>
                             </div>
