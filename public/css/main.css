@@ -5166,9 +5166,9 @@ a {
 .props--short .props__item {
   flex-wrap: wrap; }
 
-.props--short .props__prop {
+.props--short .props__label {
   width: 100%; }
-  .props--short .props__prop:before {
+  .props--short .props__label:before {
     display: none; }
 
 .props--short .props__name {
@@ -5193,13 +5193,14 @@ a {
   .props__item:first-child {
     margin-top: 0; }
 
-.props__prop {
+.props__label {
   position: relative;
   flex: 0 0 auto;
   width: 50%;
+  padding-right: 0.76923em;
   font-weight: normal;
   color: #727271; }
-  .props__prop:before {
+  .props__label:before {
     content: " ";
     position: absolute;
     right: 0.38462em;

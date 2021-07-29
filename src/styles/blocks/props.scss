@@ -10,7 +10,7 @@
 		.props__item {
 			flex-wrap: wrap;
 		}
-		.props__prop {
+		.props__label {
 			width: 100%;
 
 			&:before {
@@ -49,10 +49,11 @@
 		}
 	}
 
-	&__prop {
+	&__label {
 		position: relative;
 		flex: 0 0 auto;
 		width: 50%;
+		padding-right: 10/13 + em;
 		font-weight: normal;
 		color: #727271;
 
