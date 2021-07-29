@@ -4284,26 +4284,41 @@ a {
 
 .promo-23-feb {
   margin: 1.875em 0;
-  padding: 0 1.5625em;
+  padding: 0 1.875em;
   border-radius: 0.25em;
   background: #ef1a1a;
+  overflow: hidden;
+  font-size: 3.8vw;
   color: #fff; }
   .promo-23-feb__center {
     position: relative;
     padding: 0.9375em 0;
     display: flex;
     align-items: center; }
-  .promo-23-feb__desc {
-    padding-left: 0.625em; }
   .promo-23-feb__image {
     margin-left: auto;
+    text-align: right;
     flex: 0 0 auto;
     width: 30%; }
   .promo-23-feb__title {
+    white-space: nowrap;
     font-size: 1.3125em;
     font-weight: 700; }
   .promo-23-feb__text {
+    margin-top: -0.3125em;
     font-size: 0.8125em; }
+
+@media (min-width: 992px) {
+  .promo-23-feb {
+    margin: 30px 0;
+    border-radius: 4px; }
+    .promo-23-feb__center {
+      height: 170px; } }
+
+@media (min-width: 1200px) {
+  .promo-23-feb {
+    font-size: 45px;
+    padding: 0 80px; } }
 
 .cart-total {
   margin-top: 1.25em;
