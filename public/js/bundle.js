@@ -27661,17 +27661,40 @@ $(function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var Gallery = {
+  _$default: $(),
+  _$zoomed: $(),
   _handleNavItemClick: function _handleNavItemClick(e) {
     e.preventDefault();
     var index = $(e.currentTarget).index();
     var src = $(e.currentTarget).find("img").attr("src");
-    $("#gallery .gallery__image__default img").attr("src", src);
-    $("#gallery .gallery__image__zoomed").attr("style", "background-image: url('".concat(src, "')"));
+
+    this._$default.find("img").attr("src", src);
+
+    this._$zoomed.attr("style", "background-image: url('".concat(src, "')"));
+
     $(e.currentTarget).addClass("active").siblings().removeClass("active");
+  },
+  _handleImageMouseover: function _handleImageMouseover(e) {
+    this._$zoomed.addClass("active");
+  },
+  _handleImageMouseout: function _handleImageMouseout(e) {
+    this._$zoomed.removeClass("active");
+  },
+  _handleImageMousemove: function _handleImageMousemove(e) {
+    var $box = $("#gallery .gallery__image");
+    var w = $box.outerWidth();
+    var h = $box.outerHeight();
+
+    this._$zoomed.css("background-position", "".concat(e.offsetX / w * 100, "% ").concat(e.offsetY / h * 100, "% "));
   },
   init: function init() {
     if (!$("#gallery").length) return;
+    this._$default = $("#gallery .gallery__image__default");
+    this._$zoomed = $("#gallery .gallery__image__zoomed");
     $(document).on("click", ".gallery__nav__item", this._handleNavItemClick.bind(this));
+    $(document).on("mouseover", ".gallery__image", this._handleImageMouseover.bind(this));
+    $(document).on("mouseout", ".gallery__image", this._handleImageMouseout.bind(this));
+    $(document).on("mousemove", ".gallery__image", this._handleImageMousemove.bind(this));
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (Gallery);

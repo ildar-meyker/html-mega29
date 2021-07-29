@@ -5103,10 +5103,13 @@ a {
 
 .gallery__image {
   position: relative; }
-  .gallery__image--gray {
-    background: #f2f3f5; }
+  .backgroundblendmode .gallery__image--gray {
+    background-color: #f2f3f5; }
     .backgroundblendmode .gallery__image--gray img {
       mix-blend-mode: multiply; }
+    .backgroundblendmode .gallery__image--gray .gallery__image__zoomed {
+      background-color: #f2f3f5;
+      background-blend-mode: multiply; }
   .gallery__image:before {
     content: " ";
     padding-top: 100%;
@@ -5123,6 +5126,15 @@ a {
     .gallery__image__default img {
       max-width: 100%;
       max-height: 100%; }
+  .gallery__image__zoomed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0; }
+    .gallery__image__zoomed.active {
+      opacity: 1; }
 
 .gallery__nav {
   margin-top: 0.625em;
