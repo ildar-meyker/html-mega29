@@ -1,7 +1,7 @@
 import $ from "jquery";
 
 const NavInfo = {
-	$root: $(),
+	_$root: $(),
 
 	_handleTabClick(e) {
 		e.preventDefault();
@@ -13,7 +13,7 @@ const NavInfo = {
 			.eq(index)
 			.addClass("active");
 
-		$(".nav-info__group", this.$root)
+		$(".nav-info__group", this._$root)
 			.removeClass("active")
 			.eq(index)
 			.addClass("active");
@@ -22,7 +22,7 @@ const NavInfo = {
 	init() {
 		if (!$("#nav-info").length) return;
 
-		this.$root = $("#nav-info");
+		this._$root = $("#nav-info");
 
 		$(document).on(
 			"click",

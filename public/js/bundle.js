@@ -27714,16 +27714,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
 var NavInfo = {
-  $root: jquery__WEBPACK_IMPORTED_MODULE_0___default()(),
+  _$root: jquery__WEBPACK_IMPORTED_MODULE_0___default()(),
   _handleTabClick: function _handleTabClick(e) {
     e.preventDefault();
     var index = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).index();
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("#nav-info-tabs .js-nav-info-tab").removeClass("active").eq(index).addClass("active");
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nav-info__group", this.$root).removeClass("active").eq(index).addClass("active");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nav-info__group", this._$root).removeClass("active").eq(index).addClass("active");
   },
   init: function init() {
     if (!jquery__WEBPACK_IMPORTED_MODULE_0___default()("#nav-info").length) return;
-    this.$root = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#nav-info");
+    this._$root = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#nav-info");
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-nav-info-tab", this._handleTabClick.bind(this));
   }
 };
