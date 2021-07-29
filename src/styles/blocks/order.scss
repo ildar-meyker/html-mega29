@@ -90,22 +90,15 @@
 		display: flex;
 		margin: 15/16 + em 0;
 
-		&__item {
-			flex: 0 0 auto;
-			width: 50%;
-		}
-
 		&__button {
+			display: flex;
+			align-items: center;
 			padding: 10/18 + em 0;
+			margin-right: 30/18 + em;
 			font-size: 18/16 + em;
 
-			> * {
-				display: inline-block;
-				vertical-align: middle;
-			}
-
 			i {
-				margin-right: 3/25 + em;
+				margin-right: 10/25 + em;
 				font-size: 25/18 + em;
 			}
 		}
