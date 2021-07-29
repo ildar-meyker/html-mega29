@@ -2309,7 +2309,7 @@ b {
 .select2-container--default
 .select2-selection--single
 .select2-selection__arrow::before {
-  content: "\e901"; }
+  content: "\e91e"; }
 
 .select2-container--default
 .select2-selection--single
@@ -5312,7 +5312,7 @@ a {
   .order__code {
     font-size: 1.0625em;
     color: #727271; }
-  .order__rating {
+  .order__rate {
     margin-top: 1.1em;
     justify-content: flex-start;
     font-size: 1.875em; }
@@ -5385,3 +5385,14 @@ a {
 @media (min-width: 992px) {
   .order__price {
     font-size: 3.4em; } }
+
+.reviews {
+  background: #fff;
+  padding: 1.25em;
+  border-radius: 0.25em; }
+  .reviews__header__select {
+    margin-bottom: 0.625em; }
+    .reviews__header__select select {
+      width: 100%; }
+  .reviews__header__button {
+    margin-bottom: 0.625em; }

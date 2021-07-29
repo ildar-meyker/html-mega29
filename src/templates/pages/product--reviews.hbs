@@ -147,7 +147,7 @@ layout: default.hbs
 
                         <div class="order__code">Код товара: 600864243</div>
 
-                        <div class="goods__rate order__rating">
+                        <div class="goods__rate order__rate">
                             <div class="goods__rate__stars">
                                 <div style="width: 68%;"></div>
                             </div>
@@ -205,8 +205,8 @@ layout: default.hbs
             <section class="nav-info mt-0 mb-0" id="nav-info">
                 <nav class="nav-info__tabs nav-info__tabs--product" id="nav-info-tabs">
                     <a href="#" class="nav-info__tabs__item js-nav-info-tab">Описание</a>
-                    <a href="#" class="nav-info__tabs__item js-nav-info-tab active">Характеристики</a>
-                    <a href="#" class="nav-info__tabs__item js-nav-info-tab">
+                    <a href="#" class="nav-info__tabs__item js-nav-info-tab ">Характеристики</a>
+                    <a href="#" class="nav-info__tabs__item js-nav-info-tab active">
                         <span>Отзывы</span> 
                         <span class="nav-info__title__count">5</span>
                     </a>
@@ -228,12 +228,12 @@ layout: default.hbs
                             </div>
                         </div>
                     </div>
-                    <div class="nav-info__group active">
-                        <a href="#" class="nav-info__title" data-bs-toggle="collapse" data-bs-target="#nav-info-2">
+                    <div class="nav-info__group">
+                        <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-2">
                             <span>Характеристики</span>
                             <i class="icon-arrow-down"></i>
                         </a>
-                        <div class="nav-info__crop collapse show" id="nav-info-2">
+                        <div class="nav-info__crop collapse" id="nav-info-2">
                             <div class="nav-info__list">
                                 
                                 {{> product-props }}
@@ -241,13 +241,13 @@ layout: default.hbs
                             </div>
                         </div>
                     </div>
-                    <div class="nav-info__group">
-                        <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-3">
+                    <div class="nav-info__group active">
+                        <a href="#" class="nav-info__title " data-bs-toggle="collapse" data-bs-target="#nav-info-3">
                             <span>Отзывы</span>
                             <span class="nav-info__title__count">5</span>
                             <i class="icon-arrow-down"></i>
                         </a>
-                        <div class="nav-info__crop collapse" id="nav-info-3">
+                        <div class="nav-info__crop collapse show" id="nav-info-3">
                             <div class="nav-info__list">
                                 
                                 {{> product-reviews }}

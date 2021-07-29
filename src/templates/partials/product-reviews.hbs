@@ -1,0 +1,78 @@
+
+<div class="reviews">
+
+    <div class="reviews__header">
+        <div class="reviews__header__button">
+            <button type="button" class="button button-green">
+                Написать отзыв
+            </button>
+        </div>
+        <div class="reviews__header__select">
+            <select class="test">
+                <option>По популярности (убывание)</option>
+                <option>По популярности (возрастание)</option>
+                <option>По рейтингу (убывание)</option>
+                <option>По рейтингу (возрастание)</option>
+                <option>По цене (убывание)</option>
+                <option>По цене (возрастание)</option>
+            </select>
+        </div>
+    </div>
+    
+    <div class="reviews__list">
+        {{#repeat 2}}
+        <div class="reviews__item">
+            <div class="reviews__author">
+                <div class="reviews__author__name">Иван К.</div>
+                <div class="reviews__author__city">Архангельск</div>
+                <div class="reviews__author__date">02.05.2021 12:03:40</div>
+            </div>
+            <div class="reviews__desc">
+                <div class="goods__rate reviews__rate">
+                    <div class="goods__rate__stars">
+                        <div style="width: 68%;"></div>
+                    </div>
+                    <div class="goods__rate__count">(23)</div>
+                </div>
+                <div class="reviews__comment">
+                    <div class="reviews__comment__title">Достоинства</div>
+                    <div class="reviews__comment__desc">
+                        Шуруповерт в деле меня не подвел. На одном заряде работает около 6 ч. В деле показал себя прекрасно. Справляется с любыми крепежными элементами и сверлением по металлу. Сам шурик очень легкий и компактный. Его приятно держать в руке. Кисть от веса не устает, когда долго работаешь. 
+                    </div>
+                </div>
+                <div class="reviews__comment">
+                    <div class="reviews__comment__title">Недостатки</div>
+                    <div class="reviews__comment__desc">
+                        Не обнаружил. Минус - слабые биты. 
+                    </div>
+                </div>
+                <div class="reviews__comment">
+                    <div class="reviews__comment__title">Комментарий</div>
+                    <div class="reviews__comment__desc">
+                        Покупал шуруповерт когда собирался делать забор из профлиста. Как по мне в соотношении такой цены и представленного качества это один из отличных вариантов. Довольно быстро заряжается и есть специальные индикаторы заряда-разряда батареи. 
+                    </div>
+                </div>
+                <div class="reviews__voting">
+                    <div class="reviews__votings__form">
+                        <div class="reviews__voting__label">Ответ был полезен?</div>
+                        <button type="button" class="reviews__voting__yes">Да</button>
+                        <button type="button" class="reviews__voting__no">Нет</button>
+                    </div>
+                    <div class="reviews__votings__result">
+                        4 человека считают этот отзыв <span>полезным</span>
+                    </div>
+                </div>
+                <div class="reviews__answer">
+                    <button type="button" class="reviews__answer__button"></button>
+                </div>
+            </div>
+        </div>
+        {{/repeat}}
+        
+    </div>
+
+    <div class="reviews__footer">
+        <button type="button" class="button button-outline-green">Показать еще</button>
+    </div>
+
+</div>

@@ -1,0 +1,65 @@
+.reviews {
+	background: #fff;
+	padding: 20/16 + em;
+	border-radius: 4/16 + em;
+
+	&__header {
+		&__select {
+			margin-bottom: 10/16 + em;
+
+			select {
+				width: 100%;
+			}
+		}
+
+		&__button {
+			margin-bottom: 10/16 + em;
+		}
+	}
+
+	&__list {
+	}
+
+	&__item {
+	}
+
+	&__author {
+		&__name {
+		}
+
+		&__city {
+		}
+
+		&__date {
+		}
+	}
+
+	&__desc {
+	}
+
+	&__rate {
+	}
+
+	&__comment {
+		&__title {
+		}
+
+		&__desc {
+		}
+	}
+
+	&__voting {
+	}
+
+	&__answer {
+	}
+
+	&__footer {
+	}
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
