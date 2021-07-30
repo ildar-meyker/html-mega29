@@ -1,19 +1,23 @@
 .reviews {
 	background: #fff;
 	padding: 20/16 + em;
+	border: 1/16 + em solid #f2f3f5;
 	border-radius: 4/16 + em;
 
 	&__header {
-		&__select {
+		&__sorting {
 			margin-bottom: 10/16 + em;
-
-			select {
-				width: 100%;
-			}
 		}
 
-		&__button {
+		&__add-new {
 			margin-bottom: 10/16 + em;
+
+			button {
+				display: block;
+				width: 100%;
+				padding: 8/18 + em 20/18 + em;
+				font-size: 18/16 + em;
+			}
 		}
 	}
 
@@ -21,16 +25,23 @@
 	}
 
 	&__item {
+		border-top: 1/16 + em solid #f2f3f5;
+		padding: 15/16 + em 0;
 	}
 
 	&__author {
+		font-size: 18/16 + em;
+
 		&__name {
+			font-weight: 700;
 		}
 
 		&__city {
+			margin-top: 15/16 + em;
 		}
 
 		&__date {
+			margin-top: 15/16 + em;
 		}
 	}
 
@@ -38,28 +49,135 @@
 	}
 
 	&__rate {
+		margin: 20/20 + em 0;
+		justify-content: flex-start;
+		font-size: 20/16 + em;
 	}
 
 	&__comment {
+		margin-top: 16/16 + em;
+
 		&__title {
+			font-size: 18/16 + em;
+			font-weight: 700;
 		}
 
 		&__desc {
+			margin-top: 6/14 + em;
+			font-size: 14/16 + em;
 		}
 	}
 
 	&__voting {
+		margin: 15/14 + em 0;
+		font-size: 14/16 + em;
+
+		&__yes {
+			color: #21a73f;
+		}
+
+		&__no {
+			color: #dc4040;
+		}
+
+		&__result {
+			margin-top: 5/14 + em;
+
+			span {
+				color: #007334;
+			}
+		}
 	}
 
 	&__answer {
+		padding-bottom: 8/16 + em;
+
+		button {
+			text-decoration: underline;
+			font-size: 18/16 + em;
+		}
 	}
 
-	&__footer {
+	&__show-more {
+		border-top: 1/16 + em solid #f2f3f5;
+		padding-top: 16/16 + em;
+
+		button {
+			display: block;
+			width: 100%;
+		}
 	}
 }
 
 @media (min-width: 768px) {
+	.reviews {
+		padding: 25/16 + em;
+
+		&__header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 25/16 + em;
+
+			&__sorting {
+				width: 15em;
+				margin-bottom: 0;
+				order: 1;
+			}
+
+			&__add-new {
+				margin-bottom: 0;
+				order: 2;
+			}
+		}
+
+		&__item {
+			display: flex;
+		}
+
+		&__author {
+			flex: 0 0 auto;
+			width: 130/16 + em;
+		}
+
+		&__desc {
+			flex: 0 0 auto;
+			width: calc(100% - #{(150 / 16) + em});
+			padding-left: 20/16 + em;
+		}
+
+		&__rate {
+			margin-top: 0;
+		}
+
+		&__show-more {
+			padding-top: 25/16 + em;
+
+			button {
+				height: 60/14 + em;
+			}
+		}
+	}
 }
 
 @media (min-width: 992px) {
+	.reviews {
+		&__voting {
+			display: flex;
+			justify-content: space-between;
+
+			&__result {
+				margin-top: 0;
+			}
+		}
+
+		&__show-more {
+			padding-top: 16/16 + em;
+			margin-bottom: -0.5em;
+
+			button {
+				height: auto;
+			}
+		}
+	}
 }
