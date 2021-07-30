@@ -4,6 +4,11 @@
 	justify-content: space-between;
 	align-items: center;
 
+	&__left {
+		flex: 0 0 auto;
+		width: 15em;
+	}
+
 	&__modes {
 		display: flex;
 		padding: 4px;

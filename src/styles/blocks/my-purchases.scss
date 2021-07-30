@@ -18,7 +18,9 @@
 	}
 
 	&__select {
+		flex: 0 0 auto;
 		margin-right: 5/16 + em;
+		width: 9em;
 	}
 
 	&__body {
@@ -70,10 +72,6 @@
 
 		&__title {
 			margin-bottom: 7px;
-		}
-
-		&__select {
-			font-size: 19px;
 		}
 
 		&__header {

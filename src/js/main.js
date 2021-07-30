@@ -1,8 +1,8 @@
 import "./modules/globals";
 import "bootstrap/js/dist/collapse";
 import "jquery-mask-plugin";
+import "jquery-custom-select";
 import "tooltipster";
-import "select2";
 import "icheck";
 import "simplebar";
 
@@ -19,11 +19,8 @@ $(function () {
 
 	$(".js-tooltip").tooltipster();
 
-	$("select").each(function () {
-		$(this).select2({
-			minimumResultsForSearch: -1,
-			dropdownParent: $(this).parent(),
-		});
+	$("select").customSelect({
+		includeValue: true,
 	});
 
 	// icheck
