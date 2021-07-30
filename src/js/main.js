@@ -2,6 +2,7 @@ import "./modules/globals";
 import "bootstrap/js/dist/collapse";
 import "jquery-mask-plugin";
 import "jquery-custom-select";
+import "slick-carousel";
 import "tooltipster";
 import "icheck";
 import "simplebar";
@@ -21,6 +22,16 @@ $(function () {
 
 	$("select").customSelect({
 		includeValue: true,
+	});
+
+	$(".promo-1").each(function () {
+		$(this)
+			.find(".promo-1__slider")
+			.slick({
+				dots: true,
+				appendArrows: $(this),
+				appendDots: $(this),
+			});
 	});
 
 	// icheck

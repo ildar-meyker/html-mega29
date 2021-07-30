@@ -8,6 +8,7 @@
 @import "../../node_modules/js-datepicker/dist/datepicker.min";
 @import "../../node_modules/tooltipster/dist/css/tooltipster.bundle";
 @import "../../node_modules/jquery-custom-select/dist/css/jquery.custom-select";
+@import "../../node_modules/slick-carousel/slick/slick.scss";
 @import "vendor/hamburgers";
 @import "vendor/spinners";
 @import "vendor/icheck-flat";
@@ -55,7 +56,7 @@
 @import "blocks/form-panel";
 @import "blocks/form-card";
 @import "blocks/promo-best-price";
-@import "blocks/promo-23-feb";
+@import "blocks/promo-1";
 @import "blocks/cart-total";
 @import "blocks/order-complete";
 @import "blocks/order-info";
