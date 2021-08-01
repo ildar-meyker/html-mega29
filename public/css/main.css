@@ -1537,54 +1537,6 @@ corresponds to the arrow we want to display */
     -webkit-transform: rotate(360deg) /* rtl:ignore */;
             transform: rotate(360deg) /* rtl:ignore */; } }
 
-/* iCheck plugin flat skin, black
------------------------------------ */
-.icheckbox_flat,
-.iradio_flat {
-  display: inline-block;
-  *display: inline;
-  vertical-align: middle;
-  margin: 0;
-  padding: 0;
-  width: 20px;
-  height: 20px;
-  background: url(flat.png) no-repeat;
-  border: none;
-  cursor: pointer; }
-
-.icheckbox_flat {
-  background-position: 0 0; }
-
-.icheckbox_flat.checked {
-  background-position: -22px 0; }
-
-.icheckbox_flat.disabled {
-  background-position: -44px 0;
-  cursor: default; }
-
-.icheckbox_flat.checked.disabled {
-  background-position: -66px 0; }
-
-.iradio_flat {
-  background-position: -88px 0; }
-
-.iradio_flat.checked {
-  background-position: -110px 0; }
-
-.iradio_flat.disabled {
-  background-position: -132px 0;
-  cursor: default; }
-
-.iradio_flat.checked.disabled {
-  background-position: -154px 0; }
-
-/* HiDPI support */
-@media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-  .icheckbox_flat,
-  .iradio_flat {
-    background-image: url(flat@2x.png);
-    background-size: 176px 22px; } }
-
 .icon {
   display: inline-block; }
 
@@ -1670,8 +1622,8 @@ corresponds to the arrow we want to display */
 
 @font-face {
   font-family: "icomoon";
-  src: url("../fonts/icomoon.eot?f96tqe");
-  src: url("../fonts/icomoon.eot?f96tqe#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?f96tqe") format("truetype"), url("../fonts/icomoon.woff?f96tqe") format("woff"), url("../fonts/icomoon.svg?f96tqe#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?qnqzym");
+  src: url("../fonts/icomoon.eot?qnqzym#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?qnqzym") format("truetype"), url("../fonts/icomoon.woff?qnqzym") format("woff"), url("../fonts/icomoon.svg?qnqzym#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block; }
@@ -1786,6 +1738,9 @@ corresponds to the arrow we want to display */
 .icon-home:before {
   content: "\e91f"; }
 
+.icon-help-circle:before {
+  content: "\e920"; }
+
 .simplebar-track.simplebar-horizontal {
   height: 2px;
   background: #f2f3f5; }
@@ -1844,8 +1799,8 @@ corresponds to the arrow we want to display */
   height: 28px !important;
   background-size: 24px 24px !important; }
 
-.icheckbox_flat,
-.iradio_flat {
+.checkbox-default .icheckbox,
+.checkbox-default .iradio {
   position: absolute;
   top: 50%;
   margin-top: -0.70588em;
@@ -1854,23 +1809,39 @@ corresponds to the arrow we want to display */
   height: 1.41176em;
   background: none; }
 
-.iradio_flat {
+.checkbox-default .iradio {
   border: 0.17647em solid #2e2e2e;
   border-radius: 50%; }
-  .iradio_flat.checked {
+  .checkbox-default .iradio.checked {
     border: 0.41176em solid #21a73f; }
 
-.icheckbox_flat {
+.checkbox-default .icheckbox {
   border-radius: 0.23529em;
   background: #f2f3f5; }
-  .icheckbox_flat.checked {
+  .checkbox-default .icheckbox.checked {
     background: #21a73f;
     font-family: "icomoon" !important;
     line-height: 1.41176em;
     text-align: center;
     color: #fff; }
-    .icheckbox_flat.checked:before {
+    .checkbox-default .icheckbox.checked:before {
       content: "\e90c"; }
+
+.checkbox-border .icheckbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5em;
+  height: 1.5em;
+  border: 0.16667em solid #323232;
+  border-radius: 0.25em; }
+  .checkbox-border .icheckbox.checked {
+    border-color: inherit;
+    color: inherit; }
+    .checkbox-border .icheckbox.checked:before {
+      content: "\e90c";
+      font-family: "icomoon" !important;
+      line-height: 1; }
 
 .qs-datepicker-container {
   font-size: 1em;
@@ -1949,7 +1920,7 @@ corresponds to the arrow we want to display */
 
 .tooltipster-sidetip .tooltipster-box {
   border-color: #fff;
-  box-shadow: 0 0.3125em 0.625em rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0.25em 0.25em rgba(0, 0, 0, 0.04), 0px 0.5em 1.5em rgba(0, 0, 0, 0.12);
   background: #fff; }
 
 .tooltipster-sidetip.tooltipster-top .tooltipster-arrow-border {
@@ -1957,6 +1928,12 @@ corresponds to the arrow we want to display */
 
 .tooltipster-sidetip.tooltipster-top .tooltipster-arrow-background {
   border-top-color: #fff; }
+
+.tooltipster-sidetip.tooltipster-right .tooltipster-arrow-border {
+  border-right-color: #fff; }
+
+.tooltipster-sidetip.tooltipster-right .tooltipster-arrow-background {
+  border-right-color: #fff; }
 
 .tooltipster-sidetip .tooltipster-content {
   font-size: 0.8125em;
@@ -4243,8 +4220,8 @@ a {
     .order-details__check input {
       position: absolute;
       opacity: 0; }
-    .order-details__check .iradio_flat,
-    .order-details__check .icheckbox_flat {
+    .order-details__check .iradio,
+    .order-details__check .icheckbox {
       -webkit-transform-origin: 0 50%;
               transform-origin: 0 50%;
       -webkit-transform: scale(0.7);
@@ -4288,8 +4265,8 @@ a {
   .order-details__check {
     padding-left: 2.5em;
     font-size: 18px; }
-    .order-details__check .iradio_flat,
-    .order-details__check .icheckbox_flat {
+    .order-details__check .iradio,
+    .order-details__check .icheckbox {
       -webkit-transform: scale(1);
               transform: scale(1); }
   .order-details__label-lg {
@@ -4917,20 +4894,7 @@ a {
   color: #2f80ed; }
 
 .props__info {
-  position: relative;
-  top: -0.18182em;
-  margin: -0.45455em 0;
-  display: inline-block;
-  text-align: center;
-  line-height: 1;
-  width: 1.18182em;
-  height: 1.18182em;
-  border: 0.09091em solid #727271;
-  border-radius: 50%;
-  font-size: 0.84615em;
-  font-style: normal;
-  cursor: pointer;
-  color: #727271; }
+  cursor: pointer; }
 
 @media (min-width: 992px) {
   .props {
@@ -5125,3 +5089,119 @@ a {
     margin-bottom: -0.5em; }
     .reviews__show-more button {
       height: auto; } }
+
+.filter {
+  background: #fff;
+  border: 1px solid #f2f3f5;
+  border-radius: 4px; }
+  .filter__group {
+    border-top: 1px solid #f2f3f5;
+    font-size: 13px; }
+    .filter__group--orange .filter__title,
+    .filter__group--orange .filter__check.active {
+      color: #ef7f1a; }
+    .filter__group--red .filter__title,
+    .filter__group--red .filter__check.active {
+      color: #ef1a1a; }
+    .filter__group:first-child {
+      border-top: 0; }
+  .filter__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 19px 13px;
+    font-weight: 500; }
+    .filter__title.collapsed .filter__title__arrow {
+      -webkit-transform: rotate(0);
+              transform: rotate(0); }
+    .filter__title__arrow {
+      transition: all 0.2s;
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
+      position: absolute;
+      top: 50%;
+      margin-top: -0.5em;
+      right: 13px; }
+    .filter__title__info {
+      margin-left: 10px;
+      font-size: 15px; }
+  .filter__body {
+    padding: 13px;
+    padding-top: 0; }
+  .filter__props {
+    margin-top: 5px; }
+    .filter__props:first-child {
+      margin-top: 0; }
+    .filter__props__title {
+      margin-left: 5px;
+      margin-bottom: 5px;
+      font-weight: 500;
+      color: #000; }
+    .filter__props__list {
+      padding: 7px;
+      background: #fafafa;
+      border-radius: 4px; }
+  .filter__check {
+    position: relative;
+    display: flex;
+    margin-top: 7px;
+    cursor: pointer; }
+    .filter__check:first-child {
+      margin-top: 0; }
+    .filter__check.active {
+      color: #21a73f; }
+    .filter__check__input {
+      flex: 0 0 auto;
+      width: 1.92308em; }
+      .filter__check__input input {
+        position: absolute;
+        opacity: 0; }
+    .filter__check__text {
+      align-self: center; }
+  .filter__ctrl {
+    padding: 13px;
+    border-top: 1px solid #e7e7e8; }
+    .filter__ctrl__item {
+      margin-top: 10px;
+      display: block;
+      width: 100%; }
+      .filter__ctrl__item:first-child {
+        margin-top: 0; }
+  .filter__range {
+    display: flex;
+    padding-top: 10px;
+    font-size: 16px; }
+    .filter__range__input {
+      flex: 1 1 50%;
+      padding: 0 7px; }
+    .filter__range__space {
+      flex: 0 0 auto;
+      align-self: center;
+      width: 12px;
+      height: 1px;
+      background: #b2b3b3; }
+
+.label-up-input {
+  position: relative; }
+  .label-up-input__label {
+    position: absolute;
+    top: 0;
+    left: 1em;
+    padding: 0 0.3em;
+    margin-top: -0.5em;
+    background: #fff;
+    font-size: 0.625em;
+    font-weight: 700;
+    line-height: 1; }
+  .label-up-input__input {
+    display: block;
+    width: 100%;
+    padding: 1.08333em;
+    border: 0.08333em solid #b2b3b3;
+    border-radius: 0.33333em;
+    font-size: 0.75em;
+    color: #000; }
+    .label-up-input__input:not(:-moz-read-only):focus {
+      border-color: #21a73f; }
+    .label-up-input__input:not(:read-only):focus {
+      border-color: #21a73f; }

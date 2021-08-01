@@ -62,8 +62,8 @@
 			opacity: 0;
 		}
 
-		.iradio_flat,
-		.icheckbox_flat {
+		.iradio,
+		.icheckbox {
 			transform-origin: 0 50%;
 			transform: scale(0.7);
 		}
@@ -136,8 +136,8 @@
 			padding-left: 35/14 + em;
 			font-size: 18px;
 
-			.iradio_flat,
-			.icheckbox_flat {
+			.iradio,
+			.icheckbox {
 				transform: scale(1);
 			}
 		}

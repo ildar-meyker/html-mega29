@@ -69,8 +69,8 @@
 }
 
 //  icheck
-.icheckbox_flat,
-.iradio_flat {
+.checkbox-default .icheckbox,
+.checkbox-default .iradio {
 	position: absolute;
 	top: 50%;
 	margin-top: -12/17 + em;
@@ -79,7 +79,7 @@
 	height: 24/17 + em;
 	background: none;
 }
-.iradio_flat {
+.checkbox-default .iradio {
 	border: 3/17 + em solid #2e2e2e;
 	border-radius: 50%;
 
@@ -87,7 +87,7 @@
 		border: 7/17 + em solid #21a73f;
 	}
 }
-.icheckbox_flat {
+.checkbox-default .icheckbox {
 	border-radius: 4/17 + em;
 	background: #f2f3f5;
 
@@ -100,6 +100,27 @@
 
 		&:before {
 			content: "\e90c";
+		}
+	}
+}
+
+.checkbox-border .icheckbox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 18/12 + em;
+	height: 18/12 + em;
+	border: 2/12 + em solid #323232;
+	border-radius: 3/12 + em;
+
+	&.checked {
+		border-color: inherit;
+		color: inherit;
+
+		&:before {
+			content: "\e90c";
+			font-family: "icomoon" !important;
+			line-height: 1;
 		}
 	}
 }
@@ -188,7 +209,8 @@
 // tooltipster
 .tooltipster-sidetip .tooltipster-box {
 	border-color: #fff;
-	box-shadow: 0 5/16 + em 10/16 + em rgba(#000, 0.2);
+	box-shadow: 0px 4/16 + em 4/16 + em rgba(0, 0, 0, 0.04),
+		0px 8/16 + em 24/16 + em rgba(0, 0, 0, 0.12);
 	background: #fff;
 }
 .tooltipster-sidetip.tooltipster-top .tooltipster-arrow-border {
@@ -197,6 +219,13 @@
 
 .tooltipster-sidetip.tooltipster-top .tooltipster-arrow-background {
 	border-top-color: #fff;
+}
+.tooltipster-sidetip.tooltipster-right .tooltipster-arrow-border {
+	border-right-color: #fff;
+}
+
+.tooltipster-sidetip.tooltipster-right .tooltipster-arrow-background {
+	border-right-color: #fff;
 }
 .tooltipster-sidetip .tooltipster-content {
 	font-size: 13/16 + em;

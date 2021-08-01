@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
-	<title> Оформление заказа</title>
+	<title> Новости</title>
 
 	<link rel="stylesheet" href="css/main.min.css">
 	
@@ -111,283 +111,310 @@
 	<nav class="nav-path">
 		<div class="page__center">
 			<a href="#">Главная</a>
-            <i class="icon-arrow-right"></i>
-            <span>Корзина</span>
+			<i class="icon-arrow-right"></i>
+			<a href="#">Инструмент</a>
+			<i class="icon-arrow-right"></i>
+			<a href="#">Электро-бензоинструмент</a>
+			<i class="icon-arrow-right"></i>
+			<span>Дрели электрические, перфораторы</span>
 		</div>
 	</nav>
-    
-    <div class="page__center">
-        <div class="layout-order__center">
-            <div class="layout-order__main">
 
-                <section class="scale-mobile">
+	<section>
+		<div class="page__center">
 
-                    <h1 class="h1">Оформление заказа</h1>
+            <h1 class="h2">Дрели электрические, перфораторы (117)</h1>
 
-                    <form action="#" class="form-panel checkbox-default">
-                        <div class="form-panel__header">
-                            <div class="form-panel__title">Контактная информация</div>
-                            <div class="form-panel__step">Шаг 1 / 4</div>
-                        </div>
-                        <div class="form-panel__body">
-                            <div class="form-panel__list form-panel__row">
-                                <div class="form-panel__item form-panel__col form-panel__col--6">
-                                    <label class="form-panel__label">Имя</label>
-                                    <input type="text" class="input input-default input--full" placeholder="Ваше имя">
-                                </div>
-                                
-                                <div class="form-panel__item form-panel__col form-panel__col--6">
-                                    <label class="form-panel__label">Фамилия</label>
-                                    <input type="text" class="input input-default input--full" placeholder="Ваша фамилия">
-                                </div>
-                                
-                                <div class="form-panel__item form-panel__col form-panel__col--6">
-                                    <label class="form-panel__label">Номер телефона</label>
-                                    <input type="text" class="input input-default input--full" placeholder="Ваш номер телефона">
-                                </div>
-                                
-                                <div class="form-panel__item form-panel__col form-panel__col--6">
-                                    <label class="form-panel__label">E-mail</label>
-                                    <input type="text" class="input input-default input--full" placeholder="Ваш e-mail">
-                                </div>
-                                
-                                <div class="form-panel__item form-panel__col">
-                                    <label class="form-panel__label">Адрес</label>
-                                    <input type="text" class="input input-default input--full" placeholder="Ваш адрес">
-                                </div>
-                            </div>
-                        </div>
+			<div class="layout-basic__center">
+				<div class="layout-basic__side">
 
-                    </form>
+					<form action="#" class="filter checkbox-border" id="filter">
+						<div class="filter__group">
+							<a href="#" class="filter__title" data-bs-toggle="collapse" data-bs-target="#filter-1">
+								<span>Наличие в магазинах</span>
+								<i class="icon-arrow-down filter__title__arrow"></i>
+							</a>
+							<div class="filter__crop collapse show" id="filter-1">
+								
+								<div class="filter__body">
 
-                    <form action="#" class="form-panel checkbox-default">
-                        <div class="form-panel__header">
-                            <div class="form-panel__title">Выберите способ доставки</div>
-                            <div class="form-panel__step">Шаг 2 / 4</div>
-                        </div>
-                        <div class="form-panel__body">
+									<div class="filter__props">
+										<div class="filter__props__title">
+											Архангельск
+										</div>
 
-                            <div class="form-panel__list">
-                                <div class="form-panel__item">
-                                    <label class="form-panel__check form-panel__check--radio">
-                                        <input type="radio" name="radio1" checked>
-                                        <span>Доставка</span>
-                                    </label>
-                                    <label class="form-panel__check form-panel__check--radio">
-                                        <input type="radio" name="radio1">
-                                        <span>Доставка на основе зон в Яндекс картах (Архангельск до 5 000 ₽ )</span>
-                                    </label>
-                                    <label class="form-panel__check form-panel__check--radio">
-                                        <input type="radio" name="radio1">
-                                        <span>Самовывоз</span>
-                                    </label>
-                                </div>
-                                
-                                <div class="form-panel__sep"></div>
+										<div class="filter__props__list">
+											<label class="filter__check">
+												<div class="filter__check__input"><input type="checkbox" checked></div>
+												<div class="filter__check__text">пр. Московский, 25</div>
+											</label>
+											<label class="filter__check">
+												<div class="filter__check__input"><input type="checkbox"></div>
+												<div class="filter__check__text">пр. Ленинградский, 255</div>
+											</label>
+											<label class="filter__check">
+												<div class="filter__check__input"><input type="checkbox"></div>
+												<div class="filter__check__text">пр. Никольский, 33, корп. 1 пр. Никольский, 33, корп. 1</div>
+											</label>
+											<label class="filter__check">
+												<div class="filter__check__input"><input type="checkbox"></div>
+												<div class="filter__check__text">ул. Гагарина, 46</div>
+											</label>
+										</div>
+									</div>
 
-                                <div class="form-panel__item mt-0">
-                                    <div class="form-panel__label-lg">Выберите дату доставки</div>
-                                    <label class="form-panel__check form-panel__check--radio">
-                                        <input type="radio" name="radio2" checked>
-                                        <span>Сегодня</span>
-                                    </label>
-                                    <label class="form-panel__check form-panel__check--radio">
-                                        <input type="radio" name="radio2">
-                                        <span>Завтра</span>
-                                    </label>
-                                    <label class="form-panel__check form-panel__check--radio">
-                                        <input type="radio" name="radio2">
-                                        <span>Выбрать</span>
-                                    </label>
-                                </div>
-                                
-                                <div class="form-panel__date">
-                                    <div class="input-datepicker">
-                                        <input type="text" class="input input-default input--full" placeholder="ДД.ММ.ГГ">
-                                        <i class="icon-calendar"></i>
-                                    </div>
-                                    
-                                </div>
+									<div class="filter__props">
+										<div class="filter__props__title">
+											Северодвинск
+										</div>
 
-                                <div class="form-panel__total">
-                                    Стоимость доставки составит: <span>650 <span>₽</span></span>
-                                </div>
-                                
-                                <div class="form-panel__sep"></div>
+										<div class="filter__props__list">
+											<label class="filter__check">
+												<div class="filter__check__input"><input type="checkbox"></div>
+												<div class="filter__check__text">пр. Никольский, 33, корп. 1</div>
+											</label>
+										</div>
+									</div>
 
-                                <div class="form-panel__attn">
-                                    <span>Важно:</span> получателю необходимо иметь при себе документ удостоверяющий личность.
-                                </div>
-                            </div>
+									<div class="filter__props">
+										<div class="filter__props__title">
+											Северодвинск
+										</div>
 
-                        </div>
-                    </form>
+										<div class="filter__props__list">
+											<label class="filter__check">
+												<div class="filter__check__input"><input type="checkbox"></div>
+												<div class="filter__check__text">пр. Никольский, 33, корп. 1</div>
+											</label>
+										</div>
+									</div>
 
-                    <form action="#" class="form-panel checkbox-default">
-                        <div class="form-panel__header">
-                            <div class="form-panel__title">Выберите способ оплаты</div>
-                            <div class="form-panel__step">Шаг 3 / 4</div>
-                        </div>
-                        <div class="form-panel__body">
-                            
-                            <div class="form-panel__list">
-                                <div class="form-panel__item">
-                                    <label class="form-panel__check form-panel__check--radio">
-                                        <input type="radio" name="radio3" checked>
-                                        <span>Безналичная оплата при получении</span>
-                                    </label>
-                                    <label class="form-panel__check form-panel__check--radio">
-                                        <input type="radio" name="radio3">
-                                        <span>Онлайн</span>
-                                    </label>
-                                </div>
+								</div>
+								
+							</div>
+						</div>
+						<div class="filter__group filter__group--orange">
+							<a href="#" class="filter__title collapsed" data-bs-toggle="collapse" data-bs-target="#filter-2">
+								<span>Товары под заказ </span>
+								<i class="icon-help-circle filter__title__info js-tooltip"  title="Перейти к товарам данной категории"></i>
+								<i class="icon-arrow-down filter__title__arrow"></i>
+							</a>
+							<div class="filter__crop collapse" id="filter-2">
+								<div class="filter__body">
+									<div class="filter__props">
+										<div class="filter__props__list">
+											<label class="filter__check">
+												<div class="filter__check__input"><input type="checkbox" checked></div>
+												<div class="filter__check__text">Совместный просмотр (421)</div>
+											</label>
+											<label class="filter__check">
+												<div class="filter__check__input"><input type="checkbox"></div>
+												<div class="filter__check__text">Да</div>
+											</label>
+											<label class="filter__check">
+												<div class="filter__check__input"><input type="checkbox"></div>
+												<div class="filter__check__text">Нет</div>
+											</label>
+										</div>
+									</div>
+								</div>
 
-                                <div class="form-panel__item">
-                                    <div class="form-card">
-                                        <div class="form-card__icons">
-                                            <img src="images/footer/pay-cards/mir.svg" alt="Мир">
-                                            <img src="images/footer/pay-cards/visa.svg" alt="Visa">
-                                            <img src="images/footer/pay-cards/maestro.svg" alt="Maestro">
-                                            <img src="images/footer/pay-cards/master-card.svg" alt="MasterCard">
-                                        </div>
-                                        <div class="form-card__fields">
-                                            <div class="form-card__item form-card__item--num">
-                                                <label class="form-panel__label">Номер карты</label>
-                                                <input type="text" class="input input-default input--full" placeholder="Номер карты">
-                                            </div>
-                                            <div class="form-card__item form-card__item--name">
-                                                <label class="form-panel__label">Владелец карты</label>
-                                                <input type="text" class="input input-default input--full" placeholder="Номер карты">
-                                            </div>
-                                            <div class="form-card__item form-card__item--date">
-                                                <label class="form-panel__label">Дата</label>
-                                                <input type="text" class="input input-default input--full" placeholder="__/__/__">
-                                            </div>
-                                            <div class="form-card__item form-card__item--cvc">
-                                                <label class="form-panel__label">CVC</label>
-                                                <input type="password" class="input input-default input--full" placeholder="CVC">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+							</div>
+						</div>
+						<div class="filter__group">
+							<a href="#" class="filter__title" data-bs-toggle="collapse" data-bs-target="#filter-3">
+								<span>Цена</span>
+								<i class="icon-arrow-down filter__title__arrow"></i>
+							</a>
+							<div class="filter__crop collapse show" id="filter-3">
+								<div class="filter__body">
 
-                                <div class="form-panel__item">
-                                    <div class="form-panel__label-lg">Бонусы</div>
-                                    <label class="form-panel__check">
-                                        <input type="checkbox">
-                                        <span></span>Применить бонусы</span>
-                                    </label>
-                                </div>
-                            </div>
+									<div class="filter__range">
+										<div class="filter__range__input">
+											<div class="label-up-input">
+												<label class="label-up-input__label">Мин</label>
+												<input type="text" class="label-up-input__input">
+											</div>
+										</div>
+										<div class="filter__range__space"></div>
+										<div class="filter__range__input">
+											<div class="label-up-input">
+												<label class="label-up-input__label">Макс</label>
+												<input type="text" class="label-up-input__input">
+											</div>
+										</div>
+									</div>
 
-                        </div>
+								</div>
 
-                    </form>
+							</div>
+						</div>
+						<div class="filter__group">
+							<a href="#" class="filter__title" data-bs-toggle="collapse" data-bs-target="#filter-4">
+								<span>Бренд</span>
+								<i class="icon-arrow-down filter__title__arrow"></i>
+							</a>
+							<div class="filter__crop collapse show" id="filter-4">
+								<div class="filter__body">
+									<div class="filter__props">
+										<div class="filter__props__list">
+											<label class="filter__check">
+												<div class="filter__check__input"><input type="checkbox" checked></div>
+												<div class="filter__check__text">Aroma Line (28)</div>
+											</label>
+											<label class="filter__check">
+												<div class="filter__check__input"><input type="checkbox"></div>
+												<div class="filter__check__text">Dr. Huter (31)</div>
+											</label>
+											<label class="filter__check">
+												<div class="filter__check__input"><input type="checkbox"></div>
+												<div class="filter__check__text">Freshco (46)</div>
+											</label>
+											<label class="filter__check">
+												<div class="filter__check__input"><input type="checkbox"></div>
+												<div class="filter__check__text">Aromalight (11)</div>
+											</label>
+											<label class="filter__check">
+												<div class="filter__check__input"><input type="checkbox"></div>
+												<div class="filter__check__text">Areon (2)</div>
+											</label>
+											<label class="filter__check">
+												<div class="filter__check__input"><input type="checkbox"></div>
+												<div class="filter__check__text">RYC (8)</div>
+											</label>
+											<label class="filter__check">
+												<div class="filter__check__input"><input type="checkbox"></div>
+												<div class="filter__check__text">Aromatique (14)</div>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="filter__group">
+							<a href="#" class="filter__title collapsed" data-bs-toggle="collapse" data-bs-target="#filter-5">
+								<span>Вид</span>
+								<i class="icon-arrow-down filter__title__arrow"></i>
+							</a>
+							<div class="filter__crop collapse" id="filter-5">
+								
 
-                    <form action="#" class="form-panel checkbox-default">
-                        <div class="form-panel__header">
-                            <div class="form-panel__title">Комментарий к заказу</div>
-                            <div class="form-panel__step">Шаг 4 / 4</div>
-                        </div>
-                        <div class="form-panel__body">
+							</div>
+						</div>
+						<div class="filter__group">
+							<a href="#" class="filter__title collapsed" data-bs-toggle="collapse" data-bs-target="#filter-6">
+								<span>Объем</span>
+								<i class="icon-arrow-down filter__title__arrow"></i>
+							</a>
+							<div class="filter__crop collapse" id="filter-6">
+								
 
-                            <div class="form-panel__list">
+							</div>
+						</div>
+						<div class="filter__group">
+							<a href="#" class="filter__title collapsed" data-bs-toggle="collapse" data-bs-target="#filter-7">
+								<span>Монтаж</span>
+								<i class="icon-arrow-down filter__title__arrow"></i>
+							</a>
+							<div class="filter__crop collapse" id="filter-7">
+								
 
-                                <div class="form-panel__item">
-                                    <textarea class="input input-default input--full" placeholder="Ваш комментарий"></textarea>
-                                </div>
-
-                                <div class="form-panel__item">
-                                    <label class="form-panel__check form-panel__check--agree">
-                                        <input type="checkbox">
-                                        <span>Я согласен с <a href="#" target="_blank">публичной офертой</a></span>
-                                    </label>
-                                    <label class="form-panel__check form-panel__check--agree">
-                                        <input type="checkbox">
-                                        <span>Я согласен на <a href="#" target="_blank">обработку персональных данных</a></span>
-                                    </label>
-                                </div>
-
-                                <div class="form-panel__actions">
-                                    <button type="button" class="button button-green">
-                                        Завершить оформление
-                                    </button>
-                                    <button type="button" class="button button-outline-green button--light">
-                                        Купить в 1 клик
-                                    </button>
-                                </div>
-                            </div>
-                           
-                        </div>
-                    </form>
-
-                </section>
-
-            </div>
-            <div class="layout-order__side">
-
-                <section class="cart-total scale-mobile">
-                    <h3  class="cart-total__title">Ваш заказ</h3>
-                    <div class="cart-total__body">
-                        <div class="cart-total__offer">При заказе от 3 000 ₽ — доставка бесплатно!</div>
-                        
-                        <div class="cart-total__props">
-                            <div class="cart-total__prop">
-                                <div>Товаров</div>
-                                <div>3 шт</div>
-                            </div>
-                            <div class="cart-total__prop">
-                                <div>Общий вес</div>
-                                <div>8,5 кг</div>
-                            </div>
-                        </div>
-                        
-                        <div class="cart-total__props">
-                            <div class="cart-total__prop cart-total__prop--bonuses">
-                                <div>Товаров</div>
-                                <div>3 шт</div>
-                            </div>
-                            <div class="cart-total__prop cart-total__prop--total">
-                                <div>Общий вес</div>
-                                <div>8,5 кг</div>
-                            </div>
-                        </div>
-                
-                        <div class="cart-total__coupon">
-                            <input type="text" class="input input-default input--full" placeholder="Ваш промокод">
-                            <button type="button" class="button button-orange button--full">
-                                Применить
-                            </button>
-                        </div>
-                
-                        <div class="cart-total__actions">
-                            <button type="button" class="button button-green button--full">
-                                Оформить заказ
-                            </button>
-                            <button type="button" class="button button-outline-green button--full button--light">
-                                Купить в 1 клик
-                            </button>
-                        </div>
+							</div>
+						</div>
+						<div class="filter__group filter__group--red">
+							<a href="#" class="filter__title" data-bs-toggle="collapse" data-bs-target="#filter-8">
+								<span>Акции</span>
+								<i class="icon-arrow-down filter__title__arrow"></i>
+							</a>
+							<div class="filter__crop collapse show" id="filter-8">
+								<div class="filter__body">
+									<div class="filter__props">
+										<div class="filter__props__list">
+											<label class="filter__check">
+												<div class="filter__check__input"><input type="checkbox" checked></div>
+												<div class="filter__check__text">Суперцена</div>
+											</label>
+											<label class="filter__check">
+												<div class="filter__check__input"><input type="checkbox"></div>
+												<div class="filter__check__text">Распродажа</div>
+											</label>
+											<label class="filter__check">
+												<div class="filter__check__input"><input type="checkbox"></div>
+												<div class="filter__check__text">Товар дня</div>
+											</label>
+											<label class="filter__check">
+												<div class="filter__check__input"><input type="checkbox"></div>
+												<div class="filter__check__text">Только онлайн</div>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="filter__ctrl">
+							<button type="button" class="button button-green filter__ctrl__item">
+								Применить
+							</button>
+							<button type="button" class="button button-outline-green filter__ctrl__item">
+								Сбросить
+							</button>
+						</div>
+					</form>
+                    
+				</div>
+				<div class="layout-basic__main">
+                    
+                    <aside class="sorting">
+						<div class="sorting__left">
+							<select>
+								<option>По популярности (убывание)</option>
+								<option>По популярности (возрастание)</option>
+								<option>По рейтингу (убывание)</option>
+								<option>По рейтингу (возрастание)</option>
+								<option>По цене (убывание)</option>
+								<option>По цене (возрастание)</option>
+							</select>
+						</div>
+						<div class="sorting__right">
+							<nav class="sorting__modes">
+								<a href="#" class="sorting__modes__item active" data-mode="tile">
+									<i class="icon-menu"></i>
+								</a>
+								<a href="#" class="sorting__modes__item" data-mode="list">
+									<i class="icon-list"></i>
+								</a>
+							</nav>
+						</div>
+					</aside>
+                    
+					<div>
+                        2
                     </div>
-                </section>
-                
-                
-                <aside class="promo-best-price scale-mobile">
-                    <h3 class="promo-best-price__title">
-                        Нашли дешевле?
-                        <br> Cнизим цену!
-                    </h3>
-                    <a href="#" class="button button-outline-white promo-best-price__button">
-                        <span>Подробнее</span>
-                        <i class="icon-arrow-forward"></i>
-                    </a>
-                </aside>
-            </div>
-        </div>
-    </div>
 
-    <div class="gap-30"></div>
+					<div class="content__more">
+						<button class="button button-outline-green button--full">
+							<span class="spinner-border"></span>
+							<span class="button__text">Показать ещё</span>
+						</button>
+					</div>
 
+					<nav class="nav-pages">
+						<a href="#" class="nav-pages__link"><i class="icon-first-page"></i></a>
+						<a href="#" class="nav-pages__link"><i class="icon-arrow-left"></i></a>
+						<a href="#" class="nav-pages__link nav-pages__text">1</a>
+						<span class="nav-pages__text nav-pages__text--sep">/</span>
+						<span class="nav-pages__text">7</span>
+						<a href="#" class="nav-pages__link"><i class="icon-arrow-right"></i></a>
+						<a href="#" class="nav-pages__link"><i class="icon-last-page"></i></a>
+					</nav>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div class="gap-30"></div>
+	
 	<section class="pros">
 	    <div class="page__center">
 	        <div class="pros__center">

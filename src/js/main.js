@@ -18,7 +18,9 @@ $(function () {
 
 	autosize($("textarea"));
 
-	$(".js-tooltip").tooltipster();
+	$(".js-tooltip").tooltipster({
+		side: ["right", "bottom"],
+	});
 
 	$("select").customSelect({
 		includeValue: true,
@@ -41,8 +43,8 @@ $(function () {
 	});
 
 	$("input").iCheck({
-		checkboxClass: "icheckbox_flat",
-		radioClass: "iradio_flat",
+		checkboxClass: "icheckbox",
+		radioClass: "iradio",
 	});
 
 	// datepicker

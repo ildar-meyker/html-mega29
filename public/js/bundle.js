@@ -24978,7 +24978,9 @@ $(function () {
   _modules_NavInfo__WEBPACK_IMPORTED_MODULE_10__["default"].init();
   _modules_Gallery__WEBPACK_IMPORTED_MODULE_11__["default"].init();
   autosize__WEBPACK_IMPORTED_MODULE_8___default()($("textarea"));
-  $(".js-tooltip").tooltipster();
+  $(".js-tooltip").tooltipster({
+    side: ["right", "bottom"]
+  });
   $("select").customSelect({
     includeValue: true
   });
@@ -24995,8 +24997,8 @@ $(function () {
     $(this).closest("label").toggleClass("active", isChecked);
   });
   $("input").iCheck({
-    checkboxClass: "icheckbox_flat",
-    radioClass: "iradio_flat"
+    checkboxClass: "icheckbox",
+    radioClass: "iradio"
   }); // datepicker
 
   if ($(".input-datepicker input").length) {

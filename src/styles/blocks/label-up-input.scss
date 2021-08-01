@@ -1,0 +1,29 @@
+.label-up-input {
+	position: relative;
+
+	&__label {
+		position: absolute;
+		top: 0;
+		left: 1em;
+		padding: 0 3/10 + em;
+		margin-top: -0.5em;
+		background: #fff;
+		font-size: 10/16 + em;
+		font-weight: 700;
+		line-height: 1;
+	}
+
+	&__input {
+		display: block;
+		width: 100%;
+		padding: 13/12 + em;
+		border: 1/12 + em solid #b2b3b3;
+		border-radius: 4/12 + em;
+		font-size: 12/16 + em;
+		color: #000;
+
+		&:not(:read-only):focus {
+			border-color: #21a73f;
+		}
+	}
+}

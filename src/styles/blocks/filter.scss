@@ -1,0 +1,145 @@
+.filter {
+	background: #fff;
+	border: 1px solid #f2f3f5;
+	border-radius: 4px;
+
+	&__group {
+		border-top: 1px solid #f2f3f5;
+		font-size: 13px;
+
+		&--orange {
+			.filter__title,
+			.filter__check.active {
+				color: #ef7f1a;
+			}
+		}
+
+		&--red {
+			.filter__title,
+			.filter__check.active {
+				color: #ef1a1a;
+			}
+		}
+
+		&:first-child {
+			border-top: 0;
+		}
+	}
+
+	&__title {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding: 19px 13px;
+		font-weight: 500;
+
+		&.collapsed {
+			.filter__title__arrow {
+				transform: rotate(0);
+			}
+		}
+
+		&__arrow {
+			transition: all 0.2s;
+			transform: rotate(180deg);
+			position: absolute;
+			top: 50%;
+			margin-top: -0.5em;
+			right: 13px;
+		}
+
+		&__info {
+			margin-left: 10px;
+			font-size: 15px;
+		}
+	}
+
+	&__body {
+		padding: 13px;
+		padding-top: 0;
+	}
+
+	&__props {
+		margin-top: 5px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&__title {
+			margin-left: 5px;
+			margin-bottom: 5px;
+			font-weight: 500;
+			color: #000;
+		}
+
+		&__list {
+			padding: 7px;
+			background: #fafafa;
+			border-radius: 4px;
+		}
+	}
+
+	&__check {
+		position: relative;
+		display: flex;
+		margin-top: 7px;
+		cursor: pointer;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&.active {
+			color: #21a73f;
+		}
+
+		&__input {
+			flex: 0 0 auto;
+			width: 25/13 + em;
+
+			input {
+				position: absolute;
+				opacity: 0;
+			}
+		}
+
+		&__text {
+			align-self: center;
+		}
+	}
+
+	&__ctrl {
+		padding: 13px;
+		border-top: 1px solid #e7e7e8;
+
+		&__item {
+			margin-top: 10px;
+			display: block;
+			width: 100%;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+
+	&__range {
+		display: flex;
+		padding-top: 10px;
+		font-size: 16px;
+
+		&__input {
+			flex: 1 1 50%;
+			padding: 0 7px;
+		}
+
+		&__space {
+			flex: 0 0 auto;
+			align-self: center;
+			width: 12px;
+			height: 1px;
+			background: #b2b3b3;
+		}
+	}
+}
