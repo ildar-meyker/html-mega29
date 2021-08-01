@@ -3157,11 +3157,12 @@ a {
 
 .nav-path {
   margin-top: 10px;
-  margin-bottom: 15px; }
-  .nav-path a {
-    font-size: 14px; }
-    .nav-path a:hover {
-      border-bottom: 1px solid rgba(46, 46, 46, 0.5); }
+  margin-bottom: 15px;
+  font-size: 14px; }
+  .nav-path a:hover {
+    color: #21a73f; }
+  .nav-path span {
+    border-bottom: 1px solid rgba(46, 46, 46, 0.5); }
   .nav-path i {
     margin: 0 5px;
     font-size: 10px; }
