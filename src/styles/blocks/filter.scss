@@ -125,9 +125,11 @@
 	}
 
 	&__range {
-		display: flex;
-		padding-top: 10px;
-		font-size: 16px;
+		&__fields {
+			display: flex;
+			padding-top: 10px;
+			font-size: 16px;
+		}
 
 		&__input {
 			flex: 1 1 50%;
@@ -140,6 +142,36 @@
 			width: 12px;
 			height: 1px;
 			background: #b2b3b3;
+		}
+
+		&__slider {
+			margin: 0 7px;
+		}
+
+		.slider-container {
+			margin-top: 33px;
+			margin-bottom: 20px;
+		}
+
+		.back-bar {
+			height: 4px;
+			background: #e7e7e8;
+		}
+
+		.selected-bar {
+			background: #21a73f !important;
+		}
+
+		.pointer {
+			top: -7px !important;
+			width: 18px !important;
+			height: 18px !important;
+			border-color: transparent !important;
+			background: #21a73f !important;
+		}
+
+		.scale {
+			display: none;
 		}
 	}
 }

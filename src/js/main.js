@@ -10,10 +10,12 @@ import "simplebar";
 import autosize from "autosize";
 import datepicker from "js-datepicker";
 import NavInfo from "./modules/NavInfo";
+import RangeSlider from "./modules/RangeSlider";
 import Gallery from "./modules/Gallery";
 
 $(function () {
 	NavInfo.init();
+	RangeSlider.init();
 	Gallery.init();
 
 	autosize($("textarea"));

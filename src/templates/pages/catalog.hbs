@@ -128,19 +128,24 @@ layout: default.hbs
 							<div class="filter__crop collapse show" id="filter-3">
 								<div class="filter__body">
 
-									<div class="filter__range">
-										<div class="filter__range__input">
-											<div class="label-up-input">
-												<label class="label-up-input__label">Мин</label>
-												<input type="text" class="label-up-input__input text-center">
+									<div class="filter__range js-range">
+										<div class="filter__range__fields">
+											<div class="filter__range__input">
+												<div class="label-up-input">
+													<label class="label-up-input__label">Мин</label>
+													<input type="text" class="label-up-input__input text-center js-range__from" value="0">
+												</div>
+											</div>
+											<div class="filter__range__space"></div>
+											<div class="filter__range__input">
+												<div class="label-up-input">
+													<label class="label-up-input__label">Макс</label>
+													<input type="text" class="label-up-input__input text-center js-range__to" value="2000">
+												</div>
 											</div>
 										</div>
-										<div class="filter__range__space"></div>
-										<div class="filter__range__input">
-											<div class="label-up-input">
-												<label class="label-up-input__label">Макс</label>
-												<input type="text" class="label-up-input__input text-center">
-											</div>
+										<div class="filter__range__slider">
+											<input type="hidden" class="js-range__hidden" value="0,2000" data-from="0" data-to="2000" />
 										</div>
 									</div>
 
