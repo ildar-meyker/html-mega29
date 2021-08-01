@@ -25001,9 +25001,9 @@ $(function () {
     radioClass: "iradio"
   }); // datepicker
 
-  if ($(".input-datepicker input").length) {
+  if ($(".datepicker-input input").length) {
     // throws error if element not found
-    js_datepicker__WEBPACK_IMPORTED_MODULE_9___default()(".input-datepicker input", {
+    js_datepicker__WEBPACK_IMPORTED_MODULE_9___default()(".datepicker-input input", {
       customDays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
       customMonths: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
       formatter: function formatter(input, date, instance) {

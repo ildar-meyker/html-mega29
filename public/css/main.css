@@ -1952,6 +1952,9 @@ corresponds to the arrow we want to display */
 .text-left {
   text-align: left !important; }
 
+.text-center {
+  text-align: center !important; }
+
 .text-right {
   text-align: right !important; }
 
@@ -2267,14 +2270,10 @@ a {
     box-shadow: inset 0 0.28571em 0.28571em rgba(0, 0, 0, 0.3);
     color: #2e2e2e; }
 
-.input {
-  transition: all 0.2s; }
-
-.input--full {
+.default-input {
+  transition: all 0.2s;
   display: block;
-  width: 100%; }
-
-.input-default {
+  width: 100%;
   border: 0.07143em solid transparent;
   border-radius: 0.28571em;
   font-size: 0.875em;
@@ -2282,20 +2281,82 @@ a {
   border-color: #e7e7e8;
   background: #fafafa;
   color: #2e2e2e; }
-  .input-default:not(:-moz-read-only):focus {
+  .default-input:not(:-moz-read-only):focus {
     border-color: #21a73f; }
-  .input-default:not(:read-only):focus {
+  .default-input:not(:read-only):focus {
     border-color: #21a73f; }
-  .input-default::-webkit-input-placeholder {
+  .default-input::-webkit-input-placeholder {
     color: #b2b3b3; }
-  .input-default::-moz-placeholder {
+  .default-input::-moz-placeholder {
     color: #b2b3b3; }
-  .input-default::-ms-input-placeholder {
+  .default-input::-ms-input-placeholder {
     color: #b2b3b3; }
-  .input-default::placeholder {
+  .default-input::placeholder {
     color: #b2b3b3; }
 
-.input-readonly {
+.datepicker-input {
+  position: relative;
+  background: #fafafa; }
+  .datepicker-input__input {
+    position: relative;
+    z-index: 1;
+    transition: all 0.2s;
+    display: block;
+    width: 100%;
+    border: 0.07143em solid transparent;
+    border-radius: 0.28571em;
+    font-size: 0.875em;
+    padding: 0.78571em 0.71429em;
+    padding-right: 2.1875em;
+    border-color: #e7e7e8;
+    background: transparent;
+    color: #2e2e2e; }
+    .datepicker-input__input:not(:-moz-read-only):focus {
+      border-color: #21a73f; }
+    .datepicker-input__input:not(:read-only):focus {
+      border-color: #21a73f; }
+    .datepicker-input__input::-webkit-input-placeholder {
+      color: #b2b3b3; }
+    .datepicker-input__input::-moz-placeholder {
+      color: #b2b3b3; }
+    .datepicker-input__input::-ms-input-placeholder {
+      color: #b2b3b3; }
+    .datepicker-input__input::placeholder {
+      color: #b2b3b3; }
+  .datepicker-input__icon {
+    position: absolute;
+    top: 50%;
+    right: 0.625em;
+    margin-top: -0.5em;
+    font-size: 0.875em;
+    color: rgba(0, 32, 51, 0.35); }
+
+.label-up-input {
+  position: relative; }
+  .label-up-input__label {
+    position: absolute;
+    top: 0;
+    left: 1em;
+    padding: 0 0.3em;
+    margin-top: -0.5em;
+    background: #fff;
+    font-size: 0.625em;
+    font-weight: 700;
+    line-height: 1; }
+  .label-up-input__input {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    border: 0.08333em solid #b2b3b3;
+    border-radius: 0.33333em;
+    font-size: 0.75em;
+    color: #000; }
+    .label-up-input__input:not(:-moz-read-only):focus {
+      border-color: #21a73f; }
+    .label-up-input__input:not(:read-only):focus {
+      border-color: #21a73f; }
+
+.readonly-input {
   border: 0.05556em solid transparent;
   border-radius: 0.22222em;
   font-size: 1.125em;
@@ -2304,22 +2365,6 @@ a {
   border-color: #e7e7e8;
   background: #fafafa;
   color: #2e2e2e; }
-
-.input-datepicker {
-  position: relative;
-  background: #fafafa; }
-  .input-datepicker input {
-    position: relative;
-    z-index: 1;
-    padding-right: 2.1875em;
-    background: transparent; }
-  .input-datepicker i {
-    position: absolute;
-    top: 50%;
-    right: 0.625em;
-    margin-top: -0.5em;
-    font-size: 0.875em;
-    color: rgba(0, 32, 51, 0.35); }
 
 .article {
   color: #000; }
@@ -5180,28 +5225,3 @@ a {
       width: 12px;
       height: 1px;
       background: #b2b3b3; }
-
-.label-up-input {
-  position: relative; }
-  .label-up-input__label {
-    position: absolute;
-    top: 0;
-    left: 1em;
-    padding: 0 0.3em;
-    margin-top: -0.5em;
-    background: #fff;
-    font-size: 0.625em;
-    font-weight: 700;
-    line-height: 1; }
-  .label-up-input__input {
-    display: block;
-    width: 100%;
-    padding: 1.08333em;
-    border: 0.08333em solid #b2b3b3;
-    border-radius: 0.33333em;
-    font-size: 0.75em;
-    color: #000; }
-    .label-up-input__input:not(:-moz-read-only):focus {
-      border-color: #21a73f; }
-    .label-up-input__input:not(:read-only):focus {
-      border-color: #21a73f; }

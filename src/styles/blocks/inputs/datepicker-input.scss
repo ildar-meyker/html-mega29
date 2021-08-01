@@ -1,0 +1,37 @@
+.datepicker-input {
+	position: relative;
+	background: #fafafa;
+
+	&__input {
+		position: relative;
+		z-index: 1;
+		transition: all 0.2s;
+		display: block;
+		width: 100%;
+		border: (1/14) + em solid transparent;
+		border-radius: (4/14) + em;
+		font-size: (14/16) + em;
+		padding: (11/14) + em (10/14) + em;
+		padding-right: 35/16 + em;
+		border-color: #e7e7e8;
+		background: transparent;
+		color: #2e2e2e;
+
+		&:not(:read-only):focus {
+			border-color: #21a73f;
+		}
+
+		&::placeholder {
+			color: #b2b3b3;
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		top: 50%;
+		right: 10/16 + em;
+		margin-top: -0.5em;
+		font-size: 14/16 + em;
+		color: rgba(0, 32, 51, 0.35);
+	}
+}

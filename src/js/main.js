@@ -48,9 +48,9 @@ $(function () {
 	});
 
 	// datepicker
-	if ($(".input-datepicker input").length) {
+	if ($(".datepicker-input input").length) {
 		// throws error if element not found
-		datepicker(".input-datepicker input", {
+		datepicker(".datepicker-input input", {
 			customDays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
 			customMonths: [
 				"Январь",
