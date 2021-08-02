@@ -1,4 +1,4 @@
-.footer-white {
+.footer {
 	&__main-content {
 		border-top: 1/16 + em solid #f2f3f5;
 		background: #fff;
@@ -101,7 +101,7 @@
 }
 
 @media (max-width: 991.98px) {
-	.footer-white {
+	.footer {
 		&__nav {
 			&__group {
 				margin: 0 -13px;
@@ -145,7 +145,7 @@
 }
 
 @media (min-width: 992px) {
-	.footer-white {
+	.footer {
 		&__main-content {
 			padding-top: 35/16 + em;
 			padding-bottom: 7/16 + em;
