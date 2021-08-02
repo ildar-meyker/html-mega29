@@ -1,0 +1,264 @@
+.footer-white {
+	&__main-content {
+		border-top: 1/16 + em solid #f2f3f5;
+		background: #fff;
+	}
+
+	&__phone {
+		padding: 20/16 + em 0;
+		text-align: center;
+
+		&__number {
+			font-size: 17/16 + em;
+			font-weight: 700;
+			color: #21a73f;
+
+			i {
+				font-size: 0.8em;
+			}
+		}
+
+		&__help {
+			margin-top: 5/11 + em;
+			font-size: 11/16 + em;
+			font-weight: 500;
+		}
+	}
+
+	&__apps {
+		padding-bottom: 15/16 + em;
+
+		&__item {
+			display: block;
+			width: 200/16 + em;
+			margin: 0 auto;
+			margin-top: 8/16 + em;
+
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+
+	&__copyright {
+		border-top: 1/16 + em solid #f2f3f5;
+		padding: 20/16 + em 0;
+
+		&__pay-methods {
+			margin: 20/16 + em 0;
+		}
+	}
+
+	&__social {
+		display: flex;
+		justify-content: center;
+
+		&__item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 4/16 + em;
+			width: 54/16 + em;
+			height: 54/16 + em;
+			border: 1/16 + em solid #d9d9d9;
+			border-radius: 4/16 + em;
+			background: #fff;
+
+			&:hover {
+				border-color: darken(#d9d9d9, 10%);
+			}
+
+			i {
+				font-size: 27/16 + em;
+				color: #21a73f;
+			}
+		}
+	}
+
+	&__pay-methods {
+		&__title {
+			margin-bottom: 5/15 + em;
+			font-size: 15/16 + em;
+			text-align: center;
+		}
+
+		&__cards {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			img {
+				width: 36/16 + em;
+				margin: 0 2/16 + em;
+			}
+		}
+	}
+
+	&__author {
+		font-size: 15/16 + em;
+		text-align: center;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.footer-white {
+		&__nav {
+			&__group {
+				margin: 0 -13px;
+				border-bottom: 1/16 + em solid #f2f3f5;
+				padding: 0 23/16 + em;
+			}
+
+			&__title {
+				position: relative;
+				padding: 12/13 + em 0;
+				font-size: 13/16 + em;
+				font-weight: 700;
+				text-transform: uppercase;
+				cursor: pointer;
+
+				i {
+					transition: all 0.2s;
+					transform: rotate(180deg);
+					position: absolute;
+					right: 0;
+					top: 50%;
+					margin-top: -0.5em;
+				}
+
+				&.collapsed {
+					i {
+						transform: rotate(0);
+					}
+				}
+			}
+
+			&__list {
+				padding-bottom: 10/16 + em;
+
+				> div {
+					margin-bottom: 10/16 + em;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.footer-white {
+		&__main-content {
+			padding-top: 35/16 + em;
+			padding-bottom: 7/16 + em;
+
+			&__center {
+				display: flex;
+			}
+
+			&__contacts {
+				padding-right: 25/16 + em;
+				order: -1;
+			}
+
+			&__links {
+				flex-grow: 1;
+			}
+		}
+
+		&__nav {
+			display: flex;
+			flex-wrap: wrap;
+
+			&__group {
+				flex: 1 0 185px;
+				padding-left: 30/16 + em;
+				margin-bottom: 30/16 + em;
+			}
+
+			&__title {
+				font-size: 15/16 + em;
+				font-weight: 700;
+				text-transform: uppercase;
+				color: #21a73f;
+
+				i {
+					display: none;
+				}
+			}
+
+			&__list {
+				> div {
+					margin-top: 8/15 + em;
+					font-size: 15/16 + em;
+				}
+			}
+
+			.collapse {
+				display: block !important;
+			}
+		}
+
+		&__phone {
+			padding: 0;
+		}
+
+		&__apps {
+			padding-bottom: 0;
+			margin-top: 22/16 + em;
+
+			&__item {
+				width: 125/16 + em;
+				margin-top: 5/16 + em;
+			}
+		}
+
+		&__copyright {
+			&__center {
+				display: flex;
+				flex-direction: row-reverse;
+				align-items: center;
+			}
+
+			&__social,
+			&__author {
+				flex: 0 0 auto;
+				width: 25%;
+			}
+
+			&__pay-methods {
+				margin: 0;
+				flex: 0 0 auto;
+				width: 50%;
+			}
+		}
+
+		&__social {
+			justify-content: flex-end;
+
+			&__item {
+				width: 44/16 + em;
+				height: 44/16 + em;
+
+				i {
+					font-size: 24/16 + em;
+				}
+			}
+		}
+
+		&__pay-methods {
+			&__title {
+				font-size: 18/16 + em;
+			}
+
+			&__cards {
+				img {
+					width: 32/16 + em;
+				}
+			}
+		}
+
+		&__author {
+			font-size: 18/16 + em;
+			text-align: left;
+		}
+	}
+}

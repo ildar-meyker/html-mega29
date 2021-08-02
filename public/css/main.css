@@ -1767,8 +1767,8 @@ corresponds to the arrow we want to display */
 
 @font-face {
   font-family: "icomoon";
-  src: url("../fonts/icomoon.eot?qnqzym");
-  src: url("../fonts/icomoon.eot?qnqzym#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?qnqzym") format("truetype"), url("../fonts/icomoon.woff?qnqzym") format("woff"), url("../fonts/icomoon.svg?qnqzym#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?svrbkg");
+  src: url("../fonts/icomoon.eot?svrbkg#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?svrbkg") format("truetype"), url("../fonts/icomoon.woff?svrbkg") format("woff"), url("../fonts/icomoon.svg?svrbkg#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block; }
@@ -1885,6 +1885,9 @@ corresponds to the arrow we want to display */
 
 .icon-help-circle:before {
   content: "\e920"; }
+
+.icon-instagram-2:before {
+  content: "\e921"; }
 
 .simplebar-track.simplebar-horizontal {
   height: 2px;
@@ -2238,7 +2241,7 @@ corresponds to the arrow we want to display */
 
 body {
   background: #fafafa;
-  min-width: 415px;
+  min-width: 320px;
   font-family: "KievitPro", sans-serif;
   -webkit-font-feature-settings: "pnum" on, "lnum" on;
           font-feature-settings: "pnum" on, "lnum" on;
@@ -2849,6 +2852,168 @@ a {
       .footer__apps__link {
         margin-top: 5px;
         width: 120px; } }
+
+.footer-white__main-content {
+  border-top: 0.0625em solid #f2f3f5;
+  background: #fff; }
+
+.footer-white__phone {
+  padding: 1.25em 0;
+  text-align: center; }
+  .footer-white__phone__number {
+    font-size: 1.0625em;
+    font-weight: 700;
+    color: #21a73f; }
+    .footer-white__phone__number i {
+      font-size: 0.8em; }
+  .footer-white__phone__help {
+    margin-top: 0.45455em;
+    font-size: 0.6875em;
+    font-weight: 500; }
+
+.footer-white__apps {
+  padding-bottom: 0.9375em; }
+  .footer-white__apps__item {
+    display: block;
+    width: 12.5em;
+    margin: 0 auto;
+    margin-top: 0.5em; }
+    .footer-white__apps__item:first-child {
+      margin-top: 0; }
+
+.footer-white__copyright {
+  border-top: 0.0625em solid #f2f3f5;
+  padding: 1.25em 0; }
+  .footer-white__copyright__pay-methods {
+    margin: 1.25em 0; }
+
+.footer-white__social {
+  display: flex;
+  justify-content: center; }
+  .footer-white__social__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.25em;
+    width: 3.375em;
+    height: 3.375em;
+    border: 0.0625em solid #d9d9d9;
+    border-radius: 0.25em;
+    background: #fff; }
+    .footer-white__social__item:hover {
+      border-color: silver; }
+    .footer-white__social__item i {
+      font-size: 1.6875em;
+      color: #21a73f; }
+
+.footer-white__pay-methods__title {
+  margin-bottom: 0.33333em;
+  font-size: 0.9375em;
+  text-align: center; }
+
+.footer-white__pay-methods__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .footer-white__pay-methods__cards img {
+    width: 2.25em;
+    margin: 0 0.125em; }
+
+.footer-white__author {
+  font-size: 0.9375em;
+  text-align: center; }
+
+@media (max-width: 991.98px) {
+  .footer-white__nav__group {
+    margin: 0 -13px;
+    border-bottom: 0.0625em solid #f2f3f5;
+    padding: 0 1.4375em; }
+  .footer-white__nav__title {
+    position: relative;
+    padding: 0.92308em 0;
+    font-size: 0.8125em;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer; }
+    .footer-white__nav__title i {
+      transition: all 0.2s;
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -0.5em; }
+    .footer-white__nav__title.collapsed i {
+      -webkit-transform: rotate(0);
+              transform: rotate(0); }
+  .footer-white__nav__list {
+    padding-bottom: 0.625em; }
+    .footer-white__nav__list > div {
+      margin-bottom: 0.625em; } }
+
+@media (min-width: 992px) {
+  .footer-white__main-content {
+    padding-top: 2.1875em;
+    padding-bottom: 0.4375em; }
+    .footer-white__main-content__center {
+      display: flex; }
+    .footer-white__main-content__contacts {
+      padding-right: 1.5625em;
+      order: -1; }
+    .footer-white__main-content__links {
+      flex-grow: 1; }
+  .footer-white__nav {
+    display: flex;
+    flex-wrap: wrap; }
+    .footer-white__nav__group {
+      flex: 1 0 185px;
+      padding-left: 1.875em;
+      margin-bottom: 1.875em; }
+    .footer-white__nav__title {
+      font-size: 0.9375em;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #21a73f; }
+      .footer-white__nav__title i {
+        display: none; }
+    .footer-white__nav__list > div {
+      margin-top: 0.53333em;
+      font-size: 0.9375em; }
+    .footer-white__nav .collapse {
+      display: block !important; }
+  .footer-white__phone {
+    padding: 0; }
+  .footer-white__apps {
+    padding-bottom: 0;
+    margin-top: 1.375em; }
+    .footer-white__apps__item {
+      width: 7.8125em;
+      margin-top: 0.3125em; }
+  .footer-white__copyright__center {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center; }
+  .footer-white__copyright__social, .footer-white__copyright__author {
+    flex: 0 0 auto;
+    width: 25%; }
+  .footer-white__copyright__pay-methods {
+    margin: 0;
+    flex: 0 0 auto;
+    width: 50%; }
+  .footer-white__social {
+    justify-content: flex-end; }
+    .footer-white__social__item {
+      width: 2.75em;
+      height: 2.75em; }
+      .footer-white__social__item i {
+        font-size: 1.5em; }
+  .footer-white__pay-methods__title {
+    font-size: 1.125em; }
+  .footer-white__pay-methods__cards img {
+    width: 2em; }
+  .footer-white__author {
+    font-size: 1.125em;
+    text-align: left; } }
 
 .error-404 {
   margin-top: 20px;
@@ -3553,6 +3718,7 @@ a {
         background: #21a73f; }
 
 .nav-bottom {
+  visibility: hidden;
   position: fixed;
   bottom: 0;
   left: 0;
