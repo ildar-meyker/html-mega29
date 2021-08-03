@@ -5415,3 +5415,36 @@ a {
     background: #21a73f !important; }
   .filter__range .scale {
     display: none; }
+
+.panel-city {
+  max-width: 18.75em;
+  border: 0.0625em solid #f1f1f1;
+  border-radius: 0.25em;
+  background: #fff; }
+  .panel-city__header {
+    border-bottom: 0.05556em solid #f1f1f1;
+    padding: 1.05556em 1.66667em;
+    font-size: 1.125em;
+    font-weight: 700;
+    text-align: center; }
+  .panel-city__body {
+    padding: 1em 1.875em; }
+  .panel-city__item {
+    position: relative;
+    display: block;
+    padding: 0.55556em 0.88889em;
+    border-radius: 0.22222em;
+    font-size: 1.125em; }
+    .panel-city__item:hover {
+      background: #f1f1f1; }
+    .panel-city__item.active {
+      color: #21a73f; }
+      .panel-city__item.active:before {
+        content: "\e90c";
+        font-family: "icomoon" !important;
+        font-size: 16px;
+        line-height: 1;
+        position: absolute;
+        top: 50%;
+        right: 1em;
+        margin-top: -0.5em; }

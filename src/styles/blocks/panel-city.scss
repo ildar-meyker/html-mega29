@@ -1,0 +1,48 @@
+.panel-city {
+	max-width: 300/16 + em;
+	border: 1/16 + em solid #f1f1f1;
+	border-radius: 4/16 + em;
+	background: #fff;
+
+	&__header {
+		border-bottom: 1/18 + em solid #f1f1f1;
+		padding: 19/18 + em 30/18 + em;
+		font-size: 18/16 + em;
+		font-weight: 700;
+		text-align: center;
+	}
+
+	&__body {
+		padding: 16/16 + em 30/16 + em;
+	}
+
+	&__list {
+	}
+
+	&__item {
+		position: relative;
+		display: block;
+		padding: 10/18 + em 16/18 + em;
+		border-radius: 4/18 + em;
+		font-size: 18/16 + em;
+
+		&:hover {
+			background: #f1f1f1;
+		}
+
+		&.active {
+			color: #21a73f;
+
+			&:before {
+				content: "\e90c";
+				font-family: "icomoon" !important;
+				font-size: 16px;
+				line-height: 1;
+				position: absolute;
+				top: 50%;
+				right: 16/16 + em;
+				margin-top: -0.5em;
+			}
+		}
+	}
+}
