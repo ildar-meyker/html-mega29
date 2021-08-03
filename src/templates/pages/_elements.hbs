@@ -468,10 +468,16 @@ layout: default.hbs
 		<div class="panel__header">Заказать обратный звонок</div>
 		<div class="panel__body">
 			<div class="panel-call__input">
-				<input type="text" class="default-input" placeholder="Ваш телефон" data-mask="+7(000)000-00-00">
+				<div class="placeholder-up-input">
+					<label class="placeholder-up-input__label">Ваш телефон</label>
+					<input type="text" class="placeholder-up-input__input" data-mask="+7(000)000-00-00">
+				</div>
 			</div>
 			<div class="panel-call__input">
-				<input type="text" class="default-input" placeholder="Ваше имя">
+				<div class="placeholder-up-input">
+					<label class="placeholder-up-input__label">Ваше имя</label>
+					<input type="text" class="placeholder-up-input__input">
+				</div>
 			</div>
 			<label class="form-panel__check panel-call__agree">
 				<input type="checkbox" class="js-check-default">
@@ -484,6 +490,8 @@ layout: default.hbs
 	</div>
 </form>
 {{!-- /обратный звонок --}}
+
+<div class="gap-30"></div>
 
 {{!--  авторизация --}}
 <aside action="#" class="panel panel-auth">

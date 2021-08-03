@@ -1,0 +1,38 @@
+.placeholder-up-input {
+	transition: all 0.2s;
+	position: relative;
+	border: 1/16 + em solid #e7e7e8;
+	border-radius: 4/16 + em;
+	background: #fafafa;
+
+	&.focus {
+		border-color: #21a73f;
+		background: #fff;
+
+		.placeholder-up-input__label {
+			top: -2/14 + em;
+			background: #fff;
+			padding: 0 3/14 + em;
+			font-size: 14/16 + em;
+			color: #21a73f;
+		}
+	}
+
+	&__label {
+		transition: all 0.2s;
+		position: absolute;
+		top: 50%;
+		margin-top: -0.5em;
+		left: 13/18 + em;
+		font-size: 18/16 + em;
+		color: rgba(#111111, 0.32);
+	}
+
+	&__input {
+		position: relative;
+		width: 100%;
+		padding: 10px 15px;
+		border: 0;
+		font-size: 18/16 + em;
+	}
+}

@@ -24992,6 +24992,12 @@ $(function () {
   _modules_RangeSlider__WEBPACK_IMPORTED_MODULE_11__["default"].init();
   _modules_Gallery__WEBPACK_IMPORTED_MODULE_12__["default"].init();
   autosize__WEBPACK_IMPORTED_MODULE_8___default()($("textarea"));
+  $(document).on("focus", ".placeholder-up-input__input", function () {
+    $(this).parent().addClass("focus");
+  });
+  $(document).on("blur", ".placeholder-up-input__input", function () {
+    $(this).parent().removeClass("focus");
+  });
   $(".js-tooltip").tooltipster({
     side: ["right", "bottom"]
   });
