@@ -1947,8 +1947,8 @@ corresponds to the arrow we want to display */
   height: 28px !important;
   background-size: 24px 24px !important; }
 
-.checkbox-default .icheckbox,
-.checkbox-default .iradio {
+.icheckbox_default,
+.iradio_default {
   position: absolute;
   top: 50%;
   margin-top: -0.70588em;
@@ -1957,25 +1957,25 @@ corresponds to the arrow we want to display */
   height: 1.41176em;
   background: none; }
 
-.checkbox-default .iradio {
+.iradio_default {
   border: 0.17647em solid #2e2e2e;
   border-radius: 50%; }
-  .checkbox-default .iradio.checked {
+  .iradio_default.checked {
     border: 0.41176em solid #21a73f; }
 
-.checkbox-default .icheckbox {
+.icheckbox_default {
   border-radius: 0.23529em;
   background: #f2f3f5; }
-  .checkbox-default .icheckbox.checked {
+  .icheckbox_default.checked {
     background: #21a73f;
     font-family: "icomoon" !important;
     line-height: 1.41176em;
     text-align: center;
     color: #fff; }
-    .checkbox-default .icheckbox.checked:before {
+    .icheckbox_default.checked:before {
       content: "\e90c"; }
 
-.checkbox-border .icheckbox {
+.icheckbox_border {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1983,10 +1983,10 @@ corresponds to the arrow we want to display */
   height: 1.5em;
   border: 0.16667em solid #323232;
   border-radius: 0.25em; }
-  .checkbox-border .icheckbox.checked {
+  .icheckbox_border.checked {
     border-color: inherit;
     color: inherit; }
-    .checkbox-border .icheckbox.checked:before {
+    .icheckbox_border.checked:before {
       content: "\e90c";
       font-family: "icomoon" !important;
       line-height: 1; }

@@ -69,8 +69,8 @@
 }
 
 //  icheck
-.checkbox-default .icheckbox,
-.checkbox-default .iradio {
+.icheckbox_default,
+.iradio_default {
 	position: absolute;
 	top: 50%;
 	margin-top: -12/17 + em;
@@ -79,7 +79,7 @@
 	height: 24/17 + em;
 	background: none;
 }
-.checkbox-default .iradio {
+.iradio_default {
 	border: 3/17 + em solid #2e2e2e;
 	border-radius: 50%;
 
@@ -87,7 +87,7 @@
 		border: 7/17 + em solid #21a73f;
 	}
 }
-.checkbox-default .icheckbox {
+.icheckbox_default {
 	border-radius: 4/17 + em;
 	background: #f2f3f5;
 
@@ -104,7 +104,7 @@
 	}
 }
 
-.checkbox-border .icheckbox {
+.icheckbox_border {
 	display: flex;
 	justify-content: center;
 	align-items: center;

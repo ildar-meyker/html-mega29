@@ -24,7 +24,7 @@ layout: default.hbs
                     <h1 class="h1">Оформление заказа</h1>
 
                     {{!--  step 1 --}}
-                    <form action="#" class="form-panel checkbox-default">
+                    <form action="#" class="form-panel">
                         <div class="form-panel__header">
                             <div class="form-panel__title">Контактная информация</div>
                             <div class="form-panel__step">Шаг 1 / 4</div>
@@ -62,7 +62,7 @@ layout: default.hbs
                     {{!-- /step 1 --}}
 
                     {{!--  step 2 --}}
-                    <form action="#" class="form-panel checkbox-default">
+                    <form action="#" class="form-panel">
                         <div class="form-panel__header">
                             <div class="form-panel__title">Выберите способ доставки</div>
                             <div class="form-panel__step">Шаг 2 / 4</div>
@@ -72,15 +72,15 @@ layout: default.hbs
                             <div class="form-panel__list">
                                 <div class="form-panel__item">
                                     <label class="form-panel__check form-panel__check--radio">
-                                        <input type="radio" name="radio1" checked>
+                                        <input type="radio" class="js-check-default" name="radio1" checked>
                                         <span>Доставка</span>
                                     </label>
                                     <label class="form-panel__check form-panel__check--radio">
-                                        <input type="radio" name="radio1">
+                                        <input type="radio" class="js-check-default" name="radio1">
                                         <span>Доставка на основе зон в Яндекс картах (Архангельск до 5 000 ₽ )</span>
                                     </label>
                                     <label class="form-panel__check form-panel__check--radio">
-                                        <input type="radio" name="radio1">
+                                        <input type="radio" class="js-check-default" name="radio1">
                                         <span>Самовывоз</span>
                                     </label>
                                 </div>
@@ -90,15 +90,15 @@ layout: default.hbs
                                 <div class="form-panel__item mt-0">
                                     <div class="form-panel__label-lg">Выберите дату доставки</div>
                                     <label class="form-panel__check form-panel__check--radio">
-                                        <input type="radio" name="radio2" checked>
+                                        <input type="radio" class="js-check-default" name="radio2" checked>
                                         <span>Сегодня</span>
                                     </label>
                                     <label class="form-panel__check form-panel__check--radio">
-                                        <input type="radio" name="radio2">
+                                        <input type="radio" class="js-check-default" name="radio2">
                                         <span>Завтра</span>
                                     </label>
                                     <label class="form-panel__check form-panel__check--radio">
-                                        <input type="radio" name="radio2">
+                                        <input type="radio" class="js-check-default" name="radio2">
                                         <span>Выбрать</span>
                                     </label>
                                 </div>
@@ -127,7 +127,7 @@ layout: default.hbs
                     {{!-- /step 2 --}}
 
                     {{!--  step 3 --}}
-                    <form action="#" class="form-panel checkbox-default">
+                    <form action="#" class="form-panel">
                         <div class="form-panel__header">
                             <div class="form-panel__title">Выберите способ оплаты</div>
                             <div class="form-panel__step">Шаг 3 / 4</div>
@@ -137,11 +137,11 @@ layout: default.hbs
                             <div class="form-panel__list">
                                 <div class="form-panel__item">
                                     <label class="form-panel__check form-panel__check--radio">
-                                        <input type="radio" name="radio3" checked>
+                                        <input type="radio" class="js-check-default" name="radio3" checked>
                                         <span>Безналичная оплата при получении</span>
                                     </label>
                                     <label class="form-panel__check form-panel__check--radio">
-                                        <input type="radio" name="radio3">
+                                        <input type="radio" class="js-check-default" name="radio3">
                                         <span>Онлайн</span>
                                     </label>
                                 </div>
@@ -178,7 +178,7 @@ layout: default.hbs
                                 <div class="form-panel__item">
                                     <div class="form-panel__label-lg">Бонусы</div>
                                     <label class="form-panel__check">
-                                        <input type="checkbox">
+                                        <input type="checkbox" class="js-check-default">
                                         <span></span>Применить бонусы</span>
                                     </label>
                                 </div>
@@ -190,7 +190,7 @@ layout: default.hbs
                     {{!-- /step 3 --}}
 
                     {{!--  step 4 --}}
-                    <form action="#" class="form-panel checkbox-default">
+                    <form action="#" class="form-panel">
                         <div class="form-panel__header">
                             <div class="form-panel__title">Комментарий к заказу</div>
                             <div class="form-panel__step">Шаг 4 / 4</div>
@@ -205,11 +205,11 @@ layout: default.hbs
 
                                 <div class="form-panel__item">
                                     <label class="form-panel__check form-panel__check--agree">
-                                        <input type="checkbox">
+                                        <input type="checkbox" class="js-check-default">
                                         <span>Я согласен с <a href="#" target="_blank">публичной офертой</a></span>
                                     </label>
                                     <label class="form-panel__check form-panel__check--agree">
-                                        <input type="checkbox">
+                                        <input type="checkbox" class="js-check-default">
                                         <span>Я согласен на <a href="#" target="_blank">обработку персональных данных</a></span>
                                     </label>
                                 </div>

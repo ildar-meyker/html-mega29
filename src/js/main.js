@@ -44,9 +44,14 @@ $(function () {
 		$(this).closest("label").toggleClass("active", isChecked);
 	});
 
-	$("input").iCheck({
-		checkboxClass: "icheckbox",
-		radioClass: "iradio",
+	$("input.js-check-border").iCheck({
+		checkboxClass: "icheckbox_border",
+		radioClass: "iradio_border",
+	});
+
+	$("input.js-check-default").iCheck({
+		checkboxClass: "icheckbox_default",
+		radioClass: "iradio_default",
 	});
 
 	// datepicker
