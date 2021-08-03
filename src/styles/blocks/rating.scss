@@ -1,0 +1,25 @@
+.rating {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__stars {
+		background: url("../images/star-outlined.png") repeat-x;
+		background-size: auto 100%;
+		width: 6em;
+		height: 1em;
+
+		div {
+			background: url("../images/star-filled.png") repeat-x;
+			background-size: auto 100%;
+			width: 0;
+			height: 100%;
+		}
+	}
+
+	&__count {
+		margin-left: 5px;
+		font-size: 0.8em;
+		color: #b2b3b3;
+	}
+}

@@ -53,7 +53,6 @@ layout: default.hbs
 </style>
 
 
-
 <div class="elems-wrapper">
 
 	<section class="elems-section">
@@ -351,6 +350,10 @@ layout: default.hbs
 </div>
 
 
+<div class="rating">
+	<div class="rating__stars"><div style="width: 68%;"></div></div>
+	<div class="rating__count">(23)</div>
+</div>
 
 <aside class="popup-search">
 	<div class="popup-search__autocomplete">
@@ -369,13 +372,11 @@ layout: default.hbs
 					<div class="popup-search__results__details">
 						<div class="popup-search__results__info">
 							<div class="popup-search__results__code">Артикул: 171-345</div>
-							<div class="popup-search__results__rate">
-								<div class="goods__rate">
-                                    <div class="goods__rate__stars">
-                                        <div style="width: 68%;"></div>
-                                    </div>
-                                    <div class="goods__rate__count">(23)</div>
-                                </div>
+							<div class="rating popup-search__results__rating">
+								<div class="rating__stars">
+									<div style="width: 68%;"></div>
+								</div>
+								<div class="rating__count">(23)</div>
 							</div>
 						</div>
 						<div class="popup-search__results__price"><span>799</span> ₽ / шт</div>
@@ -384,7 +385,7 @@ layout: default.hbs
 			</div>
 		</div>
 		<div class="popup-search__results__show-all">
-			<a href="#" class="button button-green popup-search__results__show-all__button">Показать все результаты</a>
+			<a href="#" class="button button-green">Показать все результаты</a>
 		</div>
 	</div>
 </aside>
@@ -402,13 +403,11 @@ layout: default.hbs
 					<div class="popup-cart__products__details">
 						<div class="popup-cart__products__info">
 							<div class="popup-cart__products__code">Артикул: 171-345</div>
-							<div class="popup-cart__products__rate">
-								<div class="goods__rate">
-									<div class="goods__rate__stars">
-										<div style="width: 68%;"></div>
-									</div>
-									<div class="goods__rate__count">(23)</div>
+							<div class="rating popup-cart__products__rating">
+								<div class="rating__stars">
+									<div style="width: 68%;"></div>
 								</div>
+								<div class="rating__count">(23)</div>
 							</div>
 						</div>
 						<div class="popup-cart__products__price"><span>799</span> ₽ / шт</div>
@@ -431,7 +430,7 @@ layout: default.hbs
 			</div>
 		</div>
 		<div class="popup-cart__order-btn">
-			<a href="#" class="button button-green popup-cart__order-btn__button">Оформить</a>
+			<a href="#" class="button button-green">Оформить</a>
 		</div>
 	</div>
 </aside>
