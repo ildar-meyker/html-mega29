@@ -2321,12 +2321,12 @@ a {
   transition: all 0.2s;
   position: relative;
   display: inline-block;
-  padding: 0.84615em 1.15385em;
+  padding: 0.78571em 1.07143em;
   min-width: 90px;
-  border: 0.07692em solid transparent;
-  border-radius: 0.30769em;
+  border: 0.07143em solid transparent;
+  border-radius: 0.28571em;
   text-align: center;
-  font-size: 0.8125em;
+  font-size: 0.875em;
   font-weight: 700; }
   .button .spinner-border {
     position: absolute;
@@ -2418,19 +2418,14 @@ a {
     box-shadow: inset 0 0.28571em 0.28571em rgba(0, 0, 0, 0.3);
     color: #2e2e2e; }
 
-@media (min-width: 992px) {
-  .button {
-    font-size: 15px;
-    font-weight: normal; } }
-
 .default-input {
   transition: all 0.2s;
   display: block;
   width: 100%;
-  border: 0.06667em solid transparent;
-  border-radius: 0.26667em;
-  font-size: 0.9375em;
-  padding: 0.66667em 0.66667em;
+  border: 0.07143em solid transparent;
+  border-radius: 0.28571em;
+  font-size: 0.875em;
+  padding: 0.78571em 0.71429em;
   border-color: #e7e7e8;
   background: #fafafa;
   color: #2e2e2e; }
@@ -2446,10 +2441,6 @@ a {
     color: #b2b3b3; }
   .default-input::placeholder {
     color: #b2b3b3; }
-
-@media (min-width: 992px) {
-  .default-input {
-    font-size: 18px; } }
 
 .datepicker-input {
   position: relative;
