@@ -5465,7 +5465,8 @@ a {
     font-size: 0.9375em;
     font-weight: normal; }
   .panel-call__submit {
-    margin-top: 1.25em; }
+    margin-top: 1.25em;
+    margin-bottom: 0.875em; }
     .panel-call__submit .button {
       width: 100%; }
 
@@ -5490,3 +5491,15 @@ a {
         top: 50%;
         right: 1em;
         margin-top: -0.5em; }
+
+.panel-auth {
+  max-width: 17.1875em; }
+  .panel-auth__body {
+    padding: 1.875em; }
+  .panel-auth__desc {
+    margin-bottom: 0.9375em;
+    font-size: 0.9375em; }
+  .panel-auth__button {
+    margin-top: 0.625em; }
+    .panel-auth__button .button {
+      width: 100%; }

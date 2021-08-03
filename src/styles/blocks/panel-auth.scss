@@ -1,0 +1,20 @@
+.panel-auth {
+	max-width: 275/16 + em;
+
+	&__body {
+		padding: 30/16 + em;
+	}
+
+	&__desc {
+		margin-bottom: 15/16 + em;
+		font-size: 15/16 + em;
+	}
+
+	&__button {
+		margin-top: 10/16 + em;
+
+		.button {
+			width: 100%;
+		}
+	}
+}
