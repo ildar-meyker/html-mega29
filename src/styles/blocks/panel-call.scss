@@ -1,0 +1,25 @@
+.panel-call {
+	max-width: 300/16 + em;
+
+	&__input {
+		margin-top: 10/16 + em;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	&__agree {
+		margin-top: 10/16 + em;
+		font-size: 15/16 + em;
+		font-weight: normal;
+	}
+
+	&__submit {
+		margin-top: 20/16 + em;
+
+		.button {
+			width: 100%;
+		}
+	}
+}

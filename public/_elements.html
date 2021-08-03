@@ -369,6 +369,8 @@
 	<div class="rating__count">(23)</div>
 </div>
 
+<div class="gap-30"></div>
+
 <aside class="panel-search">
 	<div class="panel-search__autocomplete">
 		<div class="panel-search__autocomplete__item">обои</div>
@@ -403,6 +405,8 @@
 		</div>
 	</div>
 </aside>
+
+<div class="gap-30"></div>
 
 <aside class="panel-cart">
 	<div class="panel-cart__header">
@@ -449,11 +453,13 @@
 	</div>
 </aside>
 
-<aside class="panel-city">
-	<div class="panel-city__arrow"></div>
-	<div class="panel-city__header">Выберите город</div>
-	<div class="panel-city__body">
-		<div class="panel-city__list">
+<div class="gap-30"></div>
+
+<aside class="panel panel-city">
+	<div class="panel__arrow"></div>
+	<div class="panel__box">
+		<div class="panel__header">Выберите город</div>
+		<div class="panel__body">
 			<a href="#" class="panel-city__item active">Архангельск</a>
 			<a href="#" class="panel-city__item">Северодвинск</a>
 			<a href="#" class="panel-city__item">Сыктывкар</a>
@@ -461,21 +467,32 @@
 	</div>
 </aside>
 
-<form action="#" class="panel-call">
-	<div class="panel-call__header">Заказать обратный звонок</div>
-	<div class="panel-call__body">
-		<div class="panel-call__input">
-			<input type="text" class="default-input" placeholder="Ваш телефон" data-mask="+7(000)000-00-00">
+<div class="gap-30"></div>
+
+<form action="#" class="panel panel-call">
+	<div class="panel__arrow"></div>
+	<div class="panel__box">
+		<div class="panel__header">Заказать обратный звонок</div>
+		<div class="panel__body">
+			<div class="panel-call__input">
+				<input type="text" class="default-input" placeholder="Ваш телефон" data-mask="+7(000)000-00-00">
+			</div>
+			<div class="panel-call__input">
+				<input type="text" class="default-input" placeholder="Ваше имя">
+			</div>
+			<label class="form-panel__check panel-call__agree">
+				<input type="checkbox" class="js-check-default">
+				<span>Я согласен с <a href="#" target="_blank">обработку персональных данных</a></span>
+			</label>
+			<div class="panel-call__submit">
+				<button type="button" class="button button-green">Заказать</button>
+			</div>
 		</div>
-		<div class="panel-call__input">
-			<input type="text" class="default-input" placeholder="Ваше имя">
-		</div>
-		<label class="form-panel__check form-panel__check--agree">
-			<input type="checkbox" class="js-check-default">
-			<span>Я согласен с <a href="#" target="_blank">обработку персональных данных</a></span>
-		</label>
 	</div>
 </form>
+
+<div class="gap-30"></div>
+
 
 	<nav class="nav-bottom">
 	    <a href="#" class="nav-bottom__item">
