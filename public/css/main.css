@@ -3628,7 +3628,6 @@ a {
         background: #21a73f; }
 
 .nav-bottom {
-  visibility: hidden;
   position: fixed;
   bottom: 0;
   left: 0;
