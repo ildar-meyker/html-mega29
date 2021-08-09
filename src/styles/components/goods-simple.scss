@@ -1,0 +1,66 @@
+.goods-simple {
+	&__item {
+		display: flex;
+		margin-bottom: 10px;
+	}
+
+	&__image {
+		flex: 0 0 auto;
+		width: 40px;
+		height: 40px;
+		border-radius: 4px;
+		background-size: cover;
+	}
+
+	&__desc {
+		flex-grow: 1;
+		margin-left: 10px;
+	}
+
+	&__title {
+		font-size: 10px;
+		font-weight: 700;
+	}
+
+	&__price {
+		margin-top: 5px;
+		font-size: 16px;
+		font-weight: 700;
+
+		&__rubl {
+			font-size: 0.5em;
+		}
+	}
+
+	&__remove {
+		padding-left: 10px;
+	}
+}
+
+@media (min-width: 992px) {
+	.goods-simple {
+		&__item {
+			padding: 10px;
+			margin-bottom: 0;
+
+			&--link {
+				&:hover {
+					background: #f2f3f5;
+				}
+			}
+		}
+
+		&__image {
+			width: 55px;
+			height: 55px;
+		}
+
+		&__title {
+			font-size: 13px;
+		}
+
+		&__price {
+			font-size: 24px;
+		}
+	}
+}

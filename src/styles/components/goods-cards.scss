@@ -1,8 +1,8 @@
-.goods {
+.goods-cards {
 	&--nowrap {
 		margin: 30px 0;
 
-		.goods__list {
+		.goods-cards__list {
 			flex-wrap: nowrap;
 		}
 	}
@@ -173,7 +173,7 @@
 }
 
 @media (max-width: 767.98px) {
-	.goods {
+	.goods-cards {
 		&__add-to-cart {
 			padding: (8/14) + em (15/14) + em;
 		}
@@ -181,14 +181,14 @@
 }
 
 @media (min-width: 600px) {
-	.goods {
+	.goods-cards {
 		&__col {
 			width: 33.33%;
 		}
 	}
 }
 @media (min-width: 768px) {
-	.goods {
+	.goods-cards {
 		&__header {
 			margin-bottom: 15px;
 		}
@@ -200,9 +200,9 @@
 }
 
 @media (min-width: 992px) {
-	.goods {
+	.goods-cards {
 		&--nowrap {
-			.goods__col {
+			.goods-cards__col {
 				width: 20%;
 			}
 		}

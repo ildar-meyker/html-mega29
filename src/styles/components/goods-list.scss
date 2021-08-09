@@ -1,4 +1,4 @@
-.my-goods {
+.goods-list {
 	&__header {
 		display: flex;
 		justify-content: space-between;
@@ -170,7 +170,7 @@
 }
 
 @media (min-width: 992px) {
-	.my-goods {
+	.goods-list {
 		&__header {
 			margin-bottom: 20px;
 
@@ -208,19 +208,19 @@
 }
 
 @media (min-width: 1200px) {
-	.my-goods {
+	.goods-list {
 		&__item {
 			position: relative;
 
 			&--favorites {
-				.my-goods__desc {
+				.goods-list__desc {
 					width: 25%;
 				}
-				.my-goods__props,
-				.my-goods__rest {
+				.goods-list__props,
+				.goods-list__rest {
 					width: 20%;
 				}
-				.my-goods__buttons {
+				.goods-list__buttons {
 					width: 15%;
 				}
 			}
@@ -262,7 +262,7 @@
 }
 
 @media (max-width: 991.98px) {
-	.my-goods {
+	.goods-list {
 		&--panel {
 			padding: 14/16 + em;
 			border: 1/16 + em solid #f2f3f5;
@@ -273,7 +273,7 @@
 }
 
 @media (max-width: 1199.98px) {
-	.my-goods {
+	.goods-list {
 		&__props {
 			display: flex;
 			flex-direction: column;

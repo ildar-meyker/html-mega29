@@ -24957,27 +24957,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_globals__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/globals */ "./src/js/modules/globals.js");
 /* harmony import */ var bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/js/dist/collapse */ "./node_modules/bootstrap/js/dist/collapse.js");
 /* harmony import */ var bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_collapse__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var jquery_mask_plugin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery-mask-plugin */ "./node_modules/jquery-mask-plugin/dist/jquery.mask.js");
-/* harmony import */ var jquery_mask_plugin__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery_mask_plugin__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var jquery_custom_select__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jquery-custom-select */ "./node_modules/jquery-custom-select/jquery.custom-select.js");
-/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
-/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var tooltipster__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! tooltipster */ "./node_modules/tooltipster/dist/js/tooltipster.bundle.min.js");
-/* harmony import */ var tooltipster__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(tooltipster__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var icheck__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! icheck */ "./node_modules/icheck/icheck.js");
-/* harmony import */ var icheck__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(icheck__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var simplebar__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! simplebar */ "./node_modules/simplebar/dist/simplebar.esm.js");
-/* harmony import */ var autosize__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! autosize */ "./node_modules/autosize/dist/autosize.js");
-/* harmony import */ var autosize__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(autosize__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var js_datepicker__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! js-datepicker */ "./node_modules/js-datepicker/dist/datepicker.min.js");
-/* harmony import */ var js_datepicker__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(js_datepicker__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _modules_NavInfo__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/NavInfo */ "./src/js/modules/NavInfo.js");
-/* harmony import */ var _modules_RangeSlider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/RangeSlider */ "./src/js/modules/RangeSlider.js");
-/* harmony import */ var _modules_Gallery__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/Gallery */ "./src/js/modules/Gallery.js");
-
-
-
-
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var tooltipster__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tooltipster */ "./node_modules/tooltipster/dist/js/tooltipster.bundle.min.js");
+/* harmony import */ var tooltipster__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(tooltipster__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var simplebar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! simplebar */ "./node_modules/simplebar/dist/simplebar.esm.js");
+/* harmony import */ var _modules_CustomForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/CustomForm */ "./src/js/modules/CustomForm.js");
+/* harmony import */ var _modules_NavInfo__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/NavInfo */ "./src/js/modules/NavInfo.js");
+/* harmony import */ var _modules_RangeSlider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/RangeSlider */ "./src/js/modules/RangeSlider.js");
+/* harmony import */ var _modules_Gallery__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/Gallery */ "./src/js/modules/Gallery.js");
 
 
 
@@ -24988,21 +24976,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 $(function () {
-  _modules_NavInfo__WEBPACK_IMPORTED_MODULE_10__["default"].init();
-  _modules_RangeSlider__WEBPACK_IMPORTED_MODULE_11__["default"].init();
-  _modules_Gallery__WEBPACK_IMPORTED_MODULE_12__["default"].init();
-  autosize__WEBPACK_IMPORTED_MODULE_8___default()($("textarea"));
-  $(document).on("focus", ".placeholder-up-input__input", function () {
-    $(this).parent().addClass("focus");
-  });
-  $(document).on("blur", ".placeholder-up-input__input", function () {
-    $(this).parent().removeClass("focus");
-  });
+  _modules_CustomForm__WEBPACK_IMPORTED_MODULE_5__["default"].init();
+  _modules_NavInfo__WEBPACK_IMPORTED_MODULE_6__["default"].init();
+  _modules_RangeSlider__WEBPACK_IMPORTED_MODULE_7__["default"].init();
+  _modules_Gallery__WEBPACK_IMPORTED_MODULE_8__["default"].init();
   $(".js-tooltip").tooltipster({
     side: ["right", "bottom"]
-  });
-  $("select").customSelect({
-    includeValue: true
   });
   $(".promo-1").each(function () {
     $(this).find(".promo-1__slider").slick({
@@ -25010,40 +24989,7 @@ $(function () {
       appendArrows: $(this),
       appendDots: $(this)
     });
-  }); // icheck
-
-  $(document).on("ifCreated ifToggled", "input", function () {
-    var isChecked = $(this).prop("checked");
-    $(this).closest("label").toggleClass("active", isChecked);
-  });
-  $("input.js-check-border").iCheck({
-    checkboxClass: "icheckbox_border",
-    radioClass: "iradio_border"
-  });
-  $("input.js-check-default").iCheck({
-    checkboxClass: "icheckbox_default",
-    radioClass: "iradio_default"
-  }); // datepicker
-
-  if ($(".datepicker-input input").length) {
-    // throws error if element not found
-    js_datepicker__WEBPACK_IMPORTED_MODULE_9___default()(".datepicker-input input", {
-      customDays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
-      customMonths: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
-      formatter: function formatter(input, date, instance) {
-        var value = new Intl.DateTimeFormat("ru-RU", {
-          day: "2-digit",
-          month: "2-digit",
-          year: "2-digit"
-        }).format(date);
-        input.value = value;
-      },
-      overlayButton: "Применить",
-      overlayPlaceholder: "Введите год",
-      showAllDates: true
-    });
-  } // sorting
-
+  }); // sorting
 
   $(document).on("click", ".sorting__modes__item", function () {
     var mode = $(this).data("mode");
@@ -25051,6 +24997,92 @@ $(function () {
     $("#news").toggleClass("news--list", mode === "list");
   });
 });
+
+/***/ }),
+
+/***/ "./src/js/modules/CustomForm.js":
+/*!**************************************!*\
+  !*** ./src/js/modules/CustomForm.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var autosize__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! autosize */ "./node_modules/autosize/dist/autosize.js");
+/* harmony import */ var autosize__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(autosize__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var js_datepicker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! js-datepicker */ "./node_modules/js-datepicker/dist/datepicker.min.js");
+/* harmony import */ var js_datepicker__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(js_datepicker__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var jquery_custom_select__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jquery-custom-select */ "./node_modules/jquery-custom-select/jquery.custom-select.js");
+/* harmony import */ var jquery_mask_plugin__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery-mask-plugin */ "./node_modules/jquery-mask-plugin/dist/jquery.mask.js");
+/* harmony import */ var jquery_mask_plugin__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jquery_mask_plugin__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var icheck__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! icheck */ "./node_modules/icheck/icheck.js");
+/* harmony import */ var icheck__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(icheck__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
+var CustomForm = {
+  initTextInputs: function initTextInputs() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("focus", ".placeholder-up-input__input", function () {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().addClass("focus");
+    });
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("blur", ".placeholder-up-input__input", function () {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().removeClass("focus");
+    });
+    autosize__WEBPACK_IMPORTED_MODULE_1___default()(jquery__WEBPACK_IMPORTED_MODULE_0___default()("textarea"));
+  },
+  initSelects: function initSelects() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("select").customSelect({
+      includeValue: true
+    });
+  },
+  initDatepickers: function initDatepickers() {
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(".datepicker-input input").length) {
+      // throws error if element not found
+      js_datepicker__WEBPACK_IMPORTED_MODULE_2___default()(".datepicker-input input", {
+        customDays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+        customMonths: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+        formatter: function formatter(input, date, instance) {
+          var value = new Intl.DateTimeFormat("ru-RU", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "2-digit"
+          }).format(date);
+          input.value = value;
+        },
+        overlayButton: "Применить",
+        overlayPlaceholder: "Введите год",
+        showAllDates: true
+      });
+    }
+  },
+  initCheckboxes: function initCheckboxes() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("ifCreated ifToggled", "input", function () {
+      var isChecked = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).prop("checked");
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest("label").toggleClass("active", isChecked);
+    });
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("input.js-check-border").iCheck({
+      checkboxClass: "icheckbox_border",
+      radioClass: "iradio_border"
+    });
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("input.js-check-default").iCheck({
+      checkboxClass: "icheckbox_default",
+      radioClass: "iradio_default"
+    });
+  },
+  init: function init() {
+    this.initCheckboxes();
+    this.initDatepickers();
+    this.initTextInputs();
+    this.initSelects();
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (CustomForm);
 
 /***/ }),
 
