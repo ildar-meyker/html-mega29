@@ -2544,6 +2544,28 @@ a {
   background: #fafafa;
   color: #2e2e2e; }
 
+.count-editor {
+  display: flex;
+  height: 1.625em; }
+  .count-editor__minus, .count-editor__plus, .count-editor__input {
+    font-weight: 700;
+    text-align: center;
+    color: #2e2e2e; }
+  .count-editor__minus, .count-editor__plus {
+    width: 1.625em;
+    background: #e7e7e8; }
+    .count-editor__minus:first-child, .count-editor__plus:first-child {
+      border-radius: 0.25em 0 0 0.25em; }
+    .count-editor__minus:last-child, .count-editor__plus:last-child {
+      border-radius: 0 0.25em 0.25em 0; }
+  .count-editor__input {
+    position: relative;
+    width: 4.16667em;
+    padding: 0 0.83333em;
+    border: 0.08333em solid #e7e7e8;
+    background: #fff;
+    font-size: 0.75em; }
+
 .rating {
   display: flex;
   align-items: center; }
@@ -4812,27 +4834,7 @@ a {
     color: #21a73f; }
 
 .goods-list__count {
-  margin-top: 0.25em;
-  display: flex;
-  height: 1.625em; }
-  .goods-list__count > * {
-    font-weight: 700;
-    text-align: center;
-    color: #2e2e2e; }
-  .goods-list__count button {
-    width: 1.625em;
-    background: #e7e7e8; }
-    .goods-list__count button:first-child {
-      border-radius: 0.25em 0 0 0.25em; }
-    .goods-list__count button:last-child {
-      border-radius: 0 0.25em 0.25em 0; }
-  .goods-list__count input {
-    position: relative;
-    width: 4.16667em;
-    padding: 0 0.83333em;
-    border: 0.08333em solid #e7e7e8;
-    background: #fff;
-    font-size: 0.75em; }
+  margin-top: 0.25em; }
 
 .goods-list__buttons {
   margin-top: 0.5em; }

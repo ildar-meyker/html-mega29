@@ -5,12 +5,14 @@ import "tooltipster";
 import "simplebar";
 
 import CustomForm from "./modules/CustomForm";
+import CountEditor from "./modules/CountEditor";
 import NavInfo from "./modules/NavInfo";
 import RangeSlider from "./modules/RangeSlider";
 import Gallery from "./modules/Gallery";
 
 $(function () {
 	CustomForm.init();
+	CountEditor.init();
 	NavInfo.init();
 	RangeSlider.init();
 	Gallery.init();

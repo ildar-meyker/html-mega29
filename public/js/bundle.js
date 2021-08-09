@@ -24963,9 +24963,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tooltipster__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(tooltipster__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var simplebar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! simplebar */ "./node_modules/simplebar/dist/simplebar.esm.js");
 /* harmony import */ var _modules_CustomForm__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/CustomForm */ "./src/js/modules/CustomForm.js");
-/* harmony import */ var _modules_NavInfo__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/NavInfo */ "./src/js/modules/NavInfo.js");
-/* harmony import */ var _modules_RangeSlider__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/RangeSlider */ "./src/js/modules/RangeSlider.js");
-/* harmony import */ var _modules_Gallery__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/Gallery */ "./src/js/modules/Gallery.js");
+/* harmony import */ var _modules_CountEditor__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/CountEditor */ "./src/js/modules/CountEditor.js");
+/* harmony import */ var _modules_NavInfo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/NavInfo */ "./src/js/modules/NavInfo.js");
+/* harmony import */ var _modules_RangeSlider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/RangeSlider */ "./src/js/modules/RangeSlider.js");
+/* harmony import */ var _modules_Gallery__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/Gallery */ "./src/js/modules/Gallery.js");
+
 
 
 
@@ -24977,9 +24979,10 @@ __webpack_require__.r(__webpack_exports__);
 
 $(function () {
   _modules_CustomForm__WEBPACK_IMPORTED_MODULE_5__["default"].init();
-  _modules_NavInfo__WEBPACK_IMPORTED_MODULE_6__["default"].init();
-  _modules_RangeSlider__WEBPACK_IMPORTED_MODULE_7__["default"].init();
-  _modules_Gallery__WEBPACK_IMPORTED_MODULE_8__["default"].init();
+  _modules_CountEditor__WEBPACK_IMPORTED_MODULE_6__["default"].init();
+  _modules_NavInfo__WEBPACK_IMPORTED_MODULE_7__["default"].init();
+  _modules_RangeSlider__WEBPACK_IMPORTED_MODULE_8__["default"].init();
+  _modules_Gallery__WEBPACK_IMPORTED_MODULE_9__["default"].init();
   $(".js-tooltip").tooltipster({
     side: ["right", "bottom"]
   });
@@ -24997,6 +25000,39 @@ $(function () {
     $("#news").toggleClass("news--list", mode === "list");
   });
 });
+
+/***/ }),
+
+/***/ "./src/js/modules/CountEditor.js":
+/*!***************************************!*\
+  !*** ./src/js/modules/CountEditor.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var CountEditor = {
+  _handleMinusClick: function _handleMinusClick(e) {
+    var $root = $(e.currentTarget).closest(".count-editor");
+    var $input = $root.find(".count-editor__input");
+    var newValue = parseInt($input.val()) - 1;
+    if (newValue < $root.data("min")) return;
+    $input.val(newValue);
+  },
+  _handlePlusClick: function _handlePlusClick(e) {
+    var $root = $(e.currentTarget).closest(".count-editor");
+    var $input = $root.find(".count-editor__input");
+    var newValue = parseInt($input.val()) + 1;
+    if (newValue > $root.data("max")) return;
+    $input.val(newValue);
+  },
+  init: function init() {
+    $(document).on("click", ".count-editor__minus", this._handleMinusClick.bind(this));
+    $(document).on("click", ".count-editor__plus", this._handlePlusClick.bind(this));
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (CountEditor);
 
 /***/ }),
 

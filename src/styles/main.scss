@@ -30,16 +30,16 @@
 
 // blocks
 @import "components/page";
-@import "components/button";
 
-@import "components/inputs/default-input";
-@import "components/inputs/datepicker-input";
-@import "components/inputs/label-up-input";
-@import "components/inputs/placeholder-up-input";
-@import "components/inputs/readonly-input";
+@import "components/form/button";
+@import "components/form/default-input";
+@import "components/form/datepicker-input";
+@import "components/form/label-up-input";
+@import "components/form/placeholder-up-input";
+@import "components/form/readonly-input";
+@import "components/form/count-editor";
 
 @import "components/rating.scss";
-
 @import "components/article";
 @import "components/header";
 @import "components/footer";
@@ -71,10 +71,10 @@
 @import "components/my-cards";
 @import "components/my-purchases";
 
-@import "components/goods-cards";
-@import "components/goods-list";
-@import "components/goods-simple";
-@import "components/goods-short";
+@import "components/goods/goods-cards";
+@import "components/goods/goods-list";
+@import "components/goods/goods-simple";
+@import "components/goods/goods-short";
 
 @import "components/product";
 @import "components/gallery";
