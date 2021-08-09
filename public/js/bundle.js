@@ -25013,23 +25013,45 @@ $(function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var CountEditor = {
+  _previosValue: null,
+  _isInMinMaxRange: function _isInMinMaxRange($root, value) {
+    if (value > $root.data("max") || value < $root.data("min")) {
+      return false;
+    }
+
+    return true;
+  },
   _handleMinusClick: function _handleMinusClick(e) {
     var $root = $(e.currentTarget).closest(".count-editor");
     var $input = $root.find(".count-editor__input");
     var newValue = parseInt($input.val()) - 1;
-    if (newValue < $root.data("min")) return;
+    if (!this._isInMinMaxRange($root, newValue)) return;
     $input.val(newValue);
   },
   _handlePlusClick: function _handlePlusClick(e) {
     var $root = $(e.currentTarget).closest(".count-editor");
     var $input = $root.find(".count-editor__input");
     var newValue = parseInt($input.val()) + 1;
-    if (newValue > $root.data("max")) return;
+    if (!this._isInMinMaxRange($root, newValue)) return;
     $input.val(newValue);
+  },
+  _handleInputChange: function _handleInputChange(e) {
+    var $root = $(e.currentTarget).closest(".count-editor");
+    var $input = $root.find(".count-editor__input");
+    var newValue = $input.val();
+
+    if (!this._isInMinMaxRange($root, newValue)) {
+      $input.val(this._previosValue);
+    }
+  },
+  _handleInputFocus: function _handleInputFocus(e) {
+    this._previosValue = $(e.currentTarget).val();
   },
   init: function init() {
     $(document).on("click", ".count-editor__minus", this._handleMinusClick.bind(this));
     $(document).on("click", ".count-editor__plus", this._handlePlusClick.bind(this));
+    $(document).on("change", ".count-editor__input", this._handleInputChange.bind(this));
+    $(document).on("focus", ".count-editor__input", this._handleInputFocus.bind(this));
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (CountEditor);

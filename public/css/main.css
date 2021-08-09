@@ -2336,16 +2336,13 @@ a {
     height: 1.4em;
     margin: -0.7em 0 0 -0.7em;
     display: none; }
-  .button.disabled {
-    background: #fafafa !important;
-    border-color: #b2b3b3 !important;
-    box-shadow: none !important;
-    color: #b2b3b3 !important;
-    cursor: default; }
   .button.loading .spinner-border {
     display: block; }
   .button.loading .button__text {
     opacity: 0; }
+  .button.loading, .button.disabled {
+    box-shadow: none !important;
+    cursor: default !important; }
   .button--full {
     display: block;
     width: 100%; }
@@ -2357,64 +2354,84 @@ a {
 .button-green {
   background: #21a73f;
   color: #fff; }
-  .button-green:hover, .button-green.hover {
+  .button-green.loading, .button-green:hover, .button-green.hover {
     background: #007334; }
   .button-green:active, .button-green.active {
     background: #007334;
-    box-shadow: inset 0 0.28571em 0.28571em rgba(0, 0, 0, 0.3); }
+    box-shadow: inset 0px 0.28571em 1.07143em rgba(0, 0, 0, 0.25); }
+  .button-green.disabled {
+    background: #e7e7e8 !important;
+    color: #979797 !important; }
 
 .button-light-green {
   background: #cfe9d5;
   color: #21a73f; }
-  .button-light-green:hover, .button-light-green.hover {
-    background: #21a73f;
+  .button-light-green.loading, .button-light-green:hover, .button-light-green.hover {
+    background: #007334;
     color: #fff; }
   .button-light-green:active, .button-light-green.active {
-    background: #21a73f;
-    box-shadow: inset 0 0.28571em 0.28571em rgba(0, 0, 0, 0.3);
+    background: #007334;
+    box-shadow: inset 0px 0.28571em 1.07143em rgba(0, 0, 0, 0.25);
     color: #fff; }
+  .button-light-green.disabled {
+    background: #f2f3f5 !important;
+    color: #979797 !important; }
 
 .button-outline-green {
   border-color: #21a73f;
   color: #21a73f; }
-  .button-outline-green:hover, .button-outline-green.hover {
+  .button-outline-green.loading, .button-outline-green:hover, .button-outline-green.hover {
     background: #21a73f;
     color: #fff; }
   .button-outline-green:active, .button-outline-green.active {
     background: #21a73f;
-    box-shadow: inset 0 0.28571em 0.28571em rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 0.28571em 1.07143em rgba(0, 0, 0, 0.25);
     color: #fff; }
+  .button-outline-green.disabled {
+    background: none !important;
+    border-color: #979797 !important;
+    color: #979797 !important; }
 
 .button-orange {
   background: #ef7f1a;
   color: #fff; }
-  .button-orange:hover, .button-orange.hover {
+  .button-orange.loading, .button-orange:hover, .button-orange.hover {
     background: #ea5e20; }
   .button-orange:active, .button-orange.active {
     background: #ea5e20;
     box-shadow: inset 0 0.28571em 0.28571em rgba(0, 0, 0, 0.3); }
+  .button-orange.disabled {
+    background: #e7e7e8 !important;
+    color: #979797 !important; }
+
+.button-light-orange {
+  background: #fde6d1;
+  color: #f68219; }
+  .button-light-orange.loading, .button-light-orange:hover, .button-light-orange.hover {
+    background: #ea5e20;
+    color: #fff; }
+  .button-light-orange:active, .button-light-orange.active {
+    background: #ea5e20;
+    box-shadow: inset 0px 0.28571em 1.07143em rgba(0, 0, 0, 0.25);
+    color: #fff; }
+  .button-light-orange.disabled {
+    background: #f2f3f5 !important;
+    color: #979797 !important; }
 
 .button-outline-orange {
   border-color: #ef7f1a;
   color: #ef7f1a; }
-  .button-outline-orange:hover, .button-outline-orange.hover {
+  .button-outline-orange.loading, .button-outline-orange:hover, .button-outline-orange.hover {
     background: #ef7f1a;
     color: #fff; }
   .button-outline-orange:active, .button-outline-orange.active {
     background: #ef7f1a;
     box-shadow: inset 0 0.28571em 0.28571em rgba(0, 0, 0, 0.3);
     color: #fff; }
-
-.button-outline-black {
-  border-color: #2e2e2e;
-  color: #2e2e2e; }
-  .button-outline-black:hover, .button-outline-black.hover {
-    background: #2e2e2e;
-    color: #fff; }
-  .button-outline-black:active, .button-outline-black.active {
-    background: #2e2e2e;
-    box-shadow: inset 0 0.28571em 0.28571em rgba(0, 0, 0, 0.3);
-    color: #fff; }
+  .button-outline-orange.disabled {
+    background: none !important;
+    border-color: #979797 !important;
+    color: #979797 !important; }
 
 .button-outline-white {
   border-color: rgba(255, 255, 255, 0.7);
