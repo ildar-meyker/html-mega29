@@ -20,7 +20,7 @@
 		display: none;
 	}
 
-	&--disabled {
+	&.disabled {
 		background: #fafafa !important;
 		border-color: #b2b3b3 !important;
 		box-shadow: none !important;
@@ -28,17 +28,13 @@
 		cursor: default;
 	}
 
-	&--loading {
+	&.loading {
 		.spinner-border {
 			display: block;
 		}
 		.button__text {
 			opacity: 0;
 		}
-	}
-
-	&--light {
-		font-weight: 500;
 	}
 
 	&--full {
@@ -58,14 +54,32 @@
 	color: #fff;
 
 	&:hover,
-	&--hover {
+	&.hover {
 		background: #007334;
 	}
 
 	&:active,
-	&--active {
+	&.active {
 		background: #007334;
 		box-shadow: inset 0 (4/14) + em (4/14) + em rgba(#000, 0.3);
+	}
+}
+
+.button-light-green {
+	background: #cfe9d5;
+	color: #21a73f;
+
+	&:hover,
+	&.hover {
+		background: #21a73f;
+		color: #fff;
+	}
+
+	&:active,
+	&.active {
+		background: #21a73f;
+		box-shadow: inset 0 (4/14) + em (4/14) + em rgba(#000, 0.3);
+		color: #fff;
 	}
 }
 
@@ -74,13 +88,13 @@
 	color: #21a73f;
 
 	&:hover,
-	&--hover {
+	&.hover {
 		background: #21a73f;
 		color: #fff;
 	}
 
 	&:active,
-	&--active {
+	&.active {
 		background: #21a73f;
 		box-shadow: inset 0 (4/14) + em (4/14) + em rgba(#000, 0.3);
 		color: #fff;
@@ -92,12 +106,12 @@
 	color: #fff;
 
 	&:hover,
-	&--hover {
+	&.hover {
 		background: #ea5e20;
 	}
 
 	&:active,
-	&--active {
+	&.active {
 		background: #ea5e20;
 		box-shadow: inset 0 (4/14) + em (4/14) + em rgba(#000, 0.3);
 	}
@@ -108,13 +122,13 @@
 	color: #ef7f1a;
 
 	&:hover,
-	&--hover {
+	&.hover {
 		background: #ef7f1a;
 		color: #fff;
 	}
 
 	&:active,
-	&--active {
+	&.active {
 		background: #ef7f1a;
 		box-shadow: inset 0 (4/14) + em (4/14) + em rgba(#000, 0.3);
 		color: #fff;
@@ -126,13 +140,13 @@
 	color: #2e2e2e;
 
 	&:hover,
-	&--hover {
+	&.hover {
 		background: #2e2e2e;
 		color: #fff;
 	}
 
 	&:active,
-	&--active {
+	&.active {
 		background: #2e2e2e;
 		box-shadow: inset 0 (4/14) + em (4/14) + em rgba(#000, 0.3);
 		color: #fff;
@@ -144,13 +158,13 @@
 	color: #fff;
 
 	&:hover,
-	&--hover {
+	&.hover {
 		background: #fff;
 		color: #2e2e2e;
 	}
 
 	&:active,
-	&--active {
+	&.active {
 		background: #fff;
 		box-shadow: inset 0 (4/14) + em (4/14) + em rgba(#000, 0.3);
 		color: #2e2e2e;
