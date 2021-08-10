@@ -1,0 +1,49 @@
+.check-border {
+	position: relative;
+	display: flex;
+	margin-top: 7px;
+	cursor: pointer;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&.active {
+		color: #21a73f;
+	}
+
+	&__input {
+		flex: 0 0 auto;
+		width: 25/13 + em;
+
+		input {
+			position: absolute;
+			opacity: 0;
+		}
+	}
+
+	&__text {
+		align-self: center;
+	}
+
+	.icheckbox {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 18/12 + em;
+		height: 18/12 + em;
+		border: 2/12 + em solid #323232;
+		border-radius: 3/12 + em;
+
+		&.checked {
+			border-color: inherit;
+			color: inherit;
+
+			&:before {
+				content: "\e90c";
+				font-family: "icomoon" !important;
+				line-height: 1;
+			}
+		}
+	}
+}

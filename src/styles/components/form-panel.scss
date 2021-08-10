@@ -39,41 +39,6 @@
 		font-size: 22/16 + em;
 	}
 
-	&__check {
-		position: relative;
-		display: block;
-		padding-left: 35/17 + em;
-		font-size: 17/16 + em;
-		font-weight: 500;
-		margin-top: 13/17 + em;
-
-		&:first-child {
-			margin-top: 0;
-		}
-
-		&--radio {
-			&.active {
-				color: #21a73f;
-			}
-		}
-
-		&--agree {
-			span {
-				font-size: 12/16 + em;
-				font-weight: 400;
-			}
-		}
-
-		input {
-			position: absolute;
-			opacity: 0;
-		}
-
-		a {
-			color: #21a73f;
-		}
-	}
-
 	&__row {
 		display: flex;
 		flex-wrap: wrap;
@@ -182,10 +147,6 @@
 			&--6 {
 				width: 50% !important;
 			}
-		}
-
-		&__check {
-			font-size: 18px;
 		}
 
 		&__label-lg {

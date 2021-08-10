@@ -6,13 +6,14 @@ layout: default.hbs
 <style>
 	.elems-h1 {
 		margin-bottom: 1em;
+		text-align: center;
 		font-size: 30px;
 		font-weight: 700;
 	}
 
 	.elems-h2 {
-		margin-bottom: 0.5em;
-		font-size: 18px;
+		margin-bottom: 20px;
+    	font-size: 20px;
 		font-weight: 700;
 	}
 
@@ -434,9 +435,10 @@ layout: default.hbs
 	</div>
 
 	<div class="elems-section">
-		<div style="max-width: 700px;">
 
-			<div class="elems-h1">Инпуты</div>
+		<div class="elems-h1">Инпуты</div>
+
+		<div style="max-width: 700px;">
 
 			<div class="elems-row elems-row--space">
 				<div class="elems-h2">input-classic</div>
@@ -472,32 +474,84 @@ layout: default.hbs
 				<input type="text" class="input-readonly" value="07.06.2021 13:29:21" readonly>
 			</div>
 			
+			<div class="elems-row elems-row--space">
+				<div class="elems-h2">count-editor</div>
+				<div class="count-editor" data-max="5" data-min="1">
+					<button type="button" class="count-editor__minus">-</button>
+					<input type="text" value="2" class="count-editor__input">
+					<button type="button" class="count-editor__plus">+</button>
+				</div>
+			</div>
+
+		</div>
+		
+	</div>
+
+	<div class="elems-section">
+
+		<div class="elems-h1">Чекбоксы</div>
+
+		<div style="max-width: 700px;">
+
+			<div class="elems-row elems-row--space">
+
+				<div class="elems-h2">check-default</div>
+
+				<label class="check-default">
+					<input type="checkbox">
+					<span>Применить бонусы</span>
+				</label>
+				
+				<label class="check-default check-default--radio">
+					<input type="radio" name="radio1" checked>
+					<span>Доставка</span>
+				</label>
+
+				<label class="check-default check-default--radio">
+					<input type="radio" name="radio1">
+					<span>Доставка на основе зон в Яндекс картах (Архангельск до 5 000 ₽ )</span>
+				</label>
+			</div>
+
+			<div class="elems-row elems-row--space">
+
+				<div class="elems-h2">check-border</div>
+
+				<label class="check-border">
+					<div class="check-border__input">
+						<input type="checkbox" checked>
+					</div>
+					<div class="check-border__text">пр. Московский, 25</div>
+				</label>
+
+				<label class="check-border">
+					<div class="check-border__input">
+						<input type="checkbox">
+					</div>
+					<div class="check-border__text">пр. Ленинградский, 255</div>
+				</label>
+			</div>
+			
 		</div>
 		
 	</div>
 
 
+	
+
+
 	<div class="elems-section">
-		<div class="elems-h1">rating</div>
+		<div class="elems-h2">rating</div>
 		<div class="rating">
 			<div class="rating__stars"><div style="width: 68%;"></div></div>
 			<div class="rating__count">(23)</div>
 		</div>
 	</div>
 
-	<div class="elems-section">
-		<div class="elems-h1">count-editor</div>
-		<div class="count-editor" data-max="5" data-min="1">
-			<button type="button" class="count-editor__minus">-</button>
-			<input type="text" value="2" class="count-editor__input">
-			<button type="button" class="count-editor__plus">+</button>
-		</div>
-	</div>
-
 
 	<div class="elems-section">
 		<div style="max-width: 700px;">
-			<div class="elems-h1">goods-list</div>
+			<div class="elems-h2">goods-list</div>
 			<div class="goods-list__list">
 				<div class="goods-list__item">
 					<div class="goods-list__image">
@@ -552,7 +606,7 @@ layout: default.hbs
 
 	<div class="elems-section">
 		<div style="max-width: 700px;">
-			<div class="elems-h1">goods-cards</div>
+			<div class="elems-h2">goods-cards</div>
 			<div class="goods-cards__list ">
 				<div class="goods-cards__col">
 					<div class="goods-cards__item">
@@ -594,7 +648,7 @@ layout: default.hbs
 
 	<div class="elems-section">
 		<div style="max-width: 700px;">
-			<div class="elems-h1">goods-simple</div>
+			<div class="elems-h2">goods-simple</div>
 			<div class="goods-simple">
 				<div class="goods-simple__item">
 					<div class="goods-simple__image" style="background-image: url('images/temp/goods/2/1.jpeg');"></div>
@@ -739,8 +793,8 @@ layout: default.hbs
 					<input type="text" class="input-label-up__input">
 				</div>
 			</div>
-			<label class="form-panel__check panel-call__agree">
-				<input type="checkbox" class="js-check-default">
+			<label class="check-default panel-call__agree">
+				<input type="checkbox">
 				<span>Я согласен с <a href="#" target="_blank">обработку персональных данных</a></span>
 			</label>
 			<div class="panel-call__submit">

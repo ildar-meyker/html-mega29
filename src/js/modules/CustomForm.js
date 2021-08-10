@@ -65,15 +65,7 @@ const CustomForm = {
 			$(this).closest("label").toggleClass("active", isChecked);
 		});
 
-		$("input.js-check-border").iCheck({
-			checkboxClass: "icheckbox_border",
-			radioClass: "iradio_border",
-		});
-
-		$("input.js-check-default").iCheck({
-			checkboxClass: "icheckbox_default",
-			radioClass: "iradio_default",
-		});
+		$("input").iCheck();
 	},
 
 	init() {

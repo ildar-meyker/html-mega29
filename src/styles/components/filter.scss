@@ -80,35 +80,6 @@
 		}
 	}
 
-	&__check {
-		position: relative;
-		display: flex;
-		margin-top: 7px;
-		cursor: pointer;
-
-		&:first-child {
-			margin-top: 0;
-		}
-
-		&.active {
-			color: #21a73f;
-		}
-
-		&__input {
-			flex: 0 0 auto;
-			width: 25/13 + em;
-
-			input {
-				position: absolute;
-				opacity: 0;
-			}
-		}
-
-		&__text {
-			align-self: center;
-		}
-	}
-
 	&__ctrl {
 		padding: 13px;
 		border-top: 1px solid #e7e7e8;

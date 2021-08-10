@@ -25124,14 +25124,7 @@ var CustomForm = {
       var isChecked = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).prop("checked");
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest("label").toggleClass("active", isChecked);
     });
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()("input.js-check-border").iCheck({
-      checkboxClass: "icheckbox_border",
-      radioClass: "iradio_border"
-    });
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()("input.js-check-default").iCheck({
-      checkboxClass: "icheckbox_default",
-      radioClass: "iradio_default"
-    });
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("input").iCheck();
   },
   init: function init() {
     this.initCheckboxes();

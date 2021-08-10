@@ -68,63 +68,6 @@
 	background-size: 24px 24px !important;
 }
 
-//  icheck
-.icheckbox_default,
-.iradio_default {
-	position: absolute;
-	top: 50%;
-	margin-top: -12/17 + em;
-	left: 0;
-	width: 24/17 + em;
-	height: 24/17 + em;
-	background: none;
-}
-.iradio_default {
-	border: 3/17 + em solid #2e2e2e;
-	border-radius: 50%;
-
-	&.checked {
-		border: 7/17 + em solid #21a73f;
-	}
-}
-.icheckbox_default {
-	border-radius: 4/17 + em;
-	background: #f2f3f5;
-
-	&.checked {
-		background: #21a73f;
-		font-family: "icomoon" !important;
-		line-height: 24/17 + em;
-		text-align: center;
-		color: #fff;
-
-		&:before {
-			content: "\e90c";
-		}
-	}
-}
-
-.icheckbox_border {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 18/12 + em;
-	height: 18/12 + em;
-	border: 2/12 + em solid #323232;
-	border-radius: 3/12 + em;
-
-	&.checked {
-		border-color: inherit;
-		color: inherit;
-
-		&:before {
-			content: "\e90c";
-			font-family: "icomoon" !important;
-			line-height: 1;
-		}
-	}
-}
-
 // js-datepicker
 .qs-datepicker-container {
 	font-size: 1em;

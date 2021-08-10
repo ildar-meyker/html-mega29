@@ -1,0 +1,64 @@
+.check-default {
+	position: relative;
+	display: block;
+	padding-left: 35/17 + em;
+	font-size: 17/16 + em;
+	font-weight: 500;
+	margin-top: 13/17 + em;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&--radio {
+		&.active {
+			color: #21a73f;
+		}
+	}
+
+	input {
+		position: absolute;
+		opacity: 0;
+	}
+
+	a {
+		color: #21a73f;
+	}
+
+	.icheckbox,
+	.iradio {
+		position: absolute;
+		top: 50%;
+		margin-top: -12/17 + em;
+		left: 0;
+		width: 24/17 + em;
+		height: 24/17 + em;
+		background: none;
+	}
+
+	.icheckbox {
+		border-radius: 4/17 + em;
+		background: #f2f3f5;
+
+		&.checked {
+			background: #21a73f;
+			font-family: "icomoon" !important;
+			line-height: 24/17 + em;
+			text-align: center;
+			color: #fff;
+
+			&:before {
+				content: "\e90c";
+			}
+		}
+	}
+
+	.iradio {
+		border: 3/17 + em solid #2e2e2e;
+		border-radius: 50%;
+
+		&.checked {
+			border: 7/17 + em solid #21a73f;
+		}
+	}
+}
