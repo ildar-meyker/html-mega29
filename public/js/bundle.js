@@ -24983,6 +24983,7 @@ $(function () {
   _modules_NavInfo__WEBPACK_IMPORTED_MODULE_7__["default"].init();
   _modules_RangeSlider__WEBPACK_IMPORTED_MODULE_8__["default"].init();
   _modules_Gallery__WEBPACK_IMPORTED_MODULE_9__["default"].init();
+  $("#nav-path").scrollLeft(99999);
   $(".js-tooltip").tooltipster({
     side: ["right", "bottom"]
   });

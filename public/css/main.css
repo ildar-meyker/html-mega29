@@ -3545,16 +3545,29 @@ a {
     align-items: center; } }
 
 .nav-path {
-  margin-top: 10px;
-  margin-bottom: 15px;
-  font-size: 14px; }
-  .nav-path a:hover {
-    color: #21a73f; }
+  overflow: auto;
+  padding: 10px 0;
+  margin: 10px 0;
+  white-space: nowrap;
+  font-size: 13px; }
+  .nav-path a {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px; }
+    .nav-path a:hover {
+      background: #e7e7e8; }
   .nav-path span {
-    border-bottom: 1px solid rgba(46, 46, 46, 0.5); }
+    display: inline-block;
+    padding: 4px 10px;
+    background: #f2f3f5;
+    border-radius: 4px;
+    margin-right: 13px; }
   .nav-path i {
-    margin: 0 5px;
     font-size: 10px; }
+
+@media (min-width: 992px) {
+  .nav-path {
+    font-size: 18px; } }
 
 .nav-side {
   background: #fff;

@@ -17,6 +17,8 @@ $(function () {
 	RangeSlider.init();
 	Gallery.init();
 
+	$("#nav-path").scrollLeft(99999);
+
 	$(".js-tooltip").tooltipster({
 		side: ["right", "bottom"],
 	});
