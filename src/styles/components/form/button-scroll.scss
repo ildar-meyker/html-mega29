@@ -1,0 +1,22 @@
+.button-scroll {
+	transition: all 0.2s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	background: #cfe9d5;
+	border-radius: 5px;
+	font-size: 20px;
+	color: #21a73f;
+
+	&:hover {
+		background: #21a73f;
+		color: #fff;
+	}
+
+	&:active {
+		background: #007334;
+		color: #fff;
+	}
+}

@@ -1,0 +1,22 @@
+.button-dialog {
+	transition: all 0.2s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	background: #fde6d1;
+	border-radius: 50%;
+	font-size: 27px;
+	color: #f68219;
+
+	&:hover {
+		background: #f68219;
+		color: #fff;
+	}
+
+	&__icon {
+		position: relative;
+		top: 0.05em;
+	}
+}

@@ -1,10 +1,10 @@
 @font-face {
 	font-family: "icomoon";
-	src: url("../fonts/icomoon.eot?svrbkg");
-	src: url("../fonts/icomoon.eot?svrbkg#iefix") format("embedded-opentype"),
-		url("../fonts/icomoon.ttf?svrbkg") format("truetype"),
-		url("../fonts/icomoon.woff?svrbkg") format("woff"),
-		url("../fonts/icomoon.svg?svrbkg#icomoon") format("svg");
+	src: url("../fonts/icomoon.eot?nu64ma");
+	src: url("../fonts/icomoon.eot?nu64ma#iefix") format("embedded-opentype"),
+		url("../fonts/icomoon.ttf?nu64ma") format("truetype"),
+		url("../fonts/icomoon.woff?nu64ma") format("woff"),
+		url("../fonts/icomoon.svg?nu64ma#icomoon") format("svg");
 	font-weight: normal;
 	font-style: normal;
 	font-display: block;
@@ -127,4 +127,7 @@
 }
 .icon-instagram-2:before {
 	content: "\e921";
+}
+.icon-dialog:before {
+	content: "\e922";
 }
