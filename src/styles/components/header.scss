@@ -1,46 +1,8 @@
 .header {
-	&__topbar {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding: 6px 0;
-		font-size: 12px;
-
-		&__left {
-			display: flex;
-			align-items: center;
-			font-weight: 500;
-		}
-
-		&__right {
-			display: flex;
-
-			a {
-				margin-left: 6px;
-
-				&:hover {
-					border-bottom: 1px solid rgba(#2e2e2e, 0.5);
-				}
-			}
-		}
-
-		&__social {
-			display: flex;
-			margin-left: 9px;
-			font-size: 18px;
-			line-height: 0;
-
-			a {
-				margin-right: 4px;
-			}
-		}
-	}
-
 	&__main {
-		padding-top: 5px;
-		padding-bottom: 10px;
 		display: flex;
 		align-items: center;
+		height: 80px;
 
 		&__logo {
 			flex: 0 0 auto;
@@ -55,57 +17,18 @@
 		&__city {
 			max-width: 200px;
 			margin: 0 3% 0 3%;
-
-			&__label {
-				font-weight: 700;
-			}
-
-			&__name {
-				font-size: 13px;
-
-				span {
-					border-bottom: 1px solid rgba(#2e2e2e, 0.5);
-				}
-			}
 		}
 
 		&__search-area {
 			flex-grow: 1;
-			position: relative;
-			background: #f2f3f5;
-			border-radius: 4px;
-
-			input {
-				position: relative;
-				background: transparent;
-				padding-left: 35px;
-			}
-
-			button {
-				position: absolute;
-				right: 0;
-				top: 0;
-				padding-bottom: 6px;
-				padding-top: 6px;
-				margin: 5px 5px 0 0;
-			}
-
-			i {
-				position: absolute;
-				top: 0;
-				left: 0;
-				padding: 11px;
-				font-size: 17px;
-				color: #b2b3b3;
-			}
 		}
 
 		&__call {
 			padding: 0 20px;
 			font-weight: 700;
+			white-space: nowrap;
 
 			&__phone {
-				white-space: nowrap;
 				color: #21a73f;
 
 				i {
@@ -199,11 +122,56 @@
 			color: #007334;
 		}
 	}
+
+	&__city {
+		font-size: 18px;
+		font-weight: 500;
+		white-space: nowrap;
+
+		&__icon {
+			font-size: 13/18 + em;
+		}
+	}
+
+	&__search {
+		position: relative;
+		display: flex;
+		background: #f2f3f5;
+		border-radius: 4px;
+
+		&__icon {
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			padding: 11px;
+			font-size: 17px;
+			color: #b2b3b3;
+		}
+
+		&__input {
+			position: relative;
+			z-index: 2;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			border-right: 0;
+			background: transparent;
+			padding-left: 35px;
+
+			&:focus {
+				border-color: darken(#e7e7e8, 10%) !important;
+			}
+		}
+
+		&__button {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
 }
 
 @media (max-width: 991.98px) {
 	.header {
-		&__topbar,
 		&__menu,
 		&__main__city,
 		&__main__search-area,

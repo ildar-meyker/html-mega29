@@ -1,20 +1,6 @@
 
 <header class="header">
     <div class="page__center">
-        <div class="header__topbar">
-            <div class="header__topbar__left">
-                <b>Присоединяйтесь</b>
-                <nav class="header__topbar__social">
-                    <a href="#"><i class="icon-vk"></i></a>
-                    <a href="#"><i class="icon-instagram"></i></a>
-                </nav>
-            </div>
-            <div class="header__topbar__right">
-                <a href="#">О компании</a>
-                <a href="#">Об интернет-магазине</a>
-            </div>
-        </div>
-
         <div class="page__outer page__inner header__main">
             <div class="header__main__burger">
                 <button class="hamburger hamburger--squeeze" type="button">
@@ -27,20 +13,17 @@
                 <img src="images/header/mega-logo.svg" alt="Мега">
             </div>
             <div class="header__main__city">
-                <div class="header__main__city__label">Ваш город</div>
-                <div class="header__main__city__name">
-                    <a href="#">
-                        <i class="icon-location"></i>
-                        <span>Архангельск</span>
-                    </a>
-                </div>
+                <button type="button" class="header__city">
+                    <i class="icon-location header__city__icon"></i>
+                    <span>Архангельск</span>
+                </button>
             </div>
             <div class="header__main__search-area">
-                <i class="icon-search"></i>
-                <input type="text" class="input-classic" placeholder="Что Вы ищете?">
-                <button type="submit" class="button button-orange">
-                    Найти
-                </button>
+                <div class="header__search">
+                    <i class="icon-search header__search__icon"></i>
+                    <input type="text" class="input-classic header__search__input" placeholder="Что Вы ищете?">
+                    <button type="submit" class="button button-orange header__search__button">Найти</button>
+                </div>
             </div>
             <div class="header__main__call">
                 <div class="header__main__call__phone">
