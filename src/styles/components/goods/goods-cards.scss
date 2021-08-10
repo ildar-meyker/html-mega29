@@ -95,39 +95,6 @@
 		top: 10px;
 		left: 10px;
 		width: 10px;
-		line-height: 0;
-
-		&__blue,
-		&__red,
-		&__orange,
-		&__green {
-			margin-bottom: 4px;
-			display: inline-block;
-			padding: 10px;
-			background: #fff;
-			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-			border-radius: 3px;
-			font-size: 10px;
-			font-weight: 700;
-			white-space: nowrap;
-		}
-
-		&__blue {
-			color: #2f80ed;
-		}
-
-		&__red {
-			color: #ef1a1a;
-		}
-
-		&__orange {
-			background: #ef7f1a;
-			color: #fff;
-		}
-
-		&__green {
-			color: #21a73f;
-		}
 	}
 
 	&__desc {

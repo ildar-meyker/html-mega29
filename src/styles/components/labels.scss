@@ -1,0 +1,38 @@
+.labels {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__blue,
+	&__red,
+	&__orange,
+	&__green {
+		padding: 4/11 + em 9/11 + em;
+		margin: 0 5/11 + em 5/11 + em 0;
+		border-radius: 5/11 + em;
+		font-size: 11px;
+		font-weight: 500;
+		color: #fff;
+	}
+
+	&__blue {
+		background: #2f80ed;
+	}
+
+	&__red {
+		background: #f50505;
+	}
+
+	&__orange {
+		background: #fde6d1;
+	}
+
+	&__green {
+		background: #21a73f;
+	}
+}
+
+@media (max-width: 767.99px) {
+	.labels {
+		font-size: 7px;
+	}
+}
