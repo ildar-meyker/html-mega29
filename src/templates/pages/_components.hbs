@@ -16,12 +16,9 @@ layout: default.hbs
 		font-weight: 700;
 	}
 
-	.elems-wrapper {
-		padding: 50px 20px;
-	}
-
 	.elems-section {
-		margin-top: 50px;
+		margin-top: 30px;
+		padding: 20px;
 	}
 
 	.elems-section:first-child {
@@ -30,6 +27,10 @@ layout: default.hbs
 
 	.elems-row {
 		margin-top: 20px;
+	}
+
+	.elems-row--space {
+		margin-top: 35px;
 	}
 
 	.elems-row:first-child {
@@ -54,6 +55,7 @@ layout: default.hbs
 	.elems-name {
 		margin: 5px 0;
 	}
+
 </style>
 
 
@@ -119,10 +121,6 @@ layout: default.hbs
 
 		</div>
 
-	</div>
-
-	<div class="elems-section">
-		<div class="elems-h1"></div>
 	</div>
 
 
@@ -435,6 +433,49 @@ layout: default.hbs
 
 	</div>
 
+	<div class="elems-section">
+		<div style="max-width: 700px;">
+
+			<div class="elems-h1">Инпуты</div>
+
+			<div class="elems-row elems-row--space">
+				<div class="elems-h2">input-classic</div>
+				<input type="text" class="input-classic" placeholder="Ваше имя">
+			</div>
+
+			<div class="elems-row elems-row--space">
+				<div class="elems-h2">input-datepicker</div>
+				<div class="input-datepicker">
+					<input type="text" class="input-datepicker__input" placeholder="ДД.ММ.ГГ">
+					<i class="icon-calendar input-datepicker__icon"></i>
+				</div>
+			</div>
+
+			<div class="elems-row elems-row--space">
+				<div class="elems-h2">input-top-label</div>
+				<div class="input-top-label">
+					<label class="input-top-label__label">Мин</label>
+					<input type="text" class="input-top-label__input">
+				</div>
+			</div>
+
+			<div class="elems-row elems-row--space">
+				<div class="elems-h2">input-label-up</div>
+				<div class="input-label-up">
+					<label class="input-label-up__label">Ваш телефон</label>
+					<input type="text" class="input-label-up__input" data-mask="+7(000)000-00-00">
+				</div>
+			</div>
+
+			<div class="elems-row elems-row--space">
+				<div class="elems-h2">input-readonly</div>
+				<input type="text" class="input-readonly" value="07.06.2021 13:29:21" readonly>
+			</div>
+			
+		</div>
+		
+	</div>
+
 
 	<div class="elems-section">
 		<div class="elems-h1">rating</div>
@@ -454,338 +495,54 @@ layout: default.hbs
 	</div>
 
 
-	<div class="elems-section" style="max-width: 700px;">
-		<div class="elems-h1">goods-list</div>
-		<div class="goods-list__list">
-			<div class="goods-list__item">
-				<div class="goods-list__image">
-					<div class="goods-cards__image goods-cards__image--gray">
-						<div><img src="images/temp/goods/1.jpeg" alt=""></div>
-					</div>
-				</div>
-				<div class="goods-list__desc">
-					<div class="goods-list__code">Артикул: 897-356</div>
-					<div class="goods-list__title">
-						<a href="#">Дрель AEК BE 750 R 449160</a>
-					</div>
-					<div class="rating goods-list__rating">
-						<div class="rating__stars">
-							<div style="width: 68%;"></div>
-						</div>
-						<div class="rating__count">(23)</div>
-					</div>
-					<button type="button" class="goods-list__close">
-						<i class="icon-close"></i>
-					</button>
-				</div>
-				<div class="goods-list__props">
-					<div class="goods-list__props__inner">
-						<div class="goods-list__prop">
-							<div>В наличии</div>
-							<div>7 шт</div>
-						</div>
-						<div class="goods-list__prop">
-							<div>Доставка</div>
-							<div>завтра</div>
-						</div>
-						<div class="goods-list__prop">
-							<div>Самовывоз</div>
-							<div>сегодня</div>
+	<div class="elems-section">
+		<div style="max-width: 700px;">
+			<div class="elems-h1">goods-list</div>
+			<div class="goods-list__list">
+				<div class="goods-list__item">
+					<div class="goods-list__image">
+						<div class="goods-cards__image goods-cards__image--gray">
+							<div><img src="images/temp/goods/1.jpeg" alt=""></div>
 						</div>
 					</div>
-				</div>
-				<div class="goods-list__rest">
-					<div class="goods-list__price"><span>5 120</span> ₽ / шт</div>
-					<div class="goods-list__points"><span>+42</span> балла на карту</div>
-					<div class="count-editor goods-list__count">
-						<button type="button" class="count-editor__minus">-</button>
-						<input type="text" value="2" class="count-editor__input">
-						<button type="button" class="count-editor__plus">+</button>
-					</div>
-				</div>
-			</div>
-
-			<div class="goods-list__item">
-				<div class="goods-list__image">
-					<div class="goods-cards__image goods-cards__image--gray">
-						<div><img src="images/temp/goods/2.jpeg" alt=""></div>
-					</div>
-				</div>
-				<div class="goods-list__desc">
-					<div class="goods-list__code">Артикул: 897-356</div>
-					<div class="goods-list__title">
-						<a href="#">Дрель AEК BE 750 R 449160</a>
-					</div>
-					<div class="rating goods-list__rating">
-						<div class="rating__stars">
-							<div style="width: 68%;"></div>
+					<div class="goods-list__desc">
+						<div class="goods-list__code">Артикул: 897-356</div>
+						<div class="goods-list__title">
+							<a href="#">Дрель AEК BE 750 R 449160</a>
 						</div>
-						<div class="rating__count">(23)</div>
-					</div>
-					<button type="button" class="goods-list__close">
-						<i class="icon-close"></i>
-					</button>
-				</div>
-				<div class="goods-list__props">
-					<div class="goods-list__props__inner">
-						<div class="goods-list__prop">
-							<div>В наличии</div>
-							<div>7 шт</div>
-						</div>
-						<div class="goods-list__prop">
-							<div>Доставка</div>
-							<div>завтра</div>
-						</div>
-						<div class="goods-list__prop">
-							<div>Самовывоз</div>
-							<div>сегодня</div>
-						</div>
-					</div>
-				</div>
-				<div class="goods-list__rest">
-					<div class="goods-list__price"><span>5 120</span> ₽ / шт</div>
-					<div class="goods-list__points"><span>+42</span> балла на карту</div>
-					<div class="count-editor goods-list__count">
-						<button type="button" class="count-editor__minus">-</button>
-						<input type="text" value="2" class="count-editor__input">
-						<button type="button" class="count-editor__plus">+</button>
-					</div>
-				</div>
-			</div>
-
-			<div class="goods-list__item">
-				<div class="goods-list__image">
-					<div class="goods-cards__image goods-cards__image--gray">
-						<div><img src="images/temp/goods/3.png" alt=""></div>
-					</div>
-				</div>
-				<div class="goods-list__desc">
-					<div class="goods-list__code">Артикул: 897-356</div>
-					<div class="goods-list__title">
-						<a href="#">Ударная дрель Boss ДЭУ-6500 </a>
-					</div>
-					<div class="rating goods-list__rating">
-						<div class="rating__stars">
-							<div style="width: 68%;"></div>
-						</div>
-						<div class="rating__count">(23)</div>
-					</div>
-					<button type="button" class="goods-list__close">
-						<i class="icon-close"></i>
-					</button>
-				</div>
-				<div class="goods-list__props">
-					<div class="goods-list__props__inner">
-						<div class="goods-list__prop">
-							<div>В наличии</div>
-							<div>7 шт</div>
-						</div>
-						<div class="goods-list__prop">
-							<div>Доставка</div>
-							<div>завтра</div>
-						</div>
-						<div class="goods-list__prop">
-							<div>Самовывоз</div>
-							<div>сегодня</div>
-						</div>
-					</div>
-				</div>
-				<div class="goods-list__rest">
-					<div class="goods-list__price"><span>5 120</span> ₽ / шт</div>
-					<div class="goods-list__points"><span>+42</span> балла на карту</div>
-					<div class="count-editor goods-list__count">
-						<button type="button" class="count-editor__minus">-</button>
-						<input type="text" value="2" class="count-editor__input">
-						<button type="button" class="count-editor__plus">+</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="elems-section" style="max-width: 700px;">
-		<div class="elems-h1">goods-cards (flow)</div>
-		<div class="goods-cards__list ">
-			<div class="goods-cards__col">
-				<div class="goods-cards__item">
-					<a href="#" class="goods-cards__image goods-cards__image--gray">
-						<div><img src="images/temp/goods/1/14.png" alt=""></div>
-					</a>
-					<div class="goods-cards__desc">
-						<div class="goods-cards__code">Артикул: 134-331</div>
-						<div class="goods-cards__title">
-							<a href="#">
-								Теплоизоляционная плита ПЕНОПЛЭКС Комфорт 50 мм
-							</a>
-						</div>
-						<div class="rating goods-cards__rating">
+						<div class="rating goods-list__rating">
 							<div class="rating__stars">
 								<div style="width: 68%;"></div>
 							</div>
 							<div class="rating__count">(23)</div>
 						</div>
-						<div class="goods-cards__price"><span>284</span> ₽ / шт</div>
-						<button class="button button-outline-green button--full goods-cards__add-to-cart">
-							<span class="spinner-border"></span>
-							<span class="button__text">В корзину</span>
+						<button type="button" class="goods-list__close">
+							<i class="icon-close"></i>
 						</button>
 					</div>
-					<div class="goods-cards__ctrl">
-						<button type="button" class="goods-cards__ctrl__item">
-							<i class="icon-heart"></i>
-						</button>
-						<button type="button" class="goods-cards__ctrl__item">
-							<i class="icon-stats"></i>
-						</button>
-					</div>
-				</div>
-			</div>
-			<div class="goods-cards__col">
-				<div class="goods-cards__item">
-					<a href="#" class="goods-cards__image goods-cards__image--gray">
-						<div><img src="images/temp/goods/1/15.png" alt=""></div>
-					</a>
-					<div class="goods-cards__desc">
-						<div class="goods-cards__code">Артикул: 134-331</div>
-						<div class="goods-cards__title">
-							<a href="#">Пена монтажная Формула мастера  350г</a>
-						</div>
-						<div class="rating goods-cards__rating">
-							<div class="rating__stars">
-								<div style="width: 68%;"></div>
+					<div class="goods-list__props">
+						<div class="goods-list__props__inner">
+							<div class="goods-list__prop">
+								<div>В наличии</div>
+								<div>7 шт</div>
 							</div>
-							<div class="rating__count">(23)</div>
-						</div>
-						<div class="goods-cards__price"><span>146</span> ₽ / шт</div>
-						<button class="button button-outline-green button--full goods-cards__add-to-cart">
-							<span class="spinner-border"></span>
-							<span class="button__text">В корзину</span>
-						</button>
-					</div>
-					<div class="goods-cards__ctrl">
-						<button type="button" class="goods-cards__ctrl__item">
-							<i class="icon-heart"></i>
-						</button>
-						<button type="button" class="goods-cards__ctrl__item">
-							<i class="icon-stats"></i>
-						</button>
-					</div>
-					<div class="goods-cards__labels">
-						<div class="goods-cards__labels__orange">
-							Выбор покупателя
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="goods-cards__col">
-				<div class="goods-cards__item">
-					<a href="#" class="goods-cards__image goods-cards__image--gray">
-						<div><img src="images/temp/goods/1/16.png" alt=""></div>
-					</a>
-					<div class="goods-cards__desc">
-						<div class="goods-cards__code">Артикул: 136-681</div>
-						<div class="goods-cards__title">
-							<a href="#">Дрель Skills DP 4010</a>
-						</div>
-						<div class="rating goods-cards__rating">
-							<div class="rating__stars">
-								<div style="width: 68%;"></div>
+							<div class="goods-list__prop">
+								<div>Доставка</div>
+								<div>завтра</div>
 							</div>
-							<div class="rating__count">(21)</div>
-						</div>
-						<div class="goods-cards__price"><span>3 450</span> ₽ / шт</div>
-						<button class="button button-outline-green button--full goods-cards__add-to-cart">
-							<span class="spinner-border"></span>
-							<span class="button__text">В корзину</span>
-						</button>
-					</div>
-					<div class="goods-cards__ctrl">
-						<button type="button" class="goods-cards__ctrl__item">
-							<i class="icon-heart"></i>
-						</button>
-						<button type="button" class="goods-cards__ctrl__item">
-							<i class="icon-stats"></i>
-						</button>
-					</div>
-					<div class="goods-cards__labels">
-						<div class="goods-cards__labels__green">
-							Товар месяца
-						</div>
-						<div class="goods-cards__labels__red">
-							Скидка
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="goods-cards__col">
-				<div class="goods-cards__item">
-					<a href="#" class="goods-cards__image goods-cards__image--gray">
-						<div><img src="images/temp/goods/1/17.png" alt=""></div>
-					</a>
-					<div class="goods-cards__desc">
-						<div class="goods-cards__code">Артикул: 134-331</div>
-						<div class="goods-cards__title">
-							<a href="#">Мойка кухонная MILENA 50DG</a>
-						</div>
-						<div class="rating goods-cards__rating">
-							<div class="rating__stars">
-								<div style="width: 68%;"></div>
+							<div class="goods-list__prop">
+								<div>Самовывоз</div>
+								<div>сегодня</div>
 							</div>
-							<div class="rating__count">(21)</div>
 						</div>
-						<div class="goods-cards__price"><span>2 787</span> ₽ / шт</div>
-						<button class="button button-outline-orange button--full">
-							<span class="spinner-border"></span>
-							<span class="button__text">Под заказ</span>
-						</button>
 					</div>
-					<div class="goods-cards__ctrl">
-						<button type="button" class="goods-cards__ctrl__item">
-							<i class="icon-heart"></i>
-						</button>
-						<button type="button" class="goods-cards__ctrl__item">
-							<i class="icon-stats"></i>
-						</button>
-					</div>
-					
-				</div>
-			</div>
-			<div class="goods-cards__col">
-				<div class="goods-cards__item">
-					<a href="#" class="goods-cards__image goods-cards__image--gray">
-						<div><img src="images/temp/goods/1/18.png" alt=""></div>
-					</a>
-					<div class="goods-cards__desc">
-						<div class="goods-cards__code">Артикул: 134-331</div>
-						<div class="goods-cards__title">
-							<a href="#">Смеситель для ванны Valta D1109500</a>
-						</div>
-						<div class="rating goods-cards__rating">
-							<div class="rating__stars">
-								<div style="width: 68%;"></div>
-							</div>
-							<div class="rating__count">(21)</div>
-						</div>
-						<div class="goods-cards__price"><span>5 120</span> ₽ / шт</div>
-						<button class="button button-outline-green button--full goods-cards__add-to-cart">
-							<span class="spinner-border"></span>
-							<span class="button__text">В корзину</span>
-						</button>
-					</div>
-					<div class="goods-cards__ctrl">
-						<button type="button" class="goods-cards__ctrl__item">
-							<i class="icon-heart"></i>
-						</button>
-						<button type="button" class="goods-cards__ctrl__item">
-							<i class="icon-stats"></i>
-						</button>
-					</div>
-					<div class="goods-cards__labels">
-						<div class="goods-cards__labels__green">
-							Выбор покупателя
-						</div>
-						<div class="goods-cards__labels__blue">
-							Только онлайн
+					<div class="goods-list__rest">
+						<div class="goods-list__price"><span>5 120</span> ₽ / шт</div>
+						<div class="goods-list__points"><span>+42</span> балла на карту</div>
+						<div class="count-editor goods-list__count">
+							<button type="button" class="count-editor__minus">-</button>
+							<input type="text" value="2" class="count-editor__input">
+							<button type="button" class="count-editor__plus">+</button>
 						</div>
 					</div>
 				</div>
@@ -793,194 +550,41 @@ layout: default.hbs
 		</div>
 	</div>
 
-	<div class="elems-section" style="max-width: 700px;">
-		<div class="elems-h1">goods-cards (scroll)</div>
-		
-		<div class="goods-cards goods-cards--nowrap">
-			<div class="goods-cards__window" data-simplebar>
-				<div class="goods-cards__list ">
-					<div class="goods-cards__col">
-						<div class="goods-cards__item">
-							<a href="#" class="goods-cards__image goods-cards__image--gray">
-								<div><img src="images/temp/goods/1/14.png" alt=""></div>
-							</a>
-							<div class="goods-cards__desc">
-								<div class="goods-cards__code">Артикул: 134-331</div>
-								<div class="goods-cards__title">
-									<a href="#">
-										Теплоизоляционная плита ПЕНОПЛЭКС Комфорт 50 мм
-									</a>
-								</div>
-								<div class="rating goods-cards__rating">
-									<div class="rating__stars">
-										<div style="width: 68%;"></div>
-									</div>
-									<div class="rating__count">(23)</div>
-								</div>
-								<div class="goods-cards__price"><span>284</span> ₽ / шт</div>
-								<button class="button button-outline-green button--full goods-cards__add-to-cart">
-									<span class="spinner-border"></span>
-									<span class="button__text">В корзину</span>
-								</button>
+	<div class="elems-section">
+		<div style="max-width: 700px;">
+			<div class="elems-h1">goods-cards</div>
+			<div class="goods-cards__list ">
+				<div class="goods-cards__col">
+					<div class="goods-cards__item">
+						<a href="#" class="goods-cards__image goods-cards__image--gray">
+							<div><img src="images/temp/goods/1/14.png" alt=""></div>
+						</a>
+						<div class="goods-cards__desc">
+							<div class="goods-cards__code">Артикул: 134-331</div>
+							<div class="goods-cards__title">
+								<a href="#">
+									Теплоизоляционная плита ПЕНОПЛЭКС Комфорт 50 мм
+								</a>
 							</div>
-							<div class="goods-cards__ctrl">
-								<button type="button" class="goods-cards__ctrl__item">
-									<i class="icon-heart"></i>
-								</button>
-								<button type="button" class="goods-cards__ctrl__item">
-									<i class="icon-stats"></i>
-								</button>
+							<div class="rating goods-cards__rating">
+								<div class="rating__stars">
+									<div style="width: 68%;"></div>
+								</div>
+								<div class="rating__count">(23)</div>
 							</div>
+							<div class="goods-cards__price"><span>284</span> ₽ / шт</div>
+							<button class="button button-outline-green button--full goods-cards__add-to-cart">
+								<span class="spinner-border"></span>
+								<span class="button__text">В корзину</span>
+							</button>
 						</div>
-					</div>
-					<div class="goods-cards__col">
-						<div class="goods-cards__item">
-							<a href="#" class="goods-cards__image goods-cards__image--gray">
-								<div><img src="images/temp/goods/1/15.png" alt=""></div>
-							</a>
-							<div class="goods-cards__desc">
-								<div class="goods-cards__code">Артикул: 134-331</div>
-								<div class="goods-cards__title">
-									<a href="#">Пена монтажная Формула мастера  350г</a>
-								</div>
-								<div class="rating goods-cards__rating">
-									<div class="rating__stars">
-										<div style="width: 68%;"></div>
-									</div>
-									<div class="rating__count">(23)</div>
-								</div>
-								<div class="goods-cards__price"><span>146</span> ₽ / шт</div>
-								<button class="button button-outline-green button--full goods-cards__add-to-cart">
-									<span class="spinner-border"></span>
-									<span class="button__text">В корзину</span>
-								</button>
-							</div>
-							<div class="goods-cards__ctrl">
-								<button type="button" class="goods-cards__ctrl__item">
-									<i class="icon-heart"></i>
-								</button>
-								<button type="button" class="goods-cards__ctrl__item">
-									<i class="icon-stats"></i>
-								</button>
-							</div>
-							<div class="goods-cards__labels">
-								<div class="goods-cards__labels__orange">
-									Выбор покупателя
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="goods-cards__col">
-						<div class="goods-cards__item">
-							<a href="#" class="goods-cards__image goods-cards__image--gray">
-								<div><img src="images/temp/goods/1/16.png" alt=""></div>
-							</a>
-							<div class="goods-cards__desc">
-								<div class="goods-cards__code">Артикул: 136-681</div>
-								<div class="goods-cards__title">
-									<a href="#">Дрель Skills DP 4010</a>
-								</div>
-								<div class="rating goods-cards__rating">
-									<div class="rating__stars">
-										<div style="width: 68%;"></div>
-									</div>
-									<div class="rating__count">(21)</div>
-								</div>
-								<div class="goods-cards__price"><span>3 450</span> ₽ / шт</div>
-								<button class="button button-outline-green button--full goods-cards__add-to-cart">
-									<span class="spinner-border"></span>
-									<span class="button__text">В корзину</span>
-								</button>
-							</div>
-							<div class="goods-cards__ctrl">
-								<button type="button" class="goods-cards__ctrl__item">
-									<i class="icon-heart"></i>
-								</button>
-								<button type="button" class="goods-cards__ctrl__item">
-									<i class="icon-stats"></i>
-								</button>
-							</div>
-							<div class="goods-cards__labels">
-								<div class="goods-cards__labels__green">
-									Товар месяца
-								</div>
-								<div class="goods-cards__labels__red">
-									Скидка
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="goods-cards__col">
-						<div class="goods-cards__item">
-							<a href="#" class="goods-cards__image goods-cards__image--gray">
-								<div><img src="images/temp/goods/1/17.png" alt=""></div>
-							</a>
-							<div class="goods-cards__desc">
-								<div class="goods-cards__code">Артикул: 134-331</div>
-								<div class="goods-cards__title">
-									<a href="#">Мойка кухонная MILENA 50DG</a>
-								</div>
-								<div class="rating goods-cards__rating">
-									<div class="rating__stars">
-										<div style="width: 68%;"></div>
-									</div>
-									<div class="rating__count">(21)</div>
-								</div>
-								<div class="goods-cards__price"><span>2 787</span> ₽ / шт</div>
-								<button class="button button-outline-orange button--full">
-									<span class="spinner-border"></span>
-									<span class="button__text">Под заказ</span>
-								</button>
-							</div>
-							<div class="goods-cards__ctrl">
-								<button type="button" class="goods-cards__ctrl__item">
-									<i class="icon-heart"></i>
-								</button>
-								<button type="button" class="goods-cards__ctrl__item">
-									<i class="icon-stats"></i>
-								</button>
-							</div>
-							
-						</div>
-					</div>
-					<div class="goods-cards__col">
-						<div class="goods-cards__item">
-							<a href="#" class="goods-cards__image goods-cards__image--gray">
-								<div><img src="images/temp/goods/1/18.png" alt=""></div>
-							</a>
-							<div class="goods-cards__desc">
-								<div class="goods-cards__code">Артикул: 134-331</div>
-								<div class="goods-cards__title">
-									<a href="#">Смеситель для ванны Valta D1109500</a>
-								</div>
-								<div class="rating goods-cards__rating">
-									<div class="rating__stars">
-										<div style="width: 68%;"></div>
-									</div>
-									<div class="rating__count">(21)</div>
-								</div>
-								<div class="goods-cards__price"><span>5 120</span> ₽ / шт</div>
-								<button class="button button-outline-green button--full goods-cards__add-to-cart">
-									<span class="spinner-border"></span>
-									<span class="button__text">В корзину</span>
-								</button>
-							</div>
-							<div class="goods-cards__ctrl">
-								<button type="button" class="goods-cards__ctrl__item">
-									<i class="icon-heart"></i>
-								</button>
-								<button type="button" class="goods-cards__ctrl__item">
-									<i class="icon-stats"></i>
-								</button>
-							</div>
-							<div class="goods-cards__labels">
-								<div class="goods-cards__labels__green">
-									Выбор покупателя
-								</div>
-								<div class="goods-cards__labels__blue">
-									Только онлайн
-								</div>
-							</div>
+						<div class="goods-cards__ctrl">
+							<button type="button" class="goods-cards__ctrl__item">
+								<i class="icon-heart"></i>
+							</button>
+							<button type="button" class="goods-cards__ctrl__item">
+								<i class="icon-stats"></i>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -988,24 +592,24 @@ layout: default.hbs
 		</div>
 	</div>
 
-	<div class="elems-section" style="max-width: 700px;">
-		<div class="elems-h1">goods-simple</div>
-		<div class="goods-simple">
-			{{#repeat 3}}
-			<div class="goods-simple__item">
-				<div class="goods-simple__image" style="background-image: url('images/temp/goods/2/1.jpeg');"></div>
-				<div class="goods-simple__desc">
-					<div class="goods-simple__title">Обои виниловые Elysium Авалон ограниченная серия Светящиеся в темноте звёзды Е21141 (1,06х10 м)</div>
-					<div class="goods-simple__price">
-						<span>599</span>
-						<span class="goods-simple__price__rubl">₽ / шт</span>
+	<div class="elems-section">
+		<div style="max-width: 700px;">
+			<div class="elems-h1">goods-simple</div>
+			<div class="goods-simple">
+				<div class="goods-simple__item">
+					<div class="goods-simple__image" style="background-image: url('images/temp/goods/2/1.jpeg');"></div>
+					<div class="goods-simple__desc">
+						<div class="goods-simple__title">Обои виниловые Elysium Авалон ограниченная серия Светящиеся в темноте звёзды Е21141 (1,06х10 м)</div>
+						<div class="goods-simple__price">
+							<span>599</span>
+							<span class="goods-simple__price__rubl">₽ / шт</span>
+						</div>
 					</div>
+					<button type="button" class="goods-simple__remove">
+						<i class="icon-close"></i>
+					</button>
 				</div>
-				<button type="button" class="goods-simple__remove">
-					<i class="icon-close"></i>
-				</button>
 			</div>
-			{{/repeat}}
 		</div>
 	</div>
 
@@ -1124,15 +728,15 @@ layout: default.hbs
 		<div class="panel__header">Заказать обратный звонок</div>
 		<div class="panel__body">
 			<div class="panel-call__input">
-				<div class="placeholder-up-input">
-					<label class="placeholder-up-input__label">Ваш телефон</label>
-					<input type="text" class="placeholder-up-input__input" data-mask="+7(000)000-00-00">
+				<div class="input-label-up">
+					<label class="input-label-up__label">Ваш телефон</label>
+					<input type="text" class="input-label-up__input" data-mask="+7(000)000-00-00">
 				</div>
 			</div>
 			<div class="panel-call__input">
-				<div class="placeholder-up-input">
-					<label class="placeholder-up-input__label">Ваше имя</label>
-					<input type="text" class="placeholder-up-input__input">
+				<div class="input-label-up">
+					<label class="input-label-up__label">Ваше имя</label>
+					<input type="text" class="input-label-up__input">
 				</div>
 			</div>
 			<label class="form-panel__check panel-call__agree">

@@ -32,11 +32,11 @@
 @import "components/page";
 
 @import "components/form/button";
-@import "components/form/default-input";
-@import "components/form/datepicker-input";
-@import "components/form/label-up-input";
-@import "components/form/placeholder-up-input";
-@import "components/form/readonly-input";
+@import "components/form/input-classic";
+@import "components/form/input-datepicker";
+@import "components/form/input-top-label";
+@import "components/form/input-label-up";
+@import "components/form/input-readonly";
 @import "components/form/count-editor";
 
 @import "components/rating.scss";

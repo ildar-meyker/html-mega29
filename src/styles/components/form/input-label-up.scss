@@ -1,4 +1,4 @@
-.placeholder-up-input {
+.input-label-up {
 	transition: all 0.2s;
 	position: relative;
 	border: 1/16 + em solid #e7e7e8;
@@ -9,7 +9,7 @@
 		border-color: #21a73f;
 		background: #fff;
 
-		.placeholder-up-input__label {
+		.input-label-up__label {
 			top: -2/14 + em;
 			background: #fff;
 			padding: 0 3/14 + em;

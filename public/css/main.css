@@ -2444,7 +2444,7 @@ a {
     box-shadow: inset 0 0.28571em 0.28571em rgba(0, 0, 0, 0.3);
     color: #2e2e2e; }
 
-.default-input {
+.input-classic {
   transition: all 0.2s;
   display: block;
   width: 100%;
@@ -2455,23 +2455,23 @@ a {
   border-color: #e7e7e8;
   background: #fafafa;
   color: #2e2e2e; }
-  .default-input:not(:-moz-read-only):focus {
+  .input-classic:not(:-moz-read-only):focus {
     border-color: #21a73f; }
-  .default-input:not(:read-only):focus {
+  .input-classic:not(:read-only):focus {
     border-color: #21a73f; }
-  .default-input::-webkit-input-placeholder {
+  .input-classic::-webkit-input-placeholder {
     color: #b2b3b3; }
-  .default-input::-moz-placeholder {
+  .input-classic::-moz-placeholder {
     color: #b2b3b3; }
-  .default-input::-ms-input-placeholder {
+  .input-classic::-ms-input-placeholder {
     color: #b2b3b3; }
-  .default-input::placeholder {
+  .input-classic::placeholder {
     color: #b2b3b3; }
 
-.datepicker-input {
+.input-datepicker {
   position: relative;
   background: #fafafa; }
-  .datepicker-input__input {
+  .input-datepicker__input {
     position: relative;
     z-index: 1;
     transition: all 0.2s;
@@ -2485,19 +2485,19 @@ a {
     border-color: #e7e7e8;
     background: transparent;
     color: #2e2e2e; }
-    .datepicker-input__input:not(:-moz-read-only):focus {
+    .input-datepicker__input:not(:-moz-read-only):focus {
       border-color: #21a73f; }
-    .datepicker-input__input:not(:read-only):focus {
+    .input-datepicker__input:not(:read-only):focus {
       border-color: #21a73f; }
-    .datepicker-input__input::-webkit-input-placeholder {
+    .input-datepicker__input::-webkit-input-placeholder {
       color: #b2b3b3; }
-    .datepicker-input__input::-moz-placeholder {
+    .input-datepicker__input::-moz-placeholder {
       color: #b2b3b3; }
-    .datepicker-input__input::-ms-input-placeholder {
+    .input-datepicker__input::-ms-input-placeholder {
       color: #b2b3b3; }
-    .datepicker-input__input::placeholder {
+    .input-datepicker__input::placeholder {
       color: #b2b3b3; }
-  .datepicker-input__icon {
+  .input-datepicker__icon {
     position: absolute;
     top: 50%;
     right: 0.625em;
@@ -2505,9 +2505,9 @@ a {
     font-size: 0.875em;
     color: rgba(0, 32, 51, 0.35); }
 
-.label-up-input {
+.input-top-label {
   position: relative; }
-  .label-up-input__label {
+  .input-top-label__label {
     position: absolute;
     top: 0;
     left: 1em;
@@ -2517,7 +2517,7 @@ a {
     font-size: 0.625em;
     font-weight: 700;
     line-height: 1; }
-  .label-up-input__input {
+  .input-top-label__input {
     display: block;
     width: 100%;
     padding: 1em;
@@ -2525,27 +2525,27 @@ a {
     border-radius: 0.33333em;
     font-size: 0.75em;
     color: #000; }
-    .label-up-input__input:not(:-moz-read-only):focus {
+    .input-top-label__input:not(:-moz-read-only):focus {
       border-color: #21a73f; }
-    .label-up-input__input:not(:read-only):focus {
+    .input-top-label__input:not(:read-only):focus {
       border-color: #21a73f; }
 
-.placeholder-up-input {
+.input-label-up {
   transition: all 0.2s;
   position: relative;
   border: 0.0625em solid #e7e7e8;
   border-radius: 0.25em;
   background: #fafafa; }
-  .placeholder-up-input.focus {
+  .input-label-up.focus {
     border-color: #21a73f;
     background: #fff; }
-    .placeholder-up-input.focus .placeholder-up-input__label {
+    .input-label-up.focus .input-label-up__label {
       top: -0.14286em;
       background: #fff;
       padding: 0 0.21429em;
       font-size: 0.875em;
       color: #21a73f; }
-  .placeholder-up-input__label {
+  .input-label-up__label {
     transition: all 0.2s;
     position: absolute;
     top: 50%;
@@ -2553,14 +2553,14 @@ a {
     left: 0.72222em;
     font-size: 1.125em;
     color: rgba(17, 17, 17, 0.32); }
-  .placeholder-up-input__input {
+  .input-label-up__input {
     position: relative;
     width: 100%;
     padding: 10px 15px;
     border: 0;
     font-size: 1.125em; }
 
-.readonly-input {
+.input-readonly {
   border: 0.05556em solid transparent;
   border-radius: 0.22222em;
   font-size: 1.125em;
@@ -4946,7 +4946,9 @@ a {
 
 .goods-simple__item {
   display: flex;
-  margin-bottom: 10px; }
+  margin-top: 10px; }
+  .goods-simple__item:first-child {
+    margin-top: 0; }
 
 .goods-simple__image {
   flex: 0 0 auto;
@@ -4976,7 +4978,7 @@ a {
 @media (min-width: 992px) {
   .goods-simple__item {
     padding: 10px;
-    margin-bottom: 0; }
+    margin-top: 0; }
     .goods-simple__item--link:hover {
       background: #f2f3f5; }
   .goods-simple__image {

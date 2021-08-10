@@ -7,11 +7,11 @@ import "icheck";
 
 const CustomForm = {
 	initTextInputs() {
-		$(document).on("focus", ".placeholder-up-input__input", function () {
+		$(document).on("focus", ".input-label-up__input", function () {
 			$(this).parent().addClass("focus");
 		});
 
-		$(document).on("blur", ".placeholder-up-input__input", function () {
+		$(document).on("blur", ".input-label-up__input", function () {
 			$(this).parent().removeClass("focus");
 		});
 
@@ -25,9 +25,9 @@ const CustomForm = {
 	},
 
 	initDatepickers() {
-		if ($(".datepicker-input input").length) {
+		if ($(".input-datepicker input").length) {
 			// throws error if element not found
-			datepicker(".datepicker-input input", {
+			datepicker(".input-datepicker input", {
 				customDays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
 				customMonths: [
 					"Январь",

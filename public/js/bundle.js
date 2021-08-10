@@ -25086,10 +25086,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var CustomForm = {
   initTextInputs: function initTextInputs() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("focus", ".placeholder-up-input__input", function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("focus", ".input-label-up__input", function () {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().addClass("focus");
     });
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("blur", ".placeholder-up-input__input", function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("blur", ".input-label-up__input", function () {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).parent().removeClass("focus");
     });
     autosize__WEBPACK_IMPORTED_MODULE_1___default()(jquery__WEBPACK_IMPORTED_MODULE_0___default()("textarea"));
@@ -25100,9 +25100,9 @@ var CustomForm = {
     });
   },
   initDatepickers: function initDatepickers() {
-    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(".datepicker-input input").length) {
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(".input-datepicker input").length) {
       // throws error if element not found
-      js_datepicker__WEBPACK_IMPORTED_MODULE_2___default()(".datepicker-input input", {
+      js_datepicker__WEBPACK_IMPORTED_MODULE_2___default()(".input-datepicker input", {
         customDays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
         customMonths: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
         formatter: function formatter(input, date, instance) {
