@@ -1,23 +1,23 @@
 .panel-auth {
-	width: 275/16 + em;
+	width: 275px;
 
 	&__body {
-		padding: 30/16 + em;
+		padding: 30px;
 	}
 
 	&__desc {
-		margin-bottom: 15/16 + em;
-		font-size: 15/16 + em;
+		margin-bottom: 15px;
+		font-size: 15px;
 	}
 
 	&__button {
-		margin-top: 10/16 + em;
+		margin-top: 10px;
 
 		.button {
 			width: 100%;
-			padding: 10/15 + em 15/15 + em;
-			border-width: 1/15 + em;
-			font-size: 15/16 + em;
+			padding: 10px 15px;
+			border-width: 1px;
+			font-size: 15px;
 			font-weight: normal;
 		}
 	}

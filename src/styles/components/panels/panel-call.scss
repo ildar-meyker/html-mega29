@@ -1,8 +1,8 @@
 .panel-call {
-	width: 300/16 + em;
+	width: 300px;
 
 	&__input {
-		margin-top: 10/16 + em;
+		margin-top: 10px;
 
 		&:first-child {
 			margin-top: 0;
@@ -10,20 +10,20 @@
 	}
 
 	&__agree {
-		margin-top: 10/16 + em;
-		font-size: 15/16 + em;
+		margin-top: 10px;
+		font-size: 15px;
 		font-weight: normal;
 	}
 
 	&__submit {
-		margin-top: 20/16 + em;
-		margin-bottom: 14/16 + em;
+		margin-top: 20px;
+		margin-bottom: 14px;
 
 		.button {
 			width: 100%;
-			padding: 10/15 + em 15/15 + em;
-			border-width: 1/15 + em;
-			font-size: 15/16 + em;
+			padding: 10px 15px;
+			border-width: 1px;
+			font-size: 15px;
 			font-weight: normal;
 		}
 	}

@@ -50,6 +50,12 @@
 	margin-top: 0 !important;
 }
 
+.rubl {
+	text-transform: uppercase;
+	font-size: 0.5em;
+	font-weight: 700;
+}
+
 @for $i from 1 through 20 {
 	.gap-#{$i*5} {
 		height: #{$i * 5}px;

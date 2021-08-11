@@ -1,12 +1,12 @@
 .panel-city {
-	width: 300/16 + em;
+	width: 300px;
 
 	&__item {
 		position: relative;
 		display: block;
-		padding: 10/18 + em 16/18 + em;
-		border-radius: 4/18 + em;
-		font-size: 18/16 + em;
+		padding: 10px 16px;
+		border-radius: 4px;
+		font-size: 18px;
 
 		&:hover {
 			background: #f1f1f1;
@@ -22,7 +22,7 @@
 				line-height: 1;
 				position: absolute;
 				top: 50%;
-				right: 16/16 + em;
+				right: 16px;
 				margin-top: -0.5em;
 			}
 		}

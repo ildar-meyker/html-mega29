@@ -35,6 +35,10 @@
 				display: none;
 			}
 		}
+
+		&.active {
+			color: #21a73f;
+		}
 	}
 
 	&__icon {

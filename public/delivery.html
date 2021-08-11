@@ -60,7 +60,7 @@
 	                    <i class="icon-heart"></i>
 	                    <span>5</span>
 	                </a>
-	                <a href="#">
+	                <a href="#" class="js-panel-button" data-target="#panel-cart" data-parent="#header-main">
 	                    <i class="icon-shopping-cart"></i>
 	                    <span>3</span>
 	                </a>
@@ -895,7 +895,7 @@
 	        </div>
 	        <div class="nav-bottom__text">Корзина</div>
 	    </a>
-	    <a href="#" class="nav-bottom__item">
+	    <a href="#" class="nav-bottom__item active">
 	        <div class="nav-bottom__icon">
 	            <i class="icon-person"></i>
 	        </div>
@@ -918,6 +918,69 @@
 				<a href="#" class="panel-city__item active">Архангельск</a>
 				<a href="#" class="panel-city__item">Северодвинск</a>
 				<a href="#" class="panel-city__item">Сыктывкар</a>
+			</div>
+		</div>
+	</aside>
+	
+	<aside class="panel panel-cart hidden" id="panel-cart">
+		<div class="panel__arrow"></div>
+		<div class="panel__box">
+			<div class="panel__header">Корзина</div>
+			<div class="panel__body">
+				<div class="panel-cart__products">
+					<div class="goods-simple">
+						<div class="goods-simple__item">
+							<div class="goods-simple__image" style="background-image: url('images/temp/goods/2/1.jpeg');"></div>
+							<div class="goods-simple__desc">
+								<div class="goods-simple__title">Обои виниловые Elysium Авалон ограниченная серия Светящиеся в темноте звёзды Е21141 (1,06х10 м)</div>
+								<div class="goods-simple__price">599 <span class="rubl">₽ / шт</span></div>
+							</div>
+							<button type="button" class="goods-simple__remove">
+								<i class="icon-close"></i>
+							</button>
+						</div>
+						<div class="goods-simple__item">
+							<div class="goods-simple__image" style="background-image: url('images/temp/goods/2/1.jpeg');"></div>
+							<div class="goods-simple__desc">
+								<div class="goods-simple__title">Обои виниловые Elysium Авалон ограниченная серия Светящиеся в темноте звёзды Е21141 (1,06х10 м)</div>
+								<div class="goods-simple__price">599 <span class="rubl">₽ / шт</span></div>
+							</div>
+							<button type="button" class="goods-simple__remove">
+								<i class="icon-close"></i>
+							</button>
+						</div>
+						<div class="goods-simple__item">
+							<div class="goods-simple__image" style="background-image: url('images/temp/goods/2/1.jpeg');"></div>
+							<div class="goods-simple__desc">
+								<div class="goods-simple__title">Обои виниловые Elysium Авалон ограниченная серия Светящиеся в темноте звёзды Е21141 (1,06х10 м)</div>
+								<div class="goods-simple__price">599 <span class="rubl">₽ / шт</span></div>
+							</div>
+							<button type="button" class="goods-simple__remove">
+								<i class="icon-close"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="panel-cart__see-all">
+					<a href="#" class="button button-light-green button--full">Смотреть все</a>
+				</div>
+				<div class="panel-cart__info">
+					<div class="panel-cart__info__row">
+						<div class="panel-cart__info__label">Всего:</div>
+						<div class="panel-cart__info__value">3 шт</div>
+					</div>
+					<div class="panel-cart__info__row">
+						<div class="panel-cart__info__label">Общий вес:</div>
+						<div class="panel-cart__info__value">3,5 кг</div>
+					</div>
+					<div class="panel-cart__info__row">
+						<div class="panel-cart__info__label">К оплате:</div>
+						<div class="panel-cart__info__value">2 377 <span class="rubl">₽</span></div>
+					</div>
+				</div>
+				<div class="panel-cart__checkout">
+					<a href="#" class="button button-green button--full">Оформить</a>
+				</div>
 			</div>
 		</div>
 	</aside>
@@ -950,7 +1013,7 @@
 		</div>
 	</form>
 	
-	<aside action="#" class="panel panel-auth hidden" id="panel-auth">
+	<form action="#" class="panel panel-auth hidden" id="panel-auth">
 		<div class="panel__arrow"></div>
 		<div class="panel__box">
 			<div class="panel-auth__body">
@@ -965,7 +1028,9 @@
 				</div>
 			</div>
 		</div>
-	</aside>
+	</form>
+	
+
 </div>
 
 	<script src="js/bundle.js"></script>

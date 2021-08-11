@@ -2089,6 +2089,11 @@ corresponds to the arrow we want to display */
 .mt-0 {
   margin-top: 0 !important; }
 
+.rubl {
+  text-transform: uppercase;
+  font-size: 0.5em;
+  font-weight: 700; }
+
 .gap-5 {
   height: 5px; }
 
@@ -3829,6 +3834,8 @@ a {
               transform: translateY(-50%); }
     .nav-bottom__item:last-child:before {
       display: none; }
+    .nav-bottom__item.active {
+      color: #21a73f; }
   .nav-bottom__icon {
     position: relative;
     width: 1.25em;
@@ -3954,10 +3961,6 @@ a {
   .form-panel__total {
     margin-top: 0.45455em;
     font-size: 1.375em; }
-    .form-panel__total span {
-      font-weight: 700; }
-      .form-panel__total span span {
-        font-size: 0.59091em; }
   .form-panel__attn {
     font-size: 1.375em;
     font-weight: 700; }
@@ -4342,10 +4345,6 @@ a {
   text-align: center;
   background: #fff;
   color: #000; }
-
-.order-info__price i {
-  font-style: normal;
-  font-size: 0.55556em; }
 
 .order-info__completed {
   color: #21a73f; }
@@ -4835,12 +4834,8 @@ a {
 
 .goods-cards__price {
   padding: 10px 0;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase; }
-  .goods-cards__price span {
-    font-size: 20px;
-    font-weight: 500; }
+  font-size: 20px;
+  font-weight: 500; }
 
 .goods-cards__rating {
   justify-content: center; }
@@ -4936,11 +4931,8 @@ a {
   padding: 0.375em 1.25em; }
 
 .goods-list__price {
-  font-size: 0.875em;
-  font-weight: 700; }
-  .goods-list__price span {
-    font-size: 1.71429em;
-    font-weight: 500; }
+  font-size: 1.5em;
+  font-weight: 500; }
 
 .goods-list__points {
   font-size: 0.9375em; }
@@ -5057,8 +5049,6 @@ a {
   margin-top: 5px;
   font-size: 16px;
   font-weight: 700; }
-  .goods-simple__price__rubl {
-    font-size: 0.5em; }
 
 .goods-simple__remove {
   padding-left: 10px; }
@@ -5331,8 +5321,6 @@ a {
     font-size: 2.25em;
     font-weight: 800;
     line-height: 0.7; }
-    .order__price__rubl {
-      font-size: 0.5em; }
   .order__score {
     margin-top: 0.65217em;
     font-size: 1.4375em; }
@@ -5572,9 +5560,9 @@ a {
 .panel {
   transition: margin 0.2s, opacity 0.2s;
   position: relative;
-  border: 0.0625em solid #f1f1f1;
-  border-radius: 0.25em;
-  box-shadow: 0px 0.25em 0.25em rgba(51, 51, 51, 0.04), 0px 0.25em 1em rgba(51, 51, 51, 0.08); }
+  border: 1px solid #f1f1f1;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08); }
   .panel.hidden {
     position: absolute;
     z-index: 200;
@@ -5591,55 +5579,78 @@ a {
   .panel__arrow {
     position: absolute;
     left: 50%;
-    border: 0.0625em solid #f1f1f1;
-    width: 1.875em;
-    height: 1.875em;
-    margin-left: -0.9375em;
+    border: 1px solid #f1f1f1;
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
     background: #fff;
-    top: -0.1875em; }
+    top: -3px; }
   .panel__box {
     position: relative;
-    border-radius: 0.22222em;
+    border-radius: 4px;
     background: #fff; }
   .panel__header {
-    border-bottom: 0.05556em solid #f1f1f1;
-    padding: 1.05556em 1.66667em;
-    font-size: 1.125em;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 19px 30px;
+    font-size: 18px;
     font-weight: 700;
     text-align: center; }
   .panel__body {
-    padding: 1em 1.875em; }
+    padding: 16px 30px; }
+
+.panel-cart {
+  width: 390px; }
+  .panel-cart__see-all {
+    margin: 20px 0; }
+  .panel-cart__info {
+    margin: 20px 0;
+    padding: 0.90909em 1.09091em;
+    border-radius: 4px;
+    background: #fafafa;
+    font-size: 11px;
+    line-height: 1.3; }
+    .panel-cart__info__row {
+      display: flex; }
+    .panel-cart__info__label {
+      flex: 0 0 auto;
+      margin-right: auto;
+      width: 50%; }
+    .panel-cart__info__value {
+      font-size: 13px;
+      font-weight: 700; }
+  .panel-cart__checkout {
+    margin-bottom: 14px; }
 
 .panel-call {
-  width: 18.75em; }
+  width: 300px; }
   .panel-call__input {
-    margin-top: 0.625em; }
+    margin-top: 10px; }
     .panel-call__input:first-child {
       margin-top: 0; }
   .panel-call__agree {
-    margin-top: 0.625em;
-    font-size: 0.9375em;
+    margin-top: 10px;
+    font-size: 15px;
     font-weight: normal; }
   .panel-call__submit {
-    margin-top: 1.25em;
-    margin-bottom: 0.875em; }
+    margin-top: 20px;
+    margin-bottom: 14px; }
     .panel-call__submit .button {
       width: 100%;
-      padding: 0.66667em 1em;
-      border-width: 0.06667em;
-      font-size: 0.9375em;
+      padding: 10px 15px;
+      border-width: 1px;
+      font-size: 15px;
       font-weight: normal; }
 
 .panel-city {
-  width: 18.75em; }
+  width: 300px; }
   .panel-city__item {
     position: relative;
     display: block;
-    padding: 0.55556em 0.88889em;
-    border-radius: 0.22222em;
-    font-size: 1.125em; }
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-size: 18px; }
     .panel-city__item:hover {
       background: #f1f1f1; }
     .panel-city__item.active {
@@ -5651,21 +5662,21 @@ a {
         line-height: 1;
         position: absolute;
         top: 50%;
-        right: 1em;
+        right: 16px;
         margin-top: -0.5em; }
 
 .panel-auth {
-  width: 17.1875em; }
+  width: 275px; }
   .panel-auth__body {
-    padding: 1.875em; }
+    padding: 30px; }
   .panel-auth__desc {
-    margin-bottom: 0.9375em;
-    font-size: 0.9375em; }
+    margin-bottom: 15px;
+    font-size: 15px; }
   .panel-auth__button {
-    margin-top: 0.625em; }
+    margin-top: 10px; }
     .panel-auth__button .button {
       width: 100%;
-      padding: 0.66667em 1em;
-      border-width: 0.06667em;
-      font-size: 0.9375em;
+      padding: 10px 15px;
+      border-width: 1px;
+      font-size: 15px;
       font-weight: normal; }
