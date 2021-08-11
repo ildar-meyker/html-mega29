@@ -9,6 +9,7 @@ import CountEditor from "./modules/CountEditor";
 import NavInfo from "./modules/NavInfo";
 import RangeSlider from "./modules/RangeSlider";
 import Gallery from "./modules/Gallery";
+import Panel from "./modules/Panel";
 
 $(function () {
 	CustomForm.init();
@@ -16,6 +17,7 @@ $(function () {
 	NavInfo.init();
 	RangeSlider.init();
 	Gallery.init();
+	Panel.init();
 
 	$("#nav-path").scrollLeft(99999);
 

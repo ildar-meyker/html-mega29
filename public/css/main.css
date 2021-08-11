@@ -2071,6 +2071,12 @@ corresponds to the arrow we want to display */
 .text-left {
   text-align: left !important; }
 
+.d-none {
+  display: none !important; }
+
+.d-block {
+  display: block !important; }
+
 .text-center {
   text-align: center !important; }
 
@@ -2786,11 +2792,11 @@ a {
       width: 100%; }
   .header__main__city {
     max-width: 200px;
-    margin: 0 3% 0 3%; }
+    margin: 0 2% 0 2%; }
   .header__main__search-area {
     flex-grow: 1; }
   .header__main__call {
-    padding: 0 20px;
+    padding: 10px 20px;
     font-weight: 700;
     white-space: nowrap; }
     .header__main__call__phone {
@@ -2858,6 +2864,7 @@ a {
     color: #007334; }
 
 .header__city {
+  padding: 10px;
   font-size: 18px;
   font-weight: 500;
   white-space: nowrap; }
@@ -5559,10 +5566,24 @@ a {
     display: none; }
 
 .panel {
+  transition: margin 0.2s, opacity 0.2s;
   position: relative;
   border: 0.0625em solid #f1f1f1;
   border-radius: 0.25em;
   box-shadow: 0px 0.25em 0.25em rgba(51, 51, 51, 0.04), 0px 0.25em 1em rgba(51, 51, 51, 0.08); }
+  .panel.hidden {
+    position: absolute;
+    z-index: 200;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    display: none;
+    margin-top: 40px;
+    opacity: 0; }
+  .panel.ready {
+    display: block; }
+  .panel.active {
+    margin-top: 0;
+    opacity: 1; }
   .panel__arrow {
     position: absolute;
     left: 50%;
@@ -5588,7 +5609,7 @@ a {
     padding: 1em 1.875em; }
 
 .panel-call {
-  max-width: 18.75em; }
+  width: 18.75em; }
   .panel-call__input {
     margin-top: 0.625em; }
     .panel-call__input:first-child {
@@ -5608,7 +5629,7 @@ a {
       font-weight: normal; }
 
 .panel-city {
-  max-width: 18.75em; }
+  width: 18.75em; }
   .panel-city__item {
     position: relative;
     display: block;
@@ -5630,7 +5651,7 @@ a {
         margin-top: -0.5em; }
 
 .panel-auth {
-  max-width: 17.1875em; }
+  width: 17.1875em; }
   .panel-auth__body {
     padding: 1.875em; }
   .panel-auth__desc {

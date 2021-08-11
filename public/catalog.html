@@ -22,7 +22,7 @@
 	
 	<header class="header">
 	    <div class="page__center">
-	        <div class="page__outer page__inner header__main">
+	        <div class="page__outer page__inner header__main" id="header-main">
 	            <div class="header__main__burger">
 	                <button class="hamburger hamburger--squeeze" type="button">
 	                    <span class="hamburger-box">
@@ -34,7 +34,7 @@
 	                <img src="images/header/mega-logo.svg" alt="Мега">
 	            </div>
 	            <div class="header__main__city">
-	                <button type="button" class="header__city">
+	                <button type="button" class="header__city js-panel-button" data-target="#panel-city" data-parent="#header-main">
 	                    <i class="icon-location header__city__icon"></i>
 	                    <span>Архангельск</span>
 	                </button>
@@ -46,7 +46,7 @@
 	                    <button type="submit" class="button button-orange header__search__button">Найти</button>
 	                </div>
 	            </div>
-	            <div class="header__main__call">
+	            <div class="header__main__call js-panel-button" data-target="#panel-call" data-parent="#header-main">
 	                <div class="header__main__call__phone">
 	                    <i class="icon-phone"></i>
 	                    <span>8-800-222-12-40</span>
@@ -64,7 +64,7 @@
 	                    <i class="icon-shopping-cart"></i>
 	                    <span>3</span>
 	                </a>
-	                <a href="#">
+	                <a href="#" class="js-panel-button" data-target="#panel-auth" data-parent='#header-main'>
 	                    <i class="icon-person"></i>
 	                </a>
 	            </nav>
@@ -91,6 +91,8 @@
 	        
 	    </div>
 	</header>
+	
+
 	<nav class="nav-path" id="nav-path">
 		<div class="page__center">
 			<a href="#">Главная</a>
@@ -638,6 +640,64 @@
 	    </div>
 	
 	</footer>
+	
+	
+	<aside class="panel panel-city hidden" id="panel-city">
+		<div class="panel__arrow"></div>
+		<div class="panel__box">
+			<div class="panel__header">Выберите город</div>
+			<div class="panel__body">
+				<a href="#" class="panel-city__item active">Архангельск</a>
+				<a href="#" class="panel-city__item">Северодвинск</a>
+				<a href="#" class="panel-city__item">Сыктывкар</a>
+			</div>
+		</div>
+	</aside>
+	
+	<form action="#" class="panel panel-call hidden" id="panel-call">
+		<div class="panel__arrow"></div>
+		<div class="panel__box">
+			<div class="panel__header">Заказать обратный звонок</div>
+			<div class="panel__body">
+				<div class="panel-call__input">
+					<div class="input-label-up">
+						<label class="input-label-up__label">Ваш телефон</label>
+						<input type="text" class="input-label-up__input" data-mask="+7(000)000-00-00">
+					</div>
+				</div>
+				<div class="panel-call__input">
+					<div class="input-label-up">
+						<label class="input-label-up__label">Ваше имя</label>
+						<input type="text" class="input-label-up__input">
+					</div>
+				</div>
+				<label class="check-default panel-call__agree">
+					<input type="checkbox">
+					<span>Я согласен с <a href="#" target="_blank">обработку персональных данных</a></span>
+				</label>
+				<div class="panel-call__submit">
+					<button type="button" class="button button-green">Заказать</button>
+				</div>
+			</div>
+		</div>
+	</form>
+	
+	<aside action="#" class="panel panel-auth hidden" id="panel-auth">
+		<div class="panel__arrow"></div>
+		<div class="panel__box">
+			<div class="panel-auth__body">
+				<div class="panel-auth__desc">
+					Войдите или зарегистрируйтесь, чтобы делать покупки, отслеживать заказы и пользоваться персональными скидками и баллами.
+				</div>
+				<div class="panel-auth__button">
+					<button type="button" class="button button-outline-green">Войти</button>
+				</div>
+				<div class="panel-auth__button">
+					<button type="button" class="button button-green">Зарегистрироваться</button>
+				</div>
+			</div>
+		</div>
+	</aside>
 </div>
 
 	<nav class="nav-bottom">

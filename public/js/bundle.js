@@ -24967,6 +24967,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_NavInfo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/NavInfo */ "./src/js/modules/NavInfo.js");
 /* harmony import */ var _modules_RangeSlider__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/RangeSlider */ "./src/js/modules/RangeSlider.js");
 /* harmony import */ var _modules_Gallery__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/Gallery */ "./src/js/modules/Gallery.js");
+/* harmony import */ var _modules_Panel__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/Panel */ "./src/js/modules/Panel.js");
+
 
 
 
@@ -24983,6 +24985,7 @@ $(function () {
   _modules_NavInfo__WEBPACK_IMPORTED_MODULE_7__["default"].init();
   _modules_RangeSlider__WEBPACK_IMPORTED_MODULE_8__["default"].init();
   _modules_Gallery__WEBPACK_IMPORTED_MODULE_9__["default"].init();
+  _modules_Panel__WEBPACK_IMPORTED_MODULE_10__["default"].init();
   $("#nav-path").scrollLeft(99999);
   $(".js-tooltip").tooltipster({
     side: ["right", "bottom"]
@@ -25215,6 +25218,73 @@ var NavInfo = {
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (NavInfo);
+
+/***/ }),
+
+/***/ "./src/js/modules/Panel.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/Panel.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var Panel = {
+  _timers: {},
+  _zIndex: 100,
+  _closePanel: function _closePanel(panelId) {
+    this._timers[panelId] = setTimeout(function () {
+      $("#" + panelId).removeClass("ready active");
+    }, 200);
+  },
+  _handleButtonMouseenter: function _handleButtonMouseenter(e) {
+    var $button = $(e.currentTarget);
+    var $parent = $($button.data("parent"));
+    var $panel = $($button.data("target"));
+    var panelId = $panel.attr("id");
+    clearTimeout(this._timers[panelId]); // точка посередине кнопки
+
+    var x = $button.position().left + $button.outerWidth() / 2;
+    var y = $parent.height() - 10; // рассчет коррекции, чтобы не выходило за пределы окна
+
+    var maxPanelEdge = $(window).width() - parseInt($parent.css("padding-right"));
+    var panelEdge = x + $panel.outerWidth() / 2;
+    var xFix = panelEdge > maxPanelEdge ? panelEdge - maxPanelEdge : 0;
+    $panel.find(".panel__arrow").css({
+      left: "calc(50% + ".concat(xFix, "px)")
+    });
+    $panel.addClass("ready").css({
+      zIndex: this._zIndex++,
+      left: x - xFix,
+      top: y
+    });
+    setTimeout(function () {
+      $panel.addClass("active");
+    }, 0);
+  },
+  _handleButtonMouseleave: function _handleButtonMouseleave(e) {
+    var panelId = $(e.currentTarget).data("target").substring(1);
+
+    this._closePanel(panelId);
+  },
+  _handlePanelMouseenter: function _handlePanelMouseenter(e) {
+    var panelId = $(e.currentTarget).attr("id");
+    clearTimeout(this._timers[panelId]);
+  },
+  _handlePanelMouseleave: function _handlePanelMouseleave(e) {
+    var panelId = $(e.currentTarget).attr("id");
+
+    this._closePanel(panelId);
+  },
+  init: function init() {
+    $(document).on("mouseenter", ".js-panel-button", this._handleButtonMouseenter.bind(this));
+    $(document).on("mouseleave", ".js-panel-button", this._handleButtonMouseleave.bind(this));
+    $(document).on("mouseenter", ".panel", this._handlePanelMouseenter.bind(this));
+    $(document).on("mouseleave", ".panel", this._handlePanelMouseleave.bind(this));
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (Panel);
 
 /***/ }),
 
