@@ -7,6 +7,7 @@ import "simplebar";
 import CustomForm from "./modules/CustomForm";
 import CountEditor from "./modules/CountEditor";
 import NavInfo from "./modules/NavInfo";
+import NavBottom from "./modules/NavBottom";
 import RangeSlider from "./modules/RangeSlider";
 import Gallery from "./modules/Gallery";
 import Panel from "./modules/Panel";
@@ -15,6 +16,7 @@ $(function () {
 	CustomForm.init();
 	CountEditor.init();
 	NavInfo.init();
+	NavBottom.init();
 	RangeSlider.init();
 	Gallery.init();
 	Panel.init();
