@@ -5613,37 +5613,35 @@ a {
   .panel__body {
     padding: 16px 30px; }
 
-.panel-search--hidden {
-  display: none;
-  position: absolute;
-  top: 100%;
-  margin-top: -10px;
-  left: 0;
-  width: 100%;
-  min-width: 400px;
-  z-index: 100; }
-
-.panel-search--active {
-  display: block; }
-
-.panel-search__tips__item {
-  transition: all 0.2s;
-  display: block;
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-size: 18px; }
-  .panel-search__tips__item:hover {
-    background: #f1f1f1; }
-
-.panel-search__break {
-  border-top: 1px solid #f1f1f1;
-  margin: 15px -30px; }
-
-.panel-search__show-all {
-  margin: 15px 0; }
+.panel-search {
+  width: 400px; }
+  .panel-search--hidden {
+    display: none;
+    position: absolute;
+    top: 100%;
+    margin-top: -10px;
+    left: 0;
+    width: 100%;
+    min-width: 400px;
+    z-index: 100; }
+  .panel-search--active {
+    display: block; }
+  .panel-search__tips__item {
+    transition: all 0.2s;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 18px; }
+    .panel-search__tips__item:hover {
+      background: #f1f1f1; }
+  .panel-search__break {
+    border-top: 1px solid #f1f1f1;
+    margin: 15px -30px; }
+  .panel-search__show-all {
+    margin: 15px 0; }
 
 .panel-cart {
-  width: 390px; }
+  width: 400px; }
   .panel-cart__see-all {
     margin: 20px 0; }
   .panel-cart__info {
@@ -5708,7 +5706,7 @@ a {
         margin-top: -0.5em; }
 
 .panel-auth {
-  width: 275px; }
+  width: 300px; }
   .panel-auth__body {
     padding: 30px; }
   .panel-auth__desc {

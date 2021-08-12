@@ -702,6 +702,158 @@ layout: default.hbs
 		</div>
 	</div>
 
+	<div class="elems-section">
+		<div class="elems-h1">Панели</div>
+
+		<div class="elems-row">
+			<aside class="panel panel-city" id="panel-city">
+				<div class="panel__arrow"></div>
+				<div class="panel__box">
+					<div class="panel__header">Выберите город</div>
+					<div class="panel__body">
+						<a href="#" class="panel-city__item active">Архангельск</a>
+						<a href="#" class="panel-city__item">Северодвинск</a>
+						<a href="#" class="panel-city__item">Сыктывкар</a>
+					</div>
+				</div>
+			</aside>
+		</div>
+
+		<div class="elems-row">
+			<form action="#" class="panel panel-call" id="panel-call">
+				<div class="panel__arrow"></div>
+				<div class="panel__box">
+					<div class="panel__header">Заказать обратный звонок</div>
+					<div class="panel__body">
+						<div class="panel-call__input">
+							<div class="input-label-up">
+								<label class="input-label-up__label">Ваш телефон</label>
+								<input type="text" class="input-label-up__input" data-mask="+7(000)000-00-00">
+							</div>
+						</div>
+						<div class="panel-call__input">
+							<div class="input-label-up">
+								<label class="input-label-up__label">Ваше имя</label>
+								<input type="text" class="input-label-up__input">
+							</div>
+						</div>
+						<label class="check-default panel-call__agree">
+							<input type="checkbox">
+							<span>Я согласен с <a href="#" target="_blank">обработку персональных данных</a></span>
+						</label>
+						<div class="panel-call__submit">
+							<button type="button" class="button button-green">Заказать</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<div class="elems-row">
+
+			<form action="#" class="panel panel-auth" id="panel-auth">
+				<div class="panel__arrow"></div>
+				<div class="panel__box">
+					<div class="panel-auth__body">
+						<div class="panel-auth__desc">
+							Войдите или зарегистрируйтесь, чтобы делать покупки, отслеживать заказы и пользоваться персональными скидками и баллами.
+						</div>
+						<div class="panel-auth__button">
+							<button type="button" class="button button-outline-green">Войти</button>
+						</div>
+						<div class="panel-auth__button">
+							<button type="button" class="button button-green">Зарегистрироваться</button>
+						</div>
+					</div>
+				</div>
+			</form>
+
+		</div>
+
+		<div class="elems-row">
+			<aside class="panel panel-cart" id="panel-cart">
+				<div class="panel__arrow"></div>
+				<div class="panel__box">
+					<div class="panel__header">Корзина</div>
+					<div class="panel__body">
+						<div class="panel-cart__products">
+							<div class="goods-simple">
+								{{#repeat 3}}
+								<div class="goods-simple__item">
+									<div class="goods-simple__image" style="background-image: url('images/temp/goods/2/1.jpeg');"></div>
+									<div class="goods-simple__desc">
+										<div class="goods-simple__title">Обои виниловые Elysium Авалон ограниченная серия Светящиеся в темноте звёзды Е21141 (1,06х10 м)</div>
+										<div class="goods-simple__price">599 <span class="rubl">₽ / шт</span></div>
+									</div>
+									<button type="button" class="goods-simple__remove">
+										<i class="icon-close"></i>
+									</button>
+								</div>
+								{{/repeat}}
+							</div>
+						</div>
+						<div class="panel-cart__see-all">
+							<a href="#" class="button button-light-green button--full">Смотреть все</a>
+						</div>
+						<div class="panel-cart__info">
+							<div class="panel-cart__info__row">
+								<div class="panel-cart__info__label">Всего:</div>
+								<div class="panel-cart__info__value">3 шт</div>
+							</div>
+							<div class="panel-cart__info__row">
+								<div class="panel-cart__info__label">Общий вес:</div>
+								<div class="panel-cart__info__value">3,5 кг</div>
+							</div>
+							<div class="panel-cart__info__row">
+								<div class="panel-cart__info__label">К оплате:</div>
+								<div class="panel-cart__info__value">2 377 <span class="rubl">₽</span></div>
+							</div>
+						</div>
+						<div class="panel-cart__checkout">
+							<a href="#" class="button button-green button--full">Оформить</a>
+						</div>
+					</div>
+				</div>
+			</aside>
+		</div>
+
+		<div class="elems-row">
+			<aside class="panel panel-search" id="panel-search">
+				<div class="panel__box">
+					<div class="panel__body">
+						<div class="panel-search__tips">
+							<a href="#" class="panel-search__tips__item"><b>обои</b></a>
+							<a href="#" class="panel-search__tips__item"><b>обои</b> флизелиновые</a>
+							<a href="#" class="panel-search__tips__item"><b>обои</b> под покраску</a>
+							<a href="#" class="panel-search__tips__item">клей для обоев</a>
+							<a href="#" class="panel-search__tips__item">шпатель для обоев</a>
+						</div>
+						<div class="panel-search__break"></div>
+						<div class="panel-search__goods">
+							<div class="goods-simple">
+								{{#repeat 3}}
+								<div class="goods-simple__item goods-simple__item--link">
+									<div class="goods-simple__image" style="background-image: url('images/temp/goods/2/1.jpeg');"></div>
+									<div class="goods-simple__desc">
+										<div class="goods-simple__title">Обои виниловые Elysium Авалон ограниченная серия Светящиеся в темноте звёзды Е21141 (1,06х10 м)</div>
+										<div class="goods-simple__price">599 <span class="rubl">₽ / шт</span></div>
+									</div>
+									<a href="#" class="link-area"></a>
+								</div>
+								{{/repeat}}
+							</div>
+						</div>
+						<div class="panel-search__show-all">
+							<a href="#" class="button button-green button--full">Показать все результаты</a>
+						</div>
+					</div>
+				</div>
+			</aside>
+		</div>
+
+		
+	</div>
+
 </div>
 
 
