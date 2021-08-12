@@ -11,6 +11,7 @@ import NavBottom from "./modules/NavBottom";
 import RangeSlider from "./modules/RangeSlider";
 import Gallery from "./modules/Gallery";
 import Panel from "./modules/Panel";
+import Search from "./modules/Search";
 
 $(function () {
 	CustomForm.init();
@@ -20,6 +21,7 @@ $(function () {
 	RangeSlider.init();
 	Gallery.init();
 	Panel.init();
+	Search.init();
 
 	$("#nav-path").scrollLeft(99999);
 

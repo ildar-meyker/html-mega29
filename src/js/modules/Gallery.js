@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 const Gallery = {
 	_$default: $(),
 	_$zoomed: $(),

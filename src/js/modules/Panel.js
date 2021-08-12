@@ -1,10 +1,12 @@
+import $ from "jquery";
+
 const Panel = {
 	_timers: {},
 	_zIndex: 100,
 
 	_closePanel(panelId) {
 		this._timers[panelId] = setTimeout(() => {
-			$("#" + panelId).removeClass("ready active");
+			$("#" + panelId).removeClass("panel--ready panel--active");
 		}, 200);
 	},
 
@@ -31,14 +33,14 @@ const Panel = {
 			left: `calc(50% + ${xFix}px)`,
 		});
 
-		$panel.addClass("ready").css({
+		$panel.addClass("panel--ready").css({
 			zIndex: this._zIndex++,
 			left: x - xFix,
 			top: y,
 		});
 
 		setTimeout(() => {
-			$panel.addClass("active");
+			$panel.addClass("panel--active");
 		}, 0);
 	},
 

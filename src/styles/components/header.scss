@@ -20,7 +20,12 @@
 		}
 
 		&__search-area {
+			position: relative;
 			flex-grow: 1;
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 		}
 
 		&__call {

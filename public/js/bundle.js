@@ -24997,6 +24997,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_RangeSlider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/RangeSlider */ "./src/js/modules/RangeSlider.js");
 /* harmony import */ var _modules_Gallery__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/Gallery */ "./src/js/modules/Gallery.js");
 /* harmony import */ var _modules_Panel__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/Panel */ "./src/js/modules/Panel.js");
+/* harmony import */ var _modules_Search__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/Search */ "./src/js/modules/Search.js");
+
 
 
 
@@ -25017,6 +25019,7 @@ $(function () {
   _modules_RangeSlider__WEBPACK_IMPORTED_MODULE_9__["default"].init();
   _modules_Gallery__WEBPACK_IMPORTED_MODULE_10__["default"].init();
   _modules_Panel__WEBPACK_IMPORTED_MODULE_11__["default"].init();
+  _modules_Search__WEBPACK_IMPORTED_MODULE_12__["default"].init();
   $("#nav-path").scrollLeft(99999);
   $(".js-tooltip").tooltipster({
     side: ["right", "bottom"]
@@ -25047,6 +25050,9 @@ $(function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
 var CountEditor = {
   _previosValue: null,
   _isInMinMaxRange: function _isInMinMaxRange($root, value) {
@@ -25057,21 +25063,21 @@ var CountEditor = {
     return true;
   },
   _handleMinusClick: function _handleMinusClick(e) {
-    var $root = $(e.currentTarget).closest(".count-editor");
+    var $root = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).closest(".count-editor");
     var $input = $root.find(".count-editor__input");
     var newValue = parseInt($input.val()) - 1;
     if (!this._isInMinMaxRange($root, newValue)) return;
     $input.val(newValue);
   },
   _handlePlusClick: function _handlePlusClick(e) {
-    var $root = $(e.currentTarget).closest(".count-editor");
+    var $root = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).closest(".count-editor");
     var $input = $root.find(".count-editor__input");
     var newValue = parseInt($input.val()) + 1;
     if (!this._isInMinMaxRange($root, newValue)) return;
     $input.val(newValue);
   },
   _handleInputChange: function _handleInputChange(e) {
-    var $root = $(e.currentTarget).closest(".count-editor");
+    var $root = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).closest(".count-editor");
     var $input = $root.find(".count-editor__input");
     var newValue = $input.val();
 
@@ -25080,13 +25086,13 @@ var CountEditor = {
     }
   },
   _handleInputFocus: function _handleInputFocus(e) {
-    this._previosValue = $(e.currentTarget).val();
+    this._previosValue = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).val();
   },
   init: function init() {
-    $(document).on("click", ".count-editor__minus", this._handleMinusClick.bind(this));
-    $(document).on("click", ".count-editor__plus", this._handlePlusClick.bind(this));
-    $(document).on("change", ".count-editor__input", this._handleInputChange.bind(this));
-    $(document).on("focus", ".count-editor__input", this._handleInputFocus.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".count-editor__minus", this._handleMinusClick.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".count-editor__plus", this._handlePlusClick.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("change", ".count-editor__input", this._handleInputChange.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("focus", ".count-editor__input", this._handleInputFocus.bind(this));
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (CountEditor);
@@ -25181,19 +25187,22 @@ var CustomForm = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
 var Gallery = {
-  _$default: $(),
-  _$zoomed: $(),
+  _$default: jquery__WEBPACK_IMPORTED_MODULE_0___default()(),
+  _$zoomed: jquery__WEBPACK_IMPORTED_MODULE_0___default()(),
   _handleNavItemClick: function _handleNavItemClick(e) {
     e.preventDefault();
-    var index = $(e.currentTarget).index();
-    var src = $(e.currentTarget).find("img").attr("src");
+    var index = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).index();
+    var src = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).find("img").attr("src");
 
     this._$default.find("img").attr("src", src);
 
     this._$zoomed.attr("style", "background-image: url('".concat(src, "')"));
 
-    $(e.currentTarget).addClass("active").siblings().removeClass("active");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).addClass("active").siblings().removeClass("active");
   },
   _handleImageMouseover: function _handleImageMouseover(e) {
     this._$zoomed.addClass("active");
@@ -25202,20 +25211,20 @@ var Gallery = {
     this._$zoomed.removeClass("active");
   },
   _handleImageMousemove: function _handleImageMousemove(e) {
-    var $box = $("#gallery .gallery__image");
+    var $box = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#gallery .gallery__image");
     var w = $box.outerWidth();
     var h = $box.outerHeight();
 
     this._$zoomed.css("background-position", "".concat(e.offsetX / w * 100, "% ").concat(e.offsetY / h * 100, "% "));
   },
   init: function init() {
-    if (!$("#gallery").length) return;
-    this._$default = $("#gallery .gallery__image__default");
-    this._$zoomed = $("#gallery .gallery__image__zoomed");
-    $(document).on("click", ".gallery__nav__item", this._handleNavItemClick.bind(this));
-    $(document).on("mouseover", ".gallery__image", this._handleImageMouseover.bind(this));
-    $(document).on("mouseout", ".gallery__image", this._handleImageMouseout.bind(this));
-    $(document).on("mousemove", ".gallery__image", this._handleImageMousemove.bind(this));
+    if (!jquery__WEBPACK_IMPORTED_MODULE_0___default()("#gallery").length) return;
+    this._$default = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#gallery .gallery__image__default");
+    this._$zoomed = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#gallery .gallery__image__zoomed");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".gallery__nav__item", this._handleNavItemClick.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("mouseover", ".gallery__image", this._handleImageMouseover.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("mouseout", ".gallery__image", this._handleImageMouseout.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("mousemove", ".gallery__image", this._handleImageMousemove.bind(this));
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (Gallery);
@@ -25295,58 +25304,61 @@ var NavInfo = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
 var Panel = {
   _timers: {},
   _zIndex: 100,
   _closePanel: function _closePanel(panelId) {
     this._timers[panelId] = setTimeout(function () {
-      $("#" + panelId).removeClass("ready active");
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()("#" + panelId).removeClass("panel--ready panel--active");
     }, 200);
   },
   _handleButtonMouseenter: function _handleButtonMouseenter(e) {
-    var $button = $(e.currentTarget);
-    var $parent = $($button.data("parent"));
-    var $panel = $($button.data("target"));
+    var $button = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget);
+    var $parent = jquery__WEBPACK_IMPORTED_MODULE_0___default()($button.data("parent"));
+    var $panel = jquery__WEBPACK_IMPORTED_MODULE_0___default()($button.data("target"));
     var panelId = $panel.attr("id");
     clearTimeout(this._timers[panelId]); // точка посередине кнопки
 
     var x = $button.position().left + $button.outerWidth() / 2;
     var y = $parent.height() - 10; // рассчет коррекции, чтобы не выходило за пределы окна
 
-    var maxPanelEdge = $(window).width() - parseInt($parent.css("padding-right"));
+    var maxPanelEdge = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).width() - parseInt($parent.css("padding-right"));
     var panelEdge = x + $panel.outerWidth() / 2;
     var xFix = panelEdge > maxPanelEdge ? panelEdge - maxPanelEdge : 0;
     $panel.find(".panel__arrow").css({
       left: "calc(50% + ".concat(xFix, "px)")
     });
-    $panel.addClass("ready").css({
+    $panel.addClass("panel--ready").css({
       zIndex: this._zIndex++,
       left: x - xFix,
       top: y
     });
     setTimeout(function () {
-      $panel.addClass("active");
+      $panel.addClass("panel--active");
     }, 0);
   },
   _handleButtonMouseleave: function _handleButtonMouseleave(e) {
-    var panelId = $(e.currentTarget).data("target").substring(1);
+    var panelId = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).data("target").substring(1);
 
     this._closePanel(panelId);
   },
   _handlePanelMouseenter: function _handlePanelMouseenter(e) {
-    var panelId = $(e.currentTarget).attr("id");
+    var panelId = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).attr("id");
     clearTimeout(this._timers[panelId]);
   },
   _handlePanelMouseleave: function _handlePanelMouseleave(e) {
-    var panelId = $(e.currentTarget).attr("id");
+    var panelId = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).attr("id");
 
     this._closePanel(panelId);
   },
   init: function init() {
-    $(document).on("mouseenter", ".js-panel-button", this._handleButtonMouseenter.bind(this));
-    $(document).on("mouseleave", ".js-panel-button", this._handleButtonMouseleave.bind(this));
-    $(document).on("mouseenter", ".panel", this._handlePanelMouseenter.bind(this));
-    $(document).on("mouseleave", ".panel", this._handlePanelMouseleave.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("mouseenter", ".js-panel-button", this._handleButtonMouseenter.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("mouseleave", ".js-panel-button", this._handleButtonMouseleave.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("mouseenter", ".panel", this._handlePanelMouseenter.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("mouseleave", ".panel", this._handlePanelMouseleave.bind(this));
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (Panel);
@@ -25401,6 +25413,40 @@ var RangeSlider = {
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (RangeSlider);
+
+/***/ }),
+
+/***/ "./src/js/modules/Search.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/Search.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+var Search = {
+  showPanel: function showPanel() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#panel-search").addClass("panel-search--active");
+  },
+  hidePanel: function hidePanel() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#panel-search").removeClass("panel-search--active");
+  },
+  _handleInputBlur: function _handleInputBlur() {
+    this.hidePanel();
+  },
+  _handleInputFocus: function _handleInputFocus() {
+    this.showPanel();
+  },
+  init: function init() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("focus", ".header__search__input", this._handleInputFocus.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("blur", ".header__search__input", this._handleInputBlur.bind(this));
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (Search);
 
 /***/ }),
 

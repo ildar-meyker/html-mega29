@@ -2094,6 +2094,13 @@ corresponds to the arrow we want to display */
   font-size: 0.5em;
   font-weight: 700; }
 
+.link-area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+
 .gap-5 {
   height: 5px; }
 
@@ -2799,7 +2806,12 @@ a {
     max-width: 200px;
     margin: 0 2% 0 2%; }
   .header__main__search-area {
-    flex-grow: 1; }
+    position: relative;
+    flex-grow: 1;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
   .header__main__call {
     padding: 10px 20px;
     font-weight: 700;
@@ -5025,6 +5037,7 @@ a {
       flex-grow: 1; } }
 
 .goods-simple__item {
+  position: relative;
   display: flex;
   margin-top: 10px; }
   .goods-simple__item:first-child {
@@ -5563,7 +5576,7 @@ a {
   border: 1px solid #f1f1f1;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08); }
-  .panel.hidden {
+  .panel--hidden {
     position: absolute;
     z-index: 200;
     -webkit-transform: translateX(-50%);
@@ -5571,9 +5584,9 @@ a {
     display: none;
     margin-top: 40px;
     opacity: 0; }
-  .panel.ready {
+  .panel--ready {
     display: block; }
-  .panel.active {
+  .panel--active {
     margin-top: 0;
     opacity: 1; }
   .panel__arrow {
@@ -5599,6 +5612,35 @@ a {
     text-align: center; }
   .panel__body {
     padding: 16px 30px; }
+
+.panel-search--hidden {
+  display: none;
+  position: absolute;
+  top: 100%;
+  margin-top: -10px;
+  left: 0;
+  width: 100%;
+  min-width: 400px;
+  z-index: 100; }
+
+.panel-search--active {
+  display: block; }
+
+.panel-search__tips__item {
+  transition: all 0.2s;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 18px; }
+  .panel-search__tips__item:hover {
+    background: #f1f1f1; }
+
+.panel-search__break {
+  border-top: 1px solid #f1f1f1;
+  margin: 15px -30px; }
+
+.panel-search__show-all {
+  margin: 15px 0; }
 
 .panel-cart {
   width: 390px; }
