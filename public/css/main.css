@@ -2714,7 +2714,7 @@ a {
   display: flex;
   align-items: center; }
   .rating__stars {
-    background: url("../images/star-outlined.png") repeat-x;
+    background: url("../images/star-empty.png") repeat-x;
     background-size: auto 100%;
     width: 6em;
     height: 1em; }
@@ -5466,7 +5466,7 @@ a {
     position: absolute;
     right: 0.38462em;
     height: 0.15385em;
-    background: url("../images/props/dots.png") repeat-x;
+    background: url("../images/dots.png") repeat-x;
     background-size: auto 100%;
     bottom: 0.23077em;
     left: 3px; }
