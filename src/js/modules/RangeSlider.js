@@ -41,4 +41,8 @@ const RangeSlider = {
 	},
 };
 
+$(function () {
+	RangeSlider.init();
+});
+
 export default RangeSlider;

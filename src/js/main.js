@@ -1,28 +1,21 @@
 import "./modules/globals";
+
 import "bootstrap/js/dist/collapse";
 import "slick-carousel";
 import "tooltipster";
 import "simplebar";
 
-import CustomForm from "./modules/CustomForm";
-import CountEditor from "./modules/CountEditor";
-import NavInfo from "./modules/NavInfo";
-import NavBottom from "./modules/NavBottom";
-import RangeSlider from "./modules/RangeSlider";
-import Gallery from "./modules/Gallery";
-import Panel from "./modules/Panel";
-import Search from "./modules/Search";
+import "./modules/CustomForm";
+import "./modules/CountEditor";
+import "./modules/NavInfo";
+import "./modules/NavCatalog";
+import "./modules/NavBottom";
+import "./modules/RangeSlider";
+import "./modules/Gallery";
+import "./modules/Panel";
+import "./modules/Search";
 
 $(function () {
-	CustomForm.init();
-	CountEditor.init();
-	NavInfo.init();
-	NavBottom.init();
-	RangeSlider.init();
-	Gallery.init();
-	Panel.init();
-	Search.init();
-
 	$("#nav-path").scrollLeft(99999);
 
 	$(".js-tooltip").tooltipster({

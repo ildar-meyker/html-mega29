@@ -6,8 +6,8 @@ const Panel = {
 
 	_closePanel(panelId) {
 		this._timers[panelId] = setTimeout(() => {
-			$("#" + panelId).removeClass("panel--ready panel--active");
-		}, 200);
+			$("#" + panelId).removeClass("panel--opacity panel--active");
+		}, 100);
 	},
 
 	_handleButtonMouseenter(e) {
@@ -33,7 +33,7 @@ const Panel = {
 			left: `calc(50% + ${xFix}px)`,
 		});
 
-		$panel.addClass("panel--ready").css({
+		$panel.addClass("panel--opacity").css({
 			zIndex: this._zIndex++,
 			left: x - xFix,
 			top: y,
@@ -65,13 +65,13 @@ const Panel = {
 	init() {
 		$(document).on(
 			"mouseenter",
-			".js-panel-button",
+			".js-show-panel",
 			this._handleButtonMouseenter.bind(this)
 		);
 
 		$(document).on(
 			"mouseleave",
-			".js-panel-button",
+			".js-show-panel",
 			this._handleButtonMouseleave.bind(this)
 		);
 
@@ -88,5 +88,9 @@ const Panel = {
 		);
 	},
 };
+
+$(function () {
+	Panel.init();
+});
 
 export default Panel;

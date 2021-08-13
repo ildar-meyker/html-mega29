@@ -1,5 +1,5 @@
 
-<header class="header">
+<header class="header" id="header">
     <div class="page__center">
         <div class="page__outer page__inner header__main" id="header-main">
             <div class="header__main__burger">
@@ -13,7 +13,7 @@
                 <img src="images/header/mega-logo.svg" alt="Мега">
             </div>
             <div class="header__main__city">
-                <button type="button" class="header__city js-panel-button" data-target="#panel-city" data-parent="#header-main">
+                <button type="button" class="header__city js-show-panel" data-target="#panel-city" data-parent="#header-main">
                     <i class="icon-location header__city__icon"></i>
                     <span>Архангельск</span>
                 </button>
@@ -59,7 +59,7 @@
                 </aside>
                 
             </div>
-            <div class="header__main__call js-panel-button" data-target="#panel-call" data-parent="#header-main">
+            <div class="header__main__call js-show-panel" data-target="#panel-call" data-parent="#header-main">
                 <div class="header__main__call__phone">
                     <i class="icon-phone"></i>
                     <span>8-800-222-12-40</span>
@@ -73,15 +73,15 @@
                     <i class="icon-heart"></i>
                     <span>5</span>
                 </a>
-                <a href="#" class="js-panel-button" data-target="#panel-cart" data-parent="#header-main">
+                <a href="#" class="js-show-panel" data-target="#panel-cart" data-parent="#header-main">
                     <i class="icon-shopping-cart"></i>
                     <span>3</span>
                 </a>
-                <a href="#" class="js-panel-button" data-target="#panel-auth" data-parent='#header-main'>
+                <a href="#" class="js-show-panel" data-target="#panel-auth" data-parent='#header-main'>
                     <i class="icon-person"></i>
                 </a>
             </nav>
-            <div class="header__main__search-btn">
+            <div class="header__main__search-button">
                 <button type="button">
                     <i class="icon-search"></i>
                 </button>
@@ -89,7 +89,7 @@
         </div>
 
         <nav class="header__menu">
-            <a href="#">
+            <a href="#" class="js-show-catalog">
                 <i class="icon-menu"></i>
                 <span>Каталог</span>
             </a>
@@ -100,7 +100,6 @@
             <a href="#">Магазины</a>
             <a href="#">Партнёрство</a>
         </nav>
-
         
     </div>
 </header>

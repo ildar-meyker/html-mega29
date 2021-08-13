@@ -8,15 +8,15 @@
 
 	&--hidden {
 		position: absolute;
-		z-index: 200;
+		z-index: 100;
 		transform: translateX(-50%);
 		display: none;
 		margin-top: 40px;
-		opacity: 0;
 	}
 
-	&--ready {
+	&--opacity {
 		display: block;
+		opacity: 0;
 	}
 
 	&--active {

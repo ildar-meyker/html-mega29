@@ -72,4 +72,8 @@ const CountEditor = {
 	},
 };
 
+$(function () {
+	CountEditor.init();
+});
+
 export default CountEditor;

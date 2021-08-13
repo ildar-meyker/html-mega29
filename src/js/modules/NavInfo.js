@@ -32,4 +32,8 @@ const NavInfo = {
 	},
 };
 
+$(function () {
+	NavInfo.init();
+});
+
 export default NavInfo;

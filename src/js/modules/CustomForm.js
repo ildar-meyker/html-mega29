@@ -76,4 +76,8 @@ const CustomForm = {
 	},
 };
 
+$(function () {
+	CustomForm.init();
+});
+
 export default CustomForm;

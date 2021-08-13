@@ -67,4 +67,8 @@ const Gallery = {
 	},
 };
 
+$(function () {
+	Gallery.init();
+});
+
 export default Gallery;

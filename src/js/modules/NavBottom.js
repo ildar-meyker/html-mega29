@@ -25,4 +25,8 @@ const NavBottom = {
 	},
 };
 
+$(function () {
+	NavBottom.init();
+});
+
 export default NavBottom;

@@ -32,4 +32,8 @@ const Search = {
 	},
 };
 
+$(function () {
+	Search.init();
+});
+
 export default Search;
