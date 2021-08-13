@@ -14,7 +14,7 @@
 
 	&__center {
 		display: flex;
-		height: calc(100vh - 150px);
+		height: calc(100vh - 140px);
 		border-radius: 5px;
 		background: #fff;
 		box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.04),
@@ -90,6 +90,10 @@
 		display: block;
 		font-size: 18px;
 		font-weight: 500;
+
+		&:hover {
+			color: #007334;
+		}
 	}
 
 	&__list {
