@@ -1,0 +1,72 @@
+.shops-cards {
+	&__item {
+		border: 1px solid #f2f3f5;
+		border-radius: 3/16 + em;
+		background: #fff;
+		overflow: hidden;
+	}
+
+	&__image {
+		background-size: cover;
+		background-position: 50% 50%;
+
+		&:before {
+			content: " ";
+			padding-top: 100%;
+			display: block;
+		}
+	}
+
+	&__body {
+		padding: 13/16 + em;
+	}
+
+	&__title {
+		font-size: 8/16 + em;
+		font-weight: 700;
+		color: #21a73f;
+	}
+
+	&__address {
+		font-size: 7/16 + em;
+		font-weight: 500;
+		color: #21a73f;
+	}
+
+	&__list {
+		margin-top: 5/16 + em;
+	}
+
+	&__prop {
+		display: flex;
+		align-items: center;
+		margin-top: 5/16 + em;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	&__icon {
+		flex: 0 0 auto;
+		width: 16/10 + em;
+		font-size: 10/16 + em;
+	}
+
+	&__label {
+		font-size: 7/16 + em;
+		font-weight: 500;
+	}
+
+	&__value {
+		font-size: 6/16 + em;
+	}
+}
+
+@media (min-width: 992px) {
+	.shops-cards {
+		&__item {
+			font-size: 30px;
+		}
+	}
+}

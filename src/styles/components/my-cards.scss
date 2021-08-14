@@ -20,7 +20,7 @@
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
-		border: 1/16 + em solid #f2f3f5;
+		border: 1px solid #f2f3f5;
 		padding: 17/16 + em 20/17 + em;
 		margin-bottom: -1/16 + em;
 		background: #fff;
@@ -65,7 +65,7 @@
 	&__image {
 		flex: 0 0 auto;
 		width: 100/16 + em;
-		border: 1/16 + em solid transparent;
+		border: 1px solid transparent;
 		border-radius: 5/16 + em;
 		background: #f2f3f5 url(../images/no-image--small.svg) no-repeat 50% 50%;
 		background-size: 50% auto;
