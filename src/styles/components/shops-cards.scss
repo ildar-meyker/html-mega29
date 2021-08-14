@@ -1,7 +1,20 @@
 .shops-cards {
+	display: flex;
+	padding-left: 14px;
+
+	&__col {
+		flex: 0 0 auto;
+		width: 50%;
+		max-width: 250/16 + em;
+		display: flex;
+		flex-direction: column;
+		padding-right: 14px;
+	}
+
 	&__item {
+		flex-grow: 1;
 		border: 1px solid #f2f3f5;
-		border-radius: 3/16 + em;
+		border-radius: 5px;
 		background: #fff;
 		overflow: hidden;
 	}
@@ -63,8 +76,23 @@
 	}
 }
 
+@media (min-width: 768px) {
+	.shops-cards {
+		padding-left: 20px;
+
+		&__col {
+			padding-right: 20px;
+			width: 33.33%;
+		}
+	}
+}
 @media (min-width: 992px) {
 	.shops-cards {
+		&__col {
+			width: 25%;
+			max-width: none;
+		}
+
 		&__item {
 			font-size: 30px;
 		}

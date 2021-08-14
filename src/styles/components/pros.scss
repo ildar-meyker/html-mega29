@@ -6,22 +6,6 @@
 		position: relative;
 	}
 
-	&__see-all {
-		position: absolute;
-		right: 0;
-		top: 5px;
-	}
-
-	&__h1 {
-		margin-bottom: 40px;
-		font-size: 28px;
-		font-weight: 700;
-	}
-
-	&__window {
-		overflow: auto;
-	}
-
 	&__list {
 		display: flex;
 		margin-bottom: 30px;
@@ -62,19 +46,10 @@
 		margin-top: 20px;
 		height: 85px;
 	}
-
-	.simplebar-horizontal {
-		margin: 0 20px;
-	}
 }
 
 @media (min-width: 992px) {
 	.pros {
-		&__h1 {
-			margin-bottom: 20px;
-			font-size: 32px;
-		}
-
 		&__item {
 			&__title {
 				font-size: 18px;

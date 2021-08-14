@@ -1,0 +1,53 @@
+.section {
+	margin: 20/16 + em 0;
+
+	&__header {
+		margin-bottom: 10/16 + em;
+		display: flex;
+		align-items: center;
+
+		&__title {
+			font-size: 20/16 + em;
+			font-weight: 700;
+		}
+
+		&__link {
+			margin-left: auto;
+		}
+	}
+
+	&__window {
+		overflow: auto;
+		padding-bottom: 10/16 + em;
+
+		.simplebar-horizontal {
+			margin: 0 14px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.section {
+		&__window {
+			padding-bottom: 15px;
+
+			.simplebar-horizontal {
+				margin: 0 20px;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.section {
+		margin: 30px 0;
+
+		&__header {
+			margin-bottom: 15px;
+
+			&__title {
+				font-size: 32px;
+			}
+		}
+	}
+}

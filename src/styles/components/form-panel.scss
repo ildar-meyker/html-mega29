@@ -14,7 +14,7 @@
 		align-items: center;
 		padding: 0 14/16 + em;
 		height: 60/16 + em;
-		border-bottom: 1/16 + em solid #f2f3f5;
+		border-bottom: 1px solid #f2f3f5;
 		font-weight: 700;
 	}
 
@@ -58,7 +58,7 @@
 	}
 
 	&__sep {
-		border-top: 1/16 + em solid #f2f3f5;
+		border-top: 1px solid #f2f3f5;
 		margin: 20/16 + em (-14/16) + em;
 	}
 
