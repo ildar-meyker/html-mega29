@@ -3269,7 +3269,7 @@ a {
     position: relative; }
   .pros__list {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     color: #000; }
   .pros__item {
     flex: 0 0 auto;
@@ -4865,17 +4865,6 @@ a {
   .goods-cards--nowrap .goods-cards__list {
     flex-wrap: nowrap; }
 
-.goods-cards__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px; }
-
-.goods-cards__window {
-  overflow: auto;
-  padding: 0 2px 12px 2px;
-  margin: 0 -2px; }
-
 .goods-cards__list {
   display: flex;
   flex-wrap: wrap;
@@ -4976,8 +4965,6 @@ a {
     width: 33.33%; } }
 
 @media (min-width: 768px) {
-  .goods-cards__header {
-    margin-bottom: 15px; }
   .goods-cards__col {
     width: 25%; } }
 
