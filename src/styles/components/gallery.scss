@@ -2,21 +2,6 @@
 	&__image {
 		position: relative;
 
-		&--gray {
-			.backgroundblendmode & {
-				background-color: #f2f3f5;
-
-				img {
-					mix-blend-mode: multiply;
-				}
-
-				.gallery__image__zoomed {
-					background-color: #f2f3f5;
-					background-blend-mode: multiply;
-				}
-			}
-		}
-
 		&:before {
 			content: " ";
 			padding-top: 100%;

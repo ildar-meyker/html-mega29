@@ -29,8 +29,10 @@ layout: default.hbs
                     <div class="goods-list__list">
                         <div class="goods-list__item">
                             <div class="goods-list__image">
-                                <div class="goods-cards__image goods-cards__image--gray">
-                                    <div><img src="images/temp/goods/1.jpeg" alt=""></div>
+                                <div class="goods-cards__image-size">
+                                    <div class="goods-cards__image">
+                                        <img src="images/temp/goods/6.jpeg" alt="">
+                                    </div>
                                 </div>
                             </div>
                             <div class="goods-list__desc">
@@ -77,8 +79,10 @@ layout: default.hbs
 
                         <div class="goods-list__item">
                             <div class="goods-list__image">
-                                <div class="goods-cards__image goods-cards__image--gray">
-                                    <div><img src="images/temp/goods/2.jpeg" alt=""></div>
+                                <div class="goods-cards__image-size">
+                                    <div class="goods-cards__image">
+                                        <img src="images/temp/goods/7.jpeg" alt="">
+                                    </div>
                                 </div>
                             </div>
                             <div class="goods-list__desc">
@@ -125,8 +129,10 @@ layout: default.hbs
 
                         <div class="goods-list__item">
                             <div class="goods-list__image">
-                                <div class="goods-cards__image goods-cards__image--gray">
-                                    <div><img src="images/temp/goods/3.jpeg" alt=""></div>
+                                <div class="goods-cards__image-size">
+                                    <div class="goods-cards__image">
+                                        <img src="images/temp/goods/8.jpeg" alt="">
+                                    </div>
                                 </div>
                             </div>
                             <div class="goods-list__desc">
@@ -184,8 +190,37 @@ layout: default.hbs
         </div>
     </div>
 
-    {{> goods--favorites }}
-    {{> goods--handy }}
+    <section class="section">
+        <div class="page__center">
+            
+            <div class="section__header">
+                <h3 class="section__header__title">В избранном</h3>
+                <div class="section__header__link">
+                    <a href="#" class="button-more">
+                        Смотреть все <i class="icon-arrow-right button-more__icon"></i>
+                    </a>
+                </div>
+            </div>
+
+            {{> goods-line--shuffle }}
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="page__center">
+            
+            <div class="section__header">
+                <h3 class="section__header__title">Вам понадобится</h3>
+                <div class="section__header__link">
+                    <a href="#" class="button-more">
+                        Смотреть все <i class="icon-arrow-right button-more__icon"></i>
+                    </a>
+                </div>
+            </div>
+
+            {{> goods-line }}
+        </div>
+    </section>
 	
 	{{> pros }}
 

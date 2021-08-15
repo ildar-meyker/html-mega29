@@ -25,7 +25,7 @@ layout: default.hbs
             <div class="product">
                 <div class="product__gallery scale-mobile">
                     <section class="gallery" id="gallery">
-                        <div class="gallery__image gallery__image--gray">
+                        <div class="gallery__image">
                             <div class="gallery__image__default">
                                 <img src="images/temp/gallery/1/1.webp" alt="">
                             </div>
@@ -306,7 +306,21 @@ layout: default.hbs
 
     </div>
 
-    {{> goods--recommended }}
+    <section class="section">
+        <div class="page__center">
+            
+            <div class="section__header">
+                <h3 class="section__header__title">Рекомендуем</h3>
+                <div class="section__header__link">
+                    <a href="#" class="button-more">
+                        Смотреть все <i class="icon-arrow-right button-more__icon"></i>
+                    </a>
+                </div>
+            </div>
+
+            {{> goods-line }}
+        </div>
+    </section>
 	
 	{{> pros }}
 
