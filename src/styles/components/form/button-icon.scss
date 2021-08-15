@@ -1,0 +1,23 @@
+.button-icon {
+	transition: all 0.2s;
+	display: flex;
+	align-items: center;
+	font-size: 8/16 + em;
+	font-weight: 500;
+	color: #bdbdbd;
+
+	&__icon {
+		margin-right: 4/11 + em;
+		font-size: 11/8 + em;
+	}
+
+	&:hover {
+		color: #21a73f;
+	}
+}
+
+@media (min-width: 992px) {
+	.button-icon {
+		font-size: 13px;
+	}
+}

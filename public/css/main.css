@@ -1767,8 +1767,8 @@ corresponds to the arrow we want to display */
 
 @font-face {
   font-family: "icomoon";
-  src: url("../fonts/icomoon.eot?gggltl");
-  src: url("../fonts/icomoon.eot?gggltl#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?gggltl") format("truetype"), url("../fonts/icomoon.woff?gggltl") format("woff"), url("../fonts/icomoon.svg?gggltl#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?np7x5l");
+  src: url("../fonts/icomoon.eot?np7x5l#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?np7x5l") format("truetype"), url("../fonts/icomoon.woff?np7x5l") format("woff"), url("../fonts/icomoon.svg?np7x5l#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block; }
@@ -1900,6 +1900,9 @@ corresponds to the arrow we want to display */
 
 .icon-bus:before {
   content: "\e925"; }
+
+.icon-bookmark:before {
+  content: "\e926"; }
 
 .simplebar-track.simplebar-horizontal {
   height: 2px;
@@ -2493,6 +2496,23 @@ a {
 @media (min-width: 992px) {
   .button-more {
     font-size: 18px; } }
+
+.button-icon {
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  font-size: 0.5em;
+  font-weight: 500;
+  color: #bdbdbd; }
+  .button-icon__icon {
+    margin-right: 0.36364em;
+    font-size: 1.375em; }
+  .button-icon:hover {
+    color: #21a73f; }
+
+@media (min-width: 992px) {
+  .button-icon {
+    font-size: 13px; } }
 
 .input-classic {
   transition: all 0.2s;
