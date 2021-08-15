@@ -2,6 +2,7 @@
 	transition: all 0.2s;
 	display: flex;
 	align-items: center;
+	padding: 5/16 + em 0;
 	font-size: 8/16 + em;
 	font-weight: 500;
 	color: #bdbdbd;
@@ -12,7 +13,7 @@
 	}
 
 	&:hover {
-		color: #21a73f;
+		color: #979797;
 	}
 }
 
