@@ -1,14 +1,20 @@
 .shops-cards {
-	display: flex;
-	padding-left: 14px;
+	&__row-line {
+		display: flex;
+	}
 
-	&__col {
+	&__gap-line {
 		flex: 0 0 auto;
-		width: 50%;
+		width: 7px;
+	}
+
+	&__col-line {
+		flex: 0 0 auto;
+		width: calc((100% - 14px) / 2);
 		max-width: 250/16 + em;
 		display: flex;
 		flex-direction: column;
-		padding-right: 14px;
+		padding: 0 7px;
 	}
 
 	&__item {
@@ -78,18 +84,25 @@
 
 @media (min-width: 768px) {
 	.shops-cards {
-		padding-left: 20px;
+		&__gap-line {
+			width: 10px;
+		}
 
-		&__col {
-			padding-right: 20px;
-			width: 33.33%;
+		&__col-line {
+			width: calc((100% - 20px) / 3);
+			padding: 0 10px;
 		}
 	}
 }
 @media (min-width: 992px) {
 	.shops-cards {
-		&__col {
-			width: 25%;
+		&__gap-line {
+			width: 5px;
+		}
+
+		&__col-line {
+			width: calc((100% - 10px) / 4);
+			padding: 0 15px;
 			max-width: none;
 		}
 

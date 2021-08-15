@@ -4860,23 +4860,21 @@ a {
     .my-purchases__show-more {
       font-size: 10px; } }
 
-.goods-cards--nowrap {
-  margin: 30px 0; }
-  .goods-cards--nowrap .goods-cards__list {
-    flex-wrap: nowrap; }
+.goods-cards__row-line {
+  display: flex; }
 
-.goods-cards__list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -4px -2px 0 -2px; }
-
-.goods-cards__col {
+.goods-cards__col-line {
   display: flex;
   flex-direction: column;
   flex: 0 0 auto;
-  width: 50%;
+  width: calc((100% - 14px) / 2);
+  max-width: 15.625em;
   margin-top: 4px;
-  padding: 0 2px; }
+  padding: 0 7px; }
+
+.goods-cards__gap-line {
+  flex: 0 0 auto;
+  width: 7px; }
 
 .goods-cards__item {
   position: relative;
@@ -4960,17 +4958,13 @@ a {
   .goods-cards__add-to-cart {
     padding: 0.57143em 1.07143em; } }
 
-@media (min-width: 600px) {
-  .goods-cards__col {
-    width: 33.33%; } }
-
 @media (min-width: 768px) {
-  .goods-cards__col {
-    width: 25%; } }
+  .goods-cards__gap-line {
+    width: 13px; } }
 
 @media (min-width: 992px) {
-  .goods-cards--nowrap .goods-cards__col {
-    width: 20%; } }
+  .goods-cards__col-line {
+    width: calc((100% - 26px) / 5); } }
 
 .goods-list__header {
   display: flex;
@@ -5256,67 +5250,84 @@ a {
   .goods-short__price {
     font-size: 24px; } }
 
-.shops-cards {
+.shops-cards__row-line {
+  display: flex; }
+
+.shops-cards__gap-line {
+  flex: 0 0 auto;
+  width: 7px; }
+
+.shops-cards__col-line {
+  flex: 0 0 auto;
+  width: calc((100% - 14px) / 2);
+  max-width: 15.625em;
   display: flex;
-  padding-left: 14px; }
-  .shops-cards__col {
-    flex: 0 0 auto;
-    width: 50%;
-    max-width: 15.625em;
-    display: flex;
-    flex-direction: column;
-    padding-right: 14px; }
-  .shops-cards__item {
-    flex-grow: 1;
-    border: 1px solid #f2f3f5;
-    border-radius: 5px;
-    background: #fff;
-    overflow: hidden; }
-  .shops-cards__image {
-    background-size: cover;
-    background-position: 50% 50%; }
-    .shops-cards__image:before {
-      content: " ";
-      padding-top: 100%;
-      display: block; }
-  .shops-cards__body {
-    padding: 0.8125em; }
-  .shops-cards__title {
-    font-size: 0.5em;
-    font-weight: 700;
-    color: #21a73f; }
-  .shops-cards__address {
-    font-size: 0.4375em;
-    font-weight: 500;
-    color: #21a73f; }
-  .shops-cards__list {
-    margin-top: 0.3125em; }
-  .shops-cards__prop {
-    display: flex;
-    align-items: center;
-    margin-top: 0.3125em; }
-    .shops-cards__prop:first-child {
-      margin-top: 0; }
-  .shops-cards__icon {
-    flex: 0 0 auto;
-    width: 1.6em;
-    font-size: 0.625em; }
-  .shops-cards__label {
-    font-size: 0.4375em;
-    font-weight: 500; }
-  .shops-cards__value {
-    font-size: 0.375em; }
+  flex-direction: column;
+  padding: 0 7px; }
+
+.shops-cards__item {
+  flex-grow: 1;
+  border: 1px solid #f2f3f5;
+  border-radius: 5px;
+  background: #fff;
+  overflow: hidden; }
+
+.shops-cards__image {
+  background-size: cover;
+  background-position: 50% 50%; }
+  .shops-cards__image:before {
+    content: " ";
+    padding-top: 100%;
+    display: block; }
+
+.shops-cards__body {
+  padding: 0.8125em; }
+
+.shops-cards__title {
+  font-size: 0.5em;
+  font-weight: 700;
+  color: #21a73f; }
+
+.shops-cards__address {
+  font-size: 0.4375em;
+  font-weight: 500;
+  color: #21a73f; }
+
+.shops-cards__list {
+  margin-top: 0.3125em; }
+
+.shops-cards__prop {
+  display: flex;
+  align-items: center;
+  margin-top: 0.3125em; }
+  .shops-cards__prop:first-child {
+    margin-top: 0; }
+
+.shops-cards__icon {
+  flex: 0 0 auto;
+  width: 1.6em;
+  font-size: 0.625em; }
+
+.shops-cards__label {
+  font-size: 0.4375em;
+  font-weight: 500; }
+
+.shops-cards__value {
+  font-size: 0.375em; }
 
 @media (min-width: 768px) {
-  .shops-cards {
-    padding-left: 20px; }
-    .shops-cards__col {
-      padding-right: 20px;
-      width: 33.33%; } }
+  .shops-cards__gap-line {
+    width: 10px; }
+  .shops-cards__col-line {
+    width: calc((100% - 20px) / 3);
+    padding: 0 10px; } }
 
 @media (min-width: 992px) {
-  .shops-cards__col {
-    width: 25%;
+  .shops-cards__gap-line {
+    width: 5px; }
+  .shops-cards__col-line {
+    width: calc((100% - 10px) / 4);
+    padding: 0 15px;
     max-width: none; }
   .shops-cards__item {
     font-size: 30px; } }
@@ -5991,4 +6002,6 @@ a {
     .section__header {
       margin-bottom: 15px; }
       .section__header__title {
-        font-size: 32px; } }
+        font-size: 32px; }
+    .section__hidden {
+      overflow: hidden; } }
