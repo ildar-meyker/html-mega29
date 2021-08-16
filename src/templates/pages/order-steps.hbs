@@ -24,35 +24,35 @@ layout: default.hbs
                     <h1 class="h1">Оформление заказа</h1>
 
                     {{!--  step 1 --}}
-                    <form action="#" class="form-panel">
-                        <div class="form-panel__header">
-                            <div class="form-panel__title">Контактная информация</div>
-                            <div class="form-panel__step">Шаг 1 / 4</div>
+                    <form action="#" class="form">
+                        <div class="form__header">
+                            <div class="form__title">Контактная информация</div>
+                            <div class="form__step">Шаг 1 / 4</div>
                         </div>
-                        <div class="form-panel__body">
-                            <div class="form-panel__list form-panel__row">
-                                <div class="form-panel__item form-panel__col form-panel__col--6">
-                                    <label class="form-panel__label">Имя</label>
+                        <div class="form__body">
+                            <div class="form__list form__row">
+                                <div class="form__item form__col form__col--6">
+                                    <label class="form__label">Имя</label>
                                     <input type="text" class="input-classic" placeholder="Ваше имя">
                                 </div>
                                 
-                                <div class="form-panel__item form-panel__col form-panel__col--6">
-                                    <label class="form-panel__label">Фамилия</label>
+                                <div class="form__item form__col form__col--6">
+                                    <label class="form__label">Фамилия</label>
                                     <input type="text" class="input-classic" placeholder="Ваша фамилия">
                                 </div>
                                 
-                                <div class="form-panel__item form-panel__col form-panel__col--6">
-                                    <label class="form-panel__label">Номер телефона</label>
+                                <div class="form__item form__col form__col--6">
+                                    <label class="form__label">Номер телефона</label>
                                     <input type="text" class="input-classic" placeholder="Ваш номер телефона">
                                 </div>
                                 
-                                <div class="form-panel__item form-panel__col form-panel__col--6">
-                                    <label class="form-panel__label">E-mail</label>
+                                <div class="form__item form__col form__col--6">
+                                    <label class="form__label">E-mail</label>
                                     <input type="text" class="input-classic" placeholder="Ваш e-mail">
                                 </div>
                                 
-                                <div class="form-panel__item form-panel__col">
-                                    <label class="form-panel__label">Адрес</label>
+                                <div class="form__item form__col">
+                                    <label class="form__label">Адрес</label>
                                     <input type="text" class="input-classic" placeholder="Ваш адрес">
                                 </div>
                             </div>
@@ -62,15 +62,15 @@ layout: default.hbs
                     {{!-- /step 1 --}}
 
                     {{!--  step 2 --}}
-                    <form action="#" class="form-panel">
-                        <div class="form-panel__header">
-                            <div class="form-panel__title">Выберите способ доставки</div>
-                            <div class="form-panel__step">Шаг 2 / 4</div>
+                    <form action="#" class="form">
+                        <div class="form__header">
+                            <div class="form__title">Выберите способ доставки</div>
+                            <div class="form__step">Шаг 2 / 4</div>
                         </div>
-                        <div class="form-panel__body">
+                        <div class="form__body">
 
-                            <div class="form-panel__list">
-                                <div class="form-panel__item">
+                            <div class="form__list">
+                                <div class="form__item">
                                     <label class="check-default check-default--radio">
                                         <input type="radio" name="radio1" checked>
                                         <span>Доставка</span>
@@ -85,10 +85,10 @@ layout: default.hbs
                                     </label>
                                 </div>
                                 
-                                <div class="form-panel__sep"></div>
+                                <div class="form__sep"></div>
 
-                                <div class="form-panel__item mt-0">
-                                    <div class="form-panel__label-lg">Выберите дату доставки</div>
+                                <div class="form__item mt-0">
+                                    <div class="form__label-lg">Выберите дату доставки</div>
                                     <label class="check-default check-default--radio">
                                         <input type="radio" name="radio2" checked>
                                         <span>Сегодня</span>
@@ -103,7 +103,7 @@ layout: default.hbs
                                     </label>
                                 </div>
                                 
-                                <div class="form-panel__date">
+                                <div class="form__date">
                                     <div class="input-datepicker">
                                         <input type="text" class="input-datepicker__input" placeholder="ДД.ММ.ГГ">
                                         <i class="icon-calendar input-datepicker__icon"></i>
@@ -111,13 +111,13 @@ layout: default.hbs
                                     
                                 </div>
 
-                                <div class="form-panel__total">
+                                <div class="form__total">
                                     Стоимость доставки составит: <b>650 <span class="rubl">₽</span></b>
                                 </div>
                                 
-                                <div class="form-panel__sep"></div>
+                                <div class="form__sep"></div>
 
-                                <div class="form-panel__attn">
+                                <div class="form__attn">
                                     <span>Важно:</span> получателю необходимо иметь при себе документ удостоверяющий личность.
                                 </div>
                             </div>
@@ -127,15 +127,15 @@ layout: default.hbs
                     {{!-- /step 2 --}}
 
                     {{!--  step 3 --}}
-                    <form action="#" class="form-panel">
-                        <div class="form-panel__header">
-                            <div class="form-panel__title">Выберите способ оплаты</div>
-                            <div class="form-panel__step">Шаг 3 / 4</div>
+                    <form action="#" class="form">
+                        <div class="form__header">
+                            <div class="form__title">Выберите способ оплаты</div>
+                            <div class="form__step">Шаг 3 / 4</div>
                         </div>
-                        <div class="form-panel__body">
+                        <div class="form__body">
                             
-                            <div class="form-panel__list">
-                                <div class="form-panel__item">
+                            <div class="form__list">
+                                <div class="form__item">
                                     <label class="check-default check-default--radio">
                                         <input type="radio" name="radio3" checked>
                                         <span>Безналичная оплата при получении</span>
@@ -146,7 +146,7 @@ layout: default.hbs
                                     </label>
                                 </div>
 
-                                <div class="form-panel__item">
+                                <div class="form__item">
                                     <div class="form-card">
                                         <div class="form-card__icons">
                                             <img src="images/footer/pay-cards/mir.svg" alt="Мир">
@@ -156,27 +156,27 @@ layout: default.hbs
                                         </div>
                                         <div class="form-card__fields">
                                             <div class="form-card__item form-card__item--num">
-                                                <label class="form-panel__label">Номер карты</label>
+                                                <label class="form__label">Номер карты</label>
                                                 <input type="text" class="input-classic" placeholder="Номер карты">
                                             </div>
                                             <div class="form-card__item form-card__item--name">
-                                                <label class="form-panel__label">Владелец карты</label>
+                                                <label class="form__label">Владелец карты</label>
                                                 <input type="text" class="input-classic" placeholder="Номер карты">
                                             </div>
                                             <div class="form-card__item form-card__item--date">
-                                                <label class="form-panel__label">Дата</label>
+                                                <label class="form__label">Дата</label>
                                                 <input type="text" class="input-classic" placeholder="__/__/__">
                                             </div>
                                             <div class="form-card__item form-card__item--cvc">
-                                                <label class="form-panel__label">CVC</label>
+                                                <label class="form__label">CVC</label>
                                                 <input type="password" class="input-classic" placeholder="CVC">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="form-panel__item">
-                                    <div class="form-panel__label-lg">Бонусы</div>
+                                <div class="form__item">
+                                    <div class="form__label-lg">Бонусы</div>
                                     <label class="check-default">
                                         <input type="checkbox">
                                         <span></span>Применить бонусы</span>
@@ -190,20 +190,20 @@ layout: default.hbs
                     {{!-- /step 3 --}}
 
                     {{!--  step 4 --}}
-                    <form action="#" class="form-panel">
-                        <div class="form-panel__header">
-                            <div class="form-panel__title">Комментарий к заказу</div>
-                            <div class="form-panel__step">Шаг 4 / 4</div>
+                    <form action="#" class="form">
+                        <div class="form__header">
+                            <div class="form__title">Комментарий к заказу</div>
+                            <div class="form__step">Шаг 4 / 4</div>
                         </div>
-                        <div class="form-panel__body">
+                        <div class="form__body">
 
-                            <div class="form-panel__list">
+                            <div class="form__list">
 
-                                <div class="form-panel__item">
+                                <div class="form__item">
                                     <textarea class="input-classic" placeholder="Ваш комментарий"></textarea>
                                 </div>
 
-                                <div class="form-panel__item">
+                                <div class="form__item">
                                     <label class="check-default">
                                         <input type="checkbox">
                                         <span>Я согласен с <a href="#" target="_blank">публичной офертой</a></span>
@@ -214,7 +214,7 @@ layout: default.hbs
                                     </label>
                                 </div>
 
-                                <div class="form-panel__actions">
+                                <div class="form__actions">
                                     <button type="button" class="button button-green">
                                         Завершить оформление
                                     </button>

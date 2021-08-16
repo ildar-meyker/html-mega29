@@ -10,7 +10,7 @@
 		background: #fff;
 
 		.input-label-up__label {
-			top: -2/14 + em;
+			top: -0.6em;
 			background: #fff;
 			padding: 0 3/14 + em;
 			font-size: 14/16 + em;
@@ -21,8 +21,7 @@
 	&__label {
 		transition: all 0.2s;
 		position: absolute;
-		top: 50%;
-		margin-top: -0.5em;
+		top: 10/18 + em;
 		left: 13/18 + em;
 		font-size: 18/16 + em;
 		color: rgba(#111111, 0.32);
