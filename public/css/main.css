@@ -6103,25 +6103,6 @@ a {
     border-radius: 50%; }
     .popup__close:hover {
       background: #d9d9d9; }
-  .popup__icon {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    font-size: 12px; }
-    .popup__icon--error {
-      background: #f9e3e3;
-      color: #db524e; }
-    .popup__icon--success {
-      background: rgba(39, 174, 96, 0.12);
-      color: #27ae60; }
-  .popup__message {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 15px; }
 
 @media (min-width: 768px) {
   .popup__header {
@@ -6134,17 +6115,10 @@ a {
     min-height: 60px; }
   .popup__close {
     -webkit-transform: scale(1);
-            transform: scale(1); }
-  .popup__message {
-    margin-top: 35px;
-    font-size: 18px; } }
+            transform: scale(1); } }
 
 @media (min-width: 992px) {
   .popup__header {
-    font-size: 18px; }
-  .popup__icon {
-    width: 85px;
-    height: 85px;
     font-size: 18px; } }
 
 .popup-city-confirm {
@@ -6194,3 +6168,40 @@ a {
         margin-top: 0; }
       .popup-city-confirm__choose__button {
         font-size: 15px; } }
+
+.popup-status {
+  max-width: 300px; }
+  .popup-status__icon {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    font-size: 12px; }
+    .popup-status__icon--error {
+      background: #f9e3e3;
+      color: #db524e; }
+    .popup-status__icon--success {
+      background: rgba(39, 174, 96, 0.12);
+      color: #27ae60; }
+  .popup-status__message {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px; }
+
+@media (min-width: 768px) {
+  .popup-status {
+    max-width: 450px; }
+    .popup-status__message {
+      margin-top: 35px;
+      font-size: 18px; } }
+
+@media (min-width: 992px) {
+  .popup-status {
+    max-width: 600px; }
+    .popup-status__icon {
+      width: 85px;
+      height: 85px;
+      font-size: 18px; } }
