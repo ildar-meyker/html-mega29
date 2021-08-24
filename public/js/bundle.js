@@ -25031,6 +25031,12 @@ $(function () {
     $(this).siblings().removeClass("active").end().addClass("active");
     $("#news").toggleClass("news--list", mode === "list");
   });
+  $("#slider-main .slider-main__list").slick({
+    prevArrow: '<button type="button" class="slick-prev"></button>',
+    nextArrow: '<button type="button" class="slick-next"></button>',
+    slidesToShow: 1,
+    dots: true
+  });
 });
 
 /***/ }),
