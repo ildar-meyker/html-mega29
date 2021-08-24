@@ -6295,6 +6295,8 @@ a {
     margin: 0 -25px; }
   .slider-main__item {
     padding: 0 25px; }
+  .slider-main .slick-dots {
+    bottom: 10px; }
   .slider-main .slick-prev {
     left: 5px; }
   .slider-main .slick-next {
