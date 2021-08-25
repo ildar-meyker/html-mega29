@@ -7,7 +7,7 @@ layout: default.hbs
 
 	{{> header }}
 
-	<section class="slider-main" id="slider-main">
+	<section class="slider-main slider-dots-1" id="slider-main">
 		<div class="page__center">
 			<div class="slider-main__list">
 				<div class="slider-main__item">
@@ -56,6 +56,43 @@ layout: default.hbs
         </div>
     </section>
 
+	{{> slider-items-1 }}
+
+	<section class="section">
+        <div class="page__center">
+            
+            <div class="section__header">
+                <h3 class="section__header__title">Суперцена</h3>
+                <div class="section__header__link">
+                    <a href="#" class="button-more">
+                        Смотреть все <i class="icon-arrow-right button-more__icon"></i>
+                    </a>
+                </div>
+            </div>
+
+			{{> slider-goods }}
+
+        </div>
+    </section>
+
+	{{> slider-items-1 }}
+
+	<section class="section">
+        <div class="page__center">
+            
+            <div class="section__header">
+                <h3 class="section__header__title">Товар месяца</h3>
+                <div class="section__header__link">
+                    <a href="#" class="button-more">
+                        Смотреть все <i class="icon-arrow-right button-more__icon"></i>
+                    </a>
+                </div>
+            </div>
+
+			{{> slider-goods }}
+
+        </div>
+    </section>
 
 	<section class="section">
 		<div class="page__center">

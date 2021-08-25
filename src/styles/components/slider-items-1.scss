@@ -1,29 +1,25 @@
-.slider-main {
-	margin-top: 10px;
-	overflow: hidden;
+.slider-items-1 {
+	overflow: auto;
+
+	&__center {
+		position: relative;
+	}
 
 	&__list {
-		margin: 0 -10px;
-		line-height: 0;
+		white-space: nowrap;
+		font-size: 0;
 	}
 
 	&__item {
-		padding: 0 10px;
-		display: none;
-
-		&:first-child {
-			display: block;
-		}
+		display: inline-block;
+		padding-right: 10px;
+		width: 100%;
 	}
 
 	&__slide {
+		height: 75px;
 		background: #e7e7e8;
-		height: 300px;
 		border-radius: 5px;
-	}
-
-	.slick-list {
-		overflow: visible;
 	}
 
 	.button-slider {
@@ -32,53 +28,54 @@
 }
 
 @media (min-width: 768px) {
-	.slider-main {
-		margin-top: 20px;
-
+	.slider-items-1 {
 		&__list {
-			margin: 0 -20px;
 		}
 
 		&__item {
-			padding: 0 20px;
+			padding-right: 20px;
 		}
 
 		&__slide {
-			height: 240px;
+			height: 180px;
 		}
 	}
 }
 
 @media (min-width: 992px) {
-	.slider-main {
-		margin-top: 30px;
+	.slider-items-1 {
+		overflow: visible;
 
 		&__list {
 			margin: 0 -25px;
 		}
 
 		&__item {
+			display: none;
 			padding: 0 25px;
+
+			&:first-child {
+				display: block;
+			}
 		}
 
 		&__slide {
-			height: 400px;
 		}
 	}
 }
 
 @media (min-width: 1220px) {
-	.slider-main {
+	.slider-items-1 {
 		.button-slider {
 			display: flex !important;
 		}
 
 		.button-slider--prev {
-			left: 5px;
+			left: -20px;
 		}
 
 		.button-slider--next {
-			right: 5px;
+			right: -20px;
 		}
 	}
 }

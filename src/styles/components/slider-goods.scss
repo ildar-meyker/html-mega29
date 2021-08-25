@@ -1,6 +1,5 @@
 .slider-goods {
 	position: relative;
-	margin-bottom: -15px;
 
 	&__row {
 		display: flex;
@@ -21,15 +20,7 @@
 	}
 
 	.button-slider {
-		display: none;
-	}
-
-	.button-slider--prev {
-		left: -20px;
-	}
-
-	.button-slider--next {
-		right: -20px;
+		display: none !important;
 	}
 }
 
@@ -47,6 +38,8 @@
 
 @media (min-width: 1220px) {
 	.slider-goods {
+		margin-bottom: -15px;
+
 		&__col {
 			// 13 * 2 + 2 (makes border visible when scroll via button)
 			width: calc((100% - 28px) / 5);
@@ -54,7 +47,15 @@
 		}
 
 		.button-slider {
-			display: flex;
+			display: flex !important;
+		}
+
+		.button-slider--prev {
+			left: -20px;
+		}
+
+		.button-slider--next {
+			right: -20px;
 		}
 
 		.simplebar-horizontal {

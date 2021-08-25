@@ -1,0 +1,39 @@
+.slider-dots-1 {
+	.slick-dots {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 5px;
+		display: flex;
+
+		li {
+			margin: 0 3px;
+
+			button {
+				transition: all 0.2s;
+				box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+				width: 5px;
+				height: 5px;
+				text-indent: 20px;
+				background: #fff;
+				border-radius: 10px;
+				overflow: hidden;
+			}
+
+			&.slick-active {
+				button {
+					width: 15px;
+					background: #21a73f;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.slider-dots-1 {
+		.slick-dots {
+			bottom: 10px;
+		}
+	}
+}
