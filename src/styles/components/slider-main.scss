@@ -3,12 +3,12 @@
 	overflow: hidden;
 
 	&__list {
-		margin: 0 -14px;
+		margin: 0 -10px;
 		line-height: 0;
 	}
 
 	&__item {
-		padding: 0 14px;
+		padding: 0 10px;
 		display: none;
 
 		&:first-child {
@@ -26,41 +26,16 @@
 		overflow: visible;
 	}
 
-	.slick-prev,
-	.slick-next {
-		display: none;
-		transition: all 0.2s;
-		font-family: "icomoon" !important;
-		position: absolute;
-		z-index: 10;
-		top: 50%;
-		width: 40px;
-		height: 40px;
-		background: #fff;
-		border-radius: 5px;
-		text-align: center;
-		font-size: 16px;
-
-		&:hover {
-			background: #21a73f;
-			color: #fff;
-		}
+	.button-slider {
+		display: none !important;
 	}
 
-	.slick-prev {
+	.button-slider--prev {
 		left: 0;
-
-		&:before {
-			content: "\e90f";
-		}
 	}
 
-	.slick-next {
+	.button-slider--next {
 		right: 0;
-
-		&:before {
-			content: "\e90a";
-		}
 	}
 
 	.slick-dots {
@@ -120,9 +95,8 @@
 			height: 400px;
 		}
 
-		.slick-prev,
-		.slick-next {
-			display: block;
+		.button-slider {
+			display: block !important;
 		}
 	}
 }
@@ -141,11 +115,11 @@
 			bottom: 10px;
 		}
 
-		.slick-prev {
+		.button-slider--prev {
 			left: 5px;
 		}
 
-		.slick-next {
+		.button-slider--next {
 			right: 5px;
 		}
 	}

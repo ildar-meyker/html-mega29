@@ -448,17 +448,35 @@ layout: default.hbs
 
 		<div class="elems-row">
 			<div class="elems-h2">button-icon</div>
-			<div class="elems-item">
-				<a href="#" class="button-icon">
-					<i class="icon-bookmark button-icon__icon"></i>
-					В избранное
-				</a>
+			<div class="clearfix">
+				<div class="elems-item">
+					<a href="#" class="button-icon">
+						<i class="icon-bookmark button-icon__icon"></i>
+						В избранное
+					</a>
+				</div>
+				<div class="elems-item">
+					<a href="#" class="button-icon">
+						<i class="icon-stats button-icon__icon"></i>
+						Сравнить
+					</a>
+				</div>
 			</div>
-			<div class="elems-item">
-				<a href="#" class="button-icon">
-					<i class="icon-stats button-icon__icon"></i>
-					Сравнить
-				</a>
+		</div>
+
+		<div class="elems-row">
+			<div class="elems-h2">button-slider</div>
+			<div class="clearfix">
+				<div class="elems-item">
+					<button type="button" class="button-slider">
+						<i class="icon-arrow-left"></i>
+					</button>
+				</div>
+				<div class="elems-item">
+					<button type="button" class="button-slider">
+						<i class="icon-arrow-right"></i>
+					</button>
+				</div>
 			</div>
 		</div>
 
@@ -710,7 +728,7 @@ layout: default.hbs
 								</div>
 							</div>
 							
-							<div class="goods-cards__add-to-cart">
+							<div class="goods-cards__to-cart">
 								<button class="button button-outline-green  button--full">
 									<span class="spinner-border"></span>
 									<span class="button__text">В корзину</span>

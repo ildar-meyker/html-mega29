@@ -41,8 +41,12 @@ $(function () {
 	});
 
 	$("#slider-main .slider-main__list").slick({
-		prevArrow: '<button type="button" class="slick-prev"></button>',
-		nextArrow: '<button type="button" class="slick-next"></button>',
+		prevArrow: `<button type="button" class="button-slider button-slider--prev">
+			<i class="icon-arrow-left"></i>
+		</button>`,
+		nextArrow: `<button type="button" class="button-slider button-slider--next">
+			<i class="icon-arrow-right"></i>
+		</button>`,
 		slidesToShow: 1,
 		dots: true,
 	});

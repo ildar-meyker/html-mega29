@@ -1,0 +1,26 @@
+.button-slider {
+	transition: all 0.2s;
+	width: 40px;
+	height: 40px;
+	background: #fff;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 16px;
+
+	&--prev,
+	&--next {
+		position: absolute;
+		z-index: 10;
+		top: 50%;
+		margin-top: -20px;
+	}
+
+	&--disabled {
+		opacity: 0.5;
+	}
+
+	&:hover {
+		background: #21a73f;
+		color: #fff;
+	}
+}

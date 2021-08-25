@@ -1,15 +1,13 @@
 .labels {
-	display: flex;
-	flex-wrap: wrap;
-	font-size: 7/16 + em;
-
 	&__blue,
 	&__red,
 	&__orange,
 	&__green {
-		padding: 3/7 + em 6/7 + em;
-		margin: 0 3/7 + em 3/7 + em 0;
-		border-radius: 3/7 + em;
+		display: inline-block;
+		padding: 0.4em 0.8em;
+		margin: 0 0.2em 0.4em 0;
+		border-radius: 0.4em;
+		font-size: 1em;
 		font-weight: 500;
 		white-space: nowrap;
 		color: #fff;
@@ -30,11 +28,5 @@
 
 	&__green {
 		background: #21a73f;
-	}
-}
-
-@media (min-width: 992px) {
-	.labels {
-		font-size: 11px;
 	}
 }

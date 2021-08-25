@@ -25032,8 +25032,8 @@ $(function () {
     $("#news").toggleClass("news--list", mode === "list");
   });
   $("#slider-main .slider-main__list").slick({
-    prevArrow: '<button type="button" class="slick-prev"></button>',
-    nextArrow: '<button type="button" class="slick-next"></button>',
+    prevArrow: "<button type=\"button\" class=\"button-slider button-slider--prev\">\n\t\t\t<i class=\"icon-arrow-left\"></i>\n\t\t</button>",
+    nextArrow: "<button type=\"button\" class=\"button-slider button-slider--next\">\n\t\t\t<i class=\"icon-arrow-right\"></i>\n\t\t</button>",
     slidesToShow: 1,
     dots: true
   });
