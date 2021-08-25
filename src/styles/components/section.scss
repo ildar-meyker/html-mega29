@@ -1,24 +1,25 @@
 .section {
-	margin: 20/16 + em 0;
+	margin: 20px 0;
 
 	&__header {
-		margin-bottom: 10/16 + em;
+		margin-bottom: 10px;
 		display: flex;
 		align-items: center;
 
 		&__title {
-			font-size: 20/16 + em;
+			font-size: 20px;
 			font-weight: 700;
 		}
 
 		&__link {
 			margin-left: auto;
+			font-size: 11px;
 		}
 	}
 
 	&__window {
 		overflow: auto;
-		padding-bottom: 10/16 + em;
+		padding-bottom: 10px;
 
 		.simplebar-horizontal {
 			margin: 0 10px;
@@ -28,6 +29,18 @@
 
 @media (min-width: 768px) {
 	.section {
+		&__header {
+			margin-bottom: 15px;
+
+			&__title {
+				font-size: 32px;
+			}
+
+			&__link {
+				font-size: 24px;
+			}
+		}
+
 		&__window {
 			padding-bottom: 15px;
 
@@ -43,10 +56,8 @@
 		margin: 30px 0;
 
 		&__header {
-			margin-bottom: 15px;
-
-			&__title {
-				font-size: 32px;
+			&__link {
+				font-size: 18px;
 			}
 		}
 	}

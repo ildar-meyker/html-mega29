@@ -1,5 +1,6 @@
 .slider-goods {
 	position: relative;
+	margin-bottom: -15px;
 
 	&__row {
 		display: flex;
@@ -53,15 +54,11 @@
 		}
 
 		.button-slider {
-			display: block;
+			display: flex;
 		}
 
 		.simplebar-horizontal {
 			display: none;
-		}
-
-		.section__window {
-			padding-bottom: 0;
 		}
 	}
 }

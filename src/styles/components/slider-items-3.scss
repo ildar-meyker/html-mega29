@@ -1,4 +1,4 @@
-.slider-addon {
+.slider-items-3 {
 	margin-top: 20px;
 	overflow: auto;
 
@@ -25,7 +25,7 @@
 }
 
 @media (min-width: 768px) {
-	.slider-addon {
+	.slider-items-3 {
 		&__list {
 		}
 
@@ -45,7 +45,7 @@
 }
 
 @media (min-width: 992px) {
-	.slider-addon {
+	.slider-items-3 {
 		margin-top: 30px;
 
 		&__list {

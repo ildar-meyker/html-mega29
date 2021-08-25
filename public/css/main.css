@@ -2482,19 +2482,14 @@ a {
 
 .button-more {
   transition: all 0.2s;
-  display: flex;
-  align-items: center;
-  font-size: 0.6875em;
+  white-space: nowrap;
+  font-size: 1em;
   font-weight: 500; }
   .button-more__icon {
-    margin-left: 0.45455em;
-    font-size: 0.63636em; }
+    margin-left: 0.4em;
+    font-size: 0.7em; }
   .button-more:hover {
     color: #21a73f; }
-
-@media (min-width: 992px) {
-  .button-more {
-    font-size: 18px; } }
 
 .button-icon {
   transition: all 0.2s;
@@ -2518,7 +2513,9 @@ a {
   background: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04), 0px 5px 16px rgba(0, 0, 0, 0.08);
   border-radius: 5px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 16px; }
   .button-slider--prev, .button-slider--next {
     position: absolute;
@@ -6033,23 +6030,30 @@ a {
       font-weight: normal; }
 
 .section {
-  margin: 1.25em 0; }
+  margin: 20px 0; }
   .section__header {
-    margin-bottom: 0.625em;
+    margin-bottom: 10px;
     display: flex;
     align-items: center; }
     .section__header__title {
-      font-size: 1.25em;
+      font-size: 20px;
       font-weight: 700; }
     .section__header__link {
-      margin-left: auto; }
+      margin-left: auto;
+      font-size: 11px; }
   .section__window {
     overflow: auto;
-    padding-bottom: 0.625em; }
+    padding-bottom: 10px; }
     .section__window .simplebar-horizontal {
       margin: 0 10px; }
 
 @media (min-width: 768px) {
+  .section__header {
+    margin-bottom: 15px; }
+    .section__header__title {
+      font-size: 32px; }
+    .section__header__link {
+      font-size: 24px; }
   .section__window {
     padding-bottom: 15px; }
     .section__window .simplebar-horizontal {
@@ -6058,10 +6062,8 @@ a {
 @media (min-width: 992px) {
   .section {
     margin: 30px 0; }
-    .section__header {
-      margin-bottom: 15px; }
-      .section__header__title {
-        font-size: 32px; } }
+    .section__header__link {
+      font-size: 18px; } }
 
 @media (min-width: 1220px) {
   .section__hidden {
@@ -6280,7 +6282,7 @@ a {
     .slider-main__slide {
       height: 400px; }
     .slider-main .button-slider {
-      display: block !important; } }
+      display: flex !important; } }
 
 @media (min-width: 1230px) {
   .slider-main__list {
@@ -6294,46 +6296,47 @@ a {
   .slider-main .button-slider--next {
     right: 5px; } }
 
-.slider-addon {
+.slider-items-3 {
   margin-top: 20px;
   overflow: auto; }
-  .slider-addon__list {
+  .slider-items-3__list {
     white-space: nowrap;
     font-size: 0; }
-  .slider-addon__item {
+  .slider-items-3__item {
     display: inline-block;
     margin-right: 10px;
     width: 290px; }
-    .slider-addon__item:last-child {
+    .slider-items-3__item:last-child {
       margin-right: 10px; }
-  .slider-addon__slide {
+  .slider-items-3__slide {
     height: 75px;
     background: #e7e7e8;
     border-radius: 5px; }
 
 @media (min-width: 768px) {
-  .slider-addon__item {
+  .slider-items-3__item {
     width: 340px;
     margin-right: 25px; }
-    .slider-addon__item:last-child {
+    .slider-items-3__item:last-child {
       margin-right: 20px; }
-  .slider-addon__slide {
+  .slider-items-3__slide {
     height: 90px; } }
 
 @media (min-width: 992px) {
-  .slider-addon {
+  .slider-items-3 {
     margin-top: 30px; }
-    .slider-addon__list {
+    .slider-items-3__list {
       margin: 0 -15px; }
-    .slider-addon__item {
+    .slider-items-3__item {
       padding: 0 15px;
       margin-right: 0 !important;
       width: 33.33%; }
-    .slider-addon__slide {
+    .slider-items-3__slide {
       height: 100px; } }
 
 .slider-goods {
-  position: relative; }
+  position: relative;
+  margin-bottom: -15px; }
   .slider-goods__row {
     display: flex; }
   .slider-goods__col {
@@ -6364,8 +6367,6 @@ a {
     width: calc((100% - 28px) / 5);
     max-width: none; }
   .slider-goods .button-slider {
-    display: block; }
+    display: flex; }
   .slider-goods .simplebar-horizontal {
-    display: none; }
-  .slider-goods .section__window {
-    padding-bottom: 0; } }
+    display: none; } }
