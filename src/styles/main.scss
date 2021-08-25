@@ -1,4 +1,6 @@
-// vendor
+//
+// VENDOR
+//
 @import "../../node_modules/destyle.css/destyle";
 @import "../../node_modules/bootstrap/scss/_functions";
 @import "../../node_modules/bootstrap/scss/_variables";
@@ -13,7 +15,9 @@
 @import "vendor/hamburgers";
 @import "vendor/spinners";
 
-// sprites
+//
+// SPRITES
+//
 .icon {
 	display: inline-block;
 }
@@ -21,30 +25,34 @@
 @import "../../temp/css/sprite";
 @include retina-sprites($retina-groups);
 
-// partials
+//
+// PARTIALS
+//
 @import "_fonts";
 @import "_icomoon";
 @import "_fix-vendors";
 @import "_helpers";
 @import "_common";
 
-// blocks
+//
+// COMPONENTS
+//
 @import "components/page";
 
-@import "components/form/button";
-@import "components/form/button-dialog";
-@import "components/form/button-scroll";
-@import "components/form/button-more";
-@import "components/form/button-icon";
-@import "components/form/button-slider";
-@import "components/form/input-classic";
-@import "components/form/input-datepicker";
-@import "components/form/input-top-label";
-@import "components/form/input-label-up";
-@import "components/form/input-readonly";
-@import "components/form/count-editor";
-@import "components/form/check-default";
-@import "components/form/check-border";
+@import "components/buttons/button";
+@import "components/buttons/button-dialog";
+@import "components/buttons/button-scroll";
+@import "components/buttons/button-more";
+@import "components/buttons/button-icon";
+@import "components/buttons/button-slider";
+@import "components/inputs/input-classic";
+@import "components/inputs/input-datepicker";
+@import "components/inputs/input-top-label";
+@import "components/inputs/input-label-up";
+@import "components/inputs/input-readonly";
+@import "components/inputs/count-editor";
+@import "components/inputs/check-default";
+@import "components/inputs/check-border";
 
 @import "components/rating.scss";
 @import "components/labels.scss";
@@ -104,3 +112,4 @@
 @import "components/popup-status";
 @import "components/slider-main";
 @import "components/slider-addon";
+@import "components/slider-goods";

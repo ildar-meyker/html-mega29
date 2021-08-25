@@ -24999,6 +24999,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_Gallery__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/Gallery */ "./src/js/modules/Gallery.js");
 /* harmony import */ var _modules_Panel__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/Panel */ "./src/js/modules/Panel.js");
 /* harmony import */ var _modules_Search__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/Search */ "./src/js/modules/Search.js");
+/* harmony import */ var _modules_SliderGoods__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/SliderGoods */ "./src/js/modules/SliderGoods.js");
+/* harmony import */ var _modules_SliderMain__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/SliderMain */ "./src/js/modules/SliderMain.js");
+
+
 
 
 
@@ -25030,12 +25034,6 @@ $(function () {
     var mode = $(this).data("mode");
     $(this).siblings().removeClass("active").end().addClass("active");
     $("#news").toggleClass("news--list", mode === "list");
-  });
-  $("#slider-main .slider-main__list").slick({
-    prevArrow: "<button type=\"button\" class=\"button-slider button-slider--prev\">\n\t\t\t<i class=\"icon-arrow-left\"></i>\n\t\t</button>",
-    nextArrow: "<button type=\"button\" class=\"button-slider button-slider--next\">\n\t\t\t<i class=\"icon-arrow-right\"></i>\n\t\t</button>",
-    slidesToShow: 1,
-    dots: true
   });
 });
 
@@ -25526,6 +25524,114 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   Search.init();
 });
 /* harmony default export */ __webpack_exports__["default"] = (Search);
+
+/***/ }),
+
+/***/ "./src/js/modules/SliderGoods.js":
+/*!***************************************!*\
+  !*** ./src/js/modules/SliderGoods.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var throttle_debounce__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! throttle-debounce */ "./node_modules/throttle-debounce/esm/index.js");
+
+
+var SliderGoods = {
+  _getMaxScroll: function _getMaxScroll($slider) {
+    var $window = $slider.find(".simplebar-content-wrapper");
+    var $contentElems = $slider.find(".slider-goods__row > div");
+    var windowW = $window.width();
+    var contentW = $contentElems.toArray().reduce(function (total, item) {
+      return total + jquery__WEBPACK_IMPORTED_MODULE_0___default()(item).outerWidth();
+    }, 0);
+    return contentW > windowW ? contentW - windowW : 0;
+  },
+  _updateButtons: function _updateButtons($slider) {
+    var $window = $slider.find(".simplebar-content-wrapper");
+    var scrollLeft = $window.scrollLeft();
+
+    var maxScroll = this._getMaxScroll($slider);
+
+    $slider.find(".button-slider--prev").toggleClass("disabled", scrollLeft === 0);
+    $slider.find(".button-slider--next").toggleClass("disabled", Math.abs(maxScroll - scrollLeft) < 1);
+  },
+  _scrollTo: function _scrollTo($slider, direction) {
+    var _this = this;
+
+    var $window = $slider.find(".simplebar-content-wrapper");
+    var scrollStep = $slider.find(".slider-goods__col").outerWidth();
+    var scrollNew = $window.scrollLeft() + scrollStep * direction;
+    $window.animate({
+      scrollLeft: scrollNew
+    }, 200, function () {
+      _this._updateButtons($slider);
+    });
+  },
+  _handleNextClick: function _handleNextClick(e) {
+    e.preventDefault();
+    var $slider = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).closest(".slider-goods");
+
+    this._scrollTo($slider, 1);
+  },
+  _handlePrevClick: function _handlePrevClick(e) {
+    e.preventDefault();
+    var $slider = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).closest(".slider-goods");
+
+    this._scrollTo($slider, -1);
+  },
+  _handleWindowScroll: function _handleWindowScroll(e) {
+    var $slider = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest(".slider-goods");
+
+    this._updateButtons($slider);
+  },
+  init: function init() {
+    var self = this;
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-slider-goods-next", this._handleNextClick.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-slider-goods-prev", this._handlePrevClick.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".slider-goods .simplebar-content-wrapper").on("scroll", Object(throttle_debounce__WEBPACK_IMPORTED_MODULE_1__["throttle"])(250, this._handleWindowScroll.bind(this)));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".slider-goods").each(function () {
+      self._updateButtons(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this));
+    });
+  }
+};
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+  SliderGoods.init();
+});
+/* harmony default export */ __webpack_exports__["default"] = (SliderGoods);
+
+/***/ }),
+
+/***/ "./src/js/modules/SliderMain.js":
+/*!**************************************!*\
+  !*** ./src/js/modules/SliderMain.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+var SliderMain = {
+  init: function init() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#slider-main .slider-main__list").slick({
+      prevArrow: "<button type=\"button\" class=\"button-slider button-slider--prev\">\n                <i class=\"icon-arrow-left\"></i>\n            </button>",
+      nextArrow: "<button type=\"button\" class=\"button-slider button-slider--next\">\n                <i class=\"icon-arrow-right\"></i>\n            </button>",
+      slidesToShow: 1,
+      dots: true
+    });
+  }
+};
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+  SliderMain.init();
+});
+/* harmony default export */ __webpack_exports__["default"] = (SliderMain);
 
 /***/ }),
 

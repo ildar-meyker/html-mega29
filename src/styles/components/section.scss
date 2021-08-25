@@ -49,7 +49,11 @@
 				font-size: 32px;
 			}
 		}
+	}
+}
 
+@media (min-width: 1220px) {
+	.section {
 		&__hidden {
 			overflow: hidden;
 		}

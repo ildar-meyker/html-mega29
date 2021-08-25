@@ -3,6 +3,8 @@
 	width: 40px;
 	height: 40px;
 	background: #fff;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04),
+		0px 5px 16px rgba(0, 0, 0, 0.08);
 	border-radius: 5px;
 	text-align: center;
 	font-size: 16px;
@@ -15,12 +17,20 @@
 		margin-top: -20px;
 	}
 
-	&--disabled {
-		opacity: 0.5;
-	}
-
 	&:hover {
 		background: #21a73f;
 		color: #fff;
+	}
+
+	&.active,
+	&:active {
+		background: #007334;
+	}
+
+	&.disabled {
+		background: #fff !important;
+		color: #2e2e2e !important;
+		cursor: default;
+		opacity: 0.5;
 	}
 }

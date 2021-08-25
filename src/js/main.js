@@ -14,6 +14,8 @@ import "./modules/RangeSlider";
 import "./modules/Gallery";
 import "./modules/Panel";
 import "./modules/Search";
+import "./modules/SliderGoods";
+import "./modules/SliderMain";
 
 $(function () {
 	$("#nav-path").scrollLeft(99999);
@@ -38,16 +40,5 @@ $(function () {
 
 		$(this).siblings().removeClass("active").end().addClass("active");
 		$("#news").toggleClass("news--list", mode === "list");
-	});
-
-	$("#slider-main .slider-main__list").slick({
-		prevArrow: `<button type="button" class="button-slider button-slider--prev">
-			<i class="icon-arrow-left"></i>
-		</button>`,
-		nextArrow: `<button type="button" class="button-slider button-slider--next">
-			<i class="icon-arrow-right"></i>
-		</button>`,
-		slidesToShow: 1,
-		dots: true,
 	});
 });

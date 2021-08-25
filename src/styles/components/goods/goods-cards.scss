@@ -1,22 +1,4 @@
 .goods-cards {
-	&__row-line {
-		display: flex;
-	}
-
-	&__col-line {
-		display: flex;
-		flex-direction: column;
-		flex: 0 0 auto;
-		width: calc((100% - 10px) / 2);
-		max-width: 230px;
-		padding: 0 5px;
-	}
-
-	&__gap-line {
-		flex: 0 0 auto;
-		width: 5px;
-	}
-
 	&__row-grid {
 		display: flex;
 		flex-wrap: wrap;
@@ -159,14 +141,6 @@
 
 @media (min-width: 768px) {
 	.goods-cards {
-		&__gap-line {
-			width: 13px;
-		}
-
-		&__col-line {
-			padding: 0 7px;
-		}
-
 		&__col-grid {
 			width: 33.33%;
 		}
@@ -207,11 +181,6 @@
 
 @media (min-width: 1200px) {
 	.goods-cards {
-		&__col-line {
-			width: calc((100% - 26px) / 5);
-			max-width: none;
-		}
-
 		&__row-grid {
 			margin-top: -25px;
 		}
@@ -219,14 +188,6 @@
 		&__col-grid {
 			margin-top: 25px;
 			width: 25%;
-		}
-
-		.section__window {
-			padding-bottom: 0;
-		}
-
-		.simplebar-horizontal {
-			display: none;
 		}
 	}
 }
