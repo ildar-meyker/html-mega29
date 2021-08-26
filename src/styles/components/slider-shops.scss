@@ -1,0 +1,45 @@
+.slider-shops {
+	&__row {
+		display: flex;
+	}
+
+	&__gap {
+		flex: 0 0 auto;
+		width: 7px;
+	}
+
+	&__col {
+		flex: 0 0 auto;
+		width: calc((100% - 10px) / 2);
+		max-width: 250/16 + em;
+		display: flex;
+		flex-direction: column;
+		padding: 0 7px;
+	}
+}
+
+@media (min-width: 768px) {
+	.slider-shops {
+		&__gap {
+			width: 10px;
+		}
+
+		&__col {
+			width: calc((100% - 20px) / 3);
+			padding: 0 10px;
+		}
+	}
+}
+@media (min-width: 992px) {
+	.slider-shops {
+		&__gap {
+			width: 5px;
+		}
+
+		&__col {
+			width: calc((100% - 10px) / 4);
+			padding: 0 15px;
+			max-width: none;
+		}
+	}
+}

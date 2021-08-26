@@ -1,22 +1,4 @@
 .shops-cards {
-	&__row-line {
-		display: flex;
-	}
-
-	&__gap-line {
-		flex: 0 0 auto;
-		width: 7px;
-	}
-
-	&__col-line {
-		flex: 0 0 auto;
-		width: calc((100% - 10px) / 2);
-		max-width: 250/16 + em;
-		display: flex;
-		flex-direction: column;
-		padding: 0 7px;
-	}
-
 	&__item {
 		flex-grow: 1;
 		border: 1px solid #f2f3f5;
@@ -50,64 +32,5 @@
 		font-size: 7/16 + em;
 		font-weight: 500;
 		color: #21a73f;
-	}
-
-	&__list {
-		margin-top: 5/16 + em;
-	}
-
-	&__prop {
-		display: flex;
-		align-items: center;
-		margin-top: 5/16 + em;
-
-		&:first-child {
-			margin-top: 0;
-		}
-	}
-
-	&__icon {
-		flex: 0 0 auto;
-		width: 16/10 + em;
-		font-size: 10/16 + em;
-	}
-
-	&__label {
-		font-size: 7/16 + em;
-		font-weight: 500;
-	}
-
-	&__value {
-		font-size: 6/16 + em;
-	}
-}
-
-@media (min-width: 768px) {
-	.shops-cards {
-		&__gap-line {
-			width: 10px;
-		}
-
-		&__col-line {
-			width: calc((100% - 20px) / 3);
-			padding: 0 10px;
-		}
-	}
-}
-@media (min-width: 992px) {
-	.shops-cards {
-		&__gap-line {
-			width: 5px;
-		}
-
-		&__col-line {
-			width: calc((100% - 10px) / 4);
-			padding: 0 15px;
-			max-width: none;
-		}
-
-		&__item {
-			font-size: 30px;
-		}
 	}
 }

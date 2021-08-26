@@ -5313,21 +5313,6 @@ a {
   .goods-short__price {
     font-size: 24px; } }
 
-.shops-cards__row-line {
-  display: flex; }
-
-.shops-cards__gap-line {
-  flex: 0 0 auto;
-  width: 7px; }
-
-.shops-cards__col-line {
-  flex: 0 0 auto;
-  width: calc((100% - 10px) / 2);
-  max-width: 15.625em;
-  display: flex;
-  flex-direction: column;
-  padding: 0 7px; }
-
 .shops-cards__item {
   flex-grow: 1;
   border: 1px solid #f2f3f5;
@@ -5355,45 +5340,6 @@ a {
   font-size: 0.4375em;
   font-weight: 500;
   color: #21a73f; }
-
-.shops-cards__list {
-  margin-top: 0.3125em; }
-
-.shops-cards__prop {
-  display: flex;
-  align-items: center;
-  margin-top: 0.3125em; }
-  .shops-cards__prop:first-child {
-    margin-top: 0; }
-
-.shops-cards__icon {
-  flex: 0 0 auto;
-  width: 1.6em;
-  font-size: 0.625em; }
-
-.shops-cards__label {
-  font-size: 0.4375em;
-  font-weight: 500; }
-
-.shops-cards__value {
-  font-size: 0.375em; }
-
-@media (min-width: 768px) {
-  .shops-cards__gap-line {
-    width: 10px; }
-  .shops-cards__col-line {
-    width: calc((100% - 20px) / 3);
-    padding: 0 10px; } }
-
-@media (min-width: 992px) {
-  .shops-cards__gap-line {
-    width: 5px; }
-  .shops-cards__col-line {
-    width: calc((100% - 10px) / 4);
-    padding: 0 15px;
-    max-width: none; }
-  .shops-cards__item {
-    font-size: 30px; } }
 
 .product__props {
   display: none; }
@@ -6413,3 +6359,33 @@ a {
 @media (min-width: 992px) {
   .slider-dots-1 .slick-dots {
     bottom: 10px; } }
+
+.slider-shops__row {
+  display: flex; }
+
+.slider-shops__gap {
+  flex: 0 0 auto;
+  width: 7px; }
+
+.slider-shops__col {
+  flex: 0 0 auto;
+  width: calc((100% - 10px) / 2);
+  max-width: 15.625em;
+  display: flex;
+  flex-direction: column;
+  padding: 0 7px; }
+
+@media (min-width: 768px) {
+  .slider-shops__gap {
+    width: 10px; }
+  .slider-shops__col {
+    width: calc((100% - 20px) / 3);
+    padding: 0 10px; } }
+
+@media (min-width: 992px) {
+  .slider-shops__gap {
+    width: 5px; }
+  .slider-shops__col {
+    width: calc((100% - 10px) / 4);
+    padding: 0 15px;
+    max-width: none; } }
