@@ -5328,18 +5328,32 @@ a {
     padding-top: 100%;
     display: block; }
 
-.shops-cards__body {
-  padding: 0.8125em; }
+.shops-cards__desc {
+  padding: 10px; }
 
 .shops-cards__title {
-  font-size: 0.5em;
-  font-weight: 700;
-  color: #21a73f; }
-
-.shops-cards__address {
-  font-size: 0.4375em;
+  font-size: 11px;
   font-weight: 500;
   color: #21a73f; }
+
+.shops-cards__text {
+  font-size: 9px; }
+
+@media (min-width: 768px) {
+  .shops-cards__desc {
+    padding: 20px; }
+  .shops-cards__title {
+    font-size: 16px; }
+  .shops-cards__text {
+    font-size: 15px; } }
+
+@media (min-width: 992px) {
+  .shops-cards__desc {
+    padding: 25px; }
+  .shops-cards__title {
+    font-size: 18px; }
+  .shops-cards__text {
+    font-size: 14px; } }
 
 .product__props {
   display: none; }

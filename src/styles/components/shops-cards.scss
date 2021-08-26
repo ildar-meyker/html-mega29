@@ -18,19 +18,49 @@
 		}
 	}
 
-	&__body {
-		padding: 13/16 + em;
+	&__desc {
+		padding: 10px;
 	}
 
 	&__title {
-		font-size: 8/16 + em;
-		font-weight: 700;
+		font-size: 11px;
+		font-weight: 500;
 		color: #21a73f;
 	}
 
-	&__address {
-		font-size: 7/16 + em;
-		font-weight: 500;
-		color: #21a73f;
+	&__text {
+		font-size: 9px;
+	}
+}
+
+@media (min-width: 768px) {
+	.shops-cards {
+		&__desc {
+			padding: 20px;
+		}
+
+		&__title {
+			font-size: 16px;
+		}
+
+		&__text {
+			font-size: 15px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.shops-cards {
+		&__desc {
+			padding: 25px;
+		}
+
+		&__title {
+			font-size: 18px;
+		}
+
+		&__text {
+			font-size: 14px;
+		}
 	}
 }
