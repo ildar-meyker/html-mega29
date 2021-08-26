@@ -14,7 +14,7 @@ import "./modules/RangeSlider";
 import "./modules/Gallery";
 import "./modules/Panel";
 import "./modules/Search";
-import "./modules/SliderGoods";
+import "./modules/SliderCards";
 import "./modules/SliderItems1";
 import "./modules/SliderMain";
 

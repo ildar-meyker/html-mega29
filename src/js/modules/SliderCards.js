@@ -4,7 +4,7 @@ import { throttle } from "throttle-debounce";
 const SliderGoods = {
 	_getMaxScroll($slider) {
 		const $window = $slider.find(".simplebar-content-wrapper");
-		const $contentElems = $slider.find(".slider-goods__row > div");
+		const $contentElems = $slider.find(".js-slider-cards__row > div");
 
 		const windowW = $window.width();
 		const contentW = $contentElems.toArray().reduce((total, item) => {
@@ -30,7 +30,9 @@ const SliderGoods = {
 	_scrollTo($slider, direction) {
 		const $window = $slider.find(".simplebar-content-wrapper");
 
-		const scrollStep = $slider.find(".slider-goods__col").outerWidth();
+		const scrollStep = $slider
+			.find(".js-slider-cards__row > div:nth-child(2)")
+			.outerWidth();
 		const scrollNew = $window.scrollLeft() + scrollStep * direction;
 
 		$window.animate({ scrollLeft: scrollNew }, 200, () => {
@@ -41,19 +43,19 @@ const SliderGoods = {
 	_handleNextClick(e) {
 		e.preventDefault();
 
-		const $slider = $(e.currentTarget).closest(".slider-goods");
+		const $slider = $(e.currentTarget).closest(".js-slider-cards");
 		this._scrollTo($slider, 1);
 	},
 
 	_handlePrevClick(e) {
 		e.preventDefault();
 
-		const $slider = $(e.currentTarget).closest(".slider-goods");
+		const $slider = $(e.currentTarget).closest(".js-slider-cards");
 		this._scrollTo($slider, -1);
 	},
 
 	_handleWindowScroll(e) {
-		const $slider = $(e.target).closest(".slider-goods");
+		const $slider = $(e.target).closest(".js-slider-cards");
 		this._updateButtons($slider);
 	},
 
@@ -62,22 +64,22 @@ const SliderGoods = {
 
 		$(document).on(
 			"click",
-			".js-slider-goods-next",
+			".js-slider-cards-next",
 			this._handleNextClick.bind(this)
 		);
 
 		$(document).on(
 			"click",
-			".js-slider-goods-prev",
+			".js-slider-cards-prev",
 			this._handlePrevClick.bind(this)
 		);
 
-		$(".slider-goods .simplebar-content-wrapper").on(
+		$(".js-slider-cards .simplebar-content-wrapper").on(
 			"scroll",
 			throttle(250, this._handleWindowScroll.bind(this))
 		);
 
-		$(".slider-goods").each(function () {
+		$(".js-slider-cards").each(function () {
 			self._updateButtons($(this));
 		});
 	},

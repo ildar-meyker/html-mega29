@@ -24999,7 +24999,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_Gallery__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/Gallery */ "./src/js/modules/Gallery.js");
 /* harmony import */ var _modules_Panel__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/Panel */ "./src/js/modules/Panel.js");
 /* harmony import */ var _modules_Search__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/Search */ "./src/js/modules/Search.js");
-/* harmony import */ var _modules_SliderGoods__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/SliderGoods */ "./src/js/modules/SliderGoods.js");
+/* harmony import */ var _modules_SliderCards__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/SliderCards */ "./src/js/modules/SliderCards.js");
 /* harmony import */ var _modules_SliderItems1__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/SliderItems1 */ "./src/js/modules/SliderItems1.js");
 /* harmony import */ var _modules_SliderMain__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/SliderMain */ "./src/js/modules/SliderMain.js");
 
@@ -25529,9 +25529,9 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
 /***/ }),
 
-/***/ "./src/js/modules/SliderGoods.js":
+/***/ "./src/js/modules/SliderCards.js":
 /*!***************************************!*\
-  !*** ./src/js/modules/SliderGoods.js ***!
+  !*** ./src/js/modules/SliderCards.js ***!
   \***************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -25546,7 +25546,7 @@ __webpack_require__.r(__webpack_exports__);
 var SliderGoods = {
   _getMaxScroll: function _getMaxScroll($slider) {
     var $window = $slider.find(".simplebar-content-wrapper");
-    var $contentElems = $slider.find(".slider-goods__row > div");
+    var $contentElems = $slider.find(".js-slider-cards__row > div");
     var windowW = $window.width();
     var contentW = $contentElems.toArray().reduce(function (total, item) {
       return total + jquery__WEBPACK_IMPORTED_MODULE_0___default()(item).outerWidth();
@@ -25566,7 +25566,7 @@ var SliderGoods = {
     var _this = this;
 
     var $window = $slider.find(".simplebar-content-wrapper");
-    var scrollStep = $slider.find(".slider-goods__col").outerWidth();
+    var scrollStep = $slider.find(".js-slider-cards__row > div:nth-child(2)").outerWidth();
     var scrollNew = $window.scrollLeft() + scrollStep * direction;
     $window.animate({
       scrollLeft: scrollNew
@@ -25576,27 +25576,27 @@ var SliderGoods = {
   },
   _handleNextClick: function _handleNextClick(e) {
     e.preventDefault();
-    var $slider = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).closest(".slider-goods");
+    var $slider = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).closest(".js-slider-cards");
 
     this._scrollTo($slider, 1);
   },
   _handlePrevClick: function _handlePrevClick(e) {
     e.preventDefault();
-    var $slider = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).closest(".slider-goods");
+    var $slider = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).closest(".js-slider-cards");
 
     this._scrollTo($slider, -1);
   },
   _handleWindowScroll: function _handleWindowScroll(e) {
-    var $slider = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest(".slider-goods");
+    var $slider = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest(".js-slider-cards");
 
     this._updateButtons($slider);
   },
   init: function init() {
     var self = this;
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-slider-goods-next", this._handleNextClick.bind(this));
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-slider-goods-prev", this._handlePrevClick.bind(this));
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".slider-goods .simplebar-content-wrapper").on("scroll", Object(throttle_debounce__WEBPACK_IMPORTED_MODULE_1__["throttle"])(250, this._handleWindowScroll.bind(this)));
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".slider-goods").each(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-slider-cards-next", this._handleNextClick.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-slider-cards-prev", this._handlePrevClick.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-slider-cards .simplebar-content-wrapper").on("scroll", Object(throttle_debounce__WEBPACK_IMPORTED_MODULE_1__["throttle"])(250, this._handleWindowScroll.bind(this)));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".js-slider-cards").each(function () {
       self._updateButtons(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this));
     });
   }
