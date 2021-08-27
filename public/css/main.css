@@ -2330,6 +2330,47 @@ a {
     .page__scroll.hidden {
       display: none; } }
 
+.rating {
+  display: flex;
+  align-items: center; }
+  .rating__stars {
+    background: url("../images/star-empty.png") repeat-x;
+    background-size: auto 100%;
+    width: 6em;
+    height: 1em; }
+    .rating__stars div {
+      background: url("../images/star-filled.png") repeat-x;
+      background-size: auto 100%;
+      width: 0;
+      height: 100%; }
+  .rating__count {
+    margin-left: 5px;
+    font-size: 0.8em;
+    color: #b2b3b3; }
+
+.labels__blue, .labels__red, .labels__orange, .labels__green {
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  margin: 0 0.2em 0.4em 0;
+  border-radius: 0.4em;
+  font-size: 1em;
+  font-weight: 500;
+  white-space: nowrap;
+  color: #fff; }
+
+.labels__blue {
+  background: #2f80ed; }
+
+.labels__red {
+  background: #f50505; }
+
+.labels__orange {
+  background: #fde6d1;
+  color: #f68219; }
+
+.labels__green {
+  background: #21a73f; }
+
 .button {
   transition: all 0.2s;
   position: relative;
@@ -2784,47 +2825,6 @@ a {
         content: "\e90c";
         font-family: "icomoon" !important;
         line-height: 1; }
-
-.rating {
-  display: flex;
-  align-items: center; }
-  .rating__stars {
-    background: url("../images/star-empty.png") repeat-x;
-    background-size: auto 100%;
-    width: 6em;
-    height: 1em; }
-    .rating__stars div {
-      background: url("../images/star-filled.png") repeat-x;
-      background-size: auto 100%;
-      width: 0;
-      height: 100%; }
-  .rating__count {
-    margin-left: 5px;
-    font-size: 0.8em;
-    color: #b2b3b3; }
-
-.labels__blue, .labels__red, .labels__orange, .labels__green {
-  display: inline-block;
-  padding: 0.4em 0.8em;
-  margin: 0 0.2em 0.4em 0;
-  border-radius: 0.4em;
-  font-size: 1em;
-  font-weight: 500;
-  white-space: nowrap;
-  color: #fff; }
-
-.labels__blue {
-  background: #2f80ed; }
-
-.labels__red {
-  background: #f50505; }
-
-.labels__orange {
-  background: #fde6d1;
-  color: #f68219; }
-
-.labels__green {
-  background: #21a73f; }
 
 .article {
   color: #000; }
