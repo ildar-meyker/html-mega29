@@ -24,6 +24,10 @@
 	&__scroll {
 		display: none;
 	}
+
+	&__more {
+		margin: 20px 0;
+	}
 }
 
 @media (max-width: 767.98px) {
@@ -52,9 +56,28 @@
 		&__paper {
 			padding: 30px;
 		}
+
+		&__more {
+			.button {
+				padding: 19px 20px;
+				font-size: 18px;
+			}
+		}
 	}
 }
 
+@media (min-width: 992px) {
+	.page {
+		&__more {
+			margin: 25px 0;
+
+			.button {
+				padding: 10px 20px;
+				font-size: 15px;
+			}
+		}
+	}
+}
 @media (min-width: 1400px) {
 	.page {
 		&__scroll {

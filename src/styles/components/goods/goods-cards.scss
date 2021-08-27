@@ -1,18 +1,4 @@
 .goods-cards {
-	&__row-grid {
-		display: flex;
-		flex-wrap: wrap;
-		margin: 0 -7px;
-		margin-top: -14px;
-	}
-
-	&__col-grid {
-		flex: 0 0 auto;
-		width: 50%;
-		padding: 0 7px;
-		margin-top: 14px;
-	}
-
 	&__item {
 		transition: all 0.2s;
 		position: relative;
@@ -141,10 +127,6 @@
 
 @media (min-width: 768px) {
 	.goods-cards {
-		&__col-grid {
-			width: 33.33%;
-		}
-
 		&__desc {
 			padding: 15px;
 		}
@@ -175,19 +157,6 @@
 		&__actions {
 			margin: 10px 0 -5px 0;
 			font-size: 13px;
-		}
-	}
-}
-
-@media (min-width: 1200px) {
-	.goods-cards {
-		&__row-grid {
-			margin-top: -25px;
-		}
-
-		&__col-grid {
-			margin-top: 25px;
-			width: 25%;
 		}
 	}
 }

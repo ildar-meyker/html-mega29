@@ -15,10 +15,6 @@
 			border-radius: 0;
 		}
 	}
-
-	&__more {
-		margin: 20px 0;
-	}
 }
 
 @media (min-width: 768px) {
@@ -26,17 +22,6 @@
 		&__image {
 			&--empty {
 				background-size: 45% auto;
-			}
-		}
-	}
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-	.content {
-		&__more {
-			button {
-				padding: 20px 15px;
-				font-size: 16px;
 			}
 		}
 	}

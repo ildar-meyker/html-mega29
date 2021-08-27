@@ -1,0 +1,41 @@
+.grid-goods {
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -5px;
+		margin-top: -10px;
+	}
+
+	&__col {
+		flex: 0 0 auto;
+		width: 50%;
+		padding: 0 5px;
+		margin-top: 10px;
+	}
+}
+
+@media (min-width: 768px) {
+	.grid-goods {
+		&__row {
+			margin: 0 -7px;
+		}
+
+		&__col {
+			width: 33.33%;
+			padding: 0 7px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.grid-goods {
+		&__row {
+			margin-top: -25px;
+		}
+
+		&__col {
+			margin-top: 25px;
+			width: 25%;
+		}
+	}
+}

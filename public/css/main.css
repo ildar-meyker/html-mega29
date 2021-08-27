@@ -2307,6 +2307,9 @@ a {
 .page__scroll {
   display: none; }
 
+.page__more {
+  margin: 20px 0; }
+
 @media (max-width: 767.98px) {
   .page__paper--compact {
     padding: 10px; } }
@@ -2319,7 +2322,17 @@ a {
   .page__inner {
     padding: 0 20px; }
   .page__paper {
-    padding: 30px; } }
+    padding: 30px; }
+  .page__more .button {
+    padding: 19px 20px;
+    font-size: 18px; } }
+
+@media (min-width: 992px) {
+  .page__more {
+    margin: 25px 0; }
+    .page__more .button {
+      padding: 10px 20px;
+      font-size: 15px; } }
 
 @media (min-width: 1400px) {
   .page__scroll {
@@ -3525,17 +3538,9 @@ a {
   .content__image--rect {
     border-radius: 0; }
 
-.content__more {
-  margin: 20px 0; }
-
 @media (min-width: 768px) {
   .content__image--empty {
     background-size: 45% auto; } }
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  .content__more button {
-    padding: 20px 15px;
-    font-size: 16px; } }
 
 .sorting {
   margin-bottom: 15px;
@@ -5003,18 +5008,6 @@ a {
     .my-purchases__show-more {
       font-size: 10px; } }
 
-.goods-cards__row-grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -7px;
-  margin-top: -14px; }
-
-.goods-cards__col-grid {
-  flex: 0 0 auto;
-  width: 50%;
-  padding: 0 7px;
-  margin-top: 14px; }
-
 .goods-cards__item {
   transition: all 0.2s;
   position: relative;
@@ -5110,8 +5103,6 @@ a {
     margin: 0 0.5em; }
 
 @media (min-width: 768px) {
-  .goods-cards__col-grid {
-    width: 33.33%; }
   .goods-cards__desc {
     padding: 15px; }
   .goods-cards__labels {
@@ -5128,13 +5119,6 @@ a {
   .goods-cards__actions {
     margin: 10px 0 -5px 0;
     font-size: 13px; } }
-
-@media (min-width: 1200px) {
-  .goods-cards__row-grid {
-    margin-top: -25px; }
-  .goods-cards__col-grid {
-    margin-top: 25px;
-    width: 25%; } }
 
 .goods-list__header {
   display: flex;
@@ -6533,6 +6517,32 @@ a {
       right: -20px; }
     .slider-shops .simplebar-horizontal {
       display: none; } }
+
+.grid-goods__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+  margin-top: -10px; }
+
+.grid-goods__col {
+  flex: 0 0 auto;
+  width: 50%;
+  padding: 0 5px;
+  margin-top: 10px; }
+
+@media (min-width: 768px) {
+  .grid-goods__row {
+    margin: 0 -7px; }
+  .grid-goods__col {
+    width: 33.33%;
+    padding: 0 7px; } }
+
+@media (min-width: 1200px) {
+  .grid-goods__row {
+    margin-top: -25px; }
+  .grid-goods__col {
+    margin-top: 25px;
+    width: 25%; } }
 
 .brands {
   display: flex; }
