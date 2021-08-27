@@ -2304,6 +2304,9 @@ a {
   border-radius: 4px;
   background: #fff; }
 
+.page__scroll {
+  display: none; }
+
 @media (max-width: 767.98px) {
   .page__paper--compact {
     padding: 10px; } }
@@ -2317,6 +2320,15 @@ a {
     padding: 0 20px; }
   .page__paper {
     padding: 30px; } }
+
+@media (min-width: 1400px) {
+  .page__scroll {
+    position: fixed;
+    display: block;
+    bottom: 10%;
+    right: 30px; }
+    .page__scroll.hidden {
+      display: none; } }
 
 .button {
   transition: all 0.2s;

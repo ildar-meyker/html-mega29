@@ -5,6 +5,7 @@ import "slick-carousel";
 import "tooltipster";
 import "simplebar";
 
+import "./modules/iOSClickFix";
 import "./modules/CustomForm";
 import "./modules/CountEditor";
 import "./modules/NavInfo";
@@ -17,6 +18,7 @@ import "./modules/Search";
 import "./modules/SliderCards";
 import "./modules/SliderItems1";
 import "./modules/SliderMain";
+import "./modules/ScrollUp";
 
 $(function () {
 	$("#nav-path").scrollLeft(99999);

@@ -20,6 +20,10 @@
 		border-radius: 4px;
 		background: #fff;
 	}
+
+	&__scroll {
+		display: none;
+	}
 }
 
 @media (max-width: 767.98px) {
@@ -47,6 +51,21 @@
 
 		&__paper {
 			padding: 30px;
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.page {
+		&__scroll {
+			position: fixed;
+			display: block;
+			bottom: 10%;
+			right: 30px;
+
+			&.hidden {
+				display: none;
+			}
 		}
 	}
 }
