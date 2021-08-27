@@ -1,4 +1,4 @@
-.pros {
+.benefits {
 	padding: 20px 0;
 	background: #fff;
 
@@ -44,7 +44,7 @@
 }
 
 @media (min-width: 768px) {
-	.pros {
+	.benefits {
 		&__list {
 			padding: 15px 0;
 			margin-top: 10px;
@@ -69,7 +69,7 @@
 }
 
 @media (min-width: 992px) {
-	.pros {
+	.benefits {
 		&__item {
 			color: #323232;
 
@@ -83,7 +83,7 @@
 }
 
 @media (min-width: 1220px) {
-	.pros {
+	.benefits {
 		padding-top: 25px;
 
 		&__item {
