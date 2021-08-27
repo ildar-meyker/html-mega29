@@ -1,15 +1,23 @@
 .footer {
-	&__main-content {
-		border-top: 1px solid #f2f3f5;
-		background: #fff;
+	&__content {
+		background: #f2f3f5;
+	}
+
+	&__bottom {
+		padding: 20px 0;
+		background: #fafafa;
+
+		&__cards {
+			margin: 20px 0;
+		}
 	}
 
 	&__phone {
-		padding: 20/16 + em 0;
+		padding: 20px 0;
 		text-align: center;
 
 		&__number {
-			font-size: 17/16 + em;
+			font-size: 17px;
 			font-weight: 700;
 			color: #21a73f;
 
@@ -19,33 +27,24 @@
 		}
 
 		&__help {
-			margin-top: 5/11 + em;
-			font-size: 11/16 + em;
+			margin-top: 5px;
+			font-size: 11px;
 			font-weight: 500;
 		}
 	}
 
 	&__apps {
-		padding-bottom: 15/16 + em;
+		padding-bottom: 15px;
 
 		&__item {
 			display: block;
-			width: 200/16 + em;
+			width: 200px;
 			margin: 0 auto;
-			margin-top: 8/16 + em;
+			margin-top: 8px;
 
 			&:first-child {
 				margin-top: 0;
 			}
-		}
-	}
-
-	&__copyright {
-		border-top: 1px solid #f2f3f5;
-		padding: 20/16 + em 0;
-
-		&__pay-methods {
-			margin: 20/16 + em 0;
 		}
 	}
 
@@ -57,64 +56,72 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			margin: 0 4/16 + em;
-			width: 54/16 + em;
-			height: 54/16 + em;
+			margin: 0 4px;
+			width: 1em;
+			height: 1em;
 			border: 1px solid #d9d9d9;
-			border-radius: 4/16 + em;
+			border-radius: 5px;
 			background: #fff;
+			font-size: 50px;
 
 			&:hover {
-				border-color: darken(#d9d9d9, 10%);
+				border-color: #21a73f;
 			}
 
 			i {
-				font-size: 27/16 + em;
+				font-size: 0.5em;
 				color: #21a73f;
 			}
 		}
 	}
 
-	&__pay-methods {
+	&__cards {
 		&__title {
-			margin-bottom: 5/15 + em;
-			font-size: 15/16 + em;
+			margin-bottom: 5px;
+			font-size: 15px;
 			text-align: center;
 		}
 
-		&__cards {
+		&__icons {
 			display: flex;
 			justify-content: center;
 			align-items: center;
 
 			img {
-				width: 36/16 + em;
-				margin: 0 2/16 + em;
+				width: 36px;
+				margin: 0 2px;
 			}
 		}
 	}
 
 	&__author {
-		font-size: 15/16 + em;
+		font-size: 15px;
 		text-align: center;
 	}
 }
 
 @media (max-width: 991.98px) {
 	.footer {
+		&__bottom {
+			&__center {
+				padding-bottom: 60px;
+			}
+		}
+
 		&__nav {
 			&__group {
 				margin: 0 -20px;
-				border-bottom: 1px solid #f2f3f5;
-				padding: 0 23/16 + em;
+				border-bottom: 1px solid #e7e7e8;
+				padding: 0 23px;
 			}
 
 			&__title {
 				position: relative;
-				padding: 12/13 + em 0;
-				font-size: 13/16 + em;
+				padding: 12px 0;
+				font-size: 13px;
 				font-weight: 700;
 				text-transform: uppercase;
+				color: #21a73f;
 				cursor: pointer;
 
 				i {
@@ -134,10 +141,10 @@
 			}
 
 			&__list {
-				padding-bottom: 10/16 + em;
+				padding-bottom: 10px;
 
 				> div {
-					margin-bottom: 10/16 + em;
+					margin-bottom: 10px;
 				}
 			}
 		}
@@ -154,24 +161,136 @@
 	}
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.footer {
+		&__content {
+			&__touch {
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+				padding: 50px 0;
+			}
+		}
+
+		&__bottom {
+			&__center {
+				padding-right: 30px;
+				padding-left: 30px;
+			}
+		}
+
+		&__nav {
+			&__group {
+				padding: 0 30px;
+			}
+
+			&__title {
+				padding: 21px 0;
+				font-size: 24px;
+			}
+		}
+
+		&__phone {
+			flex: 0 0 auto;
+			padding: 0;
+			text-align: left;
+			padding-right: 90px;
+
+			&__number {
+				font-size: 24px;
+			}
+
+			&__help {
+				margin-top: 0;
+				font-size: 16px;
+			}
+		}
+
+		&__apps {
+			flex: 0 0 auto;
+			padding: 0;
+			width: 50%;
+			display: flex;
+
+			&__item {
+				margin: 0 7px 0 0;
+				width: 150px;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.footer {
+		&__bottom {
+			&__center {
+				display: flex;
+				flex-direction: row-reverse;
+				align-items: center;
+			}
+
+			&__social,
+			&__author {
+				flex: 0 0 auto;
+				width: 25%;
+			}
+
+			&__cards {
+				margin: 0;
+				flex: 0 0 auto;
+				width: 50%;
+			}
+		}
+
+		&__social {
+			justify-content: flex-end;
+
+			&__item {
+				font-size: 58px;
+			}
+		}
+
+		&__cards {
+			&__title {
+				font-size: 18px;
+			}
+
+			&__icons {
+				img {
+					width: 40px;
+				}
+			}
+		}
+
+		&__author {
+			font-size: 18px;
+			text-align: left;
+		}
+	}
+}
+
 @media (min-width: 992px) {
 	.footer {
-		&__main-content {
-			padding-top: 35/16 + em;
-			padding-bottom: 7/16 + em;
+		&__content {
+			padding-top: 35px;
+			padding-bottom: 7px;
 
 			&__center {
 				display: flex;
 			}
 
-			&__contacts {
-				padding-right: 25/16 + em;
+			&__touch {
+				padding-right: 25px;
 				order: -1;
 			}
 
-			&__links {
+			&__nav {
 				flex-grow: 1;
 			}
+		}
+
+		&__bottom {
+			padding: 25px 0;
 		}
 
 		&__nav {
@@ -180,12 +299,12 @@
 
 			&__group {
 				flex: 1 0 185px;
-				padding-left: 30/16 + em;
-				margin-bottom: 30/16 + em;
+				padding-left: 30px;
+				margin-bottom: 30px;
 			}
 
 			&__title {
-				font-size: 15/16 + em;
+				font-size: 15px;
 				font-weight: 700;
 				text-transform: uppercase;
 				color: #21a73f;
@@ -197,8 +316,8 @@
 
 			&__list {
 				> div {
-					margin-top: 8/15 + em;
-					font-size: 15/16 + em;
+					margin-top: 8px;
+					font-size: 15px;
 				}
 			}
 
@@ -213,62 +332,24 @@
 
 		&__apps {
 			padding-bottom: 0;
-			margin-top: 22/16 + em;
+			margin-top: 22px;
 
 			&__item {
-				width: 125/16 + em;
-				margin-top: 5/16 + em;
-			}
-		}
-
-		&__copyright {
-			&__center {
-				display: flex;
-				flex-direction: row-reverse;
-				align-items: center;
-			}
-
-			&__social,
-			&__author {
-				flex: 0 0 auto;
-				width: 25%;
-			}
-
-			&__pay-methods {
-				margin: 0;
-				flex: 0 0 auto;
-				width: 50%;
+				width: 125px;
+				margin-top: 5px;
 			}
 		}
 
 		&__social {
-			justify-content: flex-end;
-
 			&__item {
-				width: 44/16 + em;
-				height: 44/16 + em;
-
-				i {
-					font-size: 24/16 + em;
-				}
+				font-size: 44px;
 			}
 		}
 
-		&__pay-methods {
-			&__title {
-				font-size: 18/16 + em;
+		&__cards {
+			img {
+				width: 30px;
 			}
-
-			&__cards {
-				img {
-					width: 32/16 + em;
-				}
-			}
-		}
-
-		&__author {
-			font-size: 18/16 + em;
-			text-align: left;
 		}
 	}
 }
