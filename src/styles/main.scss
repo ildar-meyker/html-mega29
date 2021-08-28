@@ -70,16 +70,15 @@
 @import "components/news";
 @import "components/news-item";
 
-@import "components/nav-path";
-@import "components/nav-side";
-@import "components/nav-info";
-@import "components/nav-pages";
-@import "components/nav-profile";
-@import "components/nav-bottom";
-@import "components/nav-catalog";
-@import "components/layout-basic";
-@import "components/layout-order";
-@import "components/layout-profile";
+@import "components/navs/nav-path";
+@import "components/navs/nav-side";
+@import "components/navs/nav-info";
+@import "components/navs/nav-pages";
+@import "components/navs/nav-profile";
+@import "components/navs/nav-bottom";
+@import "components/navs/nav-catalog";
+@import "components/navs/nav-deep";
+
 @import "components/form";
 @import "components/form-card";
 @import "components/promo-best-price";
@@ -124,5 +123,10 @@
 @import "components/sliders/slider-shops";
 
 @import "components/grids/grid-goods";
+
+@import "components/layouts/layout-basic";
+@import "components/layouts/layout-order";
+@import "components/layouts/layout-profile";
+@import "components/layouts/layout-catalog";
 
 @import "components/brands";

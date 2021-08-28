@@ -85,7 +85,7 @@
 		break-inside: avoid-column;
 	}
 
-	&__title {
+	&__h2 {
 		margin-bottom: 5px;
 		display: block;
 		font-size: 18px;
@@ -116,6 +116,24 @@
 
 		&:hover {
 			color: #ea5e20 !important;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.nav-catalog {
+		&__h1 {
+			font-size: 24px;
+			font-weight: 700;
+		}
+	}
+}
+@media (min-width: 1220px) {
+	.nav-catalog {
+		&__pane {
+			&--4-cols {
+				column-count: 4;
+			}
 		}
 	}
 }

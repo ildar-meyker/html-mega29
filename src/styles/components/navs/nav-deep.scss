@@ -1,0 +1,134 @@
+.nav-deep {
+	border-bottom: 1px solid #f2f3f5;
+
+	&__group {
+		border-top: 1px solid #f2f3f5;
+	}
+
+	&__title {
+		position: relative;
+		min-height: 50px;
+		display: flex;
+		align-items: center;
+		padding: 10px 25px;
+		padding-right: 50px;
+		font-size: 17px;
+		font-weight: 700;
+		background: #fff;
+		cursor: pointer;
+		color: #21a73f;
+
+		i {
+			transition: all 0.2s;
+			transform: rotate(180deg);
+			position: absolute;
+			right: 25px;
+			top: 50%;
+			margin-top: -0.5em;
+			font-size: 13px;
+		}
+
+		&.collapsed {
+			color: #2e2e2e;
+
+			i {
+				transform: rotate(0);
+			}
+		}
+	}
+
+	&__list {
+		background: #fafafa;
+
+		a {
+			position: relative;
+			display: flex;
+			align-items: center;
+			border-top: 1px solid #f2f3f5;
+			min-height: 50px;
+			padding: 10px 25px;
+			padding-right: 50px;
+			font-size: 15px;
+			font-weight: 500;
+
+			&:before {
+				font-family: "icomoon" !important;
+				content: "\e90a";
+				position: absolute;
+				right: 25px;
+				top: 50%;
+				margin-top: -0.5em;
+				font-size: 13px;
+				font-weight: normal;
+			}
+		}
+	}
+
+	&__root {
+		a {
+			font-size: 17px;
+			font-weight: 700;
+		}
+	}
+
+	&__back {
+		background: #fff;
+
+		a {
+			justify-content: center;
+			padding-left: 50px;
+			font-size: 17px;
+			font-weight: 700;
+
+			&:before {
+				transform: rotate(-180deg);
+				left: 25px;
+				right: auto;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.nav-deep {
+		&__group {
+		}
+
+		&__title {
+			padding-right: 40px;
+			padding-left: 40px;
+			height: 80px;
+			font-size: 32px;
+
+			i {
+				right: 40px;
+				font-size: 26px;
+			}
+		}
+
+		&__list {
+			a {
+				padding-right: 40px;
+				padding-left: 40px;
+				height: 80px;
+				font-size: 32px;
+
+				&:before {
+					right: 40px;
+					font-size: 26px;
+				}
+			}
+		}
+
+		&__back {
+			a {
+				font-size: 32px;
+
+				&:before {
+					left: 40px;
+					right: auto;
+				}
+			}
+		}
+	}
+}
