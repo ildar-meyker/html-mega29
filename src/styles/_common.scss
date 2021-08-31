@@ -26,6 +26,10 @@ body {
 	font-feature-settings: "pnum" on, "lnum" on;
 	line-height: 1.2;
 	color: #2e2e2e;
+
+	&.locked {
+		overflow: hidden;
+	}
 }
 
 textarea {
@@ -42,10 +46,6 @@ a {
 	transition: all 0.2s;
 }
 
-.scale-mobile {
-	font-size: 3.9vw;
-}
-
 .h1 {
 	margin-bottom: 15px;
 	font-size: 24px;
@@ -60,21 +60,11 @@ a {
 }
 
 @media (min-width: 768px) {
-	.scale-mobile {
-		font-size: 30px;
-	}
-
 	.h1 {
 		font-size: 32px;
 	}
 
 	.h2 {
 		font-size: 24px;
-	}
-}
-
-@media (min-width: 992px) {
-	.scale-mobile {
-		font-size: 16px;
 	}
 }

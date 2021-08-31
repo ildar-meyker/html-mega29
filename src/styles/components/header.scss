@@ -1,4 +1,8 @@
 .header {
+	position: relative;
+	z-index: 400;
+	background: #fff;
+
 	&__main {
 		display: flex;
 		align-items: center;

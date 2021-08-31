@@ -6,6 +6,7 @@ import "tooltipster";
 import "simplebar";
 
 import "./modules/iOSClickFix";
+import "./modules/CatalogFilter";
 import "./modules/CustomForm";
 import "./modules/CountEditor";
 import "./modules/NavInfo";

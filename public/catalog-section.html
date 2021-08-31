@@ -160,241 +160,244 @@
 			<div class="layout-basic__center">
 				<div class="layout-basic__side">
 
-					<form action="#" class="filter" id="filter">
-						<div class="filter__group">
-							<a href="#" class="filter__title" data-bs-toggle="collapse" data-bs-target="#filter-1">
-								<span>Наличие в магазинах</span>
-								<i class="icon-arrow-down filter__title__arrow"></i>
-							</a>
-							<div class="filter__crop collapse show" id="filter-1">
-								
-								<div class="filter__body">
+					<form action="#" class="form-filter" id="form-filter">
+						<div class="form-filter__overlay"></div>
+						<div class="form-filter__panel">
+							<div class="form-filter__group">
+								<a href="#" class="form-filter__title" data-bs-toggle="collapse" data-bs-target="#filter-1">
+									<span>Наличие в магазинах</span>
+									<i class="icon-arrow-down form-filter__title__arrow"></i>
+								</a>
+								<div class="form-filter__crop collapse show" id="filter-1">
+									
+									<div class="form-filter__body">
 
-									<div class="filter__props">
-										<div class="filter__props__title">
-											Архангельск
-										</div>
-
-										<div class="filter__props__list">
-											<label class="check-border filter__check">
-												<div class="check-border__input"><input type="checkbox" checked></div>
-												<div class="check-border__text">пр. Московский, 25</div>
-											</label>
-											<label class="check-border filter__check">
-												<div class="check-border__input"><input type="checkbox"></div>
-												<div class="check-border__text">пр. Ленинградский, 255</div>
-											</label>
-											<label class="check-border filter__check">
-												<div class="check-border__input"><input type="checkbox"></div>
-												<div class="check-border__text">пр. Никольский, 33, корп. 1 пр. Никольский, 33, корп. 1</div>
-											</label>
-											<label class="check-border filter__check">
-												<div class="check-border__input"><input type="checkbox"></div>
-												<div class="check-border__text">ул. Гагарина, 46</div>
-											</label>
-										</div>
-									</div>
-
-									<div class="filter__props">
-										<div class="filter__props__title">
-											Северодвинск
-										</div>
-
-										<div class="filter__props__list">
-											<label class="check-border filter__check">
-												<div class="check-border__input"><input type="checkbox"></div>
-												<div class="check-border__text">пр. Никольский, 33, корп. 1</div>
-											</label>
-										</div>
-									</div>
-
-									<div class="filter__props">
-										<div class="filter__props__title">
-											Северодвинск
-										</div>
-
-										<div class="filter__props__list">
-											<label class="check-border filter__check">
-												<div class="check-border__input"><input type="checkbox"></div>
-												<div class="check-border__text">пр. Никольский, 33, корп. 1</div>
-											</label>
-										</div>
-									</div>
-
-								</div>
-								
-							</div>
-						</div>
-						<div class="filter__group filter__group--orange">
-							<a href="#" class="filter__title collapsed" data-bs-toggle="collapse" data-bs-target="#filter-2">
-								<span>Товары под заказ </span>
-								<i class="icon-help-circle filter__title__info js-tooltip"  title="Перейти к товарам данной категории"></i>
-								<i class="icon-arrow-down filter__title__arrow"></i>
-							</a>
-							<div class="filter__crop collapse" id="filter-2">
-								<div class="filter__body">
-									<div class="filter__props">
-										<div class="filter__props__list">
-											<label class="check-border filter__check">
-												<div class="check-border__input"><input type="checkbox" checked></div>
-												<div class="check-border__text">Совместный просмотр (421)</div>
-											</label>
-											<label class="check-border filter__check">
-												<div class="check-border__input"><input type="checkbox"></div>
-												<div class="check-border__text">Да</div>
-											</label>
-											<label class="check-border filter__check">
-												<div class="check-border__input"><input type="checkbox"></div>
-												<div class="check-border__text">Нет</div>
-											</label>
-										</div>
-									</div>
-								</div>
-
-							</div>
-						</div>
-						<div class="filter__group">
-							<a href="#" class="filter__title" data-bs-toggle="collapse" data-bs-target="#filter-3">
-								<span>Цена</span>
-								<i class="icon-arrow-down filter__title__arrow"></i>
-							</a>
-							<div class="filter__crop collapse show" id="filter-3">
-								<div class="filter__body">
-
-									<div class="filter__range js-range">
-										<div class="filter__range__fields">
-											<div class="filter__range__input">
-												<div class="input-top-label">
-													<label class="input-top-label__label">Мин</label>
-													<input type="text" class="input-top-label__input text-center js-range__from" value="0">
-												</div>
+										<div class="form-filter__props">
+											<div class="form-filter__props__title">
+												Архангельск
 											</div>
-											<div class="filter__range__space"></div>
-											<div class="filter__range__input">
-												<div class="input-top-label">
-													<label class="input-top-label__label">Макс</label>
-													<input type="text" class="input-top-label__input text-center js-range__to" value="2000">
-												</div>
+
+											<div class="form-filter__props__list">
+												<label class="check-border form-filter__check">
+													<div class="check-border__input"><input type="checkbox" checked></div>
+													<div class="check-border__text">пр. Московский, 25</div>
+												</label>
+												<label class="check-border form-filter__check">
+													<div class="check-border__input"><input type="checkbox"></div>
+													<div class="check-border__text">пр. Ленинградский, 255</div>
+												</label>
+												<label class="check-border form-filter__check">
+													<div class="check-border__input"><input type="checkbox"></div>
+													<div class="check-border__text">пр. Никольский, 33, корп. 1 пр. Никольский, 33, корп. 1</div>
+												</label>
+												<label class="check-border form-filter__check">
+													<div class="check-border__input"><input type="checkbox"></div>
+													<div class="check-border__text">ул. Гагарина, 46</div>
+												</label>
 											</div>
 										</div>
-										<div class="filter__range__slider">
-											<input type="hidden" class="js-range__hidden" value="0,2000" data-from="0" data-to="2000" />
+
+										<div class="form-filter__props">
+											<div class="form-filter__props__title">
+												Северодвинск
+											</div>
+
+											<div class="form-filter__props__list">
+												<label class="check-border form-filter__check">
+													<div class="check-border__input"><input type="checkbox"></div>
+													<div class="check-border__text">пр. Никольский, 33, корп. 1</div>
+												</label>
+											</div>
+										</div>
+
+										<div class="form-filter__props">
+											<div class="form-filter__props__title">
+												Северодвинск
+											</div>
+
+											<div class="form-filter__props__list">
+												<label class="check-border form-filter__check">
+													<div class="check-border__input"><input type="checkbox"></div>
+													<div class="check-border__text">пр. Никольский, 33, корп. 1</div>
+												</label>
+											</div>
+										</div>
+
+									</div>
+									
+								</div>
+							</div>
+							<div class="form-filter__group form-filter__group--orange">
+								<a href="#" class="form-filter__title collapsed" data-bs-toggle="collapse" data-bs-target="#filter-2">
+									<span>Товары под заказ </span>
+									<i class="icon-help-circle form-filter__title__info js-tooltip"  title="Перейти к товарам данной категории"></i>
+									<i class="icon-arrow-down form-filter__title__arrow"></i>
+								</a>
+								<div class="form-filter__crop collapse" id="filter-2">
+									<div class="form-filter__body">
+										<div class="form-filter__props">
+											<div class="form-filter__props__list">
+												<label class="check-border form-filter__check">
+													<div class="check-border__input"><input type="checkbox" checked></div>
+													<div class="check-border__text">Совместный просмотр (421)</div>
+												</label>
+												<label class="check-border form-filter__check">
+													<div class="check-border__input"><input type="checkbox"></div>
+													<div class="check-border__text">Да</div>
+												</label>
+												<label class="check-border form-filter__check">
+													<div class="check-border__input"><input type="checkbox"></div>
+													<div class="check-border__text">Нет</div>
+												</label>
+											</div>
 										</div>
 									</div>
 
 								</div>
-
 							</div>
-						</div>
-						<div class="filter__group">
-							<a href="#" class="filter__title" data-bs-toggle="collapse" data-bs-target="#filter-4">
-								<span>Бренд</span>
-								<i class="icon-arrow-down filter__title__arrow"></i>
-							</a>
-							<div class="filter__crop collapse show" id="filter-4">
-								<div class="filter__body">
-									<div class="filter__props">
-										<div class="filter__props__list">
-											<label class="check-border filter__check">
-												<div class="check-border__input"><input type="checkbox" checked></div>
-												<div class="check-border__text">Aroma Line (28)</div>
-											</label>
-											<label class="check-border filter__check">
-												<div class="check-border__input"><input type="checkbox"></div>
-												<div class="check-border__text">Dr. Huter (31)</div>
-											</label>
-											<label class="check-border filter__check">
-												<div class="check-border__input"><input type="checkbox"></div>
-												<div class="check-border__text">Freshco (46)</div>
-											</label>
-											<label class="check-border filter__check">
-												<div class="check-border__input"><input type="checkbox"></div>
-												<div class="check-border__text">Aromalight (11)</div>
-											</label>
-											<label class="check-border filter__check">
-												<div class="check-border__input"><input type="checkbox"></div>
-												<div class="check-border__text">Areon (2)</div>
-											</label>
-											<label class="check-border filter__check">
-												<div class="check-border__input"><input type="checkbox"></div>
-												<div class="check-border__text">RYC (8)</div>
-											</label>
-											<label class="check-border filter__check">
-												<div class="check-border__input"><input type="checkbox"></div>
-												<div class="check-border__text">Aromatique (14)</div>
-											</label>
+							<div class="form-filter__group">
+								<a href="#" class="form-filter__title" data-bs-toggle="collapse" data-bs-target="#filter-3">
+									<span>Цена</span>
+									<i class="icon-arrow-down form-filter__title__arrow"></i>
+								</a>
+								<div class="form-filter__crop collapse show" id="filter-3">
+									<div class="form-filter__body">
+
+										<div class="form-filter__range js-range">
+											<div class="form-filter__range__fields">
+												<div class="form-filter__range__input">
+													<div class="input-top-label">
+														<label class="input-top-label__label">Мин</label>
+														<input type="text" class="input-top-label__input text-center js-range__from" value="0">
+													</div>
+												</div>
+												<div class="form-filter__range__space"></div>
+												<div class="form-filter__range__input">
+													<div class="input-top-label">
+														<label class="input-top-label__label">Макс</label>
+														<input type="text" class="input-top-label__input text-center js-range__to" value="2000">
+													</div>
+												</div>
+											</div>
+											<div class="form-filter__range__slider">
+												<input type="hidden" class="js-range__hidden" value="0,2000" data-from="0" data-to="2000" />
+											</div>
+										</div>
+
+									</div>
+
+								</div>
+							</div>
+							<div class="form-filter__group">
+								<a href="#" class="form-filter__title" data-bs-toggle="collapse" data-bs-target="#filter-4">
+									<span>Бренд</span>
+									<i class="icon-arrow-down form-filter__title__arrow"></i>
+								</a>
+								<div class="form-filter__crop collapse show" id="filter-4">
+									<div class="form-filter__body">
+										<div class="form-filter__props">
+											<div class="form-filter__props__list">
+												<label class="check-border form-filter__check">
+													<div class="check-border__input"><input type="checkbox" checked></div>
+													<div class="check-border__text">Aroma Line (28)</div>
+												</label>
+												<label class="check-border form-filter__check">
+													<div class="check-border__input"><input type="checkbox"></div>
+													<div class="check-border__text">Dr. Huter (31)</div>
+												</label>
+												<label class="check-border form-filter__check">
+													<div class="check-border__input"><input type="checkbox"></div>
+													<div class="check-border__text">Freshco (46)</div>
+												</label>
+												<label class="check-border form-filter__check">
+													<div class="check-border__input"><input type="checkbox"></div>
+													<div class="check-border__text">Aromalight (11)</div>
+												</label>
+												<label class="check-border form-filter__check">
+													<div class="check-border__input"><input type="checkbox"></div>
+													<div class="check-border__text">Areon (2)</div>
+												</label>
+												<label class="check-border form-filter__check">
+													<div class="check-border__input"><input type="checkbox"></div>
+													<div class="check-border__text">RYC (8)</div>
+												</label>
+												<label class="check-border form-filter__check">
+													<div class="check-border__input"><input type="checkbox"></div>
+													<div class="check-border__text">Aromatique (14)</div>
+												</label>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="filter__group">
-							<a href="#" class="filter__title collapsed" data-bs-toggle="collapse" data-bs-target="#filter-5">
-								<span>Вид</span>
-								<i class="icon-arrow-down filter__title__arrow"></i>
-							</a>
-							<div class="filter__crop collapse" id="filter-5">
-								
+							<div class="form-filter__group">
+								<a href="#" class="form-filter__title collapsed" data-bs-toggle="collapse" data-bs-target="#filter-5">
+									<span>Вид</span>
+									<i class="icon-arrow-down form-filter__title__arrow"></i>
+								</a>
+								<div class="form-filter__crop collapse" id="filter-5">
+									
 
+								</div>
 							</div>
-						</div>
-						<div class="filter__group">
-							<a href="#" class="filter__title collapsed" data-bs-toggle="collapse" data-bs-target="#filter-6">
-								<span>Объем</span>
-								<i class="icon-arrow-down filter__title__arrow"></i>
-							</a>
-							<div class="filter__crop collapse" id="filter-6">
-								
+							<div class="form-filter__group">
+								<a href="#" class="form-filter__title collapsed" data-bs-toggle="collapse" data-bs-target="#filter-6">
+									<span>Объем</span>
+									<i class="icon-arrow-down form-filter__title__arrow"></i>
+								</a>
+								<div class="form-filter__crop collapse" id="filter-6">
+									
 
+								</div>
 							</div>
-						</div>
-						<div class="filter__group">
-							<a href="#" class="filter__title collapsed" data-bs-toggle="collapse" data-bs-target="#filter-7">
-								<span>Монтаж</span>
-								<i class="icon-arrow-down filter__title__arrow"></i>
-							</a>
-							<div class="filter__crop collapse" id="filter-7">
-								
+							<div class="form-filter__group">
+								<a href="#" class="form-filter__title collapsed" data-bs-toggle="collapse" data-bs-target="#filter-7">
+									<span>Монтаж</span>
+									<i class="icon-arrow-down form-filter__title__arrow"></i>
+								</a>
+								<div class="form-filter__crop collapse" id="filter-7">
+									
 
+								</div>
 							</div>
-						</div>
-						<div class="filter__group filter__group--red">
-							<a href="#" class="filter__title" data-bs-toggle="collapse" data-bs-target="#filter-8">
-								<span>Акции</span>
-								<i class="icon-arrow-down filter__title__arrow"></i>
-							</a>
-							<div class="filter__crop collapse show" id="filter-8">
-								<div class="filter__body">
-									<div class="filter__props">
-										<div class="filter__props__list">
-											<label class="check-border filter__check">
-												<div class="check-border__input"><input type="checkbox" checked></div>
-												<div class="check-border__text">Суперцена</div>
-											</label>
-											<label class="check-border filter__check">
-												<div class="check-border__input"><input type="checkbox"></div>
-												<div class="check-border__text">Распродажа</div>
-											</label>
-											<label class="check-border filter__check">
-												<div class="check-border__input"><input type="checkbox"></div>
-												<div class="check-border__text">Товар дня</div>
-											</label>
-											<label class="check-border filter__check">
-												<div class="check-border__input"><input type="checkbox"></div>
-												<div class="check-border__text">Только онлайн</div>
-											</label>
+							<div class="form-filter__group form-filter__group--red">
+								<a href="#" class="form-filter__title" data-bs-toggle="collapse" data-bs-target="#filter-8">
+									<span>Акции</span>
+									<i class="icon-arrow-down form-filter__title__arrow"></i>
+								</a>
+								<div class="form-filter__crop collapse show" id="filter-8">
+									<div class="form-filter__body">
+										<div class="form-filter__props">
+											<div class="form-filter__props__list">
+												<label class="check-border form-filter__check">
+													<div class="check-border__input"><input type="checkbox" checked></div>
+													<div class="check-border__text">Суперцена</div>
+												</label>
+												<label class="check-border form-filter__check">
+													<div class="check-border__input"><input type="checkbox"></div>
+													<div class="check-border__text">Распродажа</div>
+												</label>
+												<label class="check-border form-filter__check">
+													<div class="check-border__input"><input type="checkbox"></div>
+													<div class="check-border__text">Товар дня</div>
+												</label>
+												<label class="check-border form-filter__check">
+													<div class="check-border__input"><input type="checkbox"></div>
+													<div class="check-border__text">Только онлайн</div>
+												</label>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="filter__ctrl">
-							<button type="button" class="button button-green filter__ctrl__item">
-								Применить
-							</button>
-							<button type="button" class="button button-outline-green filter__ctrl__item">
-								Сбросить
-							</button>
+							<div class="form-filter__ctrl">
+								<button type="button" class="button button-green form-filter__ctrl__item">
+									Применить
+								</button>
+								<button type="button" class="button button-outline-green form-filter__ctrl__item">
+									Сбросить
+								</button>
+							</div>
 						</div>
 					</form>
                     
@@ -418,7 +421,7 @@
                             </div>
                             
                             <div class="form-sorting__col form-sorting__col--filter">
-                                <button class="button button-outline-white">
+                                <button class="button button-outline-white js-filter-show">
                                     <i class="icon-filter button__icon"></i>
                                     <span class="spinner-border"></span>
                                     <span class="button__text">Все фильтры</span>

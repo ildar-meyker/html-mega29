@@ -79,9 +79,10 @@
 @import "components/navs/nav-catalog";
 @import "components/navs/nav-deep";
 
-@import "components/form";
-@import "components/form-card";
-@import "components/form-sorting";
+@import "components/forms/form";
+@import "components/forms/form-card";
+@import "components/forms/form-sorting";
+@import "components/forms/form-filter";
 
 @import "components/promo-best-price";
 @import "components/promo-1";
@@ -103,7 +104,6 @@
 @import "components/props";
 @import "components/order";
 @import "components/reviews";
-@import "components/filter";
 
 @import "components/panels/panel";
 @import "components/panels/panel-search";
