@@ -4,8 +4,9 @@
 	display: inline-block;
 	padding: (9/13) + em (10/13) + em;
 	border: 1px solid transparent;
-	border-radius: 4/13 + em;
+	border-radius: 5px;
 	text-align: center;
+	white-space: nowrap;
 	font-size: (13/16) + em;
 	font-weight: 500;
 
@@ -23,6 +24,8 @@
 		.spinner-border {
 			display: block;
 		}
+
+		.button__icon,
 		.button__text {
 			opacity: 0;
 		}
@@ -37,6 +40,16 @@
 	&--full {
 		display: block;
 		width: 100%;
+	}
+
+	&__icon {
+		margin-right: 0.2em;
+		vertical-align: middle;
+		font-size: 1.5em;
+	}
+
+	&__text {
+		vertical-align: middle;
 	}
 }
 
@@ -183,20 +196,24 @@
 }
 
 .button-outline-white {
-	border-color: rgba(#fff, 0.7);
-	color: #fff;
+	border-color: #f2f3f5;
+	background: #fff;
 
+	&.loading,
 	&:hover,
 	&.hover {
-		background: #fff;
-		color: #2e2e2e;
+		background: #f2f3f5;
 	}
 
 	&:active,
 	&.active {
-		background: #fff;
+		background: #f2f3f5;
 		box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.25);
-		color: #2e2e2e;
+	}
+
+	&.disabled {
+		background: #f2f3f5 !important;
+		color: #979797 !important;
 	}
 }
 

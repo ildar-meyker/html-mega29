@@ -26,6 +26,14 @@
 	text-align: left !important;
 }
 
+.text-center {
+	text-align: center !important;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
 .d-none {
 	display: none !important;
 }
@@ -34,12 +42,16 @@
 	display: block !important;
 }
 
-.text-center {
-	text-align: center !important;
+.ws-nowrap {
+	white-space: nowrap !important;
 }
 
-.text-right {
-	text-align: right !important;
+.ws-normal {
+	white-space: normal !important;
+}
+
+.fw-normal {
+	font-weight: normal !important;
 }
 
 .mb-0 {

@@ -12,51 +12,6 @@
 	opacity: 1 !important;
 }
 
-// custom select
-.custom-select__dropdown {
-	border-color: #f2f3f5;
-}
-
-.custom-select__option {
-	padding: 10/12 + em 18/12 + em;
-	padding-right: 36/12 + em;
-	border-color: #f2f3f5;
-	font-size: 12/16 + em;
-}
-
-.custom-select__option:hover {
-	background: #f2f3f5;
-}
-
-.custom-select__option--value::after {
-	display: none;
-}
-
-.custom-select__option--value::before,
-.custom-select__option--selected:before {
-	content: "\e91e";
-	transition: all 0.2s;
-	position: absolute;
-	top: 50%;
-	margin-top: -0.5em;
-	right: 10/16 + em;
-	font-family: "icomoon" !important;
-	font-size: 1em;
-	line-height: 1;
-}
-
-.custom-select--active .custom-select__option--value::before {
-	transform: rotate(180deg);
-}
-
-.custom-select__option--selected {
-	color: #21a73f;
-}
-
-.custom-select__option--selected:before {
-	content: "\e90c";
-}
-
 // ya share
 .ya-share2__badge {
 	background: #21a73f !important;
@@ -174,4 +129,80 @@
 	font-size: 13/16 + em;
 	padding: 12/13 + em 16/13 + em;
 	color: #111111;
+}
+
+// selectric
+.selectric {
+	transition: all 0.2s;
+	border-color: #f2f3f5 !important;
+	border-radius: 5px;
+	background: #fff;
+}
+
+.selectric-hover .selectric {
+	border-color: #f2f3f5;
+	background: #f2f3f5;
+}
+
+.selectric .label {
+	height: auto;
+	line-height: 1;
+	margin: 0;
+	padding: 0.69231em 0.76923em;
+	padding-right: 2em;
+	font-size: 1em;
+}
+
+.selectric .button {
+	display: none;
+}
+
+.selectric::before {
+	position: absolute;
+	font-size: 1em;
+	right: 0.76923em;
+	top: 50%;
+	margin-top: -0.5em;
+	font-family: "icomoon" !important;
+	content: "\e91e";
+}
+
+.selectric-items {
+	margin-top: 5px;
+	border: 0;
+	border-radius: 5px;
+	box-shadow: 0px 2.39834px 2.39834px rgba(0, 0, 0, 0.04),
+		0px 4.79668px 14.39px rgba(0, 0, 0, 0.12);
+	background: #fff;
+	overflow: hidden;
+}
+
+.selectric-items li,
+.selectric-items ul {
+	font-size: 1em;
+}
+.selectric-items li {
+	transition: all 0.2s;
+	position: relative;
+	padding: 0.69231em 0.76923em;
+}
+
+.selectric-items li.selected {
+	padding-right: 2em;
+	background: transparent;
+	color: #21a73f;
+
+	&:before {
+		font-family: "icomoon" !important;
+		content: "\e90c";
+		font-size: 0.8em;
+		position: absolute;
+		right: 1em;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.selectric-items li:hover {
+	background: #f2f3f5;
 }

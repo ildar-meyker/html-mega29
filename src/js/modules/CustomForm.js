@@ -1,8 +1,8 @@
 import $ from "jquery";
 import autosize from "autosize";
 import datepicker from "js-datepicker";
-import "jquery-custom-select";
 import "jquery-mask-plugin";
+import "selectric";
 import "icheck";
 
 const CustomForm = {
@@ -19,9 +19,7 @@ const CustomForm = {
 	},
 
 	initSelects() {
-		$("select").customSelect({
-			includeValue: true,
-		});
+		$("select").selectric();
 	},
 
 	initDatepickers() {

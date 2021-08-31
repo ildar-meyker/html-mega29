@@ -9,9 +9,9 @@
 @import "../../node_modules/simplebar/dist/simplebar";
 @import "../../node_modules/js-datepicker/dist/datepicker.min";
 @import "../../node_modules/tooltipster/dist/css/tooltipster.bundle";
-@import "../../node_modules/jquery-custom-select/dist/css/jquery.custom-select";
 @import "../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../node_modules/jquery-range/jquery.range";
+@import "../../node_modules/selectric/src/selectric";
 @import "vendor/hamburgers";
 @import "vendor/spinners";
 
@@ -66,7 +66,7 @@
 @import "components/benefits";
 @import "components/table-areas";
 @import "components/content";
-@import "components/sorting";
+
 @import "components/news";
 @import "components/news-item";
 
@@ -81,6 +81,8 @@
 
 @import "components/form";
 @import "components/form-card";
+@import "components/form-sorting";
+
 @import "components/promo-best-price";
 @import "components/promo-1";
 @import "components/cart-total";
