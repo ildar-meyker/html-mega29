@@ -17,8 +17,9 @@
 		}
 
 		&__main {
-			flex-grow: 1;
+			flex: 0 0 auto;
 			padding-left: 17px;
+			width: calc(100% - 230px);
 		}
 	}
 }

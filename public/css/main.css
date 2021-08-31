@@ -2351,6 +2351,8 @@ a {
   padding: 0 10px;
   max-width: 1180px;
   margin: 0 auto; }
+  .page__center .page__center {
+    padding: 0 !important; }
 
 .page__outer {
   margin: 0 -10px; }
@@ -6759,8 +6761,9 @@ a {
     flex: 0 0 auto;
     width: 230px; }
   .layout-basic__main {
-    flex-grow: 1;
-    padding-left: 17px; } }
+    flex: 0 0 auto;
+    padding-left: 17px;
+    width: calc(100% - 230px); } }
 
 @media (min-width: 992px) {
   .layout-order__center {
