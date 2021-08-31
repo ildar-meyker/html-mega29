@@ -44,6 +44,10 @@
 			// 13 * 2 + 2 (makes border visible when scroll via button)
 			width: calc((100% - 28px) / 5);
 			max-width: none;
+
+			.section--inner & {
+				width: calc((100% - 28px) / 4);
+			}
 		}
 
 		.button-slider {
