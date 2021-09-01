@@ -1788,8 +1788,8 @@ corresponds to the arrow we want to display */
 
 @font-face {
   font-family: "icomoon";
-  src: url("../fonts/icomoon.eot?sdet34");
-  src: url("../fonts/icomoon.eot?sdet34#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?sdet34") format("truetype"), url("../fonts/icomoon.woff?sdet34") format("woff"), url("../fonts/icomoon.svg?sdet34#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?qp2a8a");
+  src: url("../fonts/icomoon.eot?qp2a8a#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?qp2a8a") format("truetype"), url("../fonts/icomoon.woff?qp2a8a") format("woff"), url("../fonts/icomoon.svg?qp2a8a#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block; }
@@ -1927,6 +1927,9 @@ corresponds to the arrow we want to display */
 
 .icon-filter:before {
   content: "\e927"; }
+
+.icon-call:before {
+  content: "\e928"; }
 
 .simplebar-track.simplebar-horizontal {
   height: 2px;
@@ -2308,8 +2311,6 @@ body {
           font-feature-settings: "pnum" on, "lnum" on;
   line-height: 1.2;
   color: #2e2e2e; }
-  body.locked {
-    overflow: hidden; }
 
 textarea {
   resize: vertical;
@@ -2370,6 +2371,24 @@ a {
 .page__more {
   margin: 20px 0; }
 
+.page__bg-mobile {
+  transition: all 0.2s;
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+  visibility: hidden; }
+  .page__bg-mobile.active {
+    visibility: visible;
+    opacity: 0.2; }
+
+.page__lock-mobile {
+  overflow: hidden; }
+
 @media (max-width: 767.98px) {
   .page__paper--compact {
     padding: 10px; } }
@@ -2392,7 +2411,11 @@ a {
     margin: 25px 0; }
     .page__more .button {
       padding: 10px 20px;
-      font-size: 15px; } }
+      font-size: 15px; }
+  .page__bg-mobile {
+    display: none; }
+  .page__lock-mobile {
+    overflow: visible; } }
 
 @media (min-width: 1400px) {
   .page__scroll {
@@ -2672,12 +2695,11 @@ a {
   transition: all 0.2s;
   display: block;
   width: 100%;
-  border: 1px solid transparent;
-  border-radius: 0.28571em;
-  font-size: 0.875em;
   padding: 0.78571em 0.71429em;
-  border-color: #e7e7e8;
+  border: 1px solid #e7e7e8;
+  border-radius: 5px;
   background: #fafafa;
+  font-size: 0.875em;
   color: #2e2e2e; }
   .input-classic:not(:-moz-read-only):focus {
     border-color: #21a73f; }
@@ -2694,19 +2716,18 @@ a {
 
 .input-datepicker {
   position: relative;
-  background: #fafafa; }
+  background: #fafafa;
+  font-size: 0.875em; }
   .input-datepicker__input {
+    transition: all 0.2s;
     position: relative;
     z-index: 1;
-    transition: all 0.2s;
     display: block;
     width: 100%;
-    border: 0.07143em solid transparent;
-    border-radius: 0.28571em;
-    font-size: 0.875em;
+    border: 1px solid #e7e7e8;
+    border-radius: 5px;
     padding: 0.78571em 0.71429em;
-    padding-right: 2.1875em;
-    border-color: #e7e7e8;
+    padding-right: 2.2em;
     background: transparent;
     color: #2e2e2e; }
     .input-datepicker__input:not(:-moz-read-only):focus {
@@ -2724,30 +2745,30 @@ a {
   .input-datepicker__icon {
     position: absolute;
     top: 50%;
-    right: 0.625em;
-    margin-top: -0.5em;
-    font-size: 0.875em;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 0.71429em;
     color: rgba(0, 32, 51, 0.35); }
 
 .input-top-label {
-  position: relative; }
+  position: relative;
+  font-size: 0.875em; }
   .input-top-label__label {
     position: absolute;
     top: 0;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
     left: 0.5em;
-    padding: 0 0.3em;
+    padding: 0 5px;
     background: #fff;
-    font-size: 0.9em;
-    font-weight: 700;
-    line-height: 1; }
+    font-size: 0.8em;
+    font-weight: 700; }
   .input-top-label__input {
     display: block;
     width: 100%;
-    padding: 1em;
+    padding: 0.78571em 0.71429em;
     border: 1px solid #b2b3b3;
-    border-radius: 0.33333em;
+    border-radius: 5px;
     font-size: 1em;
     color: #000; }
     .input-top-label__input:not(:-moz-read-only):focus {
@@ -4314,6 +4335,168 @@ a {
       left: 40px;
       right: auto; } }
 
+.nav-burger.active .nav-burger__panel {
+  -webkit-transform: translateX(0);
+          transform: translateX(0); }
+
+.nav-burger__panel {
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  position: fixed;
+  z-index: 300;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  min-width: 230px;
+  max-width: 400px;
+  bottom: 0;
+  overflow: auto;
+  background: #fff; }
+
+.nav-burger__city {
+  position: relative;
+  display: block;
+  padding: 12px 20px;
+  background: #21a73f;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff; }
+  .nav-burger__city:hover {
+    background: #23b042; }
+  .nav-burger__city i {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 20px; }
+
+.nav-burger__item {
+  position: relative;
+  display: block;
+  padding: 11px 20px;
+  border-top: 1px solid #f2f3f5;
+  background: #fafafa;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700; }
+  .nav-burger__item:before {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    content: "\e90a";
+    font-family: "icomoon" !important;
+    font-size: 0.65em; }
+  .nav-burger__item:hover {
+    background: #f2f3f5; }
+
+.nav-burger__info {
+  padding: 20px; }
+  .nav-burger__info__item {
+    margin-top: 20px; }
+    .nav-burger__info__item:first-child {
+      margin-top: 0; }
+  .nav-burger__info__title {
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000; }
+
+.nav-burger__write {
+  display: flex;
+  justify-content: center;
+  font-size: 40px; }
+  .nav-burger__write__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.125em;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    color: #fff; }
+    .nav-burger__write__item--call {
+      background: #21a73f; }
+      .nav-burger__write__item--call:hover {
+        background: #1d9237; }
+    .nav-burger__write__item--telegram {
+      background: #2f89ce; }
+      .nav-burger__write__item--telegram:hover {
+        background: #2a7bb9; }
+    .nav-burger__write__item--vk {
+      background: #7294c7; }
+      .nav-burger__write__item--vk:hover {
+        background: #6086c0; }
+    .nav-burger__write__item i {
+      font-size: 0.45em; }
+
+.nav-burger__social {
+  display: flex;
+  justify-content: center;
+  font-size: 50px; }
+  .nav-burger__social__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.06em;
+    width: 1em;
+    height: 1em;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    background: #fff; }
+    .nav-burger__social__item:hover {
+      border-color: #21a73f; }
+    .nav-burger__social__item i {
+      font-size: 0.5em;
+      color: #21a73f; }
+
+.nav-burger__call {
+  text-align: center;
+  font-size: 20px; }
+  .nav-burger__call__phone {
+    font-weight: 700;
+    color: #21a73f; }
+    .nav-burger__call__phone i {
+      font-size: 0.8em; }
+  .nav-burger__call__tip {
+    margin-top: 0.15em;
+    font-size: 0.7em;
+    font-weight: 500; }
+
+@media (min-width: 768px) {
+  .nav-burger__panel {
+    max-width: 460px; }
+  .nav-burger__city {
+    padding: 21px 40px;
+    font-size: 32px;
+    font-weight: 500; }
+  .nav-burger__item {
+    padding: 20px 40px;
+    font-size: 32px;
+    font-weight: 500; }
+  .nav-burger__info {
+    padding: 40px; }
+    .nav-burger__info__item {
+      margin-top: 40px; }
+    .nav-burger__info__title {
+      margin-bottom: 10px;
+      font-size: 24px; }
+  .nav-burger__write {
+    font-size: 70px; }
+  .nav-burger__social {
+    font-size: 85px; }
+  .nav-burger__call {
+    font-size: 32px; } }
+
+@media (min-width: 992px) {
+  .nav-burger__panel {
+    display: none; } }
+
 .form {
   border: 1px solid #f2f3f5;
   border-radius: 0.25em;
@@ -4607,8 +4790,7 @@ a {
 
 .form-filter__range {
   max-width: 200px;
-  margin: 0 auto;
-  font-size: 15px; }
+  margin: 0 auto; }
   .form-filter__range__fields {
     display: flex;
     padding-top: 10px; }
@@ -4623,6 +4805,8 @@ a {
     background: #b2b3b3; }
   .form-filter__range__slider {
     margin: 0 7px; }
+  .form-filter__range .input-top-label {
+    font-size: 15px; }
   .form-filter__range .slider-container {
     margin-top: 33px;
     margin-bottom: 20px; }
@@ -4646,19 +4830,6 @@ a {
   height: 0; }
 
 @media (max-width: 991.98px) {
-  .form-filter__lock {
-    overflow: hidden; }
-  .form-filter__overlay {
-    transition: all 0.2s;
-    position: fixed;
-    z-index: 200;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    opacity: 0;
-    visibility: hidden; }
   .form-filter__panel {
     transition: -webkit-transform 0.2s;
     transition: transform 0.2s;
@@ -4674,9 +4845,6 @@ a {
     max-width: 400px;
     bottom: 0;
     overflow: auto; }
-  .form-filter.active .form-filter__overlay {
-    visibility: visible;
-    opacity: 0.2; }
   .form-filter.active .form-filter__panel {
     -webkit-transform: translateX(0);
             transform: translateX(0); } }
@@ -4689,6 +4857,8 @@ a {
 @media (min-width: 768px) {
   .form-filter__body {
     padding: 0 24px 24px 24px; }
+  .form-filter__panel {
+    max-width: 460px; }
   .form-filter__title {
     font-size: 24px; }
   .form-filter__props__title {
@@ -4696,8 +4866,9 @@ a {
   .form-filter__props__list {
     font-size: 18px; }
   .form-filter__range {
-    max-width: 260px;
-    font-size: 18px; }
+    max-width: 260px; }
+    .form-filter__range .input-top-label {
+      font-size: 18px; }
   .form-filter__ctrl {
     padding: 24px;
     font-size: 24px; }
@@ -4715,7 +4886,7 @@ a {
     font-size: 13px; }
   .form-filter__props__list {
     font-size: 11px; }
-  .form-filter__range {
+  .form-filter__range .input-top-label {
     font-size: 13px; }
   .form-filter__ctrl {
     padding: 13px;

@@ -12,6 +12,7 @@ import "./modules/CountEditor";
 import "./modules/NavInfo";
 import "./modules/NavCatalog";
 import "./modules/NavBottom";
+import "./modules/NavBurger";
 import "./modules/RangeSlider";
 import "./modules/Gallery";
 import "./modules/Panel";

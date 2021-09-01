@@ -1,24 +1,24 @@
 .input-top-label {
 	position: relative;
+	font-size: (14/16) + em;
 
 	&__label {
 		position: absolute;
 		top: 0;
 		transform: translateY(-50%);
 		left: 0.5em;
-		padding: 0 3/10 + em;
+		padding: 0 5px;
 		background: #fff;
-		font-size: 0.9em;
+		font-size: 0.8em;
 		font-weight: 700;
-		line-height: 1;
 	}
 
 	&__input {
 		display: block;
 		width: 100%;
-		padding: 12/12 + em;
+		padding: (11/14) + em (10/14) + em;
 		border: 1px solid #b2b3b3;
-		border-radius: 4/12 + em;
+		border-radius: 5px;
 		font-size: 1em;
 		color: #000;
 

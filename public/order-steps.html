@@ -24,7 +24,7 @@
 	    <div class="page__center">
 	        <div class="page__outer page__inner header__main" id="header-main">
 	            <div class="header__main__burger">
-	                <button class="hamburger hamburger--squeeze" type="button">
+	                <button class="hamburger hamburger--squeeze" type="button" id="hamburger">
 	                    <span class="hamburger-box">
 	                        <span class="hamburger-inner"></span>
 	                    </span>
@@ -668,11 +668,7 @@
 	</footer>
 	
 	
-	<div class="page__scroll hidden" id="scroll-up">
-	    <button type="button" class="button-scroll">
-	        <i class="icon-arrow-right-short rotate-90"></i>
-	    </button>
-	</div>
+	
 	
 	<aside class="panel panel-city panel--hidden" id="panel-city">
 		<div class="panel__arrow"></div>
@@ -933,7 +929,58 @@
 	        </div>
 	    </div>
 	</nav>
-
+	
+	<nav class="nav-burger" id="nav-burger">
+	    <div class="nav-burger__panel">
+	        <a href="#" class="nav-burger__city">
+	            <span>Архангельск</span>
+	            <i class="icon-location"></i>
+	        </a>
+	        <div class="nav-burger__list">
+	            <a href="#" class="nav-burger__item">Доставка</a>
+	            <a href="#" class="nav-burger__item">Cервисы</a>
+	            <a href="#" class="nav-burger__item">Мега-клуб</a>
+	            <a href="#" class="nav-burger__item">Блог</a>
+	            <a href="#" class="nav-burger__item">Магазины</a>
+	            <a href="#" class="nav-burger__item">Партнерство</a>
+	        </div>
+	        <div class="nav-burger__info">
+	            <div class="nav-burger__info__item">
+	                <div class="nav-burger__info__title">Напишите нам</div>
+	                <div class="nav-burger__write">
+	                    <a href="#" class="nav-burger__write__item nav-burger__write__item--call"><i class="icon-call"></i></a>
+	                    <a href="#" class="nav-burger__write__item nav-burger__write__item--telegram"><i class="icon-telegram"></i></a>
+	                    <a href="#" class="nav-burger__write__item nav-burger__write__item--vk"><i class="icon-vk-share"></i></a>
+	                </div>
+	            </div>
+	            <div class="nav-burger__info__item">
+	                <div class="nav-burger__info__title">Мы в социальных сетях</div>
+	                <div class="nav-burger__social">
+	                    <a href="#" class="nav-burger__social__item"><i class="icon-vk-share"></i></a>
+	                    <a href="#" class="nav-burger__social__item"><i class="icon-instagram-2"></i></a>
+	                </div>
+	            </div>
+	            <div class="nav-burger__info__item">
+	                <div class="nav-burger__call">
+	                    <div class="nav-burger__call__phone">
+	                        <i class="icon-phone"></i>
+	                        <span>8-800-222-12-40</span>
+	                    </div>
+	                    <div class="nav-burger__call__tip">Мы работаем с 8:00 до 21:00</div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</nav>
+	
+	
+	<div class="page__scroll hidden" id="scroll-up">
+	    <button type="button" class="button-scroll">
+	        <i class="icon-arrow-right-short rotate-90"></i>
+	    </button>
+	</div>
+	
+	<div class="page__bg-mobile" id="bg-mobile"></div>
     
     <nav class="nav-bottom" id="nav-bottom">
         <a href="/" class="nav-bottom__item">

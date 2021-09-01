@@ -1,19 +1,18 @@
 .input-datepicker {
 	position: relative;
 	background: #fafafa;
+	font-size: (14/16) + em;
 
 	&__input {
+		transition: all 0.2s;
 		position: relative;
 		z-index: 1;
-		transition: all 0.2s;
 		display: block;
 		width: 100%;
-		border: (1/14) + em solid transparent;
-		border-radius: (4/14) + em;
-		font-size: (14/16) + em;
+		border: 1px solid #e7e7e8;
+		border-radius: 5px;
 		padding: (11/14) + em (10/14) + em;
-		padding-right: 35/16 + em;
-		border-color: #e7e7e8;
+		padding-right: 2.2em;
 		background: transparent;
 		color: #2e2e2e;
 
@@ -29,9 +28,8 @@
 	&__icon {
 		position: absolute;
 		top: 50%;
-		right: 10/16 + em;
-		margin-top: -0.5em;
-		font-size: 14/16 + em;
+		transform: translateY(-50%);
+		right: 10/14 + em;
 		color: rgba(0, 32, 51, 0.35);
 	}
 }

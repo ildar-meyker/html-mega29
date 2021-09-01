@@ -2,7 +2,7 @@ import $ from "jquery";
 import { throttle } from "throttle-debounce";
 import BgMobile from "./BgMobile";
 
-const CatalogFilter = {
+const NavBurger = {
 	_setPanelSize() {
 		const $navBottom = $("#nav-bottom");
 		const isNavHidden = $navBottom.hasClass("hidden");
@@ -12,7 +12,7 @@ const CatalogFilter = {
 		const headerH = $("#header").height();
 		const top = scrollTop > headerH ? 0 : headerH - scrollTop;
 
-		$("#form-filter .form-filter__panel").css({
+		$("#nav-burger .nav-burger__panel").css({
 			top: top,
 			bottom: bottom,
 		});
@@ -24,58 +24,38 @@ const CatalogFilter = {
 		}, 50);
 	},
 
-	_handleShowButton(e) {
+	_handleBurgerClick(e) {
 		e.preventDefault();
 
-		this.open();
-	},
-
-	_handleApplyButton(e) {
-		e.preventDefault();
-
-		this.close();
-	},
-
-	_handleResetButton(e) {
-		e.preventDefault();
-
-		this.close();
+		if (this.isActive()) {
+			this.close();
+		} else {
+			this.open();
+		}
 	},
 
 	isActive() {
-		return $("#form-filter").hasClass("active");
+		return $("#nav-burger").hasClass("active");
 	},
 
 	open() {
 		this._setPanelSize();
-		$("#form-filter").addClass("active");
+		$("#nav-burger").addClass("active");
+		$("#hamburger").addClass("is-active");
 		BgMobile.show();
 	},
 
 	close() {
-		$("#form-filter").removeClass("active");
+		$("#nav-burger").removeClass("active");
+		$("#hamburger").removeClass("is-active");
 		BgMobile.hide();
 	},
 
 	init() {
-		if ($("#form-filter").length === 0) return;
-
 		$(document).on(
 			"click",
-			".js-filter-show",
-			this._handleShowButton.bind(this)
-		);
-
-		$(document).on(
-			"click",
-			".js-filter-apply",
-			this._handleApplyButton.bind(this)
-		);
-
-		$(document).on(
-			"click",
-			".js-filter-reset",
-			this._handleResetButton.bind(this)
+			"#hamburger",
+			this._handleBurgerClick.bind(this)
 		);
 
 		$(window).on(
@@ -86,7 +66,7 @@ const CatalogFilter = {
 };
 
 $(function () {
-	CatalogFilter.init();
+	NavBurger.init();
 });
 
-export default CatalogFilter;
+export default NavBurger;

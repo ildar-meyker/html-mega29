@@ -117,7 +117,6 @@
 	&__range {
 		max-width: 200px;
 		margin: 0 auto;
-		font-size: 15px;
 
 		&__fields {
 			display: flex;
@@ -139,6 +138,10 @@
 
 		&__slider {
 			margin: 0 7px;
+		}
+
+		.input-top-label {
+			font-size: 15px;
 		}
 
 		.slider-container {
@@ -177,23 +180,6 @@
 
 @media (max-width: 991.98px) {
 	.form-filter {
-		&__lock {
-			overflow: hidden;
-		}
-
-		&__overlay {
-			transition: all 0.2s;
-			position: fixed;
-			z-index: 200;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: #000;
-			opacity: 0;
-			visibility: hidden;
-		}
-
 		&__panel {
 			transition: transform 0.2s;
 			transform: translateX(-100%);
@@ -209,11 +195,6 @@
 		}
 
 		&.active {
-			.form-filter__overlay {
-				visibility: visible;
-				opacity: 0.2;
-			}
-
 			.form-filter__panel {
 				transform: translateX(0);
 			}
@@ -236,6 +217,10 @@
 			padding: 0 24px 24px 24px;
 		}
 
+		&__panel {
+			max-width: 460px;
+		}
+
 		&__title {
 			font-size: 24px;
 		}
@@ -252,7 +237,10 @@
 
 		&__range {
 			max-width: 260px;
-			font-size: 18px;
+
+			.input-top-label {
+				font-size: 18px;
+			}
 		}
 
 		&__ctrl {
@@ -291,7 +279,9 @@
 		}
 
 		&__range {
-			font-size: 13px;
+			.input-top-label {
+				font-size: 13px;
+			}
 		}
 
 		&__ctrl {

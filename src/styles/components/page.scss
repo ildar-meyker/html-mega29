@@ -32,6 +32,28 @@
 	&__more {
 		margin: 20px 0;
 	}
+
+	&__bg-mobile {
+		transition: all 0.2s;
+		position: fixed;
+		z-index: 200;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #000;
+		opacity: 0;
+		visibility: hidden;
+
+		&.active {
+			visibility: visible;
+			opacity: 0.2;
+		}
+	}
+
+	&__lock-mobile {
+		overflow: hidden;
+	}
 }
 
 @media (max-width: 767.98px) {
@@ -79,6 +101,14 @@
 				padding: 10px 20px;
 				font-size: 15px;
 			}
+		}
+
+		&__bg-mobile {
+			display: none;
+		}
+
+		&__lock-mobile {
+			overflow: visible;
 		}
 	}
 }
