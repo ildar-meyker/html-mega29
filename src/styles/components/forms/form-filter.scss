@@ -167,6 +167,12 @@
 			display: none;
 		}
 	}
+
+	.collapse:not(.show) {
+		overflow: hidden;
+		display: block;
+		height: 0;
+	}
 }
 
 @media (max-width: 991.98px) {
