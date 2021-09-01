@@ -27,9 +27,9 @@ layout: default.hbs
 			<div class="layout-basic__center">
 				<div class="layout-basic__side">
 
-					<form action="#" class="form-filter" id="catalog-filter">
+					<form action="#" class="form-filter" id="form-filter">
 						<div class="form-filter__overlay"></div>
-						<div class="form-filter__body">
+						<div class="form-filter__panel">
 							<div class="form-filter__group">
 								<a href="#" class="form-filter__title" data-bs-toggle="collapse" data-bs-target="#filter-1">
 									<span>Наличие в магазинах</span>
@@ -258,12 +258,18 @@ layout: default.hbs
 								</div>
 							</div>
 							<div class="form-filter__ctrl">
-								<button type="button" class="button button-green form-filter__ctrl__item">
-									Применить
-								</button>
-								<button type="button" class="button button-outline-green form-filter__ctrl__item">
-									Сбросить
-								</button>
+								<div class="form-filter__ctrl__list">
+									<div class="form-filter__ctrl__item">
+										<button type="button" class="button button-green">
+											Применить
+										</button>
+									</div>
+									<div class="form-filter__ctrl__item">
+										<button type="button" class="button button-outline-green">
+											Сбросить
+										</button>
+									</div>
+								</div>
 							</div>
 						</div>
 					</form>

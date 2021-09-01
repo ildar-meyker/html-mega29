@@ -1,4 +1,5 @@
 import $ from "jquery";
+import { throttle } from "throttle-debounce";
 
 const CatalogFilter = {
 	_setPanelSize() {
@@ -27,10 +28,12 @@ const CatalogFilter = {
 		$("body").removeClass("form-filter__lock");
 	},
 
+	_handleWindowResize() {
+		this._setPanelSize();
+	},
+
 	_handleShowButton(e) {
 		e.preventDefault();
-
-		console.log(1);
 
 		this.open();
 	},
@@ -54,6 +57,11 @@ const CatalogFilter = {
 			"click",
 			".form-filter__overlay",
 			this._handleOverlayClick.bind(this)
+		);
+
+		$(window).on(
+			"resize",
+			throttle(250, this._handleWindowResize.bind(this))
 		);
 	},
 };

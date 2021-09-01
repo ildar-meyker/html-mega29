@@ -25626,6 +25626,8 @@ $(function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var throttle_debounce__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! throttle-debounce */ "./node_modules/throttle-debounce/esm/index.js");
+
 
 var CatalogFilter = {
   _setPanelSize: function _setPanelSize() {
@@ -25650,9 +25652,11 @@ var CatalogFilter = {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("#form-filter").removeClass("active");
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").removeClass("form-filter__lock");
   },
+  _handleWindowResize: function _handleWindowResize() {
+    this._setPanelSize();
+  },
   _handleShowButton: function _handleShowButton(e) {
     e.preventDefault();
-    console.log(1);
     this.open();
   },
   _handleOverlayClick: function _handleOverlayClick(e) {
@@ -25663,6 +25667,7 @@ var CatalogFilter = {
     if (jquery__WEBPACK_IMPORTED_MODULE_0___default()("#form-filter").length === 0) return;
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-filter-show", this._handleShowButton.bind(this));
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".form-filter__overlay", this._handleOverlayClick.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on("resize", Object(throttle_debounce__WEBPACK_IMPORTED_MODULE_1__["throttle"])(250, this._handleWindowResize.bind(this)));
   }
 };
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {

@@ -17,12 +17,14 @@
 @media (min-width: 768px) {
 	.grid-goods {
 		&__row {
-			margin: 0 -7px;
+			margin-right: -7px;
+			margin-left: -7px;
 		}
 
 		&__col {
 			width: 33.33%;
-			padding: 0 7px;
+			padding-right: 7px;
+			padding-left: 7px;
 		}
 	}
 }

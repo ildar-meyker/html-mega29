@@ -4,11 +4,11 @@
 	&__label {
 		position: absolute;
 		top: 0;
-		left: 1em;
+		transform: translateY(-50%);
+		left: 0.5em;
 		padding: 0 3/10 + em;
-		margin-top: -0.5em;
 		background: #fff;
-		font-size: 10/16 + em;
+		font-size: 0.9em;
 		font-weight: 700;
 		line-height: 1;
 	}
@@ -19,7 +19,7 @@
 		padding: 12/12 + em;
 		border: 1px solid #b2b3b3;
 		border-radius: 4/12 + em;
-		font-size: 12/16 + em;
+		font-size: 1em;
 		color: #000;
 
 		&:not(:read-only):focus {
