@@ -26014,7 +26014,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var Panel = {
   _timers: {},
-  _zIndex: 100,
+  _zIndex: 400,
   _closePanel: function _closePanel(panelId) {
     this._timers[panelId] = setTimeout(function () {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()("#" + panelId).removeClass("panel--opacity panel--active");

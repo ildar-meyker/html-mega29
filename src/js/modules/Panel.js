@@ -2,7 +2,7 @@ import $ from "jquery";
 
 const Panel = {
 	_timers: {},
-	_zIndex: 100,
+	_zIndex: 400,
 
 	_closePanel(panelId) {
 		this._timers[panelId] = setTimeout(() => {
