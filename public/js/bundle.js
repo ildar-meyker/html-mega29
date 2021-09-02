@@ -26310,10 +26310,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var Search = {
   showPanel: function showPanel() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#panel-search").addClass("panel-search--active");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#form-search").addClass("active");
   },
   hidePanel: function hidePanel() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#panel-search").removeClass("panel-search--active");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#form-search").removeClass("active");
   },
   _handleInputBlur: function _handleInputBlur() {
     this.hidePanel();
@@ -26322,8 +26322,8 @@ var Search = {
     this.showPanel();
   },
   init: function init() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("focus", ".header__search__input", this._handleInputFocus.bind(this));
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("blur", ".header__search__input", this._handleInputBlur.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("focus", ".js-search-input", this._handleInputFocus.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("blur", ".js-search-input", this._handleInputBlur.bind(this));
   }
 };
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {

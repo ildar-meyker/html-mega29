@@ -2,11 +2,11 @@ import $ from "jquery";
 
 const Search = {
 	showPanel() {
-		$("#panel-search").addClass("panel-search--active");
+		$("#form-search").addClass("active");
 	},
 
 	hidePanel() {
-		$("#panel-search").removeClass("panel-search--active");
+		$("#form-search").removeClass("active");
 	},
 
 	_handleInputBlur() {
@@ -20,13 +20,13 @@ const Search = {
 	init() {
 		$(document).on(
 			"focus",
-			".header__search__input",
+			".js-search-input",
 			this._handleInputFocus.bind(this)
 		);
 
 		$(document).on(
 			"blur",
-			".header__search__input",
+			".js-search-input",
 			this._handleInputBlur.bind(this)
 		);
 	},
