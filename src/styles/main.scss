@@ -104,7 +104,7 @@
 @import "components/product";
 @import "components/gallery";
 @import "components/props";
-@import "components/order";
+
 @import "components/reviews";
 
 @import "components/panels/panel";
@@ -132,5 +132,7 @@
 @import "components/layouts/layout-order";
 @import "components/layouts/layout-profile";
 @import "components/layouts/layout-catalog";
+
+@import "components/checkout-product";
 
 @import "components/brands";
