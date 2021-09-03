@@ -25673,20 +25673,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var throttle_debounce__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! throttle-debounce */ "./node_modules/throttle-debounce/esm/index.js");
 /* harmony import */ var _BgMobile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BgMobile */ "./src/js/modules/BgMobile.js");
+/* harmony import */ var _getPanelOffset__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./getPanelOffset */ "./src/js/modules/getPanelOffset.js");
+
 
 
 
 var CatalogFilter = {
   _setPanelSize: function _setPanelSize() {
-    var $navBottom = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#nav-bottom");
-    var isNavHidden = $navBottom.hasClass("hidden");
-    var bottom = isNavHidden ? 0 : $navBottom.height();
-    var scrollTop = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop();
-    var headerH = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#header").height();
-    var top = scrollTop > headerH ? 0 : headerH - scrollTop;
+    var offset = Object(_getPanelOffset__WEBPACK_IMPORTED_MODULE_3__["default"])();
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("#form-filter .form-filter__panel").css({
-      top: top,
-      bottom: bottom
+      top: offset.top,
+      bottom: offset.bottom
     });
   },
   _handleWindowResize: function _handleWindowResize() {
@@ -25985,20 +25982,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var throttle_debounce__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! throttle-debounce */ "./node_modules/throttle-debounce/esm/index.js");
 /* harmony import */ var _BgMobile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BgMobile */ "./src/js/modules/BgMobile.js");
+/* harmony import */ var _getPanelOffset__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./getPanelOffset */ "./src/js/modules/getPanelOffset.js");
+
 
 
 
 var NavBurger = {
   _setPanelSize: function _setPanelSize() {
-    var $navBottom = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#nav-bottom");
-    var isNavHidden = $navBottom.hasClass("hidden");
-    var bottom = isNavHidden ? 0 : $navBottom.height();
-    var scrollTop = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop();
-    var headerH = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#header").height();
-    var top = scrollTop > headerH ? 0 : headerH - scrollTop;
+    var offset = Object(_getPanelOffset__WEBPACK_IMPORTED_MODULE_3__["default"])();
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("#nav-burger .nav-burger__panel").css({
-      top: top,
-      bottom: bottom
+      top: offset.top,
+      bottom: offset.bottom
     });
   },
   _handleWindowResize: function _handleWindowResize() {
@@ -26311,17 +26305,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var throttle_debounce__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! throttle-debounce */ "./node_modules/throttle-debounce/esm/index.js");
 /* harmony import */ var _BgMobile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BgMobile */ "./src/js/modules/BgMobile.js");
+/* harmony import */ var _getPanelOffset__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./getPanelOffset */ "./src/js/modules/getPanelOffset.js");
+
 
 
 
 var Search = {
   _$root: jquery__WEBPACK_IMPORTED_MODULE_0___default()(),
   _setPanelSize: function _setPanelSize() {
-    var $navBottom = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#nav-bottom");
-    var isNavHidden = $navBottom.hasClass("hidden");
-    var bottom = isNavHidden ? 0 : $navBottom.height();
+    var offset = Object(_getPanelOffset__WEBPACK_IMPORTED_MODULE_3__["default"])();
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("#form-search").css({
-      bottom: bottom
+      bottom: offset.bottom
     });
   },
   _handleOutsideClick: function _handleOutsideClick(e) {
@@ -26578,6 +26572,32 @@ __webpack_require__.r(__webpack_exports__);
     });
   }
 });
+
+/***/ }),
+
+/***/ "./src/js/modules/getPanelOffset.js":
+/*!******************************************!*\
+  !*** ./src/js/modules/getPanelOffset.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function getPanelOffset() {
+  var $navBottom = $("#nav-bottom");
+  var isNavHidden = $navBottom.hasClass("hidden");
+  var bottom = isNavHidden ? 0 : $navBottom.height();
+  var scrollTop = $(window).scrollTop();
+  var headerH = $("#header").height();
+  var top = scrollTop > headerH ? 0 : headerH - scrollTop;
+  return {
+    top: top,
+    bottom: bottom
+  };
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (getPanelOffset);
 
 /***/ }),
 

@@ -20,6 +20,10 @@
 		}
 	}
 
+	&__list {
+		padding: 8px 0;
+	}
+
 	&__quit {
 		display: block;
 		margin-top: 10/16 + em;
@@ -30,6 +34,10 @@
 @media (min-width: 768px) {
 	.nav-info {
 		margin-top: 20px;
+
+		&__list {
+			padding: 10px 0;
+		}
 	}
 }
 
@@ -82,10 +90,6 @@
 				font-size: 0.7em;
 				color: #2e2e2e;
 			}
-		}
-
-		&__list {
-			padding: 10px 0;
 		}
 
 		&__tabs {
@@ -180,6 +184,10 @@
 
 		&__title {
 			display: none;
+		}
+
+		&__list {
+			padding: 0;
 		}
 
 		&__quit {

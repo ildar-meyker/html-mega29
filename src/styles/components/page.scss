@@ -19,9 +19,9 @@
 	}
 
 	&__paper {
-		padding: 15px;
-		border: 2px solid #f2f3f5;
-		border-radius: 4px;
+		padding: 20px;
+		border: 1px solid #f2f3f5;
+		border-radius: 5px;
 		background: #fff;
 	}
 
@@ -56,16 +56,6 @@
 	}
 }
 
-@media (max-width: 767.98px) {
-	.page {
-		&__paper {
-			&--compact {
-				padding: 10px;
-			}
-		}
-	}
-}
-
 @media (min-width: 768px) {
 	.page {
 		&__center {
@@ -80,7 +70,8 @@
 		}
 
 		&__paper {
-			padding: 30px;
+			border-width: 2px;
+			padding: 40px 50px;
 		}
 
 		&__more {
@@ -101,6 +92,11 @@
 				padding: 10px 20px;
 				font-size: 15px;
 			}
+		}
+
+		&__paper {
+			border-width: 1px;
+			padding: 25px;
 		}
 
 		&__bg-mobile {

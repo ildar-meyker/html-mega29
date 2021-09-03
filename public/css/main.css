@@ -2365,9 +2365,9 @@ a {
   padding: 0 10px; }
 
 .page__paper {
-  padding: 15px;
-  border: 2px solid #f2f3f5;
-  border-radius: 4px;
+  padding: 20px;
+  border: 1px solid #f2f3f5;
+  border-radius: 5px;
   background: #fff; }
 
 .page__scroll {
@@ -2394,10 +2394,6 @@ a {
 .page__lock-mobile {
   overflow: hidden; }
 
-@media (max-width: 767.98px) {
-  .page__paper--compact {
-    padding: 10px; } }
-
 @media (min-width: 768px) {
   .page__center {
     padding: 0 20px; }
@@ -2406,7 +2402,8 @@ a {
   .page__inner {
     padding: 0 20px; }
   .page__paper {
-    padding: 30px; }
+    border-width: 2px;
+    padding: 40px 50px; }
   .page__more .button {
     padding: 19px 20px;
     font-size: 18px; } }
@@ -2417,6 +2414,9 @@ a {
     .page__more .button {
       padding: 10px 20px;
       font-size: 15px; }
+  .page__paper {
+    border-width: 1px;
+    padding: 25px; }
   .page__bg-mobile {
     display: none; }
   .page__lock-mobile {
@@ -2937,6 +2937,7 @@ a {
         line-height: 1; }
 
 .article {
+  font-size: 15px;
   color: #000; }
   .article *:last-child {
     margin-bottom: 0; }
@@ -2967,15 +2968,15 @@ a {
 
 @media (min-width: 768px) {
   .article {
-    font-size: 28px; }
+    font-size: 24px; }
     .article h3 {
-      font-size: 36px; } }
+      font-size: 32px; } }
 
 @media (min-width: 992px) {
   .article {
-    font-size: 14px; }
+    font-size: 18px; }
     .article h3 {
-      font-size: 20px; } }
+      font-size: 24px; } }
 
 .header {
   position: relative;
@@ -3849,6 +3850,8 @@ a {
     font-size: 0.9em;
     font-weight: normal;
     color: #2e2e2e; }
+  .nav-info__list {
+    padding: 8px 0; }
   .nav-info__quit {
     display: block;
     margin-top: 0.625em;
@@ -3856,7 +3859,9 @@ a {
 
 @media (min-width: 768px) {
   .nav-info {
-    margin-top: 20px; } }
+    margin-top: 20px; }
+    .nav-info__list {
+      padding: 10px 0; } }
 
 @media (max-width: 991.98px) {
   .nav-info__group {
@@ -3896,8 +3901,6 @@ a {
       right: 18px;
       font-size: 0.7em;
       color: #2e2e2e; }
-  .nav-info__list {
-    padding: 10px 0; }
   .nav-info__tabs {
     display: none; } }
 
@@ -3960,6 +3963,8 @@ a {
     display: block !important; }
   .nav-info__title {
     display: none; }
+  .nav-info__list {
+    padding: 0; }
   .nav-info__quit {
     display: none; } }
 
