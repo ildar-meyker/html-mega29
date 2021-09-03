@@ -1,20 +1,15 @@
 import $ from "jquery";
 import { throttle } from "throttle-debounce";
 import BgMobile from "./BgMobile";
+import getPanelOffset from "./getPanelOffset";
 
 const NavBurger = {
 	_setPanelSize() {
-		const $navBottom = $("#nav-bottom");
-		const isNavHidden = $navBottom.hasClass("hidden");
-		const bottom = isNavHidden ? 0 : $navBottom.height();
-
-		const scrollTop = $(window).scrollTop();
-		const headerH = $("#header").height();
-		const top = scrollTop > headerH ? 0 : headerH - scrollTop;
+		const offset = getPanelOffset();
 
 		$("#nav-burger .nav-burger__panel").css({
-			top: top,
-			bottom: bottom,
+			top: offset.top,
+			bottom: offset.bottom,
 		});
 	},
 

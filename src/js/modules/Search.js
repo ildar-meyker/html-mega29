@@ -1,17 +1,16 @@
 import $ from "jquery";
 import { throttle } from "throttle-debounce";
 import BgMobile from "./BgMobile";
+import getPanelOffset from "./getPanelOffset";
 
 const Search = {
 	_$root: $(),
 
 	_setPanelSize() {
-		const $navBottom = $("#nav-bottom");
-		const isNavHidden = $navBottom.hasClass("hidden");
-		const bottom = isNavHidden ? 0 : $navBottom.height();
+		const offset = getPanelOffset();
 
 		$("#form-search").css({
-			bottom: bottom,
+			bottom: offset.bottom,
 		});
 	},
 
