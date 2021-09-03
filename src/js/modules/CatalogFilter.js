@@ -19,6 +19,8 @@ const CatalogFilter = {
 	},
 
 	_handleWindowResize() {
+		if (!this.isActive()) return;
+
 		setTimeout(() => {
 			this._setPanelSize();
 		}, 50);

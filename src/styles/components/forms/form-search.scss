@@ -1,11 +1,44 @@
 .form-search {
-	&.active {
+	&.focus {
 		.form-search__panel {
 			display: block;
 		}
 	}
 
+	&.loading {
+		.form-search__panel * {
+			user-select: none;
+			pointer-events: none;
+		}
+
+		.form-search__tips a:hover,
+		.goods-simple__item:hover {
+			background: transparent;
+		}
+
+		.form-search__tips span,
+		.form-search__more .button,
+		.goods-simple__image,
+		.goods-simple__title,
+		.goods-simple__price span {
+			animation: infinite form-search-pulse 1s;
+			background: #fafafa !important;
+			color: transparent;
+		}
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+
+		&__back {
+			flex: 0 0 auto;
+			width: 0;
+		}
+	}
+
 	&__field {
+		flex: 1 0 auto;
 		position: relative;
 		display: flex;
 		background: #f2f3f5;
@@ -16,7 +49,10 @@
 			z-index: 1;
 			top: 0;
 			left: 0;
-			padding: 11px;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			padding: 0 11px;
 			font-size: 17px;
 			color: #b2b3b3;
 		}
@@ -29,10 +65,6 @@
 			border-right: 0;
 			background: transparent;
 			padding-left: 35px;
-
-			&:focus {
-				border-color: darken(#e7e7e8, 10%) !important;
-			}
 		}
 
 		&__button {
@@ -43,7 +75,6 @@
 	}
 
 	&__panel {
-		transition: margin 0.2s, opacity 0.2s;
 		display: none;
 		position: absolute;
 		top: 100%;
@@ -56,20 +87,13 @@
 		border-radius: 4px;
 		box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04),
 			0px 4px 16px rgba(51, 51, 51, 0.08);
-	}
-
-	&__box {
-		position: relative;
-		border-radius: 4px;
 		background: #fff;
 	}
 
-	&__body {
-		padding: 16px 30px;
-	}
-
 	&__tips {
-		&__item {
+		padding: 15px 30px;
+
+		a {
 			transition: all 0.2s;
 			display: block;
 			padding: 10px 15px;
@@ -84,10 +108,138 @@
 
 	&__break {
 		border-top: 1px solid #f1f1f1;
-		margin: 15px -30px;
 	}
 
-	&__show-all {
-		margin: 15px 0;
+	&__goods {
+		padding: 15px 30px;
+	}
+
+	&__more {
+		padding: 0 30px 30px 30px;
+	}
+}
+
+@media (max-width: 991.98px) {
+	.form-search {
+		transition: transform 0.2s;
+		transform: translateX(100%);
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background: #fff;
+		overflow: auto;
+
+		&.active {
+			transform: translateX(0);
+		}
+
+		&__header {
+			padding: 10px 20px;
+
+			&__back {
+				font-size: 20px;
+				margin-right: 12px;
+				width: auto;
+
+				i {
+					display: block;
+				}
+			}
+		}
+
+		&__field {
+			&__input {
+				border-radius: 5px;
+				border: 1px solid #e7e7e8;
+				font-size: 15px;
+			}
+
+			&__button {
+				display: none;
+			}
+		}
+
+		&__panel {
+			display: block;
+			position: static;
+			margin: 0;
+			box-shadow: none;
+			border: 0;
+			min-width: auto;
+		}
+
+		&__tips {
+			padding: 0 10px 10px 10px;
+
+			a {
+				padding: 6px 10px;
+				font-size: 15px;
+			}
+		}
+
+		&__goods {
+			padding: 20px 10px;
+		}
+
+		&__more {
+			padding: 20px;
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.form-search {
+		&__header {
+			padding: 20px 35px;
+
+			&__back {
+				width: 60px;
+				margin-right: 0;
+				text-align: center;
+			}
+		}
+
+		&__field {
+			&__input {
+				font-size: 18px;
+			}
+		}
+
+		&__tips {
+			padding: 20px 35px;
+
+			a {
+				padding: 20px 25px;
+				font-size: 18px;
+			}
+		}
+
+		&__goods {
+			padding: 40px 55px;
+		}
+
+		&__more {
+			padding: 0 35px 50px 35px;
+
+			.button {
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+@keyframes form-search-pulse {
+	0% {
+		opacity: 0.5;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0.5;
 	}
 }

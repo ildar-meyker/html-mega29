@@ -38,6 +38,27 @@
 	}
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.goods-simple {
+		&__item {
+			margin-top: 15px;
+		}
+
+		&__image {
+			width: 85px;
+			height: 85px;
+		}
+
+		&__title {
+			font-size: 18px;
+		}
+
+		&__price {
+			font-size: 32px;
+		}
+	}
+}
+
 @media (min-width: 992px) {
 	.goods-simple {
 		&__item {

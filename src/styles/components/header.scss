@@ -1,7 +1,6 @@
 .header {
 	position: relative;
 	z-index: 400;
-	background: #fff;
 
 	&__main {
 		display: flex;
@@ -23,7 +22,7 @@
 			margin: 0 2% 0 2%;
 		}
 
-		&__search-area {
+		&__search {
 			position: relative;
 			flex-grow: 1;
 			align-self: stretch;
@@ -146,9 +145,15 @@
 
 @media (max-width: 991.98px) {
 	.header {
+		background: #fff;
+
+		&__main__search {
+			flex: 0 0 auto;
+			width: 0;
+		}
+
 		&__menu,
 		&__main__city,
-		&__main__search-area,
 		&__main__call,
 		&__main__own {
 			display: none;

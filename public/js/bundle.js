@@ -25692,6 +25692,7 @@ var CatalogFilter = {
   _handleWindowResize: function _handleWindowResize() {
     var _this = this;
 
+    if (!this.isActive()) return;
     setTimeout(function () {
       _this._setPanelSize();
     }, 50);
@@ -25959,8 +25960,8 @@ var NavBottom = {
     this._lastScrollTop = scrollTop;
   },
   init: function init() {
-    if (!jquery__WEBPACK_IMPORTED_MODULE_0___default()("#nav-bottom").length) return;
     this._$root = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#nav-bottom");
+    if (this._$root.length === 0) return;
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on("scroll", Object(throttle_debounce__WEBPACK_IMPORTED_MODULE_1__["throttle"])(250, this._handleWindowScroll.bind(this)));
   }
 };
@@ -26003,6 +26004,7 @@ var NavBurger = {
   _handleWindowResize: function _handleWindowResize() {
     var _this = this;
 
+    if (!this.isActive()) return;
     setTimeout(function () {
       _this._setPanelSize();
     }, 50);
@@ -26119,8 +26121,8 @@ var NavInfo = {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nav-info__group", this._$root).removeClass("active").eq(index).addClass("active");
   },
   init: function init() {
-    if (!jquery__WEBPACK_IMPORTED_MODULE_0___default()("#nav-info").length) return;
     this._$root = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#nav-info");
+    if (this._$root.length === 0) return;
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-nav-info-tab", this._handleTabClick.bind(this));
   }
 };
@@ -26307,23 +26309,88 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var throttle_debounce__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! throttle-debounce */ "./node_modules/throttle-debounce/esm/index.js");
+/* harmony import */ var _BgMobile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BgMobile */ "./src/js/modules/BgMobile.js");
+
+
 
 var Search = {
-  showPanel: function showPanel() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#form-search").addClass("active");
+  _$root: jquery__WEBPACK_IMPORTED_MODULE_0___default()(),
+  _setPanelSize: function _setPanelSize() {
+    var $navBottom = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#nav-bottom");
+    var isNavHidden = $navBottom.hasClass("hidden");
+    var bottom = isNavHidden ? 0 : $navBottom.height();
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#form-search").css({
+      bottom: bottom
+    });
   },
-  hidePanel: function hidePanel() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#form-search").removeClass("active");
-  },
-  _handleInputBlur: function _handleInputBlur() {
-    this.hidePanel();
+  _handleOutsideClick: function _handleOutsideClick(e) {
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).closest(".form-search").length) return;
+
+    this._hideDesktop();
   },
   _handleInputFocus: function _handleInputFocus() {
-    this.showPanel();
+    this._loadResults();
+
+    this._showDesktop();
+  },
+  _handleInputKeyup: function _handleInputKeyup(e) {
+    this._loadResults();
+  },
+  _handleOpenButton: function _handleOpenButton(e) {
+    e.preventDefault();
+
+    this._setPanelSize();
+
+    this.open();
+    _BgMobile__WEBPACK_IMPORTED_MODULE_2__["default"].show();
+  },
+  _handleCloseButton: function _handleCloseButton(e) {
+    e.preventDefault();
+    this.close();
+    _BgMobile__WEBPACK_IMPORTED_MODULE_2__["default"].hide();
+  },
+  _handleWindowResize: function _handleWindowResize() {
+    var _this = this;
+
+    if (!this.isActive()) return;
+    setTimeout(function () {
+      _this._setPanelSize();
+    }, 50);
+  },
+  _showDesktop: function _showDesktop() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#form-search").addClass("focus");
+  },
+  _hideDesktop: function _hideDesktop() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#form-search").removeClass("focus");
+  },
+  _loadResults: function _loadResults() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#form-search").addClass("loading"); // fake demo
+
+    setTimeout(function () {
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()("#form-search").removeClass("loading");
+    }, 500);
+  },
+  isActive: function isActive() {
+    return this._$root.hasClass("active");
+  },
+  open: function open() {
+    this._$root.addClass("active");
+
+    this._$root.find(".js-search-input").focus();
+  },
+  close: function close() {
+    this._$root.removeClass("active");
   },
   init: function init() {
+    this._$root = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#form-search");
+    if (this._$root.length === 0) return;
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("focus", ".js-search-input", this._handleInputFocus.bind(this));
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("blur", ".js-search-input", this._handleInputBlur.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("keyup", ".js-search-input", Object(throttle_debounce__WEBPACK_IMPORTED_MODULE_1__["throttle"])(250, this._handleInputKeyup.bind(this)));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-search-open", this._handleOpenButton.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-search-close", this._handleCloseButton.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", this._handleOutsideClick.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on("resize", Object(throttle_debounce__WEBPACK_IMPORTED_MODULE_1__["throttle"])(250, this._handleWindowResize.bind(this)));
   }
 };
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {

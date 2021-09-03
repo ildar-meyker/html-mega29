@@ -14,9 +14,9 @@ const NavBottom = {
 	},
 
 	init() {
-		if (!$("#nav-bottom").length) return;
-
 		this._$root = $("#nav-bottom");
+
+		if (this._$root.length === 0) return;
 
 		$(window).on(
 			"scroll",

@@ -20,9 +20,9 @@ const NavInfo = {
 	},
 
 	init() {
-		if (!$("#nav-info").length) return;
-
 		this._$root = $("#nav-info");
+
+		if (this._$root.length === 0) return;
 
 		$(document).on(
 			"click",
