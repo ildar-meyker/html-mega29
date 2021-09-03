@@ -5203,68 +5203,6 @@ a {
   .promo-1 .slick-next {
     right: -22.5px; } }
 
-.cart-total {
-  margin-top: 1.25em;
-  background: #fff;
-  border: 0.0625em solid #f2f3f5;
-  border-radius: 0.25em;
-  box-shadow: 0px 0px 0.3125em rgba(51, 51, 51, 0.04), 0px 0px 1.25em rgba(51, 51, 51, 0.08); }
-  .cart-total__title {
-    padding: 0.59091em 1.13636em;
-    border-bottom: 0.04545em solid #f2f3f5;
-    font-size: 1.375em;
-    font-weight: 700;
-    text-align: center; }
-  .cart-total__body {
-    padding: 1.5625em; }
-  .cart-total__offer {
-    margin: 0.5em 0 2.5em 0;
-    font-weight: 700;
-    text-align: center;
-    color: #21a73f; }
-  .cart-total__props {
-    margin-top: 1.875em; }
-  .cart-total__prop {
-    margin-top: 0.25em;
-    display: flex;
-    justify-content: space-between;
-    font-weight: 500; }
-  .cart-total__coupon {
-    margin-top: 1.25em;
-    display: flex; }
-    .cart-total__coupon input {
-      flex: 0 0 auto;
-      width: 50%;
-      border-color: #ef7f1a;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      font-size: 1.0625em;
-      font-weight: 700; }
-      .cart-total__coupon input:focus {
-        border-color: #ef7f1a; }
-    .cart-total__coupon button {
-      flex: 0 0 auto;
-      width: 50%;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      font-size: 1.0625em; }
-  .cart-total__actions {
-    margin-top: 1.13em; }
-    .cart-total__actions button {
-      margin-top: 0.35294em;
-      font-size: 1.0625em; }
-
-@media (min-width: 992px) {
-  .cart-total {
-    margin-top: 0; }
-    .cart-total__coupon input {
-      font-size: 14px; }
-    .cart-total__coupon button {
-      font-size: 14px; }
-    .cart-total__actions button {
-      padding: 0.625em 2.8125em;
-      font-size: 16px; } }
-
 .order-complete__menu {
   display: flex;
   justify-content: right;
@@ -7228,6 +7166,68 @@ a {
     padding: 20px; }
     .checkout-product__labels, .checkout-product__points, .checkout-product__price, .checkout-product__btns-buy, .checkout-product__btns-save {
       margin: 12px 0; } }
+
+.checkout-cart {
+  margin-top: 1.25em;
+  background: #fff;
+  border: 0.0625em solid #f2f3f5;
+  border-radius: 0.25em;
+  box-shadow: 0px 0px 0.3125em rgba(51, 51, 51, 0.04), 0px 0px 1.25em rgba(51, 51, 51, 0.08); }
+  .checkout-cart__title {
+    padding: 0.59091em 1.13636em;
+    border-bottom: 0.04545em solid #f2f3f5;
+    font-size: 1.375em;
+    font-weight: 700;
+    text-align: center; }
+  .checkout-cart__body {
+    padding: 1.5625em; }
+  .checkout-cart__offer {
+    margin: 0.5em 0 2.5em 0;
+    font-weight: 700;
+    text-align: center;
+    color: #21a73f; }
+  .checkout-cart__props {
+    margin-top: 1.875em; }
+  .checkout-cart__prop {
+    margin-top: 0.25em;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500; }
+  .checkout-cart__coupon {
+    margin-top: 1.25em;
+    display: flex; }
+    .checkout-cart__coupon input {
+      flex: 0 0 auto;
+      width: 50%;
+      border-color: #ef7f1a;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      font-size: 1.0625em;
+      font-weight: 700; }
+      .checkout-cart__coupon input:focus {
+        border-color: #ef7f1a; }
+    .checkout-cart__coupon button {
+      flex: 0 0 auto;
+      width: 50%;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      font-size: 1.0625em; }
+  .checkout-cart__actions {
+    margin-top: 1.13em; }
+    .checkout-cart__actions button {
+      margin-top: 0.35294em;
+      font-size: 1.0625em; }
+
+@media (min-width: 992px) {
+  .checkout-cart {
+    margin-top: 0; }
+    .checkout-cart__coupon input {
+      font-size: 14px; }
+    .checkout-cart__coupon button {
+      font-size: 14px; }
+    .checkout-cart__actions button {
+      padding: 0.625em 2.8125em;
+      font-size: 16px; } }
 
 .brands {
   display: flex; }

@@ -1,4 +1,4 @@
-.cart-total {
+.checkout-cart {
 	margin-top: 20/16 + em;
 	background: #fff;
 	border: (1/16) + em solid #f2f3f5;
@@ -74,7 +74,7 @@
 }
 
 @media (min-width: 992px) {
-	.cart-total {
+	.checkout-cart {
 		margin-top: 0;
 
 		&__coupon {
