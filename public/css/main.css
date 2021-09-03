@@ -6128,106 +6128,110 @@ a {
   display: none; }
 
 .product__order {
-  margin-top: 1.5625em;
-  margin-bottom: 2.1875em; }
+  margin: 15px 0; }
 
 @media (min-width: 768px) {
   .product {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 45px; }
+    margin-bottom: 30px; }
     .product__gallery {
-      margin-bottom: 55px;
       flex: 0 0 auto;
-      width: 100%; }
+      width: 100%;
+      margin-bottom: 30px; }
     .product__props {
-      display: block;
       flex: 0 0 auto;
       width: 50%;
-      padding: 25px 30px; }
+      display: block;
+      padding: 15px 15px 0 15px; }
     .product__order {
       flex: 0 0 auto;
-      width: 50%; } }
+      width: 50%;
+      margin: 0; } }
 
 @media (min-width: 992px) {
   .product {
-    padding: 17px;
+    padding: 15px;
     border: 1px solid #f2f3f5;
-    border-radius: 4px;
+    border-radius: 5px;
     background: #fff; }
     .product__gallery {
-      width: 50%;
-      margin-bottom: 0; }
+      width: 40%;
+      margin-bottom: 0;
+      display: flex; }
+    .product__props {
+      padding: 10px 30px 0 30px;
+      width: 30%; }
     .product__order {
-      width: 100%; } }
+      width: 30%; } }
 
 @media (min-width: 1220px) {
   .product {
     margin-bottom: 15px; }
     .product__gallery {
-      width: 46%; }
+      width: 48%;
+      padding-right: 15px; }
     .product__props {
       width: 27%; }
     .product__order {
-      margin: 0;
-      font-size: 13px;
-      width: 27%; } }
+      width: 25%; } }
 
-.gallery__image {
-  position: relative; }
-  .gallery__image:before {
-    content: " ";
-    padding-top: 100%;
-    display: block; }
-  .gallery__image__default {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0; }
-    .gallery__image__default img {
-      max-width: 100%;
-      max-height: 100%; }
-  .gallery__image__zoomed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0; }
-    .gallery__image__zoomed.active {
-      opacity: 1; }
-
-.gallery__nav {
-  margin-top: 0.625em;
-  overflow: hidden; }
-  .gallery__nav__window {
-    padding-bottom: 0.75em; }
-  .gallery__nav__list {
-    display: flex; }
-  .gallery__nav__item {
-    flex: 0 0 auto;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 0.3125em;
-    border: 1px solid #e7e7e8;
-    border-radius: 0.25em;
-    width: 5em;
-    height: 5em;
-    overflow: hidden;
-    cursor: pointer;
-    opacity: 0.7; }
-    .gallery__nav__item.active {
-      border-color: #21a73f;
-      opacity: 1; }
-    .gallery__nav__item img {
-      max-width: 100%;
-      max-height: 100%; }
+.gallery {
+  flex-grow: 1; }
+  .gallery__image {
+    position: relative; }
+    .gallery__image:before {
+      content: " ";
+      padding-top: 100%;
+      display: block; }
+    .gallery__image__default {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0; }
+      .gallery__image__default img {
+        max-width: 100%;
+        max-height: 100%; }
+    .gallery__image__zoomed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0; }
+      .gallery__image__zoomed.active {
+        opacity: 1; }
+  .gallery__nav {
+    margin-top: 0.625em;
+    overflow: hidden; }
+    .gallery__nav__window {
+      padding-bottom: 0.75em; }
+    .gallery__nav__list {
+      display: flex; }
+    .gallery__nav__item {
+      flex: 0 0 auto;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 0.3125em;
+      border: 1px solid #e7e7e8;
+      border-radius: 0.25em;
+      width: 5em;
+      height: 5em;
+      overflow: hidden;
+      cursor: pointer;
+      opacity: 0.7; }
+      .gallery__nav__item.active {
+        border-color: #21a73f;
+        opacity: 1; }
+      .gallery__nav__item img {
+        max-width: 100%;
+        max-height: 100%; }
 
 @media (min-width: 1220px) {
   .gallery {
@@ -6256,78 +6260,78 @@ a {
     .gallery .simplebar-track.simplebar-vertical {
       display: none; } }
 
-.props--panel {
-  padding: 20px 15px;
-  border: 2px solid #f2f3f5;
-  border-radius: 0.25em;
-  background: #fff; }
+.product-props {
+  font-size: 15px; }
+  .product-props dl {
+    margin-top: 5px; }
+    .product-props dl:first-child {
+      margin-top: 0; }
+  .product-props dt {
+    font-weight: normal;
+    color: #727271; }
+  .product-props dd a {
+    color: #f68219; }
+    .product-props dd a:hover {
+      color: #f57a0a; }
+  .product-props__info {
+    cursor: pointer; }
 
-.props--short .props__item {
-  flex-wrap: wrap; }
-
-.props--short .props__label {
-  width: 100%; }
-  .props--short .props__label:before {
-    display: none; }
-
-.props--short .props__name {
-  background: transparent; }
-
-.props__title {
-  margin-bottom: 1.15385em;
-  font-size: 0.8125em;
-  font-weight: 500; }
-
-.props__see-all {
-  margin-top: 1.15385em;
-  font-size: 0.8125em;
-  font-weight: 500; }
-  .props__see-all a {
-    color: #21a73f; }
-
-.props__item {
-  display: flex;
-  margin-top: 1.15385em;
-  font-size: 0.8125em; }
-  .props__item:first-child {
-    margin-top: 0; }
-
-.props__label {
-  position: relative;
-  flex: 0 0 auto;
-  width: 50%;
-  padding-right: 0.76923em;
-  font-weight: normal;
-  color: #727271; }
-  .props__label:before {
-    content: " ";
-    position: absolute;
-    right: 0.38462em;
-    height: 0.15385em;
-    background: url("../images/dots.png") repeat-x;
-    background-size: auto 100%;
-    bottom: 0.23077em;
-    left: 3px; }
-
-.props__name {
-  position: relative;
-  padding-right: 0.38462em;
-  background: #fff; }
-
-.props__value a {
-  color: #2f80ed; }
-
-.props__info {
-  cursor: pointer; }
+@media (min-width: 768px) {
+  .product-props {
+    font-size: 24px; }
+    .product-props dl {
+      margin-top: 10px; }
+    .product-props dd {
+      margin-top: 5px; }
+    .product-props__title {
+      margin-bottom: 30px;
+      font-weight: 500; }
+    .product-props__more {
+      margin-top: 15px; }
+      .product-props__more a {
+        color: #21a73f; }
+        .product-props__more a:hover {
+          color: #1e9a3a; } }
 
 @media (min-width: 992px) {
-  .props {
-    font-size: 23px; }
-    .props--panel {
-      padding: 25px 65px;
+  .product-props {
+    font-size: 18px; }
+    .product-props__title {
+      margin-bottom: 20px; }
+    .product-props--all {
+      padding: 0 40px;
+      -webkit-column-gap: 40px;
+         -moz-column-gap: 40px;
+              column-gap: 40px;
       -webkit-column-count: 2;
          -moz-column-count: 2;
-              column-count: 2; } }
+              column-count: 2; }
+      .product-props--all dl {
+        display: flex;
+        margin-top: 25px; }
+        .product-props--all dl:first-child {
+          margin-top: 0; }
+      .product-props--all dt {
+        flex: 0 0 auto;
+        width: 50%;
+        align-self: flex-start;
+        position: relative;
+        padding-right: 20px; }
+        .product-props--all dt:before {
+          content: " ";
+          position: absolute;
+          right: 10px;
+          height: 2px;
+          bottom: 0.25em;
+          left: 0;
+          background: url("../images/dots.png") repeat-x;
+          background-size: auto 100%; }
+        .product-props--all dt span {
+          position: relative;
+          padding-right: 10px;
+          background: #fff; }
+      .product-props--all dd {
+        margin-top: 0; } }
 
 .reviews {
   background: #fff;
@@ -7130,6 +7134,8 @@ a {
       font-weight: 500; }
 
 @media (min-width: 768px) {
+  .checkout-product__code {
+    margin: 25px 0; }
   .checkout-product__btns-buy {
     display: block; }
     .checkout-product__btns-buy > * {
@@ -7143,7 +7149,6 @@ a {
   .checkout-product {
     padding: 25px; }
     .checkout-product__code {
-      margin: 25px 0;
       font-size: 14px; }
     .checkout-product__labels, .checkout-product__points {
       margin: 15px 0;

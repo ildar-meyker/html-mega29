@@ -81,6 +81,10 @@
 
 @media (min-width: 768px) {
 	.checkout-product {
+		&__code {
+			margin: 25px 0;
+		}
+
 		&__btns-buy {
 			display: block;
 
@@ -102,7 +106,6 @@
 		padding: 25px;
 
 		&__code {
-			margin: 25px 0;
 			font-size: 14px;
 		}
 

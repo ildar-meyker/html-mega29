@@ -1,0 +1,118 @@
+.product-props {
+	font-size: 15px;
+
+	dl {
+		margin-top: 5px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	dt {
+		font-weight: normal;
+		color: #727271;
+	}
+
+	dd {
+		a {
+			color: #f68219;
+
+			&:hover {
+				color: darken(#f68219, 3%);
+			}
+		}
+	}
+
+	&__info {
+		cursor: pointer;
+	}
+}
+
+@media (min-width: 768px) {
+	.product-props {
+		font-size: 24px;
+
+		dl {
+			margin-top: 10px;
+		}
+
+		dt {
+		}
+
+		dd {
+			margin-top: 5px;
+		}
+
+		&__title {
+			margin-bottom: 30px;
+			font-weight: 500;
+		}
+
+		&__more {
+			margin-top: 15px;
+
+			a {
+				color: #21a73f;
+
+				&:hover {
+					color: darken(#21a73f, 3%);
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.product-props {
+		font-size: 18px;
+
+		&__title {
+			margin-bottom: 20px;
+		}
+
+		&--all {
+			padding: 0 40px;
+			column-gap: 40px;
+			column-count: 2;
+
+			dl {
+				display: flex;
+				margin-top: 25px;
+
+				&:first-child {
+					margin-top: 0;
+				}
+			}
+
+			dt {
+				flex: 0 0 auto;
+				width: 50%;
+				align-self: flex-start;
+				position: relative;
+				padding-right: 20px;
+
+				&:before {
+					content: " ";
+					position: absolute;
+					right: 10px;
+					height: 2px;
+					bottom: 0.25em;
+					left: 0;
+					background: url("../images/dots.png") repeat-x;
+					background-size: auto 100%;
+				}
+
+				span {
+					position: relative;
+					padding-right: 10px;
+					background: #fff;
+				}
+			}
+
+			dd {
+				margin-top: 0;
+			}
+		}
+	}
+}
