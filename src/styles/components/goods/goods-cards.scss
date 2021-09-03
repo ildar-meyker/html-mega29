@@ -93,14 +93,9 @@
 		font-size: 16px;
 		font-weight: 700;
 
-		&__item {
+		> * {
 			display: inline-block;
-
-			&--old {
-				margin-left: 0.3em;
-				text-decoration-line: line-through;
-				color: #d9d9d9;
-			}
+			margin: 0 0.15em;
 		}
 	}
 
