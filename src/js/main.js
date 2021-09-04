@@ -14,12 +14,12 @@ import "./modules/NavCatalog";
 import "./modules/NavBottom";
 import "./modules/NavBurger";
 import "./modules/RangeSlider";
-import "./modules/Gallery";
 import "./modules/Panel";
 import "./modules/Search";
 import "./modules/SliderCards";
 import "./modules/SliderItems1";
 import "./modules/SliderMain";
+import "./modules/SliderGallery";
 import "./modules/ScrollUp";
 
 $(function () {

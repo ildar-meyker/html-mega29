@@ -3,10 +3,12 @@
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
-		bottom: 5px;
-		display: flex;
+		bottom: 7px;
+		white-space: nowrap;
+		font-size: 0;
 
 		li {
+			display: inline-block;
 			margin: 0 3px;
 
 			button {
@@ -14,7 +16,6 @@
 				box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 				width: 5px;
 				height: 5px;
-				text-indent: 20px;
 				background: #fff;
 				border-radius: 10px;
 				overflow: hidden;
@@ -24,6 +25,29 @@
 				button {
 					width: 15px;
 					background: #21a73f;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.slider-dots-1 {
+		.slick-dots {
+			bottom: 17px;
+
+			li {
+				margin: 0 8px;
+
+				button {
+					width: 13px;
+					height: 13px;
+				}
+
+				&.slick-active {
+					button {
+						width: 40px;
+					}
 				}
 			}
 		}
