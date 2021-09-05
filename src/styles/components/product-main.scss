@@ -1,4 +1,4 @@
-.product {
+.product-main {
 	&__props {
 		display: none;
 	}
@@ -9,7 +9,7 @@
 }
 
 @media (min-width: 768px) {
-	.product {
+	.product-main {
 		display: flex;
 		flex-wrap: wrap;
 		margin-bottom: 30px;
@@ -36,7 +36,7 @@
 }
 
 @media (min-width: 992px) {
-	.product {
+	.product-main {
 		padding: 15px;
 		border: 1px solid #f2f3f5;
 		border-radius: 5px;
@@ -61,7 +61,7 @@
 }
 
 @media (min-width: 1220px) {
-	.product {
+	.product-main {
 		margin-bottom: 15px;
 
 		&__gallery {

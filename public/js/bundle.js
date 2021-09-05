@@ -26428,15 +26428,45 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var throttle_debounce__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! throttle-debounce */ "./node_modules/throttle-debounce/esm/index.js");
+
 
 var SliderGallery = {
   _$root: jquery__WEBPACK_IMPORTED_MODULE_0___default()(),
-  _$slider: jquery__WEBPACK_IMPORTED_MODULE_0___default()(),
+  _$basicSlider: jquery__WEBPACK_IMPORTED_MODULE_0___default()(),
+  _$popup: jquery__WEBPACK_IMPORTED_MODULE_0___default()(),
+  _$popupSlider: jquery__WEBPACK_IMPORTED_MODULE_0___default()(),
+  _setVideosSize: function _setVideosSize() {
+    var ratio = 0.5625;
+
+    var $content = this._$popup.find(".popup-gallery__content");
+
+    var contentW = $content.width();
+    var contentH = $content.height();
+
+    if (contentH / contentW <= ratio) {
+      var videoH = contentH;
+      var videoW = contentH / ratio;
+    } else {
+      var videoH = contentW * ratio;
+      var videoW = contentW;
+    }
+
+    this._$popup.find(".popup-gallery__video").css({
+      width: videoW,
+      height: videoH
+    });
+  },
+  _setActiveByIndex: function _setActiveByIndex($collection, index) {
+    $collection.eq(index).addClass("active").siblings().removeClass("active");
+  },
   _setActiveNavItem: function _setActiveNavItem(index) {
-    this._$root.find(".slider-gallery__nav__item").eq(index).addClass("active").siblings().removeClass("active");
+    this._setActiveByIndex(this._$root.find(".slider-gallery__nav__item"), index);
+
+    this._setActiveByIndex(this._$popup.find(".popup-gallery__nav__item"), index);
   },
   _setActiveSlide: function _setActiveSlide(index) {
-    this._$slider.slick("slickGoTo", index);
+    this._$basicSlider.slick("slickGoTo", index);
   },
   _handleNavItemClick: function _handleNavItemClick(e) {
     e.preventDefault();
@@ -26458,22 +26488,28 @@ var SliderGallery = {
     var h = $item.outerHeight();
     $item.find(".slider-gallery__zoom").css("background-position", "".concat(e.offsetX / w * 100, "% ").concat(e.offsetY / h * 100, "% "));
   },
-  init: function init() {
-    var _this = this;
+  _handleSlideClick: function _handleSlideClick(e) {
+    e.preventDefault();
+    var index = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).data("index");
 
-    this._$root = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#slider-gallery");
-    this._$slider = this._$root.find(".slider-gallery__list");
-    if (this._$root.length === 0) return;
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".slider-gallery__nav__item", this._handleNavItemClick.bind(this));
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("mouseover", ".slider-gallery__item", this._handleImageMouseover.bind(this));
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("mouseout", ".slider-gallery__item", this._handleImageMouseout.bind(this));
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("mousemove", ".slider-gallery__item", this._handleImageMousemove.bind(this));
+    this._setActiveNavItem(index);
 
-    this._$slider.on("afterChange", function (event, slick, currentSlide) {
-      _this._setActiveNavItem(currentSlide);
-    });
+    this._setActiveSlide(index);
 
-    this._$slider.slick({
+    this._setVideosSize();
+
+    this.openPopup();
+  },
+  _handlePopupClose: function _handlePopupClose(e) {
+    e.preventDefault();
+    this.closePopup();
+  },
+  _handleWindowResize: function _handleWindowResize() {
+    this._setVideosSize();
+  },
+  _initSlickSlider: function _initSlickSlider() {
+    this._$basicSlider.slick({
+      asNavFor: "#popup-gallery .popup-gallery__list",
       arrows: false,
       slidesToShow: 1,
       dots: true,
@@ -26487,6 +26523,53 @@ var SliderGallery = {
         }
       }]
     });
+
+    this._$popupSlider.slick({
+      asNavFor: "#slider-gallery .slider-gallery__list",
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: false
+    });
+  },
+  isPopupOpen: function isPopupOpen() {
+    return this._$popup.hasClass("active");
+  },
+  closePopup: function closePopup() {
+    this._$popup.removeClass("active");
+
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").removeClass("page__lock");
+  },
+  openPopup: function openPopup() {
+    this._$popup.addClass("active");
+
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").addClass("page__lock");
+  },
+  init: function init() {
+    var _this = this;
+
+    this._$root = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#slider-gallery");
+    this._$basicSlider = this._$root.find(".slider-gallery__list");
+    this._$popup = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-gallery");
+    this._$popupSlider = this._$popup.find(".popup-gallery__list");
+    if (this._$root.length === 0) return;
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".slider-gallery__nav__item, .popup-gallery__nav__item", this._handleNavItemClick.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("mouseover", ".slider-gallery__item", this._handleImageMouseover.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("mouseout", ".slider-gallery__item", this._handleImageMouseout.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("mousemove", ".slider-gallery__item", this._handleImageMousemove.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".slider-gallery__item", this._handleSlideClick.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".popup-gallery__close", this._handlePopupClose.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on("resize", Object(throttle_debounce__WEBPACK_IMPORTED_MODULE_1__["throttle"])(250, this._handleWindowResize.bind(this)));
+
+    this._$basicSlider.on("afterChange", function (event, slick, currentSlide) {
+      _this._setActiveNavItem(currentSlide);
+    });
+
+    this._$popupSlider.on("afterChange", function (event, slick, currentSlide) {
+      _this._setActiveNavItem(currentSlide);
+    });
+
+    this._initSlickSlider();
   }
 };
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {

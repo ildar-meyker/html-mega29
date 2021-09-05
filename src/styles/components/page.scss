@@ -54,6 +54,10 @@
 	&__lock-mobile {
 		overflow: hidden;
 	}
+
+	&__lock {
+		overflow: hidden;
+	}
 }
 
 @media (min-width: 768px) {

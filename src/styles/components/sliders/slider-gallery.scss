@@ -10,6 +10,10 @@
 		position: relative;
 		display: none;
 
+		* {
+			cursor: pointer;
+		}
+
 		&:first-child {
 			display: block;
 		}
@@ -92,7 +96,7 @@
 			width: 72px;
 			overflow: hidden;
 
-			&__list {
+			&__window {
 				height: 100%;
 			}
 

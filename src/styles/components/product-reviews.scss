@@ -1,4 +1,4 @@
-.reviews {
+.product-reviews {
 	background: #fff;
 	padding: 20/16 + em;
 	border: 1px solid #f2f3f5;
@@ -109,7 +109,7 @@
 }
 
 @media (min-width: 768px) {
-	.reviews {
+	.product-reviews {
 		padding: 25/16 + em;
 
 		&__header {
@@ -160,7 +160,7 @@
 }
 
 @media (min-width: 992px) {
-	.reviews {
+	.product-reviews {
 		&__voting {
 			display: flex;
 			justify-content: space-between;

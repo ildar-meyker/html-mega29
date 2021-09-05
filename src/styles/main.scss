@@ -101,22 +101,23 @@
 @import "components/goods/goods-short";
 
 @import "components/shops-cards";
-@import "components/product";
-@import "components/product-props";
 
-@import "components/reviews";
+@import "components/product-main";
+@import "components/product-props";
+@import "components/product-reviews";
 
 @import "components/panels/panel";
-
 @import "components/panels/panel-cart";
 @import "components/panels/panel-call";
 @import "components/panels/panel-city";
 @import "components/panels/panel-auth";
 
 @import "components/section";
-@import "components/popup";
-@import "components/popup-city-confirm";
-@import "components/popup-status";
+
+@import "components/popups/popup";
+@import "components/popups/popup-city-confirm";
+@import "components/popups/popup-status";
+@import "components/popups/popup-gallery";
 
 @import "components/sliders/slider-main";
 @import "components/sliders/slider-items-3";
