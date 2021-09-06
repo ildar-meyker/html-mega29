@@ -18,17 +18,10 @@
 		display: block;
 		position: relative;
 		padding-top: 100%;
-
-		&:hover {
-			.goods-cards__quick-view {
-				visibility: visible;
-				opacity: 1;
-			}
-		}
 	}
 
 	&__image,
-	&__quick-view {
+	&__quick {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -54,7 +47,7 @@
 		font-size: 7px;
 	}
 
-	&__quick-view {
+	&__quick {
 		transition: all 0.2s;
 		padding: 10/16 + em;
 		background: rgba(50, 50, 50, 0.5);
@@ -152,6 +145,19 @@
 		&__actions {
 			margin: 10px 0 -5px 0;
 			font-size: 13px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.goods-cards {
+		&__image-size {
+			&:hover {
+				.goods-cards__quick {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
 		}
 	}
 }

@@ -1,0 +1,48 @@
+.popup-quick {
+	position: fixed;
+	z-index: 500;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(#000, 0.2);
+	font-size: 0;
+	transform: translateY(-100%);
+	overflow: auto;
+
+	&:before {
+		content: " ";
+		display: inline-block;
+		vertical-align: middle;
+		height: 100%;
+		width: 0;
+	}
+
+	&__content {
+		display: inline-block;
+		vertical-align: middle;
+		width: 100%;
+		font-size: 1rem;
+	}
+
+	&__center {
+		position: relative;
+	}
+
+	&__close {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 1.5em;
+		font-size: 14px;
+		line-height: 0;
+	}
+}
+
+@media (min-width: 992px) {
+	.popup-quick {
+		&.active {
+			transform: translateY(0);
+		}
+	}
+}

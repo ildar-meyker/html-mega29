@@ -10,9 +10,12 @@
 
 @media (min-width: 768px) {
 	.product-main {
-		display: flex;
-		flex-wrap: wrap;
 		margin-bottom: 30px;
+
+		&__content {
+			display: flex;
+			flex-wrap: wrap;
+		}
 
 		&__gallery {
 			flex: 0 0 auto;

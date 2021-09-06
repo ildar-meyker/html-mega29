@@ -25580,6 +25580,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_SliderMain__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/SliderMain */ "./src/js/modules/SliderMain.js");
 /* harmony import */ var _modules_SliderGallery__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/SliderGallery */ "./src/js/modules/SliderGallery.js");
 /* harmony import */ var _modules_ScrollUp__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./modules/ScrollUp */ "./src/js/modules/ScrollUp.js");
+/* harmony import */ var _modules_QuickView__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./modules/QuickView */ "./src/js/modules/QuickView.js");
+
 
 
 
@@ -26141,6 +26143,45 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   Panel.init();
 });
 /* harmony default export */ __webpack_exports__["default"] = (Panel);
+
+/***/ }),
+
+/***/ "./src/js/modules/QuickView.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/QuickView.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+var QuickView = {
+  _handleOpenButton: function _handleOpenButton(e) {
+    e.preventDefault();
+    this.open();
+  },
+  _handleCloseButton: function _handleCloseButton(e) {
+    e.preventDefault();
+    this.close();
+  },
+  open: function open() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-quick").addClass("active");
+  },
+  close: function close() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-quick").removeClass("active");
+  },
+  init: function init() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-quick-open", this._handleOpenButton.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-quick-close", this._handleCloseButton.bind(this));
+  }
+};
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+  QuickView.init();
+});
+/* harmony default export */ __webpack_exports__["default"] = (QuickView);
 
 /***/ }),
 

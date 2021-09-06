@@ -5702,11 +5702,8 @@ a {
   display: block;
   position: relative;
   padding-top: 100%; }
-  .goods-cards__image-size:hover .goods-cards__quick-view {
-    visibility: visible;
-    opacity: 1; }
 
-.goods-cards__image, .goods-cards__quick-view {
+.goods-cards__image, .goods-cards__quick {
   position: absolute;
   top: 0;
   left: 0;
@@ -5727,7 +5724,7 @@ a {
   width: 10px;
   font-size: 7px; }
 
-.goods-cards__quick-view {
+.goods-cards__quick {
   transition: all 0.2s;
   padding: 0.625em;
   background: rgba(50, 50, 50, 0.5);
@@ -5794,6 +5791,11 @@ a {
   .goods-cards__actions {
     margin: 10px 0 -5px 0;
     font-size: 13px; } }
+
+@media (min-width: 992px) {
+  .goods-cards__image-size:hover .goods-cards__quick {
+    visibility: visible;
+    opacity: 1; } }
 
 .goods-list__header {
   display: flex;
@@ -6140,9 +6142,10 @@ a {
 
 @media (min-width: 768px) {
   .product-main {
-    display: flex;
-    flex-wrap: wrap;
     margin-bottom: 30px; }
+    .product-main__content {
+      display: flex;
+      flex-wrap: wrap; }
     .product-main__gallery {
       flex: 0 0 auto;
       width: 100%;
@@ -6818,6 +6821,44 @@ a {
     bottom: 0; }
   .popup-gallery__nav__item {
     width: 60px; } }
+
+.popup-quick {
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  overflow: auto; }
+  .popup-quick:before {
+    content: " ";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 0; }
+  .popup-quick__content {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    font-size: 1rem; }
+  .popup-quick__center {
+    position: relative; }
+  .popup-quick__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 1.5em;
+    font-size: 14px;
+    line-height: 0; }
+
+@media (min-width: 992px) {
+  .popup-quick.active {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
 
 .slider-main {
   margin-top: 10px;

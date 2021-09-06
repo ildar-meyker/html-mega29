@@ -21,6 +21,7 @@ import "./modules/SliderItems1";
 import "./modules/SliderMain";
 import "./modules/SliderGallery";
 import "./modules/ScrollUp";
+import "./modules/QuickView";
 
 $(function () {
 	$("#nav-path").scrollLeft(99999);
