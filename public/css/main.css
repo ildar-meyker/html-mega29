@@ -1703,6 +1703,31 @@ corresponds to the arrow we want to display */
     -webkit-transform: rotate(360deg) /* rtl:ignore */;
             transform: rotate(360deg) /* rtl:ignore */; } }
 
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+  background-color: #fff;
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 1s infinite ease-in-out;
+  animation: sk-scaleout 1s infinite ease-in-out; }
+
+@-webkit-keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0; } }
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0; } }
+
 .icon {
   display: inline-block; }
 
@@ -2183,6 +2208,14 @@ corresponds to the arrow we want to display */
   height: 100%;
   top: 0;
   left: 0; }
+
+.out-of-screen {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 100px;
+  height: 100px;
+  overflow: hidden; }
 
 .gap-5 {
   height: 5px; }
@@ -6683,6 +6716,65 @@ a {
       height: 85px;
       font-size: 18px; } }
 
+.popup-quick-view__overlay {
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  display: none; }
+
+.popup-quick-view__loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
+.popup-quick-view__window {
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  overflow: auto; }
+  .popup-quick-view__window:before {
+    content: " ";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 0; }
+
+.popup-quick-view__content {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  font-size: 1rem; }
+
+.popup-quick-view__center {
+  position: relative; }
+
+.popup-quick-view__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1.5em;
+  font-size: 14px;
+  line-height: 0; }
+
+@media (min-width: 992px) {
+  .popup-quick-view.loading .popup-quick-view__overlay {
+    display: block; }
+  .popup-quick-view.active .popup-quick-view__window {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
 .popup-gallery {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
@@ -6692,7 +6784,7 @@ a {
   width: 100%;
   height: 100%;
   overflow: auto;
-  z-index: 500;
+  z-index: 600;
   background: #fff; }
   .popup-gallery.active {
     -webkit-transform: translateY(0);
@@ -6821,44 +6913,6 @@ a {
     bottom: 0; }
   .popup-gallery__nav__item {
     width: 60px; } }
-
-.popup-quick {
-  position: fixed;
-  z-index: 500;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  font-size: 0;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  overflow: auto; }
-  .popup-quick:before {
-    content: " ";
-    display: inline-block;
-    vertical-align: middle;
-    height: 100%;
-    width: 0; }
-  .popup-quick__content {
-    display: inline-block;
-    vertical-align: middle;
-    width: 100%;
-    font-size: 1rem; }
-  .popup-quick__center {
-    position: relative; }
-  .popup-quick__close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 1.5em;
-    font-size: 14px;
-    line-height: 0; }
-
-@media (min-width: 992px) {
-  .popup-quick.active {
-    -webkit-transform: translateY(0);
-            transform: translateY(0); } }
 
 .slider-main {
   margin-top: 10px;
@@ -7498,3 +7552,23 @@ a {
   .brands__col {
     padding: 0 4px;
     width: calc((100% - 30px) / 5); } }
+
+.notify {
+  position: fixed;
+  z-index: 700;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  max-width: 300px; }
+  .notify__item {
+    margin: 10px;
+    padding: 15px;
+    opacity: 0.8;
+    border-radius: 5px;
+    color: #fff; }
+    .notify__item--success {
+      background: #b7e968; }
+    .notify__item--warning {
+      background: #ffb922; }
+    .notify__item--error {
+      background: #ec4949; }

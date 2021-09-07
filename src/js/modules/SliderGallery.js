@@ -1,18 +1,19 @@
 import $ from "jquery";
 import { throttle } from "throttle-debounce";
+import Notify from "./Notify";
 
 const SliderGallery = {
-	_$root: $(),
+	_scopeSelector: "",
 
-	_$basicSlider: $(),
+	_fullsizeDefaultHtml: "",
 
-	_$popup: $(),
-
-	_$popupSlider: $(),
+	_setDefaultScope() {
+		this._scopeSelector = "#slider-gallery";
+	},
 
 	_setVideosSize() {
 		const ratio = 0.5625;
-		const $content = this._$popup.find(".popup-gallery__content");
+		const $content = $("#popup-gallery .popup-gallery__content");
 		const contentW = $content.width();
 		const contentH = $content.height();
 
@@ -24,7 +25,7 @@ const SliderGallery = {
 			var videoW = contentW;
 		}
 
-		this._$popup.find(".popup-gallery__video").css({
+		$("#popup-gallery .popup-gallery__video").css({
 			width: videoW,
 			height: videoH,
 		});
@@ -40,17 +41,20 @@ const SliderGallery = {
 
 	_setActiveNavItem(index) {
 		this._setActiveByIndex(
-			this._$root.find(".slider-gallery__nav__item"),
+			$(this._scopeSelector).find(".slider-gallery__nav__item"),
 			index
 		);
 		this._setActiveByIndex(
-			this._$popup.find(".popup-gallery__nav__item"),
+			$("#popup-gallery .popup-gallery__nav__item"),
 			index
 		);
 	},
 
 	_setActiveSlide(index) {
-		this._$basicSlider.slick("slickGoTo", index);
+		$(this._scopeSelector + " .slider-gallery__list").slick(
+			"slickGoTo",
+			index
+		);
 	},
 
 	_handleNavItemClick(e) {
@@ -62,11 +66,11 @@ const SliderGallery = {
 		this._setActiveSlide(index);
 	},
 
-	_handleImageMouseover(e) {
+	_handleImageMouseenter(e) {
 		$(e.currentTarget).addClass("hover");
 	},
 
-	_handleImageMouseout(e) {
+	_handleImageMouseleave(e) {
 		$(e.currentTarget).removeClass("hover");
 	},
 
@@ -91,40 +95,84 @@ const SliderGallery = {
 		this._setActiveNavItem(index);
 		this._setActiveSlide(index);
 		this._setVideosSize();
-		this.openPopup();
+		this._openFullsize();
 	},
 
-	_handlePopupClose(e) {
+	_handleFullsizeClose(e) {
 		e.preventDefault();
 
-		this.closePopup();
+		this._closeFullsize();
 	},
 
 	_handleWindowResize() {
 		this._setVideosSize();
 	},
 
-	_initSlickSlider() {
-		this._$basicSlider.slick({
-			asNavFor: "#popup-gallery .popup-gallery__list",
-			arrows: false,
-			slidesToShow: 1,
-			dots: true,
-			swipe: false,
-			speed: 0,
-			responsive: [
-				{
-					breakpoint: 1220,
-					settings: {
-						swipe: true,
-						speed: 300,
-					},
-				},
-			],
-		});
+	_handleQuickViewOpen(e) {
+		e.preventDefault();
 
-		this._$popupSlider.slick({
-			asNavFor: "#slider-gallery .slider-gallery__list",
+		const productId = $(e.currentTarget)
+			.closest(".js-quick-view-card")
+			.data("product-id");
+
+		const url = $('head meta[name="gallery-data-url"]')
+			.attr("content")
+			.replace("{id}", productId);
+
+		$("#popup-quick-view").addClass("loading");
+
+		$.get(url)
+			.done((data) => {
+				this._scopeSelector = "#slider-gallery--quick-view";
+
+				$("#popup-quick-view .popup-quick-view__window").html(
+					$(data).find(".popup-quick-view__window").html()
+				);
+				this._initBasicSlider();
+				$("#popup-quick-view").addClass("active");
+
+				$("#popup-gallery").html($(data).find("#popup-gallery").html());
+				this._initFullsizeSlider();
+			})
+			.fail(() => {
+				$("#popup-quick-view").removeClass("loading");
+				Notify.error("Ошибка при запросе: " + url);
+			});
+	},
+
+	_handleQuickViewClose(e) {
+		e.preventDefault();
+
+		$("#popup-quick-view").removeClass("loading active");
+		this._setDefaultScope();
+		this._resetFullsizeSlider();
+	},
+
+	_initBasicSlider() {
+		$(this._scopeSelector)
+			.find(".slider-gallery__list")
+			.slick({
+				asNavFor: "#popup-gallery .popup-gallery__list",
+				arrows: false,
+				slidesToShow: 1,
+				dots: true,
+				swipe: false,
+				speed: 0,
+				responsive: [
+					{
+						breakpoint: 1220,
+						settings: {
+							swipe: true,
+							speed: 300,
+						},
+					},
+				],
+			});
+	},
+
+	_initFullsizeSlider() {
+		$("#popup-gallery .popup-gallery__list").slick({
+			asNavFor: this._scopeSelector + " .slider-gallery__list",
 			arrows: false,
 			slidesToShow: 1,
 			slidesToScroll: 1,
@@ -132,29 +180,35 @@ const SliderGallery = {
 		});
 	},
 
-	isPopupOpen() {
-		return this._$popup.hasClass("active");
+	_resetFullsizeSlider() {
+		if (this._fullsizeDefaultHtml.trim() !== "") {
+			$("#popup-gallery").html(this._fullsizeDefaultHtml);
+			this._initFullsizeSlider();
+			this._syncFullsizeWithBasic();
+		}
 	},
 
-	closePopup() {
-		this._$popup.removeClass("active");
+	_syncFullsizeWithBasic() {
+		$(this._scopeSelector + " .slider-gallery__nav__item.active").trigger(
+			"click"
+		);
+	},
+
+	_isFullsizeOpen() {
+		return $("#popup-gallery").hasClass("active");
+	},
+
+	_closeFullsize() {
+		$("#popup-gallery").removeClass("active");
 		$("body").removeClass("page__lock");
 	},
 
-	openPopup() {
-		this._$popup.addClass("active");
+	_openFullsize() {
+		$("#popup-gallery").addClass("active");
 		$("body").addClass("page__lock");
 	},
 
 	init() {
-		this._$root = $("#slider-gallery");
-		this._$basicSlider = this._$root.find(".slider-gallery__list");
-
-		this._$popup = $("#popup-gallery");
-		this._$popupSlider = this._$popup.find(".popup-gallery__list");
-
-		if (this._$root.length === 0) return;
-
 		$(document).on(
 			"click",
 			".slider-gallery__nav__item, .popup-gallery__nav__item",
@@ -162,15 +216,15 @@ const SliderGallery = {
 		);
 
 		$(document).on(
-			"mouseover",
+			"mouseenter",
 			".slider-gallery__item",
-			this._handleImageMouseover.bind(this)
+			this._handleImageMouseenter.bind(this)
 		);
 
 		$(document).on(
-			"mouseout",
+			"mouseleave",
 			".slider-gallery__item",
-			this._handleImageMouseout.bind(this)
+			this._handleImageMouseleave.bind(this)
 		);
 
 		$(document).on(
@@ -188,7 +242,19 @@ const SliderGallery = {
 		$(document).on(
 			"click",
 			".popup-gallery__close",
-			this._handlePopupClose.bind(this)
+			this._handleFullsizeClose.bind(this)
+		);
+
+		$(document).on(
+			"click",
+			".js-quick-view-open",
+			this._handleQuickViewOpen.bind(this)
+		);
+
+		$(document).on(
+			"click",
+			".js-quick-view-close",
+			this._handleQuickViewClose.bind(this)
 		);
 
 		$(window).on(
@@ -196,15 +262,27 @@ const SliderGallery = {
 			throttle(250, this._handleWindowResize.bind(this))
 		);
 
-		this._$basicSlider.on("afterChange", (event, slick, currentSlide) => {
-			this._setActiveNavItem(currentSlide);
-		});
+		$(document).on(
+			"afterChange",
+			".slider-gallery__list",
+			(event, slick, currentSlide) => {
+				this._setActiveNavItem(currentSlide);
+			}
+		);
 
-		this._$popupSlider.on("afterChange", (event, slick, currentSlide) => {
-			this._setActiveNavItem(currentSlide);
-		});
+		$(document).on(
+			"afterChange",
+			".popup-gallery__list",
+			(event, slick, currentSlide) => {
+				this._setActiveNavItem(currentSlide);
+			}
+		);
 
-		this._initSlickSlider();
+		this._setDefaultScope();
+		this._initBasicSlider("#slider-gallery");
+
+		this._fullsizeDefaultHtml = $("#popup-gallery").html();
+		this._initFullsizeSlider();
 	},
 };
 

@@ -85,6 +85,15 @@
 	left: 0;
 }
 
+.out-of-screen {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+}
+
 @for $i from 1 through 20 {
 	.gap-#{$i*5} {
 		height: #{$i * 5}px;
