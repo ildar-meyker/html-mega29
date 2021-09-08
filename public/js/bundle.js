@@ -26479,14 +26479,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var SliderGallery = {
-  _scopeSelector: "",
-  _fullsizeDefaultHtml: "",
-  _setDefaultScope: function _setDefaultScope() {
-    this._scopeSelector = "#slider-gallery";
+  _currentMode: "product",
+  _selectors: {
+    product: {
+      content: "#slider-gallery",
+      fullsize: "#popup-gallery"
+    },
+    "quick-view": {
+      content: "#slider-gallery--quick-view",
+      fullsize: "#popup-gallery--quick-view"
+    }
   },
   _setVideosSize: function _setVideosSize() {
     var ratio = 0.5625;
-    var $content = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-gallery .popup-gallery__content");
+    var $content = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-gallery--quick-view .popup-gallery__content");
     var contentW = $content.width();
     var contentH = $content.height();
 
@@ -26498,7 +26504,7 @@ var SliderGallery = {
       var videoW = contentW;
     }
 
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-gallery .popup-gallery__video").css({
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-gallery--quick-view .popup-gallery__video").add("#popup-gallery .popup-gallery__video").css({
       width: videoW,
       height: videoH
     });
@@ -26507,12 +26513,22 @@ var SliderGallery = {
     $collection.eq(index).addClass("active").siblings().removeClass("active");
   },
   _setActiveNavItem: function _setActiveNavItem(index) {
-    this._setActiveByIndex(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this._scopeSelector).find(".slider-gallery__nav__item"), index);
+    this._setActiveByIndex(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this._selectors[this._currentMode].content).find(".slider-gallery__nav__item"), index);
 
-    this._setActiveByIndex(jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-gallery .popup-gallery__nav__item"), index);
+    this._setActiveByIndex(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this._selectors[this._currentMode].fullsize).find(".popup-gallery__nav__item"), index);
   },
   _setActiveSlide: function _setActiveSlide(index) {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this._scopeSelector + " .slider-gallery__list").slick("slickGoTo", index);
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this._selectors[this._currentMode].content + " .slider-gallery__list").slick("slickGoTo", index);
+  },
+  _updateQuickViewFullsizeSlider: function _updateQuickViewFullsizeSlider(data) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-gallery--quick-view").html(jquery__WEBPACK_IMPORTED_MODULE_0___default()(data).find("#popup-gallery--quick-view").html());
+
+    this._initFullsizeSlider("#popup-gallery--quick-view", "#slider-gallery--quick-view");
+  },
+  _updateQuickViewContentSlider: function _updateQuickViewContentSlider(data) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-quick-view .popup-quick-view__window").html(jquery__WEBPACK_IMPORTED_MODULE_0___default()(data).find(".popup-quick-view__window").html());
+
+    this._initContentSlider("#popup-gallery--quick-view", "#slider-gallery--quick-view");
   },
   _handleNavItemClick: function _handleNavItemClick(e) {
     e.preventDefault();
@@ -26550,6 +26566,8 @@ var SliderGallery = {
     e.preventDefault();
 
     this._closeFullsize();
+
+    this._currentMode = "product";
   },
   _handleWindowResize: function _handleWindowResize() {
     this._setVideosSize();
@@ -26562,15 +26580,12 @@ var SliderGallery = {
     var url = jquery__WEBPACK_IMPORTED_MODULE_0___default()('head meta[name="gallery-data-url"]').attr("content").replace("{id}", productId);
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-quick-view").addClass("loading");
     jquery__WEBPACK_IMPORTED_MODULE_0___default.a.get(url).done(function (data) {
-      _this._scopeSelector = "#slider-gallery--quick-view";
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-quick-view .popup-quick-view__window").html(jquery__WEBPACK_IMPORTED_MODULE_0___default()(data).find(".popup-quick-view__window").html());
+      _this._updateQuickViewContentSlider(data);
 
-      _this._initBasicSlider();
+      _this._updateQuickViewFullsizeSlider(data);
 
       jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-quick-view").addClass("active");
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-gallery").html(jquery__WEBPACK_IMPORTED_MODULE_0___default()(data).find("#popup-gallery").html());
-
-      _this._initFullsizeSlider();
+      _this._currentMode = "quick-view";
     }).fail(function () {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-quick-view").removeClass("loading");
       _Notify__WEBPACK_IMPORTED_MODULE_2__["default"].error("Ошибка при запросе: " + url);
@@ -26579,14 +26594,10 @@ var SliderGallery = {
   _handleQuickViewClose: function _handleQuickViewClose(e) {
     e.preventDefault();
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-quick-view").removeClass("loading active");
-
-    this._setDefaultScope();
-
-    this._resetFullsizeSlider();
   },
-  _initBasicSlider: function _initBasicSlider() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this._scopeSelector).find(".slider-gallery__list").slick({
-      asNavFor: "#popup-gallery .popup-gallery__list",
+  _initContentSlider: function _initContentSlider(fullsizeSelector, contentSelector) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(contentSelector).find(".slider-gallery__list").slick({
+      asNavFor: fullsizeSelector + " .popup-gallery__list",
       arrows: false,
       slidesToShow: 1,
       dots: true,
@@ -26601,36 +26612,21 @@ var SliderGallery = {
       }]
     });
   },
-  _initFullsizeSlider: function _initFullsizeSlider() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-gallery .popup-gallery__list").slick({
-      asNavFor: this._scopeSelector + " .slider-gallery__list",
+  _initFullsizeSlider: function _initFullsizeSlider(fullsizeSelector, contentSelector) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(fullsizeSelector + " .popup-gallery__list").slick({
+      asNavFor: contentSelector + " .slider-gallery__list",
       arrows: false,
       slidesToShow: 1,
       slidesToScroll: 1,
       dots: false
     });
   },
-  _resetFullsizeSlider: function _resetFullsizeSlider() {
-    if (this._fullsizeDefaultHtml.trim() !== "") {
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-gallery").html(this._fullsizeDefaultHtml);
-
-      this._initFullsizeSlider();
-
-      this._syncFullsizeWithBasic();
-    }
-  },
-  _syncFullsizeWithBasic: function _syncFullsizeWithBasic() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this._scopeSelector + " .slider-gallery__nav__item.active").trigger("click");
-  },
-  _isFullsizeOpen: function _isFullsizeOpen() {
-    return jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-gallery").hasClass("active");
-  },
   _closeFullsize: function _closeFullsize() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-gallery").removeClass("active");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this._selectors[this._currentMode].fullsize).removeClass("active");
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").removeClass("page__lock");
   },
   _openFullsize: function _openFullsize() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-gallery").addClass("active");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(this._selectors[this._currentMode].fullsize).addClass("active");
     jquery__WEBPACK_IMPORTED_MODULE_0___default()("body").addClass("page__lock");
   },
   init: function init() {
@@ -26652,13 +26648,9 @@ var SliderGallery = {
       _this2._setActiveNavItem(currentSlide);
     });
 
-    this._setDefaultScope();
+    this._initContentSlider("#popup-gallery", "#slider-gallery");
 
-    this._initBasicSlider("#slider-gallery");
-
-    this._fullsizeDefaultHtml = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-gallery").html();
-
-    this._initFullsizeSlider();
+    this._initFullsizeSlider("#popup-gallery", "#slider-gallery");
   }
 };
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {

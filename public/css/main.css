@@ -6816,6 +6816,8 @@ a {
   .popup-gallery__content {
     border-top: 1px solid #f2f3f5;
     border-width: 1px 0; }
+  .popup-gallery__list {
+    font-size: 0; }
   .popup-gallery__item {
     display: none; }
     .popup-gallery__item.active, .popup-gallery__item:first-child {
