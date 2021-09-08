@@ -1,16 +1,15 @@
 [
   "404.html",
   "_components.html",
-  "cart.html",
   "catalog-grid.html",
-  "catalog-level-1.html",
-  "catalog-level-3.html",
   "catalog-list.html",
-  "delivery.html",
+  "catalog-menu-1.html",
+  "catalog-menu-3.html",
   "index.html",
-  "news--list.html",
+  "news-grid.html",
   "news-item.html",
-  "news.html",
+  "news-list.html",
+  "order-cart.html",
   "order-complete.html",
   "order-steps.html",
   "product--reviews.html",
@@ -18,5 +17,6 @@
   "profile--cards.html",
   "profile--favorites.html",
   "profile--history.html",
-  "profile.html"
+  "profile.html",
+  "static-delivery.html"
 ]
