@@ -415,44 +415,526 @@
 				<div class="layout-basic__main">
                     
                     <form action="#" class="page__outer form-sorting">
-                        <div class="form-sorting__row">
+						<div class="form-sorting__row">
+
+							<div class="form-sorting__gap"></div>
+
+							<div class="form-sorting__col form-sorting__col--select">
+								<select>
+									<option>По популярности (убывание)</option>
+									<option>По популярности (возрастание)</option>
+									<option>По рейтингу (убывание)</option>
+									<option>По рейтингу (возрастание)</option>
+									<option>По цене (убывание)</option>
+									<option>По цене (возрастание)</option>
+								</select>
+							</div>
+							
+							<div class="form-sorting__col form-sorting__col--filter">
+								<button class="button button-outline-white js-filter-show">
+									<i class="icon-filter button__icon"></i>
+									<span class="spinner-border"></span>
+									<span class="button__text">Все фильтры</span>
+								</button>
+							</div>
+							
+							<div class="form-sorting__col form-sorting__col--right">
+								<nav class="form-sorting__modes">
+									<a href="catalog-grid.html" class="form-sorting__modes__item">
+										<i class="icon-menu"></i>
+									</a>
+									<a href="catalog-list.html" class="form-sorting__modes__item active">
+										<i class="icon-list"></i>
+									</a>
+								</nav>
+							</div>
+
+							<div class="form-sorting__gap"></div>
+						</div>
+					</form>
                     
-                            <div class="form-sorting__gap"></div>
-                    
-                            <div class="form-sorting__col form-sorting__col--select">
-                                <select>
-                                    <option>По популярности (убывание)</option>
-                                    <option>По популярности (возрастание)</option>
-                                    <option>По рейтингу (убывание)</option>
-                                    <option>По рейтингу (возрастание)</option>
-                                    <option>По цене (убывание)</option>
-                                    <option>По цене (возрастание)</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-sorting__col form-sorting__col--filter">
-                                <button class="button button-outline-white js-filter-show">
-                                    <i class="icon-filter button__icon"></i>
-                                    <span class="spinner-border"></span>
-                                    <span class="button__text">Все фильтры</span>
-                                </button>
-                            </div>
-                            
-                            <div class="form-sorting__col form-sorting__col--right">
-                                <nav class="form-sorting__modes">
-                                    <a href="#" class="form-sorting__modes__item active">
-                                        <i class="icon-menu"></i>
-                                    </a>
-                                    <a href="#" class="form-sorting__modes__item">
-                                        <i class="icon-list"></i>
-                                    </a>
-                                </nav>
-                            </div>
-                    
-                            <div class="form-sorting__gap"></div>
-                        </div>
-                    </form>                    
-                    
+					<div class="goods-list">
+					    <div class="goods-list__item js-quick-view-card" data-product-id="2">
+					        <div class="goods-list__col-image">
+					            <div class="goods-list__image" style="background-image: url(images/temp/goods/1.jpeg);"></div>
+					        </div>
+					        <div class="goods-list__col-desc">
+					            <div class="goods-list__col-info">
+					
+					                <div class="goods-list__col-title">
+					                    <div class="goods-list__title">
+					                        <a href="#">
+					                            Наименование товара высотой 
+					                            в карточке товара в три строки
+					                            012-345-678-9
+					                        </a>
+					                    </div>
+					                    
+					                    <div class="goods-list__labels">
+					                        <div class="labels">
+					                            <div class="labels__blue">Только онлайн</div>
+					                            <div class="labels__red">Скидка</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					                <div class="goods-list__col-price">
+					                    <div class="goods-list__price">
+					                        <div>8 345 <span class="rubl">₽</span></div>
+					                        <div class="old-price">12 345 <span class="rubl">₽</span></div>
+					                    </div>
+					
+					                    <div class="goods-list__points">
+					                        <div class="labels">
+					                            <div class="labels__orange">+Х000 баллов</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					            </div>
+					            <div class="goods-list__col-btns">
+					                <div class="goods-list__btns-buy">
+					                    <div><button type="button" class='button button-outline-green'>В корзину</button></div>
+					                    <div><button type="button" class='button button-light-green goods-list__btns-buy__quick-view js-quick-view-open'>Быстрый просмотр</button></div>
+					                </div>
+					                <div class="goods-list__btns-save">
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-heart button-icon__icon"></i>
+					                            <span>В избранное</span>
+					                        </button>
+					                    </div>
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-stats button-icon__icon"></i>
+					                            <span>Сравнить</span>
+					                        </button>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="goods-list__item js-quick-view-card" data-product-id="2">
+					        <div class="goods-list__col-image">
+					            <div class="goods-list__image" style="background-image: url(images/temp/goods/1.jpeg);"></div>
+					        </div>
+					        <div class="goods-list__col-desc">
+					            <div class="goods-list__col-info">
+					
+					                <div class="goods-list__col-title">
+					                    <div class="goods-list__title">
+					                        <a href="#">
+					                            Наименование товара высотой 
+					                            в карточке товара в три строки
+					                            012-345-678-9
+					                        </a>
+					                    </div>
+					                    
+					                    <div class="goods-list__labels">
+					                        <div class="labels">
+					                            <div class="labels__blue">Только онлайн</div>
+					                            <div class="labels__red">Скидка</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					                <div class="goods-list__col-price">
+					                    <div class="goods-list__price">
+					                        <div>8 345 <span class="rubl">₽</span></div>
+					                        <div class="old-price">12 345 <span class="rubl">₽</span></div>
+					                    </div>
+					
+					                    <div class="goods-list__points">
+					                        <div class="labels">
+					                            <div class="labels__orange">+Х000 баллов</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					            </div>
+					            <div class="goods-list__col-btns">
+					                <div class="goods-list__btns-buy">
+					                    <div><button type="button" class='button button-outline-green'>В корзину</button></div>
+					                    <div><button type="button" class='button button-light-green goods-list__btns-buy__quick-view js-quick-view-open'>Быстрый просмотр</button></div>
+					                </div>
+					                <div class="goods-list__btns-save">
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-heart button-icon__icon"></i>
+					                            <span>В избранное</span>
+					                        </button>
+					                    </div>
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-stats button-icon__icon"></i>
+					                            <span>Сравнить</span>
+					                        </button>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="goods-list__item js-quick-view-card" data-product-id="2">
+					        <div class="goods-list__col-image">
+					            <div class="goods-list__image" style="background-image: url(images/temp/goods/1.jpeg);"></div>
+					        </div>
+					        <div class="goods-list__col-desc">
+					            <div class="goods-list__col-info">
+					
+					                <div class="goods-list__col-title">
+					                    <div class="goods-list__title">
+					                        <a href="#">
+					                            Наименование товара высотой 
+					                            в карточке товара в три строки
+					                            012-345-678-9
+					                        </a>
+					                    </div>
+					                    
+					                    <div class="goods-list__labels">
+					                        <div class="labels">
+					                            <div class="labels__blue">Только онлайн</div>
+					                            <div class="labels__red">Скидка</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					                <div class="goods-list__col-price">
+					                    <div class="goods-list__price">
+					                        <div>8 345 <span class="rubl">₽</span></div>
+					                        <div class="old-price">12 345 <span class="rubl">₽</span></div>
+					                    </div>
+					
+					                    <div class="goods-list__points">
+					                        <div class="labels">
+					                            <div class="labels__orange">+Х000 баллов</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					            </div>
+					            <div class="goods-list__col-btns">
+					                <div class="goods-list__btns-buy">
+					                    <div><button type="button" class='button button-outline-green'>В корзину</button></div>
+					                    <div><button type="button" class='button button-light-green goods-list__btns-buy__quick-view js-quick-view-open'>Быстрый просмотр</button></div>
+					                </div>
+					                <div class="goods-list__btns-save">
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-heart button-icon__icon"></i>
+					                            <span>В избранное</span>
+					                        </button>
+					                    </div>
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-stats button-icon__icon"></i>
+					                            <span>Сравнить</span>
+					                        </button>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="goods-list__item js-quick-view-card" data-product-id="2">
+					        <div class="goods-list__col-image">
+					            <div class="goods-list__image" style="background-image: url(images/temp/goods/1.jpeg);"></div>
+					        </div>
+					        <div class="goods-list__col-desc">
+					            <div class="goods-list__col-info">
+					
+					                <div class="goods-list__col-title">
+					                    <div class="goods-list__title">
+					                        <a href="#">
+					                            Наименование товара высотой 
+					                            в карточке товара в три строки
+					                            012-345-678-9
+					                        </a>
+					                    </div>
+					                    
+					                    <div class="goods-list__labels">
+					                        <div class="labels">
+					                            <div class="labels__blue">Только онлайн</div>
+					                            <div class="labels__red">Скидка</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					                <div class="goods-list__col-price">
+					                    <div class="goods-list__price">
+					                        <div>8 345 <span class="rubl">₽</span></div>
+					                        <div class="old-price">12 345 <span class="rubl">₽</span></div>
+					                    </div>
+					
+					                    <div class="goods-list__points">
+					                        <div class="labels">
+					                            <div class="labels__orange">+Х000 баллов</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					            </div>
+					            <div class="goods-list__col-btns">
+					                <div class="goods-list__btns-buy">
+					                    <div><button type="button" class='button button-outline-green'>В корзину</button></div>
+					                    <div><button type="button" class='button button-light-green goods-list__btns-buy__quick-view js-quick-view-open'>Быстрый просмотр</button></div>
+					                </div>
+					                <div class="goods-list__btns-save">
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-heart button-icon__icon"></i>
+					                            <span>В избранное</span>
+					                        </button>
+					                    </div>
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-stats button-icon__icon"></i>
+					                            <span>Сравнить</span>
+					                        </button>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="goods-list__item js-quick-view-card" data-product-id="2">
+					        <div class="goods-list__col-image">
+					            <div class="goods-list__image" style="background-image: url(images/temp/goods/1.jpeg);"></div>
+					        </div>
+					        <div class="goods-list__col-desc">
+					            <div class="goods-list__col-info">
+					
+					                <div class="goods-list__col-title">
+					                    <div class="goods-list__title">
+					                        <a href="#">
+					                            Наименование товара высотой 
+					                            в карточке товара в три строки
+					                            012-345-678-9
+					                        </a>
+					                    </div>
+					                    
+					                    <div class="goods-list__labels">
+					                        <div class="labels">
+					                            <div class="labels__blue">Только онлайн</div>
+					                            <div class="labels__red">Скидка</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					                <div class="goods-list__col-price">
+					                    <div class="goods-list__price">
+					                        <div>8 345 <span class="rubl">₽</span></div>
+					                        <div class="old-price">12 345 <span class="rubl">₽</span></div>
+					                    </div>
+					
+					                    <div class="goods-list__points">
+					                        <div class="labels">
+					                            <div class="labels__orange">+Х000 баллов</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					            </div>
+					            <div class="goods-list__col-btns">
+					                <div class="goods-list__btns-buy">
+					                    <div><button type="button" class='button button-outline-green'>В корзину</button></div>
+					                    <div><button type="button" class='button button-light-green goods-list__btns-buy__quick-view js-quick-view-open'>Быстрый просмотр</button></div>
+					                </div>
+					                <div class="goods-list__btns-save">
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-heart button-icon__icon"></i>
+					                            <span>В избранное</span>
+					                        </button>
+					                    </div>
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-stats button-icon__icon"></i>
+					                            <span>Сравнить</span>
+					                        </button>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="goods-list__item js-quick-view-card" data-product-id="2">
+					        <div class="goods-list__col-image">
+					            <div class="goods-list__image" style="background-image: url(images/temp/goods/1.jpeg);"></div>
+					        </div>
+					        <div class="goods-list__col-desc">
+					            <div class="goods-list__col-info">
+					
+					                <div class="goods-list__col-title">
+					                    <div class="goods-list__title">
+					                        <a href="#">
+					                            Наименование товара высотой 
+					                            в карточке товара в три строки
+					                            012-345-678-9
+					                        </a>
+					                    </div>
+					                    
+					                    <div class="goods-list__labels">
+					                        <div class="labels">
+					                            <div class="labels__blue">Только онлайн</div>
+					                            <div class="labels__red">Скидка</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					                <div class="goods-list__col-price">
+					                    <div class="goods-list__price">
+					                        <div>8 345 <span class="rubl">₽</span></div>
+					                        <div class="old-price">12 345 <span class="rubl">₽</span></div>
+					                    </div>
+					
+					                    <div class="goods-list__points">
+					                        <div class="labels">
+					                            <div class="labels__orange">+Х000 баллов</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					            </div>
+					            <div class="goods-list__col-btns">
+					                <div class="goods-list__btns-buy">
+					                    <div><button type="button" class='button button-outline-green'>В корзину</button></div>
+					                    <div><button type="button" class='button button-light-green goods-list__btns-buy__quick-view js-quick-view-open'>Быстрый просмотр</button></div>
+					                </div>
+					                <div class="goods-list__btns-save">
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-heart button-icon__icon"></i>
+					                            <span>В избранное</span>
+					                        </button>
+					                    </div>
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-stats button-icon__icon"></i>
+					                            <span>Сравнить</span>
+					                        </button>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="goods-list__item js-quick-view-card" data-product-id="2">
+					        <div class="goods-list__col-image">
+					            <div class="goods-list__image" style="background-image: url(images/temp/goods/1.jpeg);"></div>
+					        </div>
+					        <div class="goods-list__col-desc">
+					            <div class="goods-list__col-info">
+					
+					                <div class="goods-list__col-title">
+					                    <div class="goods-list__title">
+					                        <a href="#">
+					                            Наименование товара высотой 
+					                            в карточке товара в три строки
+					                            012-345-678-9
+					                        </a>
+					                    </div>
+					                    
+					                    <div class="goods-list__labels">
+					                        <div class="labels">
+					                            <div class="labels__blue">Только онлайн</div>
+					                            <div class="labels__red">Скидка</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					                <div class="goods-list__col-price">
+					                    <div class="goods-list__price">
+					                        <div>8 345 <span class="rubl">₽</span></div>
+					                        <div class="old-price">12 345 <span class="rubl">₽</span></div>
+					                    </div>
+					
+					                    <div class="goods-list__points">
+					                        <div class="labels">
+					                            <div class="labels__orange">+Х000 баллов</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					            </div>
+					            <div class="goods-list__col-btns">
+					                <div class="goods-list__btns-buy">
+					                    <div><button type="button" class='button button-outline-green'>В корзину</button></div>
+					                    <div><button type="button" class='button button-light-green goods-list__btns-buy__quick-view js-quick-view-open'>Быстрый просмотр</button></div>
+					                </div>
+					                <div class="goods-list__btns-save">
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-heart button-icon__icon"></i>
+					                            <span>В избранное</span>
+					                        </button>
+					                    </div>
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-stats button-icon__icon"></i>
+					                            <span>Сравнить</span>
+					                        </button>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="goods-list__item js-quick-view-card" data-product-id="2">
+					        <div class="goods-list__col-image">
+					            <div class="goods-list__image" style="background-image: url(images/temp/goods/1.jpeg);"></div>
+					        </div>
+					        <div class="goods-list__col-desc">
+					            <div class="goods-list__col-info">
+					
+					                <div class="goods-list__col-title">
+					                    <div class="goods-list__title">
+					                        <a href="#">
+					                            Наименование товара высотой 
+					                            в карточке товара в три строки
+					                            012-345-678-9
+					                        </a>
+					                    </div>
+					                    
+					                    <div class="goods-list__labels">
+					                        <div class="labels">
+					                            <div class="labels__blue">Только онлайн</div>
+					                            <div class="labels__red">Скидка</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					                <div class="goods-list__col-price">
+					                    <div class="goods-list__price">
+					                        <div>8 345 <span class="rubl">₽</span></div>
+					                        <div class="old-price">12 345 <span class="rubl">₽</span></div>
+					                    </div>
+					
+					                    <div class="goods-list__points">
+					                        <div class="labels">
+					                            <div class="labels__orange">+Х000 баллов</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					            </div>
+					            <div class="goods-list__col-btns">
+					                <div class="goods-list__btns-buy">
+					                    <div><button type="button" class='button button-outline-green'>В корзину</button></div>
+					                    <div><button type="button" class='button button-light-green goods-list__btns-buy__quick-view js-quick-view-open'>Быстрый просмотр</button></div>
+					                </div>
+					                <div class="goods-list__btns-save">
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-heart button-icon__icon"></i>
+					                            <span>В избранное</span>
+					                        </button>
+					                    </div>
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-stats button-icon__icon"></i>
+					                            <span>Сравнить</span>
+					                        </button>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>                    
                     <section class="section slider-items-1 slider-dots-1">
                         <div class="page__center">
                             <div class="slider-items-1__center">
@@ -480,7 +962,488 @@
                             </div>
                         </div>
                     </section>
-
+					<div class="goods-list">
+					    <div class="goods-list__item js-quick-view-card" data-product-id="2">
+					        <div class="goods-list__col-image">
+					            <div class="goods-list__image" style="background-image: url(images/temp/goods/1.jpeg);"></div>
+					        </div>
+					        <div class="goods-list__col-desc">
+					            <div class="goods-list__col-info">
+					
+					                <div class="goods-list__col-title">
+					                    <div class="goods-list__title">
+					                        <a href="#">
+					                            Наименование товара высотой 
+					                            в карточке товара в три строки
+					                            012-345-678-9
+					                        </a>
+					                    </div>
+					                    
+					                    <div class="goods-list__labels">
+					                        <div class="labels">
+					                            <div class="labels__blue">Только онлайн</div>
+					                            <div class="labels__red">Скидка</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					                <div class="goods-list__col-price">
+					                    <div class="goods-list__price">
+					                        <div>8 345 <span class="rubl">₽</span></div>
+					                        <div class="old-price">12 345 <span class="rubl">₽</span></div>
+					                    </div>
+					
+					                    <div class="goods-list__points">
+					                        <div class="labels">
+					                            <div class="labels__orange">+Х000 баллов</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					            </div>
+					            <div class="goods-list__col-btns">
+					                <div class="goods-list__btns-buy">
+					                    <div><button type="button" class='button button-outline-green'>В корзину</button></div>
+					                    <div><button type="button" class='button button-light-green goods-list__btns-buy__quick-view js-quick-view-open'>Быстрый просмотр</button></div>
+					                </div>
+					                <div class="goods-list__btns-save">
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-heart button-icon__icon"></i>
+					                            <span>В избранное</span>
+					                        </button>
+					                    </div>
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-stats button-icon__icon"></i>
+					                            <span>Сравнить</span>
+					                        </button>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="goods-list__item js-quick-view-card" data-product-id="2">
+					        <div class="goods-list__col-image">
+					            <div class="goods-list__image" style="background-image: url(images/temp/goods/1.jpeg);"></div>
+					        </div>
+					        <div class="goods-list__col-desc">
+					            <div class="goods-list__col-info">
+					
+					                <div class="goods-list__col-title">
+					                    <div class="goods-list__title">
+					                        <a href="#">
+					                            Наименование товара высотой 
+					                            в карточке товара в три строки
+					                            012-345-678-9
+					                        </a>
+					                    </div>
+					                    
+					                    <div class="goods-list__labels">
+					                        <div class="labels">
+					                            <div class="labels__blue">Только онлайн</div>
+					                            <div class="labels__red">Скидка</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					                <div class="goods-list__col-price">
+					                    <div class="goods-list__price">
+					                        <div>8 345 <span class="rubl">₽</span></div>
+					                        <div class="old-price">12 345 <span class="rubl">₽</span></div>
+					                    </div>
+					
+					                    <div class="goods-list__points">
+					                        <div class="labels">
+					                            <div class="labels__orange">+Х000 баллов</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					            </div>
+					            <div class="goods-list__col-btns">
+					                <div class="goods-list__btns-buy">
+					                    <div><button type="button" class='button button-outline-green'>В корзину</button></div>
+					                    <div><button type="button" class='button button-light-green goods-list__btns-buy__quick-view js-quick-view-open'>Быстрый просмотр</button></div>
+					                </div>
+					                <div class="goods-list__btns-save">
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-heart button-icon__icon"></i>
+					                            <span>В избранное</span>
+					                        </button>
+					                    </div>
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-stats button-icon__icon"></i>
+					                            <span>Сравнить</span>
+					                        </button>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="goods-list__item js-quick-view-card" data-product-id="2">
+					        <div class="goods-list__col-image">
+					            <div class="goods-list__image" style="background-image: url(images/temp/goods/1.jpeg);"></div>
+					        </div>
+					        <div class="goods-list__col-desc">
+					            <div class="goods-list__col-info">
+					
+					                <div class="goods-list__col-title">
+					                    <div class="goods-list__title">
+					                        <a href="#">
+					                            Наименование товара высотой 
+					                            в карточке товара в три строки
+					                            012-345-678-9
+					                        </a>
+					                    </div>
+					                    
+					                    <div class="goods-list__labels">
+					                        <div class="labels">
+					                            <div class="labels__blue">Только онлайн</div>
+					                            <div class="labels__red">Скидка</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					                <div class="goods-list__col-price">
+					                    <div class="goods-list__price">
+					                        <div>8 345 <span class="rubl">₽</span></div>
+					                        <div class="old-price">12 345 <span class="rubl">₽</span></div>
+					                    </div>
+					
+					                    <div class="goods-list__points">
+					                        <div class="labels">
+					                            <div class="labels__orange">+Х000 баллов</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					            </div>
+					            <div class="goods-list__col-btns">
+					                <div class="goods-list__btns-buy">
+					                    <div><button type="button" class='button button-outline-green'>В корзину</button></div>
+					                    <div><button type="button" class='button button-light-green goods-list__btns-buy__quick-view js-quick-view-open'>Быстрый просмотр</button></div>
+					                </div>
+					                <div class="goods-list__btns-save">
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-heart button-icon__icon"></i>
+					                            <span>В избранное</span>
+					                        </button>
+					                    </div>
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-stats button-icon__icon"></i>
+					                            <span>Сравнить</span>
+					                        </button>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="goods-list__item js-quick-view-card" data-product-id="2">
+					        <div class="goods-list__col-image">
+					            <div class="goods-list__image" style="background-image: url(images/temp/goods/1.jpeg);"></div>
+					        </div>
+					        <div class="goods-list__col-desc">
+					            <div class="goods-list__col-info">
+					
+					                <div class="goods-list__col-title">
+					                    <div class="goods-list__title">
+					                        <a href="#">
+					                            Наименование товара высотой 
+					                            в карточке товара в три строки
+					                            012-345-678-9
+					                        </a>
+					                    </div>
+					                    
+					                    <div class="goods-list__labels">
+					                        <div class="labels">
+					                            <div class="labels__blue">Только онлайн</div>
+					                            <div class="labels__red">Скидка</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					                <div class="goods-list__col-price">
+					                    <div class="goods-list__price">
+					                        <div>8 345 <span class="rubl">₽</span></div>
+					                        <div class="old-price">12 345 <span class="rubl">₽</span></div>
+					                    </div>
+					
+					                    <div class="goods-list__points">
+					                        <div class="labels">
+					                            <div class="labels__orange">+Х000 баллов</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					            </div>
+					            <div class="goods-list__col-btns">
+					                <div class="goods-list__btns-buy">
+					                    <div><button type="button" class='button button-outline-green'>В корзину</button></div>
+					                    <div><button type="button" class='button button-light-green goods-list__btns-buy__quick-view js-quick-view-open'>Быстрый просмотр</button></div>
+					                </div>
+					                <div class="goods-list__btns-save">
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-heart button-icon__icon"></i>
+					                            <span>В избранное</span>
+					                        </button>
+					                    </div>
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-stats button-icon__icon"></i>
+					                            <span>Сравнить</span>
+					                        </button>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="goods-list__item js-quick-view-card" data-product-id="2">
+					        <div class="goods-list__col-image">
+					            <div class="goods-list__image" style="background-image: url(images/temp/goods/1.jpeg);"></div>
+					        </div>
+					        <div class="goods-list__col-desc">
+					            <div class="goods-list__col-info">
+					
+					                <div class="goods-list__col-title">
+					                    <div class="goods-list__title">
+					                        <a href="#">
+					                            Наименование товара высотой 
+					                            в карточке товара в три строки
+					                            012-345-678-9
+					                        </a>
+					                    </div>
+					                    
+					                    <div class="goods-list__labels">
+					                        <div class="labels">
+					                            <div class="labels__blue">Только онлайн</div>
+					                            <div class="labels__red">Скидка</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					                <div class="goods-list__col-price">
+					                    <div class="goods-list__price">
+					                        <div>8 345 <span class="rubl">₽</span></div>
+					                        <div class="old-price">12 345 <span class="rubl">₽</span></div>
+					                    </div>
+					
+					                    <div class="goods-list__points">
+					                        <div class="labels">
+					                            <div class="labels__orange">+Х000 баллов</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					            </div>
+					            <div class="goods-list__col-btns">
+					                <div class="goods-list__btns-buy">
+					                    <div><button type="button" class='button button-outline-green'>В корзину</button></div>
+					                    <div><button type="button" class='button button-light-green goods-list__btns-buy__quick-view js-quick-view-open'>Быстрый просмотр</button></div>
+					                </div>
+					                <div class="goods-list__btns-save">
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-heart button-icon__icon"></i>
+					                            <span>В избранное</span>
+					                        </button>
+					                    </div>
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-stats button-icon__icon"></i>
+					                            <span>Сравнить</span>
+					                        </button>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="goods-list__item js-quick-view-card" data-product-id="2">
+					        <div class="goods-list__col-image">
+					            <div class="goods-list__image" style="background-image: url(images/temp/goods/1.jpeg);"></div>
+					        </div>
+					        <div class="goods-list__col-desc">
+					            <div class="goods-list__col-info">
+					
+					                <div class="goods-list__col-title">
+					                    <div class="goods-list__title">
+					                        <a href="#">
+					                            Наименование товара высотой 
+					                            в карточке товара в три строки
+					                            012-345-678-9
+					                        </a>
+					                    </div>
+					                    
+					                    <div class="goods-list__labels">
+					                        <div class="labels">
+					                            <div class="labels__blue">Только онлайн</div>
+					                            <div class="labels__red">Скидка</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					                <div class="goods-list__col-price">
+					                    <div class="goods-list__price">
+					                        <div>8 345 <span class="rubl">₽</span></div>
+					                        <div class="old-price">12 345 <span class="rubl">₽</span></div>
+					                    </div>
+					
+					                    <div class="goods-list__points">
+					                        <div class="labels">
+					                            <div class="labels__orange">+Х000 баллов</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					            </div>
+					            <div class="goods-list__col-btns">
+					                <div class="goods-list__btns-buy">
+					                    <div><button type="button" class='button button-outline-green'>В корзину</button></div>
+					                    <div><button type="button" class='button button-light-green goods-list__btns-buy__quick-view js-quick-view-open'>Быстрый просмотр</button></div>
+					                </div>
+					                <div class="goods-list__btns-save">
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-heart button-icon__icon"></i>
+					                            <span>В избранное</span>
+					                        </button>
+					                    </div>
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-stats button-icon__icon"></i>
+					                            <span>Сравнить</span>
+					                        </button>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="goods-list__item js-quick-view-card" data-product-id="2">
+					        <div class="goods-list__col-image">
+					            <div class="goods-list__image" style="background-image: url(images/temp/goods/1.jpeg);"></div>
+					        </div>
+					        <div class="goods-list__col-desc">
+					            <div class="goods-list__col-info">
+					
+					                <div class="goods-list__col-title">
+					                    <div class="goods-list__title">
+					                        <a href="#">
+					                            Наименование товара высотой 
+					                            в карточке товара в три строки
+					                            012-345-678-9
+					                        </a>
+					                    </div>
+					                    
+					                    <div class="goods-list__labels">
+					                        <div class="labels">
+					                            <div class="labels__blue">Только онлайн</div>
+					                            <div class="labels__red">Скидка</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					                <div class="goods-list__col-price">
+					                    <div class="goods-list__price">
+					                        <div>8 345 <span class="rubl">₽</span></div>
+					                        <div class="old-price">12 345 <span class="rubl">₽</span></div>
+					                    </div>
+					
+					                    <div class="goods-list__points">
+					                        <div class="labels">
+					                            <div class="labels__orange">+Х000 баллов</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					            </div>
+					            <div class="goods-list__col-btns">
+					                <div class="goods-list__btns-buy">
+					                    <div><button type="button" class='button button-outline-green'>В корзину</button></div>
+					                    <div><button type="button" class='button button-light-green goods-list__btns-buy__quick-view js-quick-view-open'>Быстрый просмотр</button></div>
+					                </div>
+					                <div class="goods-list__btns-save">
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-heart button-icon__icon"></i>
+					                            <span>В избранное</span>
+					                        </button>
+					                    </div>
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-stats button-icon__icon"></i>
+					                            <span>Сравнить</span>
+					                        </button>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					    <div class="goods-list__item js-quick-view-card" data-product-id="2">
+					        <div class="goods-list__col-image">
+					            <div class="goods-list__image" style="background-image: url(images/temp/goods/1.jpeg);"></div>
+					        </div>
+					        <div class="goods-list__col-desc">
+					            <div class="goods-list__col-info">
+					
+					                <div class="goods-list__col-title">
+					                    <div class="goods-list__title">
+					                        <a href="#">
+					                            Наименование товара высотой 
+					                            в карточке товара в три строки
+					                            012-345-678-9
+					                        </a>
+					                    </div>
+					                    
+					                    <div class="goods-list__labels">
+					                        <div class="labels">
+					                            <div class="labels__blue">Только онлайн</div>
+					                            <div class="labels__red">Скидка</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					                <div class="goods-list__col-price">
+					                    <div class="goods-list__price">
+					                        <div>8 345 <span class="rubl">₽</span></div>
+					                        <div class="old-price">12 345 <span class="rubl">₽</span></div>
+					                    </div>
+					
+					                    <div class="goods-list__points">
+					                        <div class="labels">
+					                            <div class="labels__orange">+Х000 баллов</div>
+					                        </div>
+					                    </div>
+					                </div>
+					                
+					            </div>
+					            <div class="goods-list__col-btns">
+					                <div class="goods-list__btns-buy">
+					                    <div><button type="button" class='button button-outline-green'>В корзину</button></div>
+					                    <div><button type="button" class='button button-light-green goods-list__btns-buy__quick-view js-quick-view-open'>Быстрый просмотр</button></div>
+					                </div>
+					                <div class="goods-list__btns-save">
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-heart button-icon__icon"></i>
+					                            <span>В избранное</span>
+					                        </button>
+					                    </div>
+					                    <div>
+					                        <button type="button" class="button-icon">
+					                            <i class="icon-stats button-icon__icon"></i>
+					                            <span>Сравнить</span>
+					                        </button>
+					                    </div>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
 					<div class="page__more">
 					    <button class="button button-light-green button--full">
 					        <span class="spinner-border"></span>

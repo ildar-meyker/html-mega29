@@ -32,13 +32,50 @@ layout: default.hbs
 				</div>
 				<div class="layout-basic__main">
                     
-                    {{> form-sorting }}
+                    <form action="#" class="page__outer form-sorting">
+						<div class="form-sorting__row">
+
+							<div class="form-sorting__gap"></div>
+
+							<div class="form-sorting__col form-sorting__col--select">
+								<select>
+									<option>По популярности (убывание)</option>
+									<option>По популярности (возрастание)</option>
+									<option>По рейтингу (убывание)</option>
+									<option>По рейтингу (возрастание)</option>
+									<option>По цене (убывание)</option>
+									<option>По цене (возрастание)</option>
+								</select>
+							</div>
+							
+							<div class="form-sorting__col form-sorting__col--filter">
+								<button class="button button-outline-white js-filter-show">
+									<i class="icon-filter button__icon"></i>
+									<span class="spinner-border"></span>
+									<span class="button__text">Все фильтры</span>
+								</button>
+							</div>
+							
+							<div class="form-sorting__col form-sorting__col--right">
+								<nav class="form-sorting__modes">
+									<a href="catalog-grid.html" class="form-sorting__modes__item">
+										<i class="icon-menu"></i>
+									</a>
+									<a href="catalog-list.html" class="form-sorting__modes__item active">
+										<i class="icon-list"></i>
+									</a>
+								</nav>
+							</div>
+
+							<div class="form-sorting__gap"></div>
+						</div>
+					</form>
                     
-					{{> list-goods }}
+					{{> goods-list }}
                     
                     {{> slider-items-1 }}
 
-					{{> list-goods }}
+					{{> goods-list }}
 
 					{{> page-more }}
 

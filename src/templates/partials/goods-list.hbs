@@ -1,0 +1,64 @@
+<div class="goods-list">
+    {{#repeat 8}}
+    <div class="goods-list__item js-quick-view-card" data-product-id="2">
+        <div class="goods-list__col-image">
+            <div class="goods-list__image" style="background-image: url(images/temp/goods/1.jpeg);"></div>
+        </div>
+        <div class="goods-list__col-desc">
+            <div class="goods-list__col-info">
+
+                <div class="goods-list__col-title">
+                    <div class="goods-list__title">
+                        <a href="#">
+                            Наименование товара высотой 
+                            в карточке товара в три строки
+                            012-345-678-9
+                        </a>
+                    </div>
+                    
+                    <div class="goods-list__labels">
+                        <div class="labels">
+                            <div class="labels__blue">Только онлайн</div>
+                            <div class="labels__red">Скидка</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="goods-list__col-price">
+                    <div class="goods-list__price">
+                        <div>8 345 <span class="rubl">₽</span></div>
+                        <div class="old-price">12 345 <span class="rubl">₽</span></div>
+                    </div>
+
+                    <div class="goods-list__points">
+                        <div class="labels">
+                            <div class="labels__orange">+Х000 баллов</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="goods-list__col-btns">
+                <div class="goods-list__btns-buy">
+                    <div><button type="button" class='button button-outline-green'>В корзину</button></div>
+                    <div><button type="button" class='button button-light-green goods-list__btns-buy__quick-view js-quick-view-open'>Быстрый просмотр</button></div>
+                </div>
+                <div class="goods-list__btns-save">
+                    <div>
+                        <button type="button" class="button-icon">
+                            <i class="icon-heart button-icon__icon"></i>
+                            <span>В избранное</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button type="button" class="button-icon">
+                            <i class="icon-stats button-icon__icon"></i>
+                            <span>Сравнить</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/repeat}}
+</div>
