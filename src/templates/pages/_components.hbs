@@ -730,10 +730,10 @@ layout: default.hbs
 	<div class="elems-section">
 		<div class="elems-h1">Товары</div>
 
-		<div style="max-width: 700px;">
 
-			<div class="elems-row">
-				<div class="elems-h2">goods-edit</div>
+		<div class="elems-row">
+			<div class="elems-h2">goods-edit</div>
+			<div style="max-width: 900px;">
 				<div class="goods-edit__list">
 					<div class="goods-edit__item">
 						<div class="goods-edit__image">
@@ -784,90 +784,83 @@ layout: default.hbs
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> 
 			</div>
+		</div>
 
-			<div class="elems-row">
-				<div class="elems-h2">goods-cards</div>
-				<div style="max-width: 250px;">
-					<div class="goods-cards__item js-quick-view-card" data-product-id="2">
+		<div class="elems-row">
+			<div class="elems-h2">goods-list</div>
+			<div style="max-width: 900px;">
+				<div class="goods-list">
+					<div class="goods-list__item js-quick-view-card" data-product-id="2">
+						<div class="goods-list__col-image">
+							<div class="goods-list__image" style="background-image: url(images/temp/goods/1.jpeg);"></div>
+						</div>
+						<div class="goods-list__col-desc">
+							<div class="goods-list__col-info">
 
-						<div class="goods-cards__image-size">
-							<div class="goods-cards__image">
-								<img src="images/temp/goods/1.jpeg" alt="">
+								<div class="goods-list__col-title">
+									<div class="goods-list__title">
+										<a href="#">
+											Наименование товара высотой 
+											в карточке товара в три строки
+											012-345-678-9
+										</a>
+									</div>
+									
+									<div class="goods-list__labels">
+										<div class="labels">
+											<div class="labels__blue">Только онлайн</div>
+											<div class="labels__red">Скидка</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="goods-list__col-price">
+									<div class="goods-list__price">
+										<div>8 345 <span class="rubl">₽</span></div>
+										<div class="old-price">12 345 <span class="rubl">₽</span></div>
+									</div>
+
+									<div class="goods-list__points">
+										<div class="labels">
+											<div class="labels__orange">+Х000 баллов</div>
+										</div>
+									</div>
+								</div>
+								
 							</div>
-							<div class="goods-cards__labels">
-								<div class="labels">
-									<div class="labels__blue">Только онлайн</div>
-									<div class="labels__red">Скидка</div>
+							<div class="goods-list__col-btns">
+								<div class="goods-list__btns-buy">
+									<div><button type="button" class='button button-outline-green'>В корзину</button></div>
+									<div><button type="button" class='button button-light-green goods-list__btns-buy__quick-view js-quick-view-open'>Быстрый просмотр</button></div>
+								</div>
+								<div class="goods-list__btns-save">
+									<div>
+										<button type="button" class="button-icon">
+											<i class="icon-heart button-icon__icon"></i>
+											<span>В избранное</span>
+										</button>
+									</div>
+									<div>
+										<button type="button" class="button-icon">
+											<i class="icon-stats button-icon__icon"></i>
+											<span>Сравнить</span>
+										</button>
+									</div>
 								</div>
 							</div>
-							<a href="product.html" class="link-area"></a>
-							<div class="goods-cards__quick">
-								<button class="button button-light-green button--full js-quick-view-open">Быстрый просмотр</button>
-							</div>
 						</div>
-						
-						<div class="goods-cards__desc">
-							<a href="#" class="goods-cards__title">
-								Наименование товара высотой 
-								в карточке товара в три строки
-								012-345-678-9
-							</a>
-
-							<div class="goods-cards__points">
-								<div class="labels">
-									<div class="labels__orange">+Х000 баллов</div>
-								</div>
-							</div>
-
-							<div class="goods-cards__price">
-								<span>12 345 <span class="rubl">₽</span></span>
-								<span class="old-price">12 345 <span class="rubl">₽</span></span>
-							</div>
-							
-							<div class="goods-cards__to-cart">
-								<button class="button button-outline-green  button--full">
-									<span class="spinner-border"></span>
-									<span class="button__text">В корзину</span>
-								</button>
-							</div>
-
-							<div class="goods-cards__actions">
-								<a href="#" class="button-icon goods-cards__actions__item">
-									<i class="icon-bookmark button-icon__icon"></i>
-									В избранное
-								</a>
-								<a href="#" class="button-icon goods-cards__actions__item">
-									<i class="icon-stats button-icon__icon"></i>
-									Сравнить
-								</a>
-							</div>
-							
-						</div>
-						
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<div class="elems-row">
-				<div class="elems-h2">goods-simple</div>
-				<div class="goods-simple">
-					<div class="goods-simple__item">
-						<div class="goods-simple__image" style="background-image: url('images/temp/goods/2/1.jpeg');"></div>
-						<div class="goods-simple__desc">
-							<div class="goods-simple__title">Обои виниловые Elysium Авалон ограниченная серия Светящиеся в темноте звёзды Е21141 (1,06х10 м)</div>
-							<div class="goods-simple__price">599 <span class="rubl">₽ / шт</span></div>
-						</div>
-						<button type="button" class="goods-simple__remove">
-							<i class="icon-close"></i>
-						</button>
-					</div>
-				</div>
-			</div>
+		
 
-			<div class="elems-row">
-				<div class="elems-h2">goods-short</div>
+		<div class="elems-row">
+			<div class="elems-h2">goods-short</div>
+			<div style="max-width: 900px;">
 				<div class="goods-short">
 					<div class="goods-short__item">
 						<div class="goods-short__image" style="background-image: url('images/temp/goods/5.jpeg')"></div>
@@ -899,8 +892,91 @@ layout: default.hbs
 					</div>
 				</div>
 			</div>
-
 		</div>
+
+		<div class="elems-row">
+			<div class="elems-h2">goods-cards</div>
+			<div style="max-width: 250px;">
+				<div class="goods-cards__item js-quick-view-card" data-product-id="2">
+
+					<div class="goods-cards__image-size">
+						<div class="goods-cards__image">
+							<img src="images/temp/goods/1.jpeg" alt="">
+						</div>
+						<div class="goods-cards__labels">
+							<div class="labels">
+								<div class="labels__blue">Только онлайн</div>
+								<div class="labels__red">Скидка</div>
+							</div>
+						</div>
+						<a href="product.html" class="link-area"></a>
+						<div class="goods-cards__quick">
+							<button class="button button-light-green button--full js-quick-view-open">Быстрый просмотр</button>
+						</div>
+					</div>
+					
+					<div class="goods-cards__desc">
+						<a href="#" class="goods-cards__title">
+							Наименование товара высотой 
+							в карточке товара в три строки
+							012-345-678-9
+						</a>
+
+						<div class="goods-cards__points">
+							<div class="labels">
+								<div class="labels__orange">+Х000 баллов</div>
+							</div>
+						</div>
+
+						<div class="goods-cards__price">
+							<span>12 345 <span class="rubl">₽</span></span>
+							<span class="old-price">12 345 <span class="rubl">₽</span></span>
+						</div>
+						
+						<div class="goods-cards__to-cart">
+							<button class="button button-outline-green  button--full">
+								<span class="spinner-border"></span>
+								<span class="button__text">В корзину</span>
+							</button>
+						</div>
+
+						<div class="goods-cards__actions">
+							<a href="#" class="button-icon goods-cards__actions__item">
+								<i class="icon-bookmark button-icon__icon"></i>
+								В избранное
+							</a>
+							<a href="#" class="button-icon goods-cards__actions__item">
+								<i class="icon-stats button-icon__icon"></i>
+								Сравнить
+							</a>
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+		<div class="elems-row">
+			<div class="elems-h2">goods-simple</div>
+			<div style="max-width: 400px;">
+				<div class="goods-simple">
+					<div class="goods-simple__item">
+						<div class="goods-simple__image" style="background-image: url('images/temp/goods/2/1.jpeg');"></div>
+						<div class="goods-simple__desc">
+							<div class="goods-simple__title">Обои виниловые Elysium Авалон ограниченная серия Светящиеся в темноте звёзды Е21141 (1,06х10 м)</div>
+							<div class="goods-simple__price">599 <span class="rubl">₽ / шт</span></div>
+						</div>
+						<button type="button" class="goods-simple__remove">
+							<i class="icon-close"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+
 	</div>
 
 	<div class="elems-section">
