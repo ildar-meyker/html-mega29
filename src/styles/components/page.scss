@@ -18,13 +18,6 @@
 		padding: 0 10px;
 	}
 
-	&__paper {
-		padding: 20px;
-		border: 1px solid #f2f3f5;
-		border-radius: 5px;
-		background: #fff;
-	}
-
 	&__scroll {
 		display: none;
 	}
@@ -73,11 +66,6 @@
 			padding: 0 20px;
 		}
 
-		&__paper {
-			border-width: 2px;
-			padding: 40px 50px;
-		}
-
 		&__more {
 			.button {
 				padding: 19px 20px;
@@ -96,11 +84,6 @@
 				padding: 10px 20px;
 				font-size: 15px;
 			}
-		}
-
-		&__paper {
-			border-width: 1px;
-			padding: 25px;
 		}
 
 		&__bg-mobile {
