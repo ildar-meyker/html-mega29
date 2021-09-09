@@ -146,11 +146,11 @@
 
 .selectric .label {
 	height: auto;
-	line-height: 1;
 	margin: 0;
 	padding: 0.69231em 0.76923em;
 	padding-right: 2em;
 	font-size: 1em;
+	line-height: inherit;
 }
 
 .selectric .button {
@@ -163,8 +163,9 @@
 	right: 0.76923em;
 	top: 50%;
 	margin-top: -0.5em;
-	font-family: "icomoon" !important;
 	content: "\e91e";
+	font-family: "icomoon" !important;
+	line-height: 1;
 }
 
 .selectric-items {
@@ -180,6 +181,7 @@
 .selectric-items li,
 .selectric-items ul {
 	font-size: 1em;
+	line-height: inherit;
 }
 .selectric-items li {
 	transition: all 0.2s;
@@ -193,8 +195,9 @@
 	color: #21a73f;
 
 	&:before {
-		font-family: "icomoon" !important;
 		content: "\e90c";
+		font-family: "icomoon" !important;
+		line-height: 1;
 		font-size: 0.8em;
 		position: absolute;
 		right: 1em;
