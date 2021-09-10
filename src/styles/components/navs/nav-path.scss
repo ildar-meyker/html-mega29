@@ -1,9 +1,26 @@
 .nav-path {
-	overflow: auto;
-	padding: 10px 0;
-	margin: 10px 0;
+	margin: 0.7em 0;
 	white-space: nowrap;
 	font-size: 13px;
+
+	&--inner {
+		margin: 0;
+
+		.nav-path__window {
+			margin: 0;
+			padding: 0;
+
+			span {
+				margin-right: 40px !important;
+			}
+		}
+	}
+
+	&__window {
+		margin: 0 -10px;
+		padding-left: 10px;
+		overflow: auto;
+	}
 
 	a {
 		display: inline-block;
@@ -20,7 +37,7 @@
 		padding: 4px 10px;
 		background: #f2f3f5;
 		border-radius: 4px;
-		margin-right: 13px;
+		margin-right: 10px;
 	}
 
 	i {
@@ -28,8 +45,38 @@
 	}
 }
 
+@media (min-width: 768px) {
+	.nav-path {
+		margin: 1.5em 0;
+		font-size: 15px;
+
+		&__window {
+			margin: 0 -20px;
+			padding-left: 20px;
+		}
+
+		span {
+			margin-right: 20px;
+		}
+	}
+}
+
 @media (min-width: 992px) {
 	.nav-path {
+		margin: 1em 0;
 		font-size: 18px;
+	}
+}
+
+@media (min-width: 1220px) {
+	.nav-path {
+		&__window {
+			padding: 0;
+			margin: 0;
+		}
+
+		span {
+			margin-right: 0;
+		}
 	}
 }

@@ -23,7 +23,7 @@ import "./modules/SliderGallery";
 import "./modules/ScrollUp";
 
 $(function () {
-	$("#nav-path").scrollLeft(99999);
+	$(".nav-path__window").scrollLeft(9999);
 
 	$(".js-tooltip").tooltipster({
 		side: ["right", "bottom"],
