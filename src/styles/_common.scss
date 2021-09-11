@@ -42,6 +42,33 @@ a {
 	transition: all 0.2s;
 }
 
+.image-box {
+	background: #d9d9d9 no-repeat 50% 50%;
+	background-size: cover;
+
+	&:before {
+		content: " ";
+		display: block;
+		padding-top: 100%;
+	}
+
+	&--50 {
+		&:before {
+			padding-top: 50%;
+		}
+	}
+
+	&--75 {
+		&:before {
+			padding-top: 75%;
+		}
+	}
+
+	&--contain {
+		background-size: contain;
+	}
+}
+
 .h2 {
 	margin-bottom: 15px;
 	font-size: 20px;

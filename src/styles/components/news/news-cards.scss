@@ -1,0 +1,127 @@
+.news-cards {
+	&__row {
+		margin: -20px -5px 0 -5px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__col {
+		flex: 0 0 auto;
+		width: 50%;
+		padding: 0 5px;
+		margin-top: 20px;
+		display: flex;
+	}
+
+	&__item {
+		flex: 0 0 auto;
+		width: 100%;
+		overflow: hidden;
+		border: 1px solid #f2f3f5;
+		border-radius: 5px;
+		background: #fff;
+	}
+
+	&__image {
+		position: relative;
+	}
+
+	&__desc {
+		padding: 5px;
+	}
+
+	&__tags {
+		font-size: 7px;
+	}
+
+	&__title {
+		margin-top: 10px;
+		height: 3.6em;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-size: 10px;
+		font-weight: 500;
+
+		a {
+			display: block;
+		}
+	}
+
+	&__time {
+		margin-top: 10px;
+		display: block;
+		text-align: right;
+		font-size: 7px;
+	}
+}
+
+@media (min-width: 768px) {
+	.news-cards {
+		&__row {
+			margin: -24px -12px 0 -12px;
+		}
+
+		&__col {
+			margin-top: 24px;
+			padding: 0 12px;
+		}
+
+		&__item {
+		}
+
+		&__image {
+		}
+
+		&__desc {
+			padding: 10px;
+		}
+
+		&__tags {
+			font-size: 13px;
+		}
+
+		&__title {
+			margin-top: 20px;
+			font-size: 18px;
+		}
+
+		&__time {
+			margin-top: 35px;
+			font-size: 13px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.news-cards {
+		&__row {
+			margin: -20px -10px 0 -10px;
+		}
+
+		&__col {
+			padding: 0 10px;
+			width: 33.33%;
+		}
+
+		&__item {
+		}
+
+		&__image {
+		}
+
+		&__desc {
+		}
+
+		&__tags {
+			font-size: 11px;
+		}
+
+		&__title {
+		}
+
+		&__time {
+			margin-top: 25px;
+			font-size: 11px;
+		}
+	}
+}

@@ -138,37 +138,30 @@ layout: default.hbs
                     
                     {{> form-sorting }}
                     
-					<div class="news" id="news">
-						{{#repeat 5}}
-						<div class="news__col">
-							<article class="news__item">
-								<div class="news__image">
-									<div class="content__image--empty content__image--rect"></div>
-								</div>
-								<div class="news__desc">
-									<div class="news__tags">
-										<div class="news__tags__item">Триммеры</div>
+					<div class="news-cards">
+						<div class="news-cards__row">
+							{{#repeat 10}}
+							<div class="news-cards__col">
+								<article class="news-cards__item">
+									<div class="news-cards__image">
+										<div class="image-box image-box--50"></div>
+										<a href="#" class="link-area"></a>
 									</div>
-									<h3 class="news__title">При покупке триммера защитные очки за 1 рубль!</h3>
-									<time class="news__date" datetime="2020-06-07" pubdate>7. 06. 2020</time>
-								</div>
-							</article>
-						</div>
-						<div class="news__col">
-							<article class="news__item">
-								<div class="news__image">
-									<div class="content__image--empty content__image--rect"></div>
-								</div>
-								<div class="news__desc">
-									<div class="news__tags">
-										<div class="news__tags__item">Триммеры</div>
+									<div class="news-cards__desc">
+										<div class="news-cards__tags">
+											<div class="labels">
+												<a href="#" class="labels__light-green">Хэштег статьи</a>
+											</div>
+										</div>
+										<h3 class="news-cards__title">
+											<a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim fugit aperiam incidunt corporis, facere doloremque obcaecati ex repellendus dolor cupiditate nulla dolorem voluptate dolorum repudiandae ipsa exercitationem nobis ratione. Harum.</a>
+										</h3>
+										<time class="news-cards__time" datetime="2020-06-07" pubdate>7. 06. 2020</time>
 									</div>
-									<h3 class="news__title">This pull request adds a configurable option to toggle between these two desirable behaviours.</h3>
-									<time class="news__date" datetime="2020-06-07" pubdate>7. 06. 2020</time>
-								</div>
-							</article>
+								</article>
+							</div>
+							{{/repeat}}
 						</div>
-						{{/repeat}}
 					</div>
 
 					{{> page-more }}
