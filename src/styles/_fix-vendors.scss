@@ -13,14 +13,43 @@
 }
 
 // ya share
+.ya-share2__container {
+	font-size: 1em !important;
+}
+.ya-share2__list {
+	display: flex !important;
+	align-items: center !important;
+}
+.ya-share2__list * {
+	line-height: 1 !important;
+}
+.ya-share2__item {
+	margin: 0 0.3em !important;
+}
 .ya-share2__badge {
-	background: #21a73f !important;
-	border-radius: 4px !important;
+	background: transparent !important;
+	border-radius: 0 !important;
 }
 .ya-share2__icon {
-	width: 28px !important;
-	height: 28px !important;
-	background-size: 24px 24px !important;
+	width: auto !important;
+	height: auto !important;
+	color: #21a73f;
+}
+.ya-share2__icon:before {
+	font-family: "icomoon" !important;
+	line-height: 1;
+}
+.ya-share2__item_service_twitter .ya-share2__icon:before {
+	content: "\e911";
+}
+.ya-share2__item_service_vkontakte .ya-share2__icon:before {
+	content: "\e912";
+}
+.ya-share2__item_service_whatsapp .ya-share2__icon:before {
+	content: "\e913";
+}
+.ya-share2__item_service_telegram .ya-share2__icon:before {
+	content: "\e910";
 }
 
 // js-datepicker
