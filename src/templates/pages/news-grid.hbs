@@ -136,7 +136,36 @@ layout: default.hbs
 				</div>
 				<div class="layout-basic__main">
                     
-                    {{> form-sorting }}
+                    <form action="#" class="page__outer form-sorting">
+						<div class="form-sorting__row">
+
+							<div class="form-sorting__gap"></div>
+
+							<div class="form-sorting__col form-sorting__col--select">
+								<select>
+									<option>По популярности (убывание)</option>
+									<option>По популярности (возрастание)</option>
+									<option>По рейтингу (убывание)</option>
+									<option>По рейтингу (возрастание)</option>
+									<option>По цене (убывание)</option>
+									<option>По цене (возрастание)</option>
+								</select>
+							</div>
+							
+							<div class="form-sorting__col form-sorting__col--right">
+								<nav class="form-sorting__modes">
+									<a href="news-grid.html" class="form-sorting__modes__item active">
+										<i class="icon-menu"></i>
+									</a>
+									<a href="news-list.html" class="form-sorting__modes__item">
+										<i class="icon-list"></i>
+									</a>
+								</nav>
+							</div>
+
+							<div class="form-sorting__gap"></div>
+						</div>
+					</form>
                     
 					<div class="news-cards">
 						<div class="news-cards__row">
@@ -145,7 +174,7 @@ layout: default.hbs
 								<article class="news-cards__item">
 									<div class="news-cards__image">
 										<div class="image-box image-box--50"></div>
-										<a href="#" class="link-area"></a>
+										<a href="news-item.html" class="link-area"></a>
 									</div>
 									<div class="news-cards__desc">
 										<div class="news-cards__tags">
@@ -154,7 +183,7 @@ layout: default.hbs
 											</div>
 										</div>
 										<h3 class="news-cards__title">
-											<a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim fugit aperiam incidunt corporis, facere doloremque obcaecati ex repellendus dolor cupiditate nulla dolorem voluptate dolorum repudiandae ipsa exercitationem nobis ratione. Harum.</a>
+											<a href="news-item.html">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim fugit aperiam incidunt corporis, facere doloremque obcaecati ex repellendus dolor cupiditate nulla dolorem voluptate dolorum repudiandae ipsa exercitationem nobis ratione. Harum.</a>
 										</h3>
 										<time class="news-cards__time" datetime="2020-06-07" pubdate>7. 06. 2020</time>
 									</div>
