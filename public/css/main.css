@@ -7220,6 +7220,10 @@ a {
 
 .popup-status__panel {
   max-width: 300px; }
+  .popup-status__panel--success .popup__header {
+    border-color: #21a73f; }
+  .popup-status__panel--error .popup__header {
+    border-color: #f50505; }
 
 .popup-status__icon {
   margin: 0 auto;
@@ -7251,7 +7255,7 @@ a {
 
 @media (min-width: 992px) {
   .popup-status__panel {
-    max-width: 600px; }
+    max-width: 590px; }
   .popup-status__icon {
     width: 85px;
     height: 85px;

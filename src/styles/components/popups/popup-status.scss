@@ -1,6 +1,18 @@
 .popup-status {
 	&__panel {
 		max-width: 300px;
+
+		&--success {
+			.popup__header {
+				border-color: #21a73f;
+			}
+		}
+
+		&--error {
+			.popup__header {
+				border-color: #f50505;
+			}
+		}
 	}
 
 	&__icon {
@@ -47,7 +59,7 @@
 @media (min-width: 992px) {
 	.popup-status {
 		&__panel {
-			max-width: 600px;
+			max-width: 590px;
 		}
 
 		&__icon {
