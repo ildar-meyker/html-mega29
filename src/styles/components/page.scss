@@ -65,13 +65,6 @@
 		&__inner {
 			padding: 0 20px;
 		}
-
-		&__more {
-			.button {
-				height: 60px;
-				font-size: 18px;
-			}
-		}
 	}
 }
 
@@ -79,11 +72,6 @@
 	.page {
 		&__more {
 			margin: 25px 0;
-
-			.button {
-				height: auto;
-				font-size: 15px;
-			}
 		}
 
 		&__bg-mobile {
