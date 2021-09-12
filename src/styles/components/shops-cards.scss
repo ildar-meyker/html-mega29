@@ -8,14 +8,6 @@
 	}
 
 	&__image {
-		background-size: cover;
-		background-position: 50% 50%;
-
-		&:before {
-			content: " ";
-			padding-top: 100%;
-			display: block;
-		}
 	}
 
 	&__desc {

@@ -6453,14 +6453,6 @@ a {
   background: #fff;
   overflow: hidden; }
 
-.shops-cards__image {
-  background-size: cover;
-  background-position: 50% 50%; }
-  .shops-cards__image:before {
-    content: " ";
-    padding-top: 100%;
-    display: block; }
-
 .shops-cards__desc {
   padding: 10px; }
 
