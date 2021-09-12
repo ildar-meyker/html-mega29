@@ -1,4 +1,4 @@
-.popup-city-confirm {
+.popup-city {
 	&__panel {
 		max-width: 240px;
 	}
@@ -35,7 +35,7 @@
 }
 
 @media (min-width: 768px) {
-	.popup-city-confirm {
+	.popup-city {
 		&__panel {
 			max-width: 380px;
 		}
@@ -63,7 +63,7 @@
 }
 
 @media (min-width: 992px) {
-	.popup-city-confirm {
+	.popup-city {
 		&__panel {
 			max-width: 450px;
 		}

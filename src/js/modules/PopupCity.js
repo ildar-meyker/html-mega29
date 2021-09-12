@@ -1,6 +1,6 @@
 import $ from "jquery";
 
-const PopupCityConfirm = {
+const PopupCity = {
 	_handleCloseButton(e) {
 		e.preventDefault();
 
@@ -14,30 +14,30 @@ const PopupCityConfirm = {
 	},
 
 	close() {
-		$("#popup-city-confirm").removeClass("active");
+		$("#popup-city").removeClass("active");
 	},
 
 	open() {
-		$("#popup-city-confirm").addClass("active");
+		$("#popup-city").addClass("active");
 	},
 
 	init() {
 		$(document).on(
 			"click",
-			".js-popup-city-confirm-close",
+			".js-popup-city-close",
 			this._handleCloseButton.bind(this)
 		);
 
 		$(document).on(
 			"click",
-			".js-popup-city-confirm-open",
+			".js-popup-city-open",
 			this._handleOpenButton.bind(this)
 		);
 	},
 };
 
 $(function () {
-	PopupCityConfirm.init();
+	PopupCity.init();
 });
 
-export default PopupCityConfirm;
+export default PopupCity;

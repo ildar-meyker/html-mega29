@@ -25574,7 +25574,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_NavBurger__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/NavBurger */ "./src/js/modules/NavBurger.js");
 /* harmony import */ var _modules_RangeSlider__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/RangeSlider */ "./src/js/modules/RangeSlider.js");
 /* harmony import */ var _modules_Panel__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/Panel */ "./src/js/modules/Panel.js");
-/* harmony import */ var _modules_PopupCityConfirm__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/PopupCityConfirm */ "./src/js/modules/PopupCityConfirm.js");
+/* harmony import */ var _modules_PopupCity__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/PopupCity */ "./src/js/modules/PopupCity.js");
 /* harmony import */ var _modules_Search__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/Search */ "./src/js/modules/Search.js");
 /* harmony import */ var _modules_SliderCards__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/SliderCards */ "./src/js/modules/SliderCards.js");
 /* harmony import */ var _modules_SliderItems1__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/SliderItems1 */ "./src/js/modules/SliderItems1.js");
@@ -26191,10 +26191,10 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 
 /***/ }),
 
-/***/ "./src/js/modules/PopupCityConfirm.js":
-/*!********************************************!*\
-  !*** ./src/js/modules/PopupCityConfirm.js ***!
-  \********************************************/
+/***/ "./src/js/modules/PopupCity.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/PopupCity.js ***!
+  \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -26203,7 +26203,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
-var PopupCityConfirm = {
+var PopupCity = {
   _handleCloseButton: function _handleCloseButton(e) {
     e.preventDefault();
     this.close();
@@ -26213,20 +26213,20 @@ var PopupCityConfirm = {
     this.open();
   },
   close: function close() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-city-confirm").removeClass("active");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-city").removeClass("active");
   },
   open: function open() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-city-confirm").addClass("active");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-city").addClass("active");
   },
   init: function init() {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-popup-city-confirm-close", this._handleCloseButton.bind(this));
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-popup-city-confirm-open", this._handleOpenButton.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-popup-city-close", this._handleCloseButton.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-popup-city-open", this._handleOpenButton.bind(this));
   }
 };
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  PopupCityConfirm.init();
+  PopupCity.init();
 });
-/* harmony default export */ __webpack_exports__["default"] = (PopupCityConfirm);
+/* harmony default export */ __webpack_exports__["default"] = (PopupCity);
 
 /***/ }),
 
