@@ -13,17 +13,6 @@
 		}
 	}
 
-	&__image {
-		background: no-repeat 50% 50%;
-		background-size: contain;
-
-		&:before {
-			content: " ";
-			padding-top: 100%;
-			display: block;
-		}
-	}
-
 	&__title {
 		margin-bottom: 10px;
 		font-size: 10px;
