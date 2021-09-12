@@ -1170,48 +1170,51 @@ layout: default.hbs
 				</button>
 			</div>
 			<div class="popup__body">
+
 				{{> goods-short }}
 
-				<div class="form__item">
-					<div class="input-label-up">
-						<label class="input-label-up__label">Ваше имя</label>
-						<input type="text" class="input-label-up__input">
+				<form action="#" class="form-1-click">
+					<div class="form-1-click__item">
+						<div class="input-label-up">
+							<label class="input-label-up__label">Ваше имя</label>
+							<input type="text" class="input-label-up__input">
+						</div>
 					</div>
-				</div>
 
-				<div class="form__item">
-					<div class="input-label-up">
-						<label class="input-label-up__label">Ваш телефон</label>
-						<input type="text" class="input-label-up__input" data-mask="+7(000)000-00-00" >
+					<div class="form-1-click__item">
+						<div class="input-label-up">
+							<label class="input-label-up__label">Ваш телефон</label>
+							<input type="text" class="input-label-up__input" data-mask="+7(000)000-00-00" >
+						</div>
 					</div>
-				</div>
 
-				<div class="form__item">
-					<div class="input-label-up">
-						<label class="input-label-up__label">Ваш email</label>
-						<input type="text" class="input-label-up__input">
+					<div class="form-1-click__item">
+						<div class="input-label-up">
+							<label class="input-label-up__label">Ваш email</label>
+							<input type="text" class="input-label-up__input">
+						</div>
 					</div>
-				</div>
 
-				<div class="form__item">
-					<div class="input-label-up">
-						<label class="input-label-up__label">Ваш комментарий</label>
-						<textarea class="input-label-up__input"></textarea>
+					<div class="form-1-click__item">
+						<div class="input-label-up">
+							<label class="input-label-up__label">Ваш комментарий</label>
+							<textarea class="input-label-up__input"></textarea>
+						</div>
 					</div>
-				</div>
 
-				<div class="form__item">
-					<label class="check-default">
-						<div class="icheckbox"><input type="checkbox" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-						<span>Я согласен с <a href="#" target="_blank">обработку персональных данных</a></span>
-					</label>
-				</div>
+					<div class="form-1-click__agree">
+						<label class="check-default">
+							<div class="icheckbox"><input type="checkbox" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+							<span>Я согласен с <a href="#" target="_blank">обработку персональных данных</a></span>
+						</label>
+					</div>
 
-				<div class="form__actions">
-					<button type="button" class="button button-green">
-						Сохранить
-					</button>
-				</div>
+					<div class="form-1-click__apply">
+						<button type="button" class="button button-green button--full">
+							Сохранить
+						</button>
+					</div>
+				</form>
 
 			</div>
 			<div class="popup__footer">

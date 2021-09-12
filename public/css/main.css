@@ -3018,7 +3018,6 @@ a {
   display: block;
   padding-left: 2.05882em;
   font-size: 1.0625em;
-  font-weight: 500;
   margin-top: 0.76471em; }
   .check-default:first-child {
     margin-top: 0; }
@@ -5333,6 +5332,30 @@ a {
   .form-auth__sep {
     margin: 37px 0; } }
 
+.form-1-click__item {
+  margin-top: 15px; }
+
+.form-1-click__agree {
+  margin-top: 35px;
+  font-size: 15px; }
+
+.form-1-click__apply {
+  margin-top: 20px; }
+
+@media (min-width: 768px) {
+  .form-1-click__item {
+    margin-top: 30px; }
+  .form-1-click__agree {
+    margin-top: 40px;
+    font-size: 18px; } }
+
+@media (min-width: 992px) {
+  .form-1-click__item {
+    margin-top: 15px; }
+  .form-1-click__agree {
+    margin-top: 25px;
+    font-size: 15px; } }
+
 .promo-best {
   position: relative;
   margin-top: 30px; }
@@ -7077,7 +7100,7 @@ a {
   box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
   border-radius: 5px;
   overflow: hidden;
-  max-width: 600px;
+  max-width: 590px;
   margin: 0 auto; }
 
 .popup__header {
@@ -7219,7 +7242,7 @@ a {
       margin-top: 0; } }
 
 .popup-status__panel {
-  max-width: 300px; }
+  max-width: 450px; }
   .popup-status__panel--success .popup__header {
     border-color: #21a73f; }
   .popup-status__panel--error .popup__header {
