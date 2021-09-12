@@ -2,18 +2,19 @@
 	transition: all 0.2s;
 	position: relative;
 	border: 1px solid #e7e7e8;
-	border-radius: 4/16 + em;
+	border-radius: 5px;
 	background: #fafafa;
+	font-size: 15px;
 
 	&.focus {
 		border-color: #21a73f;
 		background: #fff;
 
 		.input-label-up__label {
-			top: -0.6em;
+			top: 0;
+			margin-top: -0.6em;
 			background: #fff;
-			padding: 0 3/14 + em;
-			font-size: 14/16 + em;
+			font-size: 0.8em;
 			color: #21a73f;
 		}
 	}
@@ -21,17 +22,46 @@
 	&__label {
 		transition: all 0.2s;
 		position: absolute;
-		top: 10/18 + em;
-		left: 13/18 + em;
-		font-size: 18/16 + em;
+		top: 11px;
+		left: 8px;
+		padding: 0 5px;
+		font-size: 1em;
 		color: rgba(#111111, 0.32);
 	}
 
 	&__input {
 		position: relative;
 		width: 100%;
-		padding: 10px 15px;
+		padding: 11px 13px;
 		border: 0;
-		font-size: 18/16 + em;
+		font-size: 1em;
+	}
+}
+
+@media (min-width: 768px) {
+	.input-label-up {
+		font-size: 18px;
+
+		&__input {
+			padding: 18px 13px;
+		}
+
+		&__label {
+			top: 19px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.input-label-up {
+		font-size: 15px;
+
+		&__input {
+			padding: 15px 13px;
+		}
+
+		&__label {
+			top: 16px;
+		}
 	}
 }

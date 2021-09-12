@@ -1,7 +1,7 @@
 .input-datepicker {
 	position: relative;
 	background: #fafafa;
-	font-size: (14/16) + em;
+	font-size: 15px;
 
 	&__input {
 		transition: all 0.2s;
@@ -11,9 +11,10 @@
 		width: 100%;
 		border: 1px solid #e7e7e8;
 		border-radius: 5px;
-		padding: (11/14) + em (10/14) + em;
-		padding-right: 2.2em;
+		padding: 11px 13px;
+		padding-right: 40px;
 		background: transparent;
+		font-size: 1em;
 		color: #2e2e2e;
 
 		&:not(:read-only):focus {
@@ -29,7 +30,28 @@
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
-		right: 10/14 + em;
+		right: 13px;
+		font-size: 1em;
 		color: rgba(0, 32, 51, 0.35);
+	}
+}
+
+@media (min-width: 768px) {
+	.input-datepicker {
+		font-size: 18px;
+
+		&__input {
+			padding: 18px 13px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.input-datepicker {
+		font-size: 15px;
+
+		&__input {
+			padding: 15px 13px;
+		}
 	}
 }

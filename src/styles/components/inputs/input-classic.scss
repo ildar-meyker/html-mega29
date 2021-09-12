@@ -2,11 +2,11 @@
 	transition: all 0.2s;
 	display: block;
 	width: 100%;
-	padding: (11/14) + em (10/14) + em;
+	padding: 11px 13px;
 	border: 1px solid #e7e7e8;
 	border-radius: 5px;
 	background: #fafafa;
-	font-size: (14/16) + em;
+	font-size: 15px;
 	color: #2e2e2e;
 
 	&:not(:read-only):focus {
@@ -15,5 +15,19 @@
 
 	&::placeholder {
 		color: #b2b3b3;
+	}
+}
+
+@media (min-width: 768px) {
+	.input-classic {
+		padding: 18px 13px;
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 992px) {
+	.input-classic {
+		padding: 15px 13px;
+		font-size: 15px;
 	}
 }

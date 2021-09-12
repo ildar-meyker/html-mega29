@@ -2800,11 +2800,11 @@ a {
   transition: all 0.2s;
   display: block;
   width: 100%;
-  padding: 0.78571em 0.71429em;
+  padding: 11px 13px;
   border: 1px solid #e7e7e8;
   border-radius: 5px;
   background: #fafafa;
-  font-size: 0.875em;
+  font-size: 15px;
   color: #2e2e2e; }
   .input-classic:not(:-moz-read-only):focus {
     border-color: #21a73f; }
@@ -2819,10 +2819,20 @@ a {
   .input-classic::placeholder {
     color: #b2b3b3; }
 
+@media (min-width: 768px) {
+  .input-classic {
+    padding: 18px 13px;
+    font-size: 18px; } }
+
+@media (min-width: 992px) {
+  .input-classic {
+    padding: 15px 13px;
+    font-size: 15px; } }
+
 .input-datepicker {
   position: relative;
   background: #fafafa;
-  font-size: 0.875em; }
+  font-size: 15px; }
   .input-datepicker__input {
     transition: all 0.2s;
     position: relative;
@@ -2831,9 +2841,10 @@ a {
     width: 100%;
     border: 1px solid #e7e7e8;
     border-radius: 5px;
-    padding: 0.78571em 0.71429em;
-    padding-right: 2.2em;
+    padding: 11px 13px;
+    padding-right: 40px;
     background: transparent;
+    font-size: 1em;
     color: #2e2e2e; }
     .input-datepicker__input:not(:-moz-read-only):focus {
       border-color: #21a73f; }
@@ -2852,18 +2863,30 @@ a {
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-    right: 0.71429em;
+    right: 13px;
+    font-size: 1em;
     color: rgba(0, 32, 51, 0.35); }
+
+@media (min-width: 768px) {
+  .input-datepicker {
+    font-size: 18px; }
+    .input-datepicker__input {
+      padding: 18px 13px; } }
+
+@media (min-width: 992px) {
+  .input-datepicker {
+    font-size: 15px; }
+    .input-datepicker__input {
+      padding: 15px 13px; } }
 
 .input-top-label {
   position: relative;
-  font-size: 0.875em; }
+  font-size: 15px; }
   .input-top-label__label {
     position: absolute;
     top: 0;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    left: 0.5em;
+    margin-top: -0.6em;
+    left: 8px;
     padding: 0 5px;
     background: #fff;
     font-size: 0.8em;
@@ -2871,7 +2894,7 @@ a {
   .input-top-label__input {
     display: block;
     width: 100%;
-    padding: 0.78571em 0.71429em;
+    padding: 11px 13px;
     border: 1px solid #b2b3b3;
     border-radius: 5px;
     font-size: 1em;
@@ -2881,34 +2904,64 @@ a {
     .input-top-label__input:not(:read-only):focus {
       border-color: #21a73f; }
 
+@media (min-width: 768px) {
+  .input-top-label {
+    font-size: 18px; }
+    .input-top-label__input {
+      padding: 18px 13px; } }
+
+@media (min-width: 992px) {
+  .input-top-label {
+    font-size: 15px; }
+    .input-top-label__input {
+      padding: 15px 13px; } }
+
 .input-label-up {
   transition: all 0.2s;
   position: relative;
   border: 1px solid #e7e7e8;
-  border-radius: 0.25em;
-  background: #fafafa; }
+  border-radius: 5px;
+  background: #fafafa;
+  font-size: 15px; }
   .input-label-up.focus {
     border-color: #21a73f;
     background: #fff; }
     .input-label-up.focus .input-label-up__label {
-      top: -0.6em;
+      top: 0;
+      margin-top: -0.6em;
       background: #fff;
-      padding: 0 0.21429em;
-      font-size: 0.875em;
+      font-size: 0.8em;
       color: #21a73f; }
   .input-label-up__label {
     transition: all 0.2s;
     position: absolute;
-    top: 0.55556em;
-    left: 0.72222em;
-    font-size: 1.125em;
+    top: 11px;
+    left: 8px;
+    padding: 0 5px;
+    font-size: 1em;
     color: rgba(17, 17, 17, 0.32); }
   .input-label-up__input {
     position: relative;
     width: 100%;
-    padding: 10px 15px;
+    padding: 11px 13px;
     border: 0;
-    font-size: 1.125em; }
+    font-size: 1em; }
+
+@media (min-width: 768px) {
+  .input-label-up {
+    font-size: 18px; }
+    .input-label-up__input {
+      padding: 18px 13px; }
+    .input-label-up__label {
+      top: 19px; } }
+
+@media (min-width: 992px) {
+  .input-label-up {
+    font-size: 15px; }
+    .input-label-up__input {
+      padding: 15px 13px; }
+    .input-label-up__label {
+      top: 16px; } }
 
 .input-readonly {
   border: 0.05556em solid transparent;
