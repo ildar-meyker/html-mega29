@@ -19,7 +19,7 @@
 		font-weight: 700;
 	}
 
-	&__choose {
+	&__btns-apply {
 		&__item {
 			margin-top: 10px;
 
@@ -27,9 +27,41 @@
 				margin-top: 0;
 			}
 		}
+	}
 
-		&__button {
-			width: 100%;
+	&__select,
+	&__confirm {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	&__item {
+		position: relative;
+		display: block;
+		padding: 10/18 + em 16/18 + em;
+		border-radius: 5px;
+		font-size: 15px;
+
+		&:hover {
+			background: #f1f1f1;
+		}
+
+		&.active {
+			color: #21a73f;
+
+			&:before {
+				content: "\e90c";
+				font-family: "icomoon" !important;
+				font-size: 16/18 + em;
+				line-height: 1;
+				position: absolute;
+				top: 50%;
+				right: 1em;
+				margin-top: -0.5em;
+			}
 		}
 	}
 }
@@ -54,10 +86,14 @@
 			font-size: 32px;
 		}
 
-		&__choose {
+		&__btns-apply {
 			&__item {
 				margin-top: 15px;
 			}
+		}
+
+		&__item {
+			font-size: 18px;
 		}
 	}
 }
@@ -68,7 +104,7 @@
 			max-width: 450px;
 		}
 
-		&__choose {
+		&__btns-apply {
 			display: flex;
 
 			&__item {

@@ -7,6 +7,13 @@ const PopupCity = {
 		this.close();
 	},
 
+	_handleSelectButton(e) {
+		e.preventDefault();
+
+		$("#popup-city .popup-city__confirm").removeClass("active");
+		$("#popup-city .popup-city__select").addClass("active");
+	},
+
 	_handleOpenButton(e) {
 		e.preventDefault();
 
@@ -32,6 +39,12 @@ const PopupCity = {
 			"click",
 			".js-popup-city-open",
 			this._handleOpenButton.bind(this)
+		);
+
+		$(document).on(
+			"click",
+			".js-popup-city-select",
+			this._handleSelectButton.bind(this)
 		);
 	},
 };

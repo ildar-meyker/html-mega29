@@ -26208,6 +26208,11 @@ var PopupCity = {
     e.preventDefault();
     this.close();
   },
+  _handleSelectButton: function _handleSelectButton(e) {
+    e.preventDefault();
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-city .popup-city__confirm").removeClass("active");
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-city .popup-city__select").addClass("active");
+  },
   _handleOpenButton: function _handleOpenButton(e) {
     e.preventDefault();
     this.open();
@@ -26221,6 +26226,7 @@ var PopupCity = {
   init: function init() {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-popup-city-close", this._handleCloseButton.bind(this));
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-popup-city-open", this._handleOpenButton.bind(this));
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".js-popup-city-select", this._handleSelectButton.bind(this));
   }
 };
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
