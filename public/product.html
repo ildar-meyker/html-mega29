@@ -1681,7 +1681,7 @@
 					<button type="button" class="button button-outline-green js-popup-open" data-target="#popup-auth">Войти</button>
 				</div>
 				<div class="panel-auth__button">
-					<button type="button" class="button button-green js-popup-open" data-targer="#popup-register">Зарегистрироваться</button>
+					<button type="button" class="button button-green js-popup-open" data-target="#popup-register">Зарегистрироваться</button>
 				</div>
 			</div>
 		</div>
@@ -2208,11 +2208,11 @@
 	                                    </div>
 	                                </div>
 	
-	                                <div class="form-auth__check">
+	                                <div class="form-auth__remember">
 	                                    <div>
-	                                        <label class="check-default">
-	                                            <input type="checkbox">
-	                                            <span>Запомнить меня</span>
+	                                        <label class="check-border form-auth__check">
+	                                            <div class="check-border__input"><input type="checkbox"></div>
+	                                            <div class="check-border__text">Запомнить меня</div>
 	                                        </label>
 	                                    </div>
 	                                    <div>
@@ -2251,6 +2251,76 @@
 	    </div>
 	</aside>
 	
+	
+	<aside class="popup popup-auth" id="popup-register">
+	    <div class="popup__overlay">
+	        <div class="popup__loader">
+	            <div class="spinner"></div>
+	        </div>
+	    </div>
+	    <div class="popup__window">
+	        <div class="popup__content">
+	            <div class="page__center">
+	                <div class="popup__center">
+	
+	                    <div class="popup__panel popup-auth__panel">
+	                        <div class="popup__header">
+	                            Личный кабинет
+	                            <button type="button" class="popup__close js-popup-close">
+	                                <i class="icon-close"></i>
+	                            </button>
+	                        </div>
+	                        <div class="popup__body">
+	                            
+	                            <form action="#" class="form-auth">
+	
+	                                <div class="form-auth__item">
+	                                    <div class="input-label-up">
+	                                        <label class="input-label-up__label">Ваш телефон</label>
+	                                        <input type="text" class="input-label-up__input">
+	                                    </div>
+	                                </div>
+	
+	                                <div class="form-auth__item">
+	                                    <div class="input-label-up">
+	                                        <label class="input-label-up__label">Ваш email</label>
+	                                        <input type="text" class="input-label-up__input">
+	                                    </div>
+	                                </div>
+	
+	                                <div class="form-auth__item">
+	                                    <div class="input-label-up">
+	                                        <label class="input-label-up__label">Ваш пароль</label>
+	                                        <input type="password" class="input-label-up__input">
+	                                    </div>
+	                                </div>
+	
+	                                <div class="form-auth__agree">
+	                                    <div>
+	                                        <label class="check-border form-auth__check">
+	                                            <div class="check-border__input"><input type="checkbox"></div>
+	                                            <div class="check-border__text">Я согласен на <a href="#">обработку персональных данных</a></div>
+	                                        </label>
+	                                    </div>
+	                                </div>
+	
+	                                <div class="form-auth__item">
+	                                    <button type="button" class="button button-outline-green button--full">Зарегистрироваться</button>
+	                                </div>
+	
+	                            </form>
+	
+	                        </div>
+	                        <div class="popup__footer">
+	                            <div>Возникли проблемы? Посетите раздел <a href="#">Вопросы</a></div>
+	                        </div>
+	                    </div>
+	                    
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</aside>
 	
 	<div class="page__scroll hidden" id="scroll-up">
 	    <button type="button" class="button-scroll">
