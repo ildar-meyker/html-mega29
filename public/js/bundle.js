@@ -26526,7 +26526,7 @@ var SliderGallery = {
     this._initFullsizeSlider("#popup-gallery--quick-view", "#slider-gallery--quick-view");
   },
   _updateQuickViewContentSlider: function _updateQuickViewContentSlider(data) {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-quick-view .popup-quick-view__window").html(jquery__WEBPACK_IMPORTED_MODULE_0___default()(data).find(".popup-quick-view__window").html());
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-quick-view .popup__window").html(jquery__WEBPACK_IMPORTED_MODULE_0___default()(data).find(".popup__window").html());
 
     this._initContentSlider("#popup-gallery--quick-view", "#slider-gallery--quick-view");
   },

@@ -1,77 +1,9 @@
 .popup-quick-view {
-	&__overlay {
-		position: fixed;
-		z-index: 500;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(#000, 0.2);
-		display: none;
-	}
-
-	&__loader {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-
-	&__window {
-		position: fixed;
-		z-index: 500;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		font-size: 0;
-		transform: translateY(-100%);
-		overflow: auto;
-
-		&:before {
-			content: " ";
-			display: inline-block;
-			vertical-align: middle;
-			height: 100%;
-			width: 0;
-		}
-	}
-
-	&__content {
-		display: inline-block;
-		vertical-align: middle;
-		width: 100%;
-		font-size: 1rem;
-	}
-
-	&__center {
-		position: relative;
-	}
-
-	&__close {
-		position: absolute;
-		right: 0;
-		top: 0;
-		padding: 1.5em;
-		font-size: 14px;
-		line-height: 0;
-		background: #fff;
-		border-radius: 0 5px 0 0;
-	}
+	visibility: hidden;
 }
 
 @media (min-width: 992px) {
 	.popup-quick-view {
-		&.loading {
-			.popup-quick-view__overlay {
-				display: block;
-			}
-		}
-
-		&.active {
-			.popup-quick-view__window {
-				transform: translateY(0);
-			}
-		}
+		visibility: visible;
 	}
 }

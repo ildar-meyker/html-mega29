@@ -4,15 +4,11 @@
 	font-size: 13px;
 
 	&--inner {
-		margin: 0;
+		margin: 0 !important;
 
 		.nav-path__window {
-			margin: 0;
+			margin: 0 40px 0 0;
 			padding: 0;
-
-			span {
-				margin-right: 40px !important;
-			}
 		}
 	}
 

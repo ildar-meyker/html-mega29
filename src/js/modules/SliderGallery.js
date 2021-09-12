@@ -81,8 +81,8 @@ const SliderGallery = {
 	},
 
 	_updateQuickViewContentSlider(data) {
-		$("#popup-quick-view .popup-quick-view__window").html(
-			$(data).find(".popup-quick-view__window").html()
+		$("#popup-quick-view .popup__window").html(
+			$(data).find(".popup__window").html()
 		);
 		this._initContentSlider(
 			"#popup-gallery--quick-view",
