@@ -1,6 +1,8 @@
 import $ from "jquery";
 
 const Popup = {
+	_stack: [],
+
 	_handleCloseButton(e) {
 		e.preventDefault();
 
@@ -22,6 +24,12 @@ const Popup = {
 	},
 
 	open(selector) {
+		if (this._stack.length) {
+			this.close(this._stack.pop());
+		}
+
+		this._stack.push(selector);
+
 		$(selector).addClass("active");
 	},
 

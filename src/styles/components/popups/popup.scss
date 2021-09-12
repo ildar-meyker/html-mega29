@@ -79,23 +79,24 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		min-height: 40px;
+		min-height: 60px;
 		border-bottom: 1px solid #f2f3f5;
-		padding: 10px 14px;
+		padding: 10px 20px;
 		font-size: 13px;
 		font-weight: 700;
 	}
 
 	&__body {
-		padding: 14px;
+		padding: 20px;
 	}
 
 	&__footer {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		min-height: 40px;
-		padding: 10px 14px;
+		text-align: center;
+		min-height: 60px;
+		padding: 10px 20px;
 		background: #fafafa;
 		font-size: 13px;
 
@@ -134,16 +135,14 @@
 @media (min-width: 768px) {
 	.popup {
 		&__header {
-			min-height: 60px;
 			font-size: 24px;
 		}
 
 		&__body {
-			padding: 35px;
+			padding: 110px 85px;
 		}
 
 		&__footer {
-			min-height: 60px;
 			font-size: 15px;
 		}
 
@@ -157,6 +156,10 @@
 	.popup {
 		&__header {
 			font-size: 18px;
+		}
+
+		&__body {
+			padding: 40px;
 		}
 	}
 }

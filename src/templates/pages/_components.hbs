@@ -1223,6 +1223,129 @@ layout: default.hbs
 	</div>
 
 	<div class="elems-section">
+
+		<div class="popup__panel popup-auth__panel">
+			<div class="popup__header">
+				Войти
+				<button type="button" class="popup__close js-popup-close">
+					<i class="icon-close"></i>
+				</button>
+			</div>
+			<div class="popup__body popup-auth__body">
+				
+				<form action="#" class="form-auth">
+
+					<div class="form-auth__item">
+						<div class="input-label-up">
+							<label class="input-label-up__label">Ваш телефон</label>
+							<input type="text" class="input-label-up__input">
+						</div>
+					</div>
+
+					<div class="form-auth__item">
+						<div class="input-label-up">
+							<label class="input-label-up__label">Ваш пароль</label>
+							<input type="password" class="input-label-up__input">
+						</div>
+					</div>
+
+					<div class="form-auth__remember">
+						<div>
+							<label class="check-border form-auth__check">
+								<div class="check-border__input"><input type="checkbox"></div>
+								<div class="check-border__text">Запомнить меня</div>
+							</label>
+						</div>
+						<div>
+							<a href="#">Забыли пароль?</a>
+						</div>
+					</div>
+
+					<div class="form-auth__item">
+						<button type="button" class="button button-green button--full">Войти</button>
+					</div>
+
+					<div class="form-auth__item">
+						<button type="button" class="button button-outline-green button--full js-popup-open" data-target="#popup-register">Зарегистрироваться</button>
+					</div>
+
+					<div class="form-auth__sep"><span>или</span></div>
+
+					<div class="form-auth__item">
+						<button type="button" class="button button-outline-white button--full form-auth__btn-oauth">
+							<i class="icon-vk-share"></i>
+							<span>Войти с помощью ВКонтакте</span>
+						</button>
+					</div>
+
+				</form>
+
+			</div>
+			<div class="popup__footer">
+				<div>Возникли проблемы? Посетите раздел <a href="#">Вопросы</a></div>
+			</div>
+		</div>
+		
+	</div>
+
+	<div class="elems-section">
+
+		<div class="popup__panel popup-auth__panel">
+			<div class="popup__header">
+				Зарегистрироваться
+				<button type="button" class="popup__close js-popup-close">
+					<i class="icon-close"></i>
+				</button>
+			</div>
+			<div class="popup__body popup-auth__body">
+				
+				<form action="#" class="form-auth">
+
+					<div class="form-auth__item">
+						<div class="input-label-up">
+							<label class="input-label-up__label">Ваш телефон</label>
+							<input type="text" class="input-label-up__input">
+						</div>
+					</div>
+
+					<div class="form-auth__item">
+						<div class="input-label-up">
+							<label class="input-label-up__label">Ваш email</label>
+							<input type="text" class="input-label-up__input">
+						</div>
+					</div>
+
+					<div class="form-auth__item">
+						<div class="input-label-up">
+							<label class="input-label-up__label">Ваш пароль</label>
+							<input type="password" class="input-label-up__input">
+						</div>
+					</div>
+
+					<div class="form-auth__agree">
+						<div>
+							<label class="check-border form-auth__check">
+								<div class="check-border__input"><input type="checkbox"></div>
+								<div class="check-border__text">Я согласен на <a href="#">обработку персональных данных</a></div>
+							</label>
+						</div>
+					</div>
+
+					<div class="form-auth__item">
+						<button type="button" class="button button-outline-green button--full">Зарегистрироваться</button>
+					</div>
+
+				</form>
+
+			</div>
+			<div class="popup__footer">
+				<div>Возникли проблемы? Посетите раздел <a href="#">Вопросы</a></div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="elems-section">
 		<div class="popup__panel popup-status__panel">
 			<div class="popup__header">
 				Ваш заказ

@@ -2205,12 +2205,12 @@
 	
 	                    <div class="popup__panel popup-auth__panel">
 	                        <div class="popup__header">
-	                            Личный кабинет
+	                            Войти
 	                            <button type="button" class="popup__close js-popup-close">
 	                                <i class="icon-close"></i>
 	                            </button>
 	                        </div>
-	                        <div class="popup__body">
+	                        <div class="popup__body popup-auth__body">
 	                            
 	                            <form action="#" class="form-auth">
 	
@@ -2245,7 +2245,7 @@
 	                                </div>
 	
 	                                <div class="form-auth__item">
-	                                    <button type="button" class="button button-outline-green button--full">Зарегистрироваться</button>
+	                                    <button type="button" class="button button-outline-green button--full js-popup-open" data-target="#popup-register">Зарегистрироваться</button>
 	                                </div>
 	
 	                                <div class="form-auth__sep"><span>или</span></div>
@@ -2285,12 +2285,12 @@
 	
 	                    <div class="popup__panel popup-auth__panel">
 	                        <div class="popup__header">
-	                            Личный кабинет
+	                            Зарегистрироваться
 	                            <button type="button" class="popup__close js-popup-close">
 	                                <i class="icon-close"></i>
 	                            </button>
 	                        </div>
-	                        <div class="popup__body">
+	                        <div class="popup__body popup-auth__body">
 	                            
 	                            <form action="#" class="form-auth">
 	
@@ -2372,7 +2372,7 @@
             </div>
             <div class="nav-bottom__text">Корзина</div>
         </a>
-        <a href="#" class="nav-bottom__item active">
+        <a href="#" class="nav-bottom__item active js-popup-open" data-target="#popup-auth">
             <div class="nav-bottom__icon">
                 <i class="icon-person"></i>
             </div>

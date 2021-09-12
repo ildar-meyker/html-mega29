@@ -26206,6 +26206,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 
 var Popup = {
+  _stack: [],
   _handleCloseButton: function _handleCloseButton(e) {
     e.preventDefault();
     var popupId = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).closest(".popup").attr("id");
@@ -26220,6 +26221,12 @@ var Popup = {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(target).removeClass("active");
   },
   open: function open(selector) {
+    if (this._stack.length) {
+      this.close(this._stack.pop());
+    }
+
+    this._stack.push(selector);
+
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(selector).addClass("active");
   },
   init: function init() {
