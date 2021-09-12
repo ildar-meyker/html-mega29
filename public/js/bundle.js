@@ -26631,6 +26631,7 @@ var SliderGallery = {
 
       _this._updateQuickViewFullsizeSlider(data);
 
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-quick-view .nav-path__window").scrollLeft(9999);
       jquery__WEBPACK_IMPORTED_MODULE_0___default()("#popup-quick-view").addClass("active");
       _this._currentMode = "quick-view";
     }).fail(function () {

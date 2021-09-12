@@ -160,6 +160,7 @@ const SliderGallery = {
 				this._updateQuickViewContentSlider(data);
 				this._updateQuickViewFullsizeSlider(data);
 
+				$("#popup-quick-view .nav-path__window").scrollLeft(9999);
 				$("#popup-quick-view").addClass("active");
 				this._currentMode = "quick-view";
 			})
