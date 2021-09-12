@@ -6933,6 +6933,9 @@ a {
 .popup.loading .popup__overlay {
   display: block; }
 
+.popup.active .popup__overlay {
+  display: block; }
+
 .popup.active .popup__window {
   -webkit-transform: translateY(0);
           transform: translateY(0); }
@@ -7054,90 +7057,97 @@ a {
   .popup__header {
     font-size: 18px; } }
 
-.popup-city-confirm {
+.popup-city-confirm__panel {
   max-width: 240px; }
-  .popup-city-confirm__body {
-    padding: 30px; }
-  .popup-city-confirm__footer {
-    padding-right: 30px;
-    padding-left: 30px; }
-  .popup-city-confirm__title {
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 700; }
-  .popup-city-confirm__choose__item {
-    margin-top: 10px; }
-    .popup-city-confirm__choose__item:first-child {
-      margin-top: 0; }
-  .popup-city-confirm__choose__button {
-    width: 100%;
-    font-size: 13px; }
+
+.popup-city-confirm__body {
+  padding: 30px; }
+
+.popup-city-confirm__footer {
+  padding-right: 30px;
+  padding-left: 30px; }
+
+.popup-city-confirm__title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700; }
+
+.popup-city-confirm__choose__item {
+  margin-top: 10px; }
+  .popup-city-confirm__choose__item:first-child {
+    margin-top: 0; }
+
+.popup-city-confirm__choose__button {
+  width: 100%;
+  font-size: 13px; }
 
 @media (min-width: 768px) {
-  .popup-city-confirm {
+  .popup-city-confirm__panel {
     max-width: 380px; }
-    .popup-city-confirm__body {
-      padding: 40px; }
-    .popup-city-confirm__footer {
-      padding-right: 40px;
-      padding-left: 40px; }
-    .popup-city-confirm__title {
-      margin-bottom: 35px;
-      font-size: 32px; }
-    .popup-city-confirm__choose__item {
-      margin-top: 15px; }
-    .popup-city-confirm__choose__button {
-      font-size: 18px; } }
+  .popup-city-confirm__body {
+    padding: 40px; }
+  .popup-city-confirm__footer {
+    padding-right: 40px;
+    padding-left: 40px; }
+  .popup-city-confirm__title {
+    margin-bottom: 35px;
+    font-size: 32px; }
+  .popup-city-confirm__choose__item {
+    margin-top: 15px; }
+  .popup-city-confirm__choose__button {
+    font-size: 18px; } }
 
 @media (min-width: 992px) {
-  .popup-city-confirm {
+  .popup-city-confirm__panel {
     max-width: 450px; }
-    .popup-city-confirm__choose {
-      display: flex; }
-      .popup-city-confirm__choose__item {
-        flex: 0 0 50%;
-        padding: 0 5px;
-        margin-top: 0; }
-      .popup-city-confirm__choose__button {
-        font-size: 15px; } }
+  .popup-city-confirm__choose {
+    display: flex; }
+    .popup-city-confirm__choose__item {
+      flex: 0 0 50%;
+      padding: 0 5px;
+      margin-top: 0; }
+    .popup-city-confirm__choose__button {
+      font-size: 15px; } }
 
-.popup-status {
+.popup-status__panel {
   max-width: 300px; }
-  .popup-status__icon {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    font-size: 12px; }
-    .popup-status__icon--error {
-      background: #f9e3e3;
-      color: #db524e; }
-    .popup-status__icon--success {
-      background: rgba(39, 174, 96, 0.12);
-      color: #27ae60; }
-  .popup-status__message {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 15px; }
+
+.popup-status__icon {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  font-size: 12px; }
+  .popup-status__icon--error {
+    background: #f9e3e3;
+    color: #db524e; }
+  .popup-status__icon--success {
+    background: rgba(39, 174, 96, 0.12);
+    color: #27ae60; }
+
+.popup-status__message {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 15px; }
 
 @media (min-width: 768px) {
-  .popup-status {
+  .popup-status__panel {
     max-width: 450px; }
-    .popup-status__message {
-      margin-top: 35px;
-      font-size: 18px; } }
+  .popup-status__message {
+    margin-top: 35px;
+    font-size: 18px; } }
 
 @media (min-width: 992px) {
-  .popup-status {
+  .popup-status__panel {
     max-width: 600px; }
-    .popup-status__icon {
-      width: 85px;
-      height: 85px;
-      font-size: 18px; } }
+  .popup-status__icon {
+    width: 85px;
+    height: 85px;
+    font-size: 18px; } }
 
 .popup-quick-view {
   visibility: hidden; }

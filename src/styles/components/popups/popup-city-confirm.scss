@@ -1,5 +1,7 @@
 .popup-city-confirm {
-	max-width: 240px;
+	&__panel {
+		max-width: 240px;
+	}
 
 	&__body {
 		padding: 30px;
@@ -35,7 +37,9 @@
 
 @media (min-width: 768px) {
 	.popup-city-confirm {
-		max-width: 380px;
+		&__panel {
+			max-width: 380px;
+		}
 
 		&__body {
 			padding: 40px;
@@ -65,7 +69,9 @@
 
 @media (min-width: 992px) {
 	.popup-city-confirm {
-		max-width: 450px;
+		&__panel {
+			max-width: 450px;
+		}
 
 		&__choose {
 			display: flex;

@@ -157,7 +157,7 @@
 
 </footer>
 
-
+{{!--  город при наведении --}}
 <aside class="panel panel-city panel--hidden" id="panel-city">
 	<div class="panel__arrow"></div>
 	<div class="panel__box">
@@ -169,7 +169,9 @@
 		</div>
 	</div>
 </aside>
+{{!-- /город при наведении --}}
 
+{{!--  корзина при наведении --}}
 <aside class="panel panel-cart panel--hidden" id="panel-cart">
 	<div class="panel__arrow"></div>
 	<div class="panel__box">
@@ -214,7 +216,9 @@
 		</div>
 	</div>
 </aside>
+{{!-- /корзина при наведении --}}
 
+{{!--  звонок при наведении --}}
 <form action="#" class="panel panel-call panel--hidden" id="panel-call">
 	<div class="panel__arrow"></div>
 	<div class="panel__box">
@@ -242,7 +246,9 @@
 		</div>
 	</div>
 </form>
+{{!-- /звонок при наведении --}}
 
+{{!-- авторизация при наведении --}}
 <form action="#" class="panel panel-auth panel--hidden" id="panel-auth">
 	<div class="panel__arrow"></div>
 	<div class="panel__box">
@@ -259,7 +265,9 @@
 		</div>
 	</div>
 </form>
+{{!-- /авторизация при наведении --}}
 
+{{!--  каталог при наведении --}}
 <nav class="nav-catalog nav-catalog--hidden" id="nav-catalog">
     <div class="page__center">
         <div class="nav-catalog__center">
@@ -399,10 +407,12 @@
         </div>
     </div>
 </nav>
+{{!-- /каталог при наведении --}}
 
+{{!--  мобильное бургер меню --}}
 <nav class="nav-burger" id="nav-burger">
     <div class="nav-burger__panel">
-        <a href="#" class="nav-burger__city">
+        <a href="#" class="nav-burger__city js-popup-city-confirm-open">
             <span>Архангельск</span>
             <i class="icon-location"></i>
         </a>
@@ -442,14 +452,243 @@
         </div>
     </div>
 </nav>
+{{!-- /мобильное бургер меню --}}
+
+{{!--  попап быстрого просмотра --}}
+<aside class="popup popup-quick-view" id="popup-quick-view">
+    <div class="popup__overlay">
+        <div class="popup__loader">
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <div class="popup__window">
+        <div class="popup__content">
+            <div class="page__center">
+                <div class="popup__center">
+
+                    <div class="product-main">
+                        
+                        {{> nav-path--inner }}
+
+                        <div class="h2">Аккумуляторная дрель-шуруповерт BossGSR 18V-60</div>
+                        
+                        <div class="product-main__content">
+                            <div class="product-main__gallery">
+
+                                <section class="slider-gallery slider-dots-1 slider-dots-1--large" id="slider-gallery--quick-view">
+                                    <div class="slider-gallery__list">
+                                        <div class="slider-gallery__item" data-index="0">
+                                            <div class="slider-gallery__slide" style="background-image: url(images/temp/gallery/1/1.jpeg);"></div>
+                                            <div class="slider-gallery__zoom" style="background-image: url(images/temp/gallery/1/1.jpeg);"></div>
+                                        </div>
+                                        <div class="slider-gallery__item" data-index="1">
+                                            <div class="slider-gallery__slide" style="background-image: url(images/temp/gallery/1/2.jpeg);"></div>
+                                            <div class="slider-gallery__zoom" style="background-image: url(images/temp/gallery/1/2.jpeg);"></div>
+                                        </div>
+                                        <div class="slider-gallery__item" data-index="2">
+                                            <div class="slider-gallery__slide" style="background-image: url(images/temp/gallery/1/3.jpeg);"></div>
+                                            <div class="slider-gallery__zoom" style="background-image: url(images/temp/gallery/1/3.jpeg);"></div>
+                                        </div>
+                                        <div class="slider-gallery__item" data-index="3">
+                                            <div class="slider-gallery__slide" style="background-image: url(images/temp/gallery/1/1.jpeg);"></div>
+                                            <div class="slider-gallery__zoom" style="background-image: url(images/temp/gallery/1/1.jpeg);"></div>
+                                        </div>
+                                        <div class="slider-gallery__item" data-index="4">
+                                            <div class="slider-gallery__slide" style="background-image: url(images/temp/gallery/1/2.jpeg);"></div>
+                                            <div class="slider-gallery__zoom" style="background-image: url(images/temp/gallery/1/2.jpeg);"></div>
+                                        </div>
+                                        <div class="slider-gallery__item" data-index="5">
+                                            <div class="slider-gallery__slide" style="background-image: url(images/temp/gallery/1/3.jpeg);"></div>
+                                            <div class="slider-gallery__zoom" style="background-image: url(images/temp/gallery/1/3.jpeg);"></div>
+                                        </div>
+                                        <div class="slider-gallery__item" data-index="6">
+                                            <div class="slider-gallery__slide" style="background-image: url(images/temp/gallery/1/1.jpeg);"></div>
+                                            <div class="slider-gallery__zoom" style="background-image: url(images/temp/gallery/1/1.jpeg);"></div>
+                                        </div>
+                                        <div class="slider-gallery__item" data-index="7">
+                                            <div class="slider-gallery__slide" style="background-image: url(images/temp/gallery/1/2.jpeg);"></div>
+                                            <div class="slider-gallery__zoom" style="background-image: url(images/temp/gallery/1/2.jpeg);"></div>
+                                        </div>
+                                        <div class="slider-gallery__item" data-index="8">
+                                            <div class="slider-gallery__slide" style="background-image: url(images/temp/gallery/1/3.jpeg);"></div>
+                                            <div class="slider-gallery__zoom" style="background-image: url(images/temp/gallery/1/3.jpeg);"></div>
+                                        </div>
+                                        <div class="slider-gallery__item" data-index="9">
+                                            <div class="slider-gallery__slide">
+                                                <div class="slider-gallery__video">
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vF0lLEFwy_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-gallery__nav">
+                                        <div class="slider-gallery__nav__window" data-simplebar>
+                                            <div class="slider-gallery__nav__item active" style="background-image: url(images/temp/gallery/1/1.jpeg);"></div>
+                                            <div class="slider-gallery__nav__item" style="background-image: url(images/temp/gallery/1/2.jpeg);"></div>
+                                            <div class="slider-gallery__nav__item" style="background-image: url(images/temp/gallery/1/3.jpeg);"></div>
+                                            <div class="slider-gallery__nav__item" style="background-image: url(images/temp/gallery/1/1.jpeg);"></div>
+                                            <div class="slider-gallery__nav__item" style="background-image: url(images/temp/gallery/1/2.jpeg);"></div>
+                                            <div class="slider-gallery__nav__item" style="background-image: url(images/temp/gallery/1/3.jpeg);"></div>
+                                            <div class="slider-gallery__nav__item" style="background-image: url(images/temp/gallery/1/1.jpeg);"></div>
+                                            <div class="slider-gallery__nav__item" style="background-image: url(images/temp/gallery/1/2.jpeg);"></div>
+                                            <div class="slider-gallery__nav__item" style="background-image: url(images/temp/gallery/1/3.jpeg);"></div>
+                                            <div class="slider-gallery__nav__item slider-gallery__nav__item--video" style="background-image: url(https://i.ytimg.com/vi/c6-RIyJAgJ4/maxresdefault.jpg);"></div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                            </div>
+                            <div class="product-main__props">
+                                <section class="product-props product-props--short">
+                                    <h3 class="product-props__title">Характеристики</h3>
+
+                                    <div class="product-props__list">
+                                        <dl>
+                                            <dt>
+                                                <span>
+                                                    Тип <i class="icon-help-circle product-props__info js-tooltip" title="Перейти к товарам данной категории"></i>
+                                                </span>
+                                            </dt>
+                                            <dd>
+                                                <a href="#" class="js-tooltip" title="Перейти к товарам данной категории">Дрель-шуруповерт</a>
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>
+                                                <span>
+                                                    Вид питания
+                                                </span>
+                                            </dt>
+                                            <dd>
+                                                Сменный аккумулятор
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>
+                                                <span>
+                                                    Напряжение аккумулятора
+                                                </span>
+                                            </dt>
+                                            <dd>
+                                                18 В
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>
+                                                <span>
+                                                    Тип аккумулятора
+                                                </span>
+                                            </dt>
+                                            <dd>
+                                                Li-ion
+                                            </dd>
+                                        </dl>
+                                        <dl>
+                                            <dt>
+                                                <span>
+                                                    Количество аккумуляторов в комплекте
+                                                </span>
+                                            </dt>
+                                            <dd>
+                                                2
+                                            </dd>
+                                        </dl>
+                                    </div>
+
+                                    <div class="product-props__more">
+                                        <a href="#">Смотреть все характеристики</a>
+                                    </div>
+                                    
+                                </section>
+                            </div>
+                            <div class="product-main__order">
+                                {{> checkout-product }}
+                            </div>
+                        </div>
+                    </div>
 
 
-{{> popup-quick-view }}
+                    <button type="button" class="popup__close popup__close--top js-quick-view-close">
+                        <i class="icon-close"></i>
+                    </button>
 
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</aside>
+{{!-- /попап быстрого просмотра --}}
+
+{{!--  попап галереи быстрого просмотра --}}
+<aside class="popup-gallery" id="popup-gallery--quick-view">
+    <div class="popup-gallery__header"></div>
+    <div class="popup-gallery__content">
+        <div class="popup-gallery__list">
+            <div class="popup-gallery__item">
+                <div class="popup-gallery__slide"></div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-gallery__footer"></div>
+</aside>
+{{!-- /попапгалереи  быстрого просмотра --}}
+
+{{!--  попап выбора города --}}
+<aside class="popup popup-city-confirm" id="popup-city-confirm">
+    <div class="popup__overlay">
+        <div class="popup__loader">
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <div class="popup__window">
+        <div class="popup__content">
+            <div class="page__center">
+                <div class="popup__center">
+
+                    <div class="popup__panel popup-city-confirm__panel">
+                        <div class="popup__header">
+                            Выберите город
+                            <button type="button" class="popup__close js-popup-city-confirm-close">
+                                <i class="icon-close"></i>
+                            </button>
+                        </div>
+                        <div class="popup__body popup-city-confirm__body">
+                            <div class="popup-city-confirm__title">Архангельск</div>
+                            <div class="popup-city-confirm__choose">
+                                <div class="popup-city-confirm__choose__item">
+                                    <button type="button" class="button button-green popup-city-confirm__choose__button">
+                                        Да, верно
+                                    </button>
+                                </div>
+                                <div class="popup-city-confirm__choose__item">
+                                    <button type="button" class="button button-outline-green popup-city-confirm__choose__button">
+                                        Нет, другой
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="popup__footer popup-city-confirm__footer">
+                            От выбранного города зависят цены, наличие товара и способы доставки.
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+{{!-- /попап выбора города --}}
+
+{{!--  кнопка скролла --}}
 <div class="page__scroll hidden" id="scroll-up">
     <button type="button" class="button-scroll">
         <i class="icon-arrow-right-short rotate-90"></i>
     </button>
 </div>
+{{!-- /кнопка скролла --}}
 
+{{!--  мобильный слой перекрытия  --}}
 <div class="page__bg-mobile" id="bg-mobile"></div>
+{{!-- /мобильный слой перекрытия  --}}

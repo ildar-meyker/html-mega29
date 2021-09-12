@@ -1,5 +1,7 @@
 .popup-status {
-	max-width: 300px;
+	&__panel {
+		max-width: 300px;
+	}
 
 	&__icon {
 		margin: 0 auto;
@@ -31,7 +33,9 @@
 
 @media (min-width: 768px) {
 	.popup-status {
-		max-width: 450px;
+		&__panel {
+			max-width: 450px;
+		}
 
 		&__message {
 			margin-top: 35px;
@@ -42,7 +46,9 @@
 
 @media (min-width: 992px) {
 	.popup-status {
-		max-width: 600px;
+		&__panel {
+			max-width: 600px;
+		}
 
 		&__icon {
 			width: 85px;

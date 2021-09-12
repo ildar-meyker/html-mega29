@@ -6,6 +6,10 @@
 	}
 
 	&.active {
+		.popup__overlay {
+			display: block;
+		}
+
 		.popup__window {
 			transform: translateY(0);
 		}

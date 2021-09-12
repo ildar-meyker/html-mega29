@@ -15,6 +15,7 @@ import "./modules/NavBottom";
 import "./modules/NavBurger";
 import "./modules/RangeSlider";
 import "./modules/Panel";
+import "./modules/PopupCityConfirm";
 import "./modules/Search";
 import "./modules/SliderCards";
 import "./modules/SliderItems1";
