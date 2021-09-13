@@ -53,6 +53,16 @@ layout: default.hbs
 		margin: 5px 0;
 	}
 
+	.elems-section .popup__overlay  {
+		display: none;
+	}
+
+	.elems-section .popup__window {
+		transform: none;
+		position: static;
+		overflow: visible;
+	}
+
 </style>
 
 
@@ -1162,287 +1172,38 @@ layout: default.hbs
 
 	<div class="elems-section">
 
-		<div class="popup popup__panel">
-			<div class="popup__header">
-				Ваш заказ
-				<button type="button" class="popup__close">
-					<i class="icon-close"></i>
-				</button>
-			</div>
-			<div class="popup__body">
-
-				{{> goods-short }}
-
-				<form action="#" class="form-1-click">
-					<div class="form-1-click__item">
-						<div class="input-label-up">
-							<label class="input-label-up__label">Ваше имя</label>
-							<input type="text" class="input-label-up__input">
-						</div>
-					</div>
-
-					<div class="form-1-click__item">
-						<div class="input-label-up">
-							<label class="input-label-up__label">Ваш телефон</label>
-							<input type="text" class="input-label-up__input" data-mask="+7(000)000-00-00" >
-						</div>
-					</div>
-
-					<div class="form-1-click__item">
-						<div class="input-label-up">
-							<label class="input-label-up__label">Ваш email</label>
-							<input type="text" class="input-label-up__input">
-						</div>
-					</div>
-
-					<div class="form-1-click__item">
-						<div class="input-label-up">
-							<label class="input-label-up__label">Ваш комментарий</label>
-							<textarea class="input-label-up__input"></textarea>
-						</div>
-					</div>
-
-					<div class="form-1-click__agree">
-						<label class="check-default">
-							<div class="icheckbox"><input type="checkbox" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-							<span>Я согласен с <a href="#" target="_blank">обработку персональных данных</a></span>
-						</label>
-					</div>
-
-					<div class="form-1-click__apply">
-						<button type="button" class="button button-green button--full">
-							Сохранить
-						</button>
-					</div>
-				</form>
-
-			</div>
-			<div class="popup__footer">
-				<span>Возникли проблемы? Посетите раздел <a href="#">Вопросы</a></span>
-			</div>
-			
-		</div>
+		{{> popup-1-click }}
 		
 	</div>
 
 	<div class="elems-section">
 
-		<div class="popup__panel popup-auth__panel">
-			<div class="popup__header">
-				Войти
-				<button type="button" class="popup__close js-popup-close">
-					<i class="icon-close"></i>
-				</button>
-			</div>
-			<div class="popup__body popup-auth__body">
-				
-				<form action="#" class="form-auth">
-
-					<div class="form-auth__item">
-						<div class="input-label-up">
-							<label class="input-label-up__label">Ваш телефон</label>
-							<input type="text" class="input-label-up__input">
-						</div>
-					</div>
-
-					<div class="form-auth__item">
-						<div class="input-label-up">
-							<label class="input-label-up__label">Ваш пароль</label>
-							<input type="password" class="input-label-up__input">
-						</div>
-					</div>
-
-					<div class="form-auth__remember">
-						<div>
-							<label class="check-border form-auth__check">
-								<div class="check-border__input"><input type="checkbox"></div>
-								<div class="check-border__text">Запомнить меня</div>
-							</label>
-						</div>
-						<div>
-							<a href="#">Забыли пароль?</a>
-						</div>
-					</div>
-
-					<div class="form-auth__item">
-						<button type="button" class="button button-green button--full">Войти</button>
-					</div>
-
-					<div class="form-auth__item">
-						<button type="button" class="button button-outline-green button--full js-popup-open" data-target="#popup-register">Зарегистрироваться</button>
-					</div>
-
-					<div class="form-auth__sep"><span>или</span></div>
-
-					<div class="form-auth__item">
-						<button type="button" class="button button-outline-white button--full form-auth__btn-oauth">
-							<i class="icon-vk-share"></i>
-							<span>Войти с помощью ВКонтакте</span>
-						</button>
-					</div>
-
-				</form>
-
-			</div>
-			<div class="popup__footer">
-				<div>Возникли проблемы? Посетите раздел <a href="#">Вопросы</a></div>
-			</div>
-		</div>
+		{{> popup-auth }}
 		
 	</div>
 
 	<div class="elems-section">
 
-		<div class="popup__panel popup-auth__panel">
-			<div class="popup__header">
-				Зарегистрироваться
-				<button type="button" class="popup__close js-popup-close">
-					<i class="icon-close"></i>
-				</button>
-			</div>
-			<div class="popup__body popup-auth__body">
-				
-				<form action="#" class="form-auth">
-
-					<div class="form-auth__item">
-						<div class="input-label-up">
-							<label class="input-label-up__label">Ваш телефон</label>
-							<input type="text" class="input-label-up__input">
-						</div>
-					</div>
-
-					<div class="form-auth__item">
-						<div class="input-label-up">
-							<label class="input-label-up__label">Ваш email</label>
-							<input type="text" class="input-label-up__input">
-						</div>
-					</div>
-
-					<div class="form-auth__item">
-						<div class="input-label-up">
-							<label class="input-label-up__label">Ваш пароль</label>
-							<input type="password" class="input-label-up__input">
-						</div>
-					</div>
-
-					<div class="form-auth__agree">
-						<div>
-							<label class="check-border form-auth__check">
-								<div class="check-border__input"><input type="checkbox"></div>
-								<div class="check-border__text">Я согласен на <a href="#">обработку персональных данных</a></div>
-							</label>
-						</div>
-					</div>
-
-					<div class="form-auth__item">
-						<button type="button" class="button button-outline-green button--full">Зарегистрироваться</button>
-					</div>
-
-				</form>
-
-			</div>
-			<div class="popup__footer">
-				<div>Возникли проблемы? Посетите раздел <a href="#">Вопросы</a></div>
-			</div>
-		</div>
+		{{> popup-register }}
 
 	</div>
 
 	<div class="elems-section">
-		<div class="popup__panel popup-status__panel popup-status__panel--error">
-			<div class="popup__header">
-				Ваш заказ
-				<button type="button" class="popup__close">
-					<i class="icon-close"></i>
-				</button>
-			</div>
-			<div class="popup__body">
-				<div class="popup-status__icon popup-status__icon--error">
-					<i class="icon-close"></i>
-				</div>
-				<div class="popup-status__message">
-					Произошла неизвестная ошибка. Пожалуйста, обратитесь в поддержку по телефону 8-800-222-12-40.
-				</div>
-			</div>
-		</div>
+
+		{{> popup-error-order }}
+
 	</div>
 
 	<div class="elems-section">
-		<div class="popup__panel popup-status__panel popup-status__panel--success">
-			<div class="popup__header ">
-				Ваш заказ
-				<button type="button" class="popup__close">
-					<i class="icon-close"></i>
-				</button>
-			</div>
-			<div class="popup__body">
-				<div class="popup-status__icon popup-status__icon--success">
-					<i class="icon-checked"></i>
-				</div>
-				<div class="popup-status__message">
-					Заказ принят в работу. Менеджер уточнит сроки и условия доставки и перезвонит вам в ближайшее время.
-				</div>
-			</div>
-		</div>
+		{{> popup-success-order }}
 	</div>
 
 	<div class="elems-section">
-		<div class="popup__panel popup-status__panel popup-status__panel--success">
-			<div class="popup__header">
-				Спасибо за отзыв
-				<button type="button" class="popup__close">
-					<i class="icon-close"></i>
-				</button>
-			</div>
-			<div class="popup__body">
-				<div class="popup-status__icon popup-status__icon--success">
-					<i class="icon-checked"></i>
-				</div>
-				<div class="popup-status__message">
-					Мы опубликуем его после проверки
-				</div>
-			</div>
-			
-		</div>
+		{{> popup-success-review}}
 	</div>
 
 	<div class="elems-section">
-		<div class="popup__panel popup-city__panel">
-			<div class="popup__header">
-				Выберите город
-				<button type="button" class="popup__close js-popup-city-close">
-					<i class="icon-close"></i>
-				</button>
-			</div>
-			<div class="popup__body popup-city__body">
-
-				<div class="popup-city__confirm active">
-					<div class="popup-city__title">Архангельск</div>
-					<div class="popup-city__btns-apply">
-						<div class="popup-city__btns-apply__item">
-							<button type="button" class="button button-green button--full">
-								Да, верно
-							</button>
-						</div>
-						<div class="popup-city__btns-apply__item">
-							<button type="button" class="button button-outline-green button--full js-popup-city-select">
-								Нет, другой
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<div class="popup-city__select">
-					<a href="#" class="popup-city__item active">Архангельск</a>
-					<a href="#" class="popup-city__item">Северодвинск</a>
-					<a href="#" class="popup-city__item">Сыктывкар</a>
-				</div>
-
-			</div>
-			<div class="popup__footer popup-city__footer">
-				От выбранного города зависят цены, наличие товара и способы доставки.
-			</div>
-		</div>
+		{{> popup-city }}
 	</div>
 
 </div>

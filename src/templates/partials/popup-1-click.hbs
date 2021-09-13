@@ -1,0 +1,79 @@
+{{!--  попап заказ в 1 клик --}}
+<aside class="popup popup-1-click" id="popup-1-click">
+    <div class="popup__overlay">
+        <div class="popup__loader">
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <div class="popup__window">
+        <div class="popup__content">
+            <div class="page__center">
+                <div class="popup__center">
+
+                    <div class="popup__panel popup-1-click__panel">
+                        <div class="popup__header">
+                            Ваш заказ
+                            <button type="button" class="popup__close js-popup-close">
+                                <i class="icon-close"></i>
+                            </button>
+                        </div>
+                        <div class="popup__body popup-1-click__body">
+
+                            {{> goods-short }}
+
+                            <form action="#" class="form-1-click">
+                                <div class="form-1-click__item">
+                                    <div class="input-label-up">
+                                        <label class="input-label-up__label">Ваше имя</label>
+                                        <input type="text" class="input-label-up__input">
+                                    </div>
+                                </div>
+
+                                <div class="form-1-click__item">
+                                    <div class="input-label-up">
+                                        <label class="input-label-up__label">Ваш телефон</label>
+                                        <input type="text" class="input-label-up__input" data-mask="+7(000)000-00-00" >
+                                    </div>
+                                </div>
+
+                                <div class="form-1-click__item">
+                                    <div class="input-label-up">
+                                        <label class="input-label-up__label">Ваш email</label>
+                                        <input type="text" class="input-label-up__input">
+                                    </div>
+                                </div>
+
+                                <div class="form-1-click__item">
+                                    <div class="input-label-up">
+                                        <label class="input-label-up__label">Ваш комментарий</label>
+                                        <textarea class="input-label-up__input"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-1-click__agree">
+                                    <label class="check-default">
+                                        <div class="icheckbox"><input type="checkbox" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                        <span>Я согласен с <a href="#" target="_blank">обработку персональных данных</a></span>
+                                    </label>
+                                </div>
+
+                                <div class="form-1-click__apply">
+                                    <button type="button" class="button button-green button--full">
+                                        Сохранить
+                                    </button>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="popup__footer">
+                            <span>Возникли проблемы? Посетите раздел <a href="#">Вопросы</a></span>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+{{!-- /попап заказ в 1 клик --}}

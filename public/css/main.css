@@ -7100,7 +7100,6 @@ a {
   box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
   border-radius: 5px;
   overflow: hidden;
-  max-width: 590px;
   margin: 0 auto; }
 
 .popup__header {
@@ -7156,7 +7155,7 @@ a {
   .popup__header {
     font-size: 24px; }
   .popup__body {
-    padding: 110px 85px; }
+    padding: 40px; }
   .popup__footer {
     font-size: 15px; }
   .popup__close {
@@ -7164,10 +7163,10 @@ a {
             transform: scale(1); } }
 
 @media (min-width: 992px) {
+  .popup__panel {
+    max-width: 590px; }
   .popup__header {
-    font-size: 18px; }
-  .popup__body {
-    padding: 40px; } }
+    font-size: 18px; } }
 
 .popup-city__panel {
   max-width: 240px; }
@@ -7241,12 +7240,14 @@ a {
       padding: 0 5px;
       margin-top: 0; } }
 
+.popup-status--success .popup__header {
+  border-color: #21a73f; }
+
+.popup-status--error .popup__header {
+  border-color: #f50505; }
+
 .popup-status__panel {
   max-width: 450px; }
-  .popup-status__panel--success .popup__header {
-    border-color: #21a73f; }
-  .popup-status__panel--error .popup__header {
-    border-color: #f50505; }
 
 .popup-status__icon {
   margin: 0 auto;
@@ -7270,8 +7271,8 @@ a {
   font-size: 15px; }
 
 @media (min-width: 768px) {
-  .popup-status__panel {
-    max-width: 450px; }
+  .popup-status__body {
+    padding: 20px 40px; }
   .popup-status__message {
     margin-top: 35px;
     font-size: 18px; } }
@@ -7279,6 +7280,8 @@ a {
 @media (min-width: 992px) {
   .popup-status__panel {
     max-width: 590px; }
+  .popup-status__body {
+    padding: 40px; }
   .popup-status__icon {
     width: 85px;
     height: 85px;
@@ -7435,11 +7438,23 @@ a {
 .popup-auth__panel {
   max-width: none; }
 
+@media (min-width: 768px) {
+  .popup-auth__body {
+    padding: 110px 85px; } }
+
 @media (min-width: 992px) {
   .popup-auth__panel {
     max-width: 450px; }
   .popup-auth__body {
-    padding-top: 20px; } }
+    padding: 40px; } }
+
+@media (min-width: 768px) {
+  .popup-1-click__body {
+    padding: 50px 85px; } }
+
+@media (min-width: 992px) {
+  .popup-1-click__body {
+    padding: 40px; } }
 
 .slider-main {
   margin-top: 10px;

@@ -1,18 +1,21 @@
 .popup-status {
+	&--success {
+		.popup__header {
+			border-color: #21a73f;
+		}
+	}
+
+	&--error {
+		.popup__header {
+			border-color: #f50505;
+		}
+	}
+
 	&__panel {
 		max-width: 450px;
+	}
 
-		&--success {
-			.popup__header {
-				border-color: #21a73f;
-			}
-		}
-
-		&--error {
-			.popup__header {
-				border-color: #f50505;
-			}
-		}
+	&__body {
 	}
 
 	&__icon {
@@ -46,7 +49,10 @@
 @media (min-width: 768px) {
 	.popup-status {
 		&__panel {
-			max-width: 450px;
+		}
+
+		&__body {
+			padding: 20px 40px;
 		}
 
 		&__message {
@@ -60,6 +66,10 @@
 	.popup-status {
 		&__panel {
 			max-width: 590px;
+		}
+
+		&__body {
+			padding: 40px;
 		}
 
 		&__icon {

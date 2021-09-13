@@ -68,6 +68,16 @@
 		margin: 5px 0;
 	}
 
+	.elems-section .popup__overlay  {
+		display: none;
+	}
+
+	.elems-section .popup__window {
+		transform: none;
+		position: static;
+		overflow: visible;
+	}
+
 </style>
 
 
@@ -1226,318 +1236,439 @@
 
 	<div class="elems-section">
 
-		<div class="popup popup__panel">
-			<div class="popup__header">
-				Ваш заказ
-				<button type="button" class="popup__close">
-					<i class="icon-close"></i>
-				</button>
-			</div>
-			<div class="popup__body">
-
-				<div class="goods-short">
-				    <div class="goods-short__item">
-				        <div class="goods-short__col-image">
-				            <div class="image-box image-box--contain" style="padding-top: 100%; background-image: url('images/temp/goods/5.jpeg')"></div>
-				        </div>
-				        <div class="goods-short__col-desc">
-				
-				            <div class="goods-short__col-title">
-				                <div class="goods-short__title">
-				                    Наименование товара высотой в карточке товара в три строки 012-345-678-9
-				                </div>
-				                <div class="goods-short__labels">
-				                    <div class="labels">
-				                        <div class="labels__green">Товар месяца</div>
-				                    </div>
-				                </div>
-				            </div>
-				
-				            <div class="goods-short__col-price">
-				                <div class="goods-short__points">
-				                    <div class="labels">
-				                        <div class="labels__orange">+Х000 баллов</div>
-				                    </div>
-				                </div>
-				                <div class="goods-short__price">
-				                    <div>8 345 <span class="rubl">₽</span></div>
-				                    <div class="old-price">12 345 <span class="rubl">₽</span></div>
-				                </div>
-				            </div>
-				            
-				        </div>
-				    </div>
-				</div>
-				<form action="#" class="form-1-click">
-					<div class="form-1-click__item">
-						<div class="input-label-up">
-							<label class="input-label-up__label">Ваше имя</label>
-							<input type="text" class="input-label-up__input">
-						</div>
-					</div>
-
-					<div class="form-1-click__item">
-						<div class="input-label-up">
-							<label class="input-label-up__label">Ваш телефон</label>
-							<input type="text" class="input-label-up__input" data-mask="+7(000)000-00-00" >
-						</div>
-					</div>
-
-					<div class="form-1-click__item">
-						<div class="input-label-up">
-							<label class="input-label-up__label">Ваш email</label>
-							<input type="text" class="input-label-up__input">
-						</div>
-					</div>
-
-					<div class="form-1-click__item">
-						<div class="input-label-up">
-							<label class="input-label-up__label">Ваш комментарий</label>
-							<textarea class="input-label-up__input"></textarea>
-						</div>
-					</div>
-
-					<div class="form-1-click__agree">
-						<label class="check-default">
-							<div class="icheckbox"><input type="checkbox" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
-							<span>Я согласен с <a href="#" target="_blank">обработку персональных данных</a></span>
-						</label>
-					</div>
-
-					<div class="form-1-click__apply">
-						<button type="button" class="button button-green button--full">
-							Сохранить
-						</button>
-					</div>
-				</form>
-
-			</div>
-			<div class="popup__footer">
-				<span>Возникли проблемы? Посетите раздел <a href="#">Вопросы</a></span>
-			</div>
-			
-		</div>
+		<aside class="popup popup-1-click" id="popup-1-click">
+		    <div class="popup__overlay">
+		        <div class="popup__loader">
+		            <div class="spinner"></div>
+		        </div>
+		    </div>
+		    <div class="popup__window">
+		        <div class="popup__content">
+		            <div class="page__center">
+		                <div class="popup__center">
+		
+		                    <div class="popup__panel popup-1-click__panel">
+		                        <div class="popup__header">
+		                            Ваш заказ
+		                            <button type="button" class="popup__close js-popup-close">
+		                                <i class="icon-close"></i>
+		                            </button>
+		                        </div>
+		                        <div class="popup__body popup-1-click__body">
+		
+		                            <div class="goods-short">
+		                                <div class="goods-short__item">
+		                                    <div class="goods-short__col-image">
+		                                        <div class="image-box image-box--contain" style="padding-top: 100%; background-image: url('images/temp/goods/5.jpeg')"></div>
+		                                    </div>
+		                                    <div class="goods-short__col-desc">
+		                            
+		                                        <div class="goods-short__col-title">
+		                                            <div class="goods-short__title">
+		                                                Наименование товара высотой в карточке товара в три строки 012-345-678-9
+		                                            </div>
+		                                            <div class="goods-short__labels">
+		                                                <div class="labels">
+		                                                    <div class="labels__green">Товар месяца</div>
+		                                                </div>
+		                                            </div>
+		                                        </div>
+		                            
+		                                        <div class="goods-short__col-price">
+		                                            <div class="goods-short__points">
+		                                                <div class="labels">
+		                                                    <div class="labels__orange">+Х000 баллов</div>
+		                                                </div>
+		                                            </div>
+		                                            <div class="goods-short__price">
+		                                                <div>8 345 <span class="rubl">₽</span></div>
+		                                                <div class="old-price">12 345 <span class="rubl">₽</span></div>
+		                                            </div>
+		                                        </div>
+		                                        
+		                                    </div>
+		                                </div>
+		                            </div>
+		                            <form action="#" class="form-1-click">
+		                                <div class="form-1-click__item">
+		                                    <div class="input-label-up">
+		                                        <label class="input-label-up__label">Ваше имя</label>
+		                                        <input type="text" class="input-label-up__input">
+		                                    </div>
+		                                </div>
+		
+		                                <div class="form-1-click__item">
+		                                    <div class="input-label-up">
+		                                        <label class="input-label-up__label">Ваш телефон</label>
+		                                        <input type="text" class="input-label-up__input" data-mask="+7(000)000-00-00" >
+		                                    </div>
+		                                </div>
+		
+		                                <div class="form-1-click__item">
+		                                    <div class="input-label-up">
+		                                        <label class="input-label-up__label">Ваш email</label>
+		                                        <input type="text" class="input-label-up__input">
+		                                    </div>
+		                                </div>
+		
+		                                <div class="form-1-click__item">
+		                                    <div class="input-label-up">
+		                                        <label class="input-label-up__label">Ваш комментарий</label>
+		                                        <textarea class="input-label-up__input"></textarea>
+		                                    </div>
+		                                </div>
+		
+		                                <div class="form-1-click__agree">
+		                                    <label class="check-default">
+		                                        <div class="icheckbox"><input type="checkbox" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+		                                        <span>Я согласен с <a href="#" target="_blank">обработку персональных данных</a></span>
+		                                    </label>
+		                                </div>
+		
+		                                <div class="form-1-click__apply">
+		                                    <button type="button" class="button button-green button--full">
+		                                        Сохранить
+		                                    </button>
+		                                </div>
+		                            </form>
+		
+		                        </div>
+		                        <div class="popup__footer">
+		                            <span>Возникли проблемы? Посетите раздел <a href="#">Вопросы</a></span>
+		                        </div>
+		                        
+		                    </div>
+		                    
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</aside>
 		
 	</div>
 
 	<div class="elems-section">
 
-		<div class="popup__panel popup-auth__panel">
-			<div class="popup__header">
-				Войти
-				<button type="button" class="popup__close js-popup-close">
-					<i class="icon-close"></i>
-				</button>
-			</div>
-			<div class="popup__body popup-auth__body">
-				
-				<form action="#" class="form-auth">
-
-					<div class="form-auth__item">
-						<div class="input-label-up">
-							<label class="input-label-up__label">Ваш телефон</label>
-							<input type="text" class="input-label-up__input">
-						</div>
-					</div>
-
-					<div class="form-auth__item">
-						<div class="input-label-up">
-							<label class="input-label-up__label">Ваш пароль</label>
-							<input type="password" class="input-label-up__input">
-						</div>
-					</div>
-
-					<div class="form-auth__remember">
-						<div>
-							<label class="check-border form-auth__check">
-								<div class="check-border__input"><input type="checkbox"></div>
-								<div class="check-border__text">Запомнить меня</div>
-							</label>
-						</div>
-						<div>
-							<a href="#">Забыли пароль?</a>
-						</div>
-					</div>
-
-					<div class="form-auth__item">
-						<button type="button" class="button button-green button--full">Войти</button>
-					</div>
-
-					<div class="form-auth__item">
-						<button type="button" class="button button-outline-green button--full js-popup-open" data-target="#popup-register">Зарегистрироваться</button>
-					</div>
-
-					<div class="form-auth__sep"><span>или</span></div>
-
-					<div class="form-auth__item">
-						<button type="button" class="button button-outline-white button--full form-auth__btn-oauth">
-							<i class="icon-vk-share"></i>
-							<span>Войти с помощью ВКонтакте</span>
-						</button>
-					</div>
-
-				</form>
-
-			</div>
-			<div class="popup__footer">
-				<div>Возникли проблемы? Посетите раздел <a href="#">Вопросы</a></div>
-			</div>
-		</div>
+		<aside class="popup popup-auth" id="popup-auth">
+		    <div class="popup__overlay">
+		        <div class="popup__loader">
+		            <div class="spinner"></div>
+		        </div>
+		    </div>
+		    <div class="popup__window">
+		        <div class="popup__content">
+		            <div class="page__center">
+		                <div class="popup__center">
+		
+		                    <div class="popup__panel popup-auth__panel">
+		                        <div class="popup__header">
+		                            Войти
+		                            <button type="button" class="popup__close js-popup-close">
+		                                <i class="icon-close"></i>
+		                            </button>
+		                        </div>
+		                        <div class="popup__body popup-auth__body">
+		                            
+		                            <form action="#" class="form-auth">
+		
+		                                <div class="form-auth__item">
+		                                    <div class="input-label-up">
+		                                        <label class="input-label-up__label">Ваш телефон</label>
+		                                        <input type="text" class="input-label-up__input">
+		                                    </div>
+		                                </div>
+		
+		                                <div class="form-auth__item">
+		                                    <div class="input-label-up">
+		                                        <label class="input-label-up__label">Ваш пароль</label>
+		                                        <input type="password" class="input-label-up__input">
+		                                    </div>
+		                                </div>
+		
+		                                <div class="form-auth__remember">
+		                                    <div>
+		                                        <label class="check-border form-auth__check">
+		                                            <div class="check-border__input"><input type="checkbox"></div>
+		                                            <div class="check-border__text">Запомнить меня</div>
+		                                        </label>
+		                                    </div>
+		                                    <div>
+		                                        <a href="#">Забыли пароль?</a>
+		                                    </div>
+		                                </div>
+		
+		                                <div class="form-auth__item">
+		                                    <button type="button" class="button button-green button--full">Войти</button>
+		                                </div>
+		
+		                                <div class="form-auth__item">
+		                                    <button type="button" class="button button-outline-green button--full js-popup-open" data-target="#popup-register">Зарегистрироваться</button>
+		                                </div>
+		
+		                                <div class="form-auth__sep"><span>или</span></div>
+		
+		                                <div class="form-auth__item">
+		                                    <button type="button" class="button button-outline-white button--full form-auth__btn-oauth">
+		                                        <i class="icon-vk-share"></i>
+		                                        <span>Войти с помощью ВКонтакте</span>
+		                                    </button>
+		                                </div>
+		
+		                            </form>
+		
+		                        </div>
+		                        <div class="popup__footer">
+		                            <div>Возникли проблемы? Посетите раздел <a href="#">Вопросы</a></div>
+		                        </div>
+		                    </div>
+		                    
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</aside>
 		
 	</div>
 
 	<div class="elems-section">
 
-		<div class="popup__panel popup-auth__panel">
-			<div class="popup__header">
-				Зарегистрироваться
-				<button type="button" class="popup__close js-popup-close">
-					<i class="icon-close"></i>
-				</button>
-			</div>
-			<div class="popup__body popup-auth__body">
-				
-				<form action="#" class="form-auth">
-
-					<div class="form-auth__item">
-						<div class="input-label-up">
-							<label class="input-label-up__label">Ваш телефон</label>
-							<input type="text" class="input-label-up__input">
-						</div>
-					</div>
-
-					<div class="form-auth__item">
-						<div class="input-label-up">
-							<label class="input-label-up__label">Ваш email</label>
-							<input type="text" class="input-label-up__input">
-						</div>
-					</div>
-
-					<div class="form-auth__item">
-						<div class="input-label-up">
-							<label class="input-label-up__label">Ваш пароль</label>
-							<input type="password" class="input-label-up__input">
-						</div>
-					</div>
-
-					<div class="form-auth__agree">
-						<div>
-							<label class="check-border form-auth__check">
-								<div class="check-border__input"><input type="checkbox"></div>
-								<div class="check-border__text">Я согласен на <a href="#">обработку персональных данных</a></div>
-							</label>
-						</div>
-					</div>
-
-					<div class="form-auth__item">
-						<button type="button" class="button button-outline-green button--full">Зарегистрироваться</button>
-					</div>
-
-				</form>
-
-			</div>
-			<div class="popup__footer">
-				<div>Возникли проблемы? Посетите раздел <a href="#">Вопросы</a></div>
-			</div>
-		</div>
+		<aside class="popup popup-auth" id="popup-register">
+		    <div class="popup__overlay">
+		        <div class="popup__loader">
+		            <div class="spinner"></div>
+		        </div>
+		    </div>
+		    <div class="popup__window">
+		        <div class="popup__content">
+		            <div class="page__center">
+		                <div class="popup__center">
+		
+		                    <div class="popup__panel popup-auth__panel">
+		                        <div class="popup__header">
+		                            Зарегистрироваться
+		                            <button type="button" class="popup__close js-popup-close">
+		                                <i class="icon-close"></i>
+		                            </button>
+		                        </div>
+		                        <div class="popup__body popup-auth__body">
+		                            
+		                            <form action="#" class="form-auth">
+		
+		                                <div class="form-auth__item">
+		                                    <div class="input-label-up">
+		                                        <label class="input-label-up__label">Ваш телефон</label>
+		                                        <input type="text" class="input-label-up__input">
+		                                    </div>
+		                                </div>
+		
+		                                <div class="form-auth__item">
+		                                    <div class="input-label-up">
+		                                        <label class="input-label-up__label">Ваш email</label>
+		                                        <input type="text" class="input-label-up__input">
+		                                    </div>
+		                                </div>
+		
+		                                <div class="form-auth__item">
+		                                    <div class="input-label-up">
+		                                        <label class="input-label-up__label">Ваш пароль</label>
+		                                        <input type="password" class="input-label-up__input">
+		                                    </div>
+		                                </div>
+		
+		                                <div class="form-auth__agree">
+		                                    <div>
+		                                        <label class="check-border form-auth__check">
+		                                            <div class="check-border__input"><input type="checkbox"></div>
+		                                            <div class="check-border__text">Я согласен на <a href="#">обработку персональных данных</a></div>
+		                                        </label>
+		                                    </div>
+		                                </div>
+		
+		                                <div class="form-auth__item">
+		                                    <button type="button" class="button button-outline-green button--full">Зарегистрироваться</button>
+		                                </div>
+		
+		                            </form>
+		
+		                        </div>
+		                        <div class="popup__footer">
+		                            <div>Возникли проблемы? Посетите раздел <a href="#">Вопросы</a></div>
+		                        </div>
+		                    </div>
+		                    
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</aside>
 
 	</div>
 
 	<div class="elems-section">
-		<div class="popup__panel popup-status__panel popup-status__panel--error">
-			<div class="popup__header">
-				Ваш заказ
-				<button type="button" class="popup__close">
-					<i class="icon-close"></i>
-				</button>
-			</div>
-			<div class="popup__body">
-				<div class="popup-status__icon popup-status__icon--error">
-					<i class="icon-close"></i>
-				</div>
-				<div class="popup-status__message">
-					Произошла неизвестная ошибка. Пожалуйста, обратитесь в поддержку по телефону 8-800-222-12-40.
-				</div>
-			</div>
-		</div>
+
+		<aside class="popup popup-status popup-status--error" id="popup-error-order">
+		    <div class="popup__overlay">
+		        <div class="popup__loader">
+		            <div class="spinner"></div>
+		        </div>
+		    </div>
+		    <div class="popup__window">
+		        <div class="popup__content">
+		            <div class="page__center">
+		                <div class="popup__center">
+		
+		                    <div class="popup__panel popup-status__panel">
+		                        <div class="popup__header">
+		                            Ваш заказ
+		                            <button type="button" class="popup__close js-popup-close">
+		                                <i class="icon-close"></i>
+		                            </button>
+		                        </div>
+		                        <div class="popup__body popup-status__body">
+		                            <div class="popup-status__icon popup-status__icon--error">
+		                                <i class="icon-close"></i>
+		                            </div>
+		                            <div class="popup-status__message">
+		                                Произошла неизвестная ошибка. Пожалуйста, обратитесь в поддержку по телефону 8-800-222-12-40.
+		                            </div>
+		                        </div>
+		                    </div>
+		                    
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</aside>
+
 	</div>
 
 	<div class="elems-section">
-		<div class="popup__panel popup-status__panel popup-status__panel--success">
-			<div class="popup__header ">
-				Ваш заказ
-				<button type="button" class="popup__close">
-					<i class="icon-close"></i>
-				</button>
-			</div>
-			<div class="popup__body">
-				<div class="popup-status__icon popup-status__icon--success">
-					<i class="icon-checked"></i>
-				</div>
-				<div class="popup-status__message">
-					Заказ принят в работу. Менеджер уточнит сроки и условия доставки и перезвонит вам в ближайшее время.
-				</div>
-			</div>
-		</div>
+		<aside class="popup popup-status popup-status--success" id="popup-success-order">
+		    <div class="popup__overlay">
+		        <div class="popup__loader">
+		            <div class="spinner"></div>
+		        </div>
+		    </div>
+		    <div class="popup__window">
+		        <div class="popup__content">
+		            <div class="page__center">
+		                <div class="popup__center">
+		
+		                    <div class="popup__panel popup-status__panel">
+		                        <div class="popup__header ">
+		                            Ваш заказ
+		                            <button type="button" class="popup__close js-popup-close">
+		                                <i class="icon-close"></i>
+		                            </button>
+		                        </div>
+		                        <div class="popup__body popup-status__body">
+		                            <div class="popup-status__icon popup-status__icon--success">
+		                                <i class="icon-checked"></i>
+		                            </div>
+		                            <div class="popup-status__message">
+		                                Заказ принят в работу. Менеджер уточнит сроки и условия доставки и перезвонит вам в ближайшее время.
+		                            </div>
+		                        </div>
+		                    </div>
+		                    
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</aside>
 	</div>
 
 	<div class="elems-section">
-		<div class="popup__panel popup-status__panel popup-status__panel--success">
-			<div class="popup__header">
-				Спасибо за отзыв
-				<button type="button" class="popup__close">
-					<i class="icon-close"></i>
-				</button>
-			</div>
-			<div class="popup__body">
-				<div class="popup-status__icon popup-status__icon--success">
-					<i class="icon-checked"></i>
-				</div>
-				<div class="popup-status__message">
-					Мы опубликуем его после проверки
-				</div>
-			</div>
-			
-		</div>
+		<aside class="popup popup-status popup-status--success" id="popup-success-review">
+		    <div class="popup__overlay">
+		        <div class="popup__loader">
+		            <div class="spinner"></div>
+		        </div>
+		    </div>
+		    <div class="popup__window">
+		        <div class="popup__content">
+		            <div class="page__center">
+		                <div class="popup__center">
+		
+		                    <div class="popup__panel popup-status__panel">
+		                        <div class="popup__header">
+		                            Спасибо за отзыв
+		                            <button type="button" class="popup__close js-popup-close">
+		                                <i class="icon-close"></i>
+		                            </button>
+		                        </div>
+		                        <div class="popup__body popup-status__body">
+		                            <div class="popup-status__icon popup-status__icon--success">
+		                                <i class="icon-checked"></i>
+		                            </div>
+		                            <div class="popup-status__message">
+		                                Мы опубликуем его после проверки
+		                            </div>
+		                        </div>
+		                        
+		                    </div>
+		                    
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</aside>
 	</div>
 
 	<div class="elems-section">
-		<div class="popup__panel popup-city__panel">
-			<div class="popup__header">
-				Выберите город
-				<button type="button" class="popup__close js-popup-city-close">
-					<i class="icon-close"></i>
-				</button>
-			</div>
-			<div class="popup__body popup-city__body">
-
-				<div class="popup-city__confirm active">
-					<div class="popup-city__title">Архангельск</div>
-					<div class="popup-city__btns-apply">
-						<div class="popup-city__btns-apply__item">
-							<button type="button" class="button button-green button--full">
-								Да, верно
-							</button>
-						</div>
-						<div class="popup-city__btns-apply__item">
-							<button type="button" class="button button-outline-green button--full js-popup-city-select">
-								Нет, другой
-							</button>
-						</div>
-					</div>
-				</div>
-
-				<div class="popup-city__select">
-					<a href="#" class="popup-city__item active">Архангельск</a>
-					<a href="#" class="popup-city__item">Северодвинск</a>
-					<a href="#" class="popup-city__item">Сыктывкар</a>
-				</div>
-
-			</div>
-			<div class="popup__footer popup-city__footer">
-				От выбранного города зависят цены, наличие товара и способы доставки.
-			</div>
-		</div>
+		<aside class="popup popup-city" id="popup-city">
+		    <div class="popup__overlay">
+		        <div class="popup__loader">
+		            <div class="spinner"></div>
+		        </div>
+		    </div>
+		    <div class="popup__window">
+		        <div class="popup__content">
+		            <div class="page__center">
+		                <div class="popup__center">
+		
+		                    <div class="popup__panel popup-city__panel">
+		                        <div class="popup__header">
+		                            Выберите город
+		                            <button type="button" class="popup__close js-popup-city-close">
+		                                <i class="icon-close"></i>
+		                            </button>
+		                        </div>
+		                        <div class="popup__body popup-city__body">
+		
+		                           <div class="popup-city__confirm active">
+		                                <div class="popup-city__title">Архангельск</div>
+		                                <div class="popup-city__btns-apply">
+		                                    <div class="popup-city__btns-apply__item">
+		                                        <button type="button" class="button button-green button--full">
+		                                            Да, верно
+		                                        </button>
+		                                    </div>
+		                                    <div class="popup-city__btns-apply__item">
+		                                        <button type="button" class="button button-outline-green button--full js-popup-city-select">
+		                                            Нет, другой
+		                                        </button>
+		                                    </div>
+		                                </div>
+		                           </div>
+		
+		                            <div class="popup-city__select">
+		                                <a href="#" class="popup-city__item active">Архангельск</a>
+		                                <a href="#" class="popup-city__item">Северодвинск</a>
+		                                <a href="#" class="popup-city__item">Сыктывкар</a>
+		                            </div>
+		
+		                        </div>
+		                        <div class="popup__footer popup-city__footer">
+		                            От выбранного города зависят цены, наличие товара и способы доставки.
+		                        </div>
+		                    </div>
+		                    
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</aside>
 	</div>
 
 </div>

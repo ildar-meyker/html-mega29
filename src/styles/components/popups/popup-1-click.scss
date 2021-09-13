@@ -1,21 +1,19 @@
-.popup-auth {
+.popup-1-click {
 	&__panel {
-		max-width: none;
 	}
 }
 
 @media (min-width: 768px) {
-	.popup-auth {
+	.popup-1-click {
 		&__body {
-			padding: 110px 85px;
+			padding: 50px 85px;
 		}
 	}
 }
 
 @media (min-width: 992px) {
-	.popup-auth {
+	.popup-1-click {
 		&__panel {
-			max-width: 450px;
 		}
 
 		&__body {
