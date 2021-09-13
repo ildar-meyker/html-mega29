@@ -217,6 +217,32 @@
 	}
 }
 
+.button-outline-red {
+	border-color: #f50505;
+	background: #fff;
+	color: #f50505;
+
+	&.loading,
+	&:hover,
+	&.hover {
+		background: #f50505;
+		color: #fff;
+	}
+
+	&:active,
+	&.active {
+		background: #f50505;
+		box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.25);
+		color: #fff;
+	}
+
+	&.disabled {
+		background: none !important;
+		border-color: #979797 !important;
+		color: #979797 !important;
+	}
+}
+
 @media (min-width: 768px) and (max-width: 991.98px) {
 	.button {
 		padding: 18px 20px;
