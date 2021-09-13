@@ -17,6 +17,7 @@ import "./modules/RangeSlider";
 import "./modules/Panel";
 import "./modules/Popup";
 import "./modules/PopupCity";
+import "./modules/Rating";
 import "./modules/Search";
 import "./modules/SliderCards";
 import "./modules/SliderItems1";

@@ -1,0 +1,20 @@
+.popup-review {
+	&__body {
+	}
+}
+
+@media (min-width: 768px) {
+	.popup-review {
+		&__body {
+			padding: 35px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.popup-review {
+		&__body {
+			padding: 20px;
+		}
+	}
+}

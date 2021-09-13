@@ -2495,15 +2495,27 @@ a {
   display: flex;
   align-items: center; }
   .rating__stars {
+    position: relative;
     background: url("../images/star-empty.png") repeat-x;
     background-size: auto 100%;
     width: 6em;
     height: 1em; }
-    .rating__stars div {
+    .rating__stars__value {
       background: url("../images/star-filled.png") repeat-x;
       background-size: auto 100%;
       width: 0;
       height: 100%; }
+    .rating__stars__vote {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      cursor: pointer; }
+      .rating__stars__vote > div {
+        flex: 0 0 auto;
+        width: 20%; }
   .rating__count {
     margin-left: 5px;
     font-size: 0.8em;
@@ -5356,6 +5368,46 @@ a {
     margin-top: 25px;
     font-size: 15px; } }
 
+.form-review__rating {
+  display: flex;
+  align-items: center; }
+  .form-review__rating__label {
+    font-size: 15px;
+    margin-right: 10px; }
+  .form-review__rating__stars {
+    font-size: 24px; }
+
+.form-review__item {
+  margin-top: 15px; }
+
+.form-review__label {
+  display: block;
+  margin-bottom: 10px; }
+
+.form-review__agree {
+  margin: 20px 0; }
+
+@media (min-width: 768px) {
+  .form-review__rating__label {
+    font-size: 18px; }
+  .form-review__item {
+    margin-top: 30px; }
+  .form-review__agree {
+    margin: 30px 0; } }
+
+@media (min-width: 992px) {
+  .form-review__rating__stars {
+    font-size: 20px; }
+  .form-review__item {
+    margin-top: 15px; }
+  .form-review__agree {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 10px 0; }
+  .form-review__apply {
+    max-width: 270px;
+    margin: 0 auto; } }
+
 .promo-best {
   position: relative;
   margin-top: 30px; }
@@ -7455,6 +7507,14 @@ a {
 @media (min-width: 992px) {
   .popup-1-click__body {
     padding: 40px; } }
+
+@media (min-width: 768px) {
+  .popup-review__body {
+    padding: 35px; } }
+
+@media (min-width: 992px) {
+  .popup-review__body {
+    padding: 20px; } }
 
 .slider-main {
   margin-top: 10px;

@@ -25576,12 +25576,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_Panel__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/Panel */ "./src/js/modules/Panel.js");
 /* harmony import */ var _modules_Popup__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/Popup */ "./src/js/modules/Popup.js");
 /* harmony import */ var _modules_PopupCity__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/PopupCity */ "./src/js/modules/PopupCity.js");
-/* harmony import */ var _modules_Search__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/Search */ "./src/js/modules/Search.js");
-/* harmony import */ var _modules_SliderCards__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/SliderCards */ "./src/js/modules/SliderCards.js");
-/* harmony import */ var _modules_SliderItems1__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/SliderItems1 */ "./src/js/modules/SliderItems1.js");
-/* harmony import */ var _modules_SliderMain__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./modules/SliderMain */ "./src/js/modules/SliderMain.js");
-/* harmony import */ var _modules_SliderGallery__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./modules/SliderGallery */ "./src/js/modules/SliderGallery.js");
-/* harmony import */ var _modules_ScrollUp__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./modules/ScrollUp */ "./src/js/modules/ScrollUp.js");
+/* harmony import */ var _modules_Rating__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/Rating */ "./src/js/modules/Rating.js");
+/* harmony import */ var _modules_Search__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/Search */ "./src/js/modules/Search.js");
+/* harmony import */ var _modules_SliderCards__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/SliderCards */ "./src/js/modules/SliderCards.js");
+/* harmony import */ var _modules_SliderItems1__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./modules/SliderItems1 */ "./src/js/modules/SliderItems1.js");
+/* harmony import */ var _modules_SliderMain__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./modules/SliderMain */ "./src/js/modules/SliderMain.js");
+/* harmony import */ var _modules_SliderGallery__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./modules/SliderGallery */ "./src/js/modules/SliderGallery.js");
+/* harmony import */ var _modules_ScrollUp__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./modules/ScrollUp */ "./src/js/modules/ScrollUp.js");
+
 
 
 
@@ -26337,6 +26339,39 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
   RangeSlider.init();
 });
 /* harmony default export */ __webpack_exports__["default"] = (RangeSlider);
+
+/***/ }),
+
+/***/ "./src/js/modules/Rating.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/Rating.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+var Rating = {
+  _handleItemClick: function _handleItemClick(e) {
+    e.preventDefault();
+    var value = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).index() + 1;
+    var $rating = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.currentTarget).closest(".rating");
+    $rating.find("input[type='hidden']").val(value);
+    $rating.find(".rating__stars__value").css({
+      width: value * 20 + "%"
+    });
+  },
+  init: function init() {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", ".rating__stars__vote > div", this._handleItemClick.bind(this));
+  }
+};
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+  Rating.init();
+});
+/* harmony default export */ __webpack_exports__["default"] = (Rating);
 
 /***/ }),
 

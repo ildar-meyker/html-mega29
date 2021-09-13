@@ -3,16 +3,32 @@
 	align-items: center;
 
 	&__stars {
+		position: relative;
 		background: url("../images/star-empty.png") repeat-x;
 		background-size: auto 100%;
 		width: 6em;
 		height: 1em;
 
-		div {
+		&__value {
 			background: url("../images/star-filled.png") repeat-x;
 			background-size: auto 100%;
 			width: 0;
 			height: 100%;
+		}
+
+		&__vote {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			cursor: pointer;
+
+			> div {
+				flex: 0 0 auto;
+				width: 20%;
+			}
 		}
 	}
 

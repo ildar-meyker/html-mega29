@@ -1,0 +1,83 @@
+.form-review {
+	&__rating {
+		display: flex;
+		align-items: center;
+
+		&__label {
+			font-size: 15px;
+			margin-right: 10px;
+		}
+
+		&__stars {
+			font-size: 24px;
+		}
+	}
+
+	&__item {
+		margin-top: 15px;
+	}
+
+	&__label {
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	&__agree {
+		margin: 20px 0;
+	}
+
+	&__apply {
+	}
+}
+
+@media (min-width: 768px) {
+	.form-review {
+		&__rating {
+			&__label {
+				font-size: 18px;
+			}
+
+			&__stars {
+			}
+		}
+
+		&__item {
+			margin-top: 30px;
+		}
+
+		&__agree {
+			margin: 30px 0;
+		}
+
+		&__apply {
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.form-review {
+		&__rating {
+			&__label {
+			}
+
+			&__stars {
+				font-size: 20px;
+			}
+		}
+
+		&__item {
+			margin-top: 15px;
+		}
+
+		&__agree {
+			display: flex;
+			justify-content: center;
+			margin: 30px 0 10px 0;
+		}
+
+		&__apply {
+			max-width: 270px;
+			margin: 0 auto;
+		}
+	}
+}
