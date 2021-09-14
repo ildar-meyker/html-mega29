@@ -18,14 +18,6 @@
 
 		&--select {
 			width: 18em;
-			font-size: 12px;
-
-			.selectric .label {
-				padding-top: 0;
-				padding-bottom: 0;
-				height: 30px;
-				line-height: 30px;
-			}
 		}
 
 		&--filter {
@@ -85,12 +77,6 @@
 
 		&__col {
 			&--select {
-				font-size: 17px;
-
-				.selectric .label {
-					height: 43px;
-					line-height: 43px;
-				}
 			}
 
 			&--filter {
@@ -119,12 +105,6 @@
 
 		&__col {
 			&--select {
-				font-size: 13px;
-
-				.selectric .label {
-					height: 38px;
-					line-height: 38px;
-				}
 			}
 
 			&--filter {

@@ -7,7 +7,9 @@ layout: default.hbs
 
 	{{> header }}
 
-	{{> nav-path }}
+	<div class="desktop-only">
+        {{> nav-path }}
+    </div>
     
     <div class="page__center">
         <div class="layout-profile__center">
@@ -28,79 +30,83 @@ layout: default.hbs
             </div>
             <div class="layout-profile__main">
 
-                <section class="nav-info mt-0 mb-0" id="nav-info">
+                <div class="page-favorites__nav-info">
+                    <section class="nav-info mt-0 mb-0" id="nav-info">
 
-                    <div class="nav-info__data">
-                        <div class="nav-info__group">
-                            <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-1">
-                                <span>Личный кабинет</span>
-                                <i class="icon-arrow-down"></i>
-                            </a>
-                            <div class="nav-info__crop collapse" id="nav-info-1">
-                                <div class="nav-info__list">
-                                    
-                                    {{> profile-account }}
-                                    
+                        <div class="nav-info__data">
+                            <div class="nav-info__group">
+                                <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-1">
+                                    <span>Личный кабинет</span>
+                                    <i class="icon-arrow-down"></i>
+                                </a>
+                                <div class="nav-info__crop collapse" id="nav-info-1">
+                                    <div class="nav-info__list">
+                                        
+                                        {{> profile-account }}
+                                        
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="nav-info__group">
-                            <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-2">
-                                <span>Смена пароля</span>
-                                <i class="icon-arrow-down"></i>
-                            </a>
-                            <div class="nav-info__crop collapse" id="nav-info-2">
-                                <div class="nav-info__list">
-                                    
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, enim pariatur, vero ab repudiandae unde cum iure numquam quisquam earum aperiam molestiae asperiores accusantium facilis, ad tenetur commodi delectus nostrum!
-                                    
+                            <div class="nav-info__group">
+                                <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-2">
+                                    <span>Смена пароля</span>
+                                    <i class="icon-arrow-down"></i>
+                                </a>
+                                <div class="nav-info__crop collapse" id="nav-info-2">
+                                    <div class="nav-info__list">
+                                        
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, enim pariatur, vero ab repudiandae unde cum iure numquam quisquam earum aperiam molestiae asperiores accusantium facilis, ad tenetur commodi delectus nostrum!
+                                        
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="nav-info__group active">
-                            <a href="#" class="nav-info__title" data-bs-toggle="collapse" data-bs-target="#nav-info-3">
-                                <span>Избранное</span>
-                                <i class="icon-arrow-down"></i>
-                            </a>
-                            <div class="nav-info__crop collapse show" id="nav-info-3">
-                                <div class="nav-info__list">
-                                    
-                                    {{> profile-favorites }}
+                            <div class="nav-info__group active">
+                                <a href="#" class="nav-info__title" data-bs-toggle="collapse" data-bs-target="#nav-info-3">
+                                    <span>Избранное</span>
+                                    <i class="icon-arrow-down"></i>
+                                </a>
+                                <div class="nav-info__crop collapse show" id="nav-info-3">
+                                    <div class="nav-info__list">
+                                        
+                                        {{> profile-favorites }}
 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nav-info__group">
+                                <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-4">
+                                    <span>История заказов</span>
+                                    <i class="icon-arrow-down"></i>
+                                </a>
+                                <div class="nav-info__crop collapse" id="nav-info-4">
+                                    <div class="nav-info__list">
+                                        
+                                        {{> profile-history }}
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nav-info__group">
+                                <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-5">
+                                    <span>Карты</span>
+                                    <i class="icon-arrow-down"></i>
+                                </a>
+                                <div class="nav-info__crop collapse" id="nav-info-5">
+                                    <div class="nav-info__list">
+                                        
+                                        {{> profile-cards }}
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="nav-info__group">
-                            <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-4">
-                                <span>История заказов</span>
-                                <i class="icon-arrow-down"></i>
-                            </a>
-                            <div class="nav-info__crop collapse" id="nav-info-4">
-                                <div class="nav-info__list">
-                                    
-                                    {{> profile-history }}
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="nav-info__group">
-                            <a href="#" class="nav-info__title collapsed" data-bs-toggle="collapse" data-bs-target="#nav-info-5">
-                                <span>Карты</span>
-                                <i class="icon-arrow-down"></i>
-                            </a>
-                            <div class="nav-info__crop collapse" id="nav-info-5">
-                                <div class="nav-info__list">
-                                    
-                                    {{> profile-cards }}
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <a href="#" class="button button-outline-green nav-info__quit">Выйти</a>
+                        <div class="page-favorites__btn-quit">
+                            <a href="#" class="button button-outline-green">Выйти</a>
+                        </div>
 
-                </section>
+                    </section>
+                </div>
 
             </div>
         </div>
