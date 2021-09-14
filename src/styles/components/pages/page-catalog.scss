@@ -1,4 +1,4 @@
-.layout-catalog {
+.page-catalog {
 	&__mobile {
 	}
 
@@ -8,7 +8,7 @@
 }
 
 @media (min-width: 992px) {
-	.layout-catalog {
+	.page-catalog {
 		&__mobile {
 			display: none;
 		}

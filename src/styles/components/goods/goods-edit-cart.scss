@@ -168,6 +168,7 @@
 @media (min-width: 992px) {
 	.goods-edit-cart {
 		&__item {
+			margin-top: 5px;
 		}
 
 		&__col-image {
@@ -194,7 +195,7 @@
 		&__col-remove {
 			display: block;
 			flex: 0 0 auto;
-			width: 100px;
+			width: 60px;
 		}
 
 		&__title {
@@ -219,6 +220,8 @@
 		}
 
 		&__remove-icon {
+			padding: 10px;
+			font-size: 14px;
 		}
 	}
 }

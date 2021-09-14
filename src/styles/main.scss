@@ -140,8 +140,9 @@
 @import "components/layouts/layout-basic";
 @import "components/layouts/layout-order";
 @import "components/layouts/layout-profile";
-@import "components/layouts/layout-catalog";
-@import "components/layouts/layout-cart";
+
+@import "components/pages/page-catalog";
+@import "components/pages/page-cart";
 
 @import "components/checkout-product";
 @import "components/checkout-cart";

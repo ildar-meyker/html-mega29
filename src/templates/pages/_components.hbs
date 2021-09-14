@@ -843,65 +843,7 @@ layout: default.hbs
 		<div class="elems-row">
 			<div class="elems-h2">goods-edit-cart</div>
 			<div style="max-width: 900px;">
-				<div class="goods-edit-cart__item">
-					<div class="goods-edit-cart__col-image">
-						<div class="image-box image-box--contain" style="padding-top: 100%; background-image: url(images/temp/goods/1.jpeg);"></div>
-					</div>
-					<div class="goods-edit-cart__col-desc">
-						<div class="goods-edit-cart__col-title">
-							<div class="goods-edit-cart__title">
-								Наименование товара высотой 
-								в карточке товара в три строки
-								012-345-678-9
-							</div>
-
-							<div class="goods-edit-cart__labels">
-								<div class="labels">
-									<div class="labels__blue">Только онлайн</div>
-									<div class="labels__red">Скидка</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="goods-edit-cart__col-price">
-							<div class="goods-edit-cart__price">
-								<div>8 345 <span class="rubl">₽</span></div>
-								<div class="old-price">12 345 <span class="rubl">₽</span></div>
-							</div>
-
-							<div class="goods-edit-cart__points">
-								<div class="labels">
-									<div class="labels__orange">+Х000 баллов</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="goods-edit-cart__col-btns">
-							<div class="goods-edit-cart__remove">
-								<button class="button button-outline-red">
-									<span class="spinner-border"></span>
-									<span class="button__text">Удалить</span>
-								</button>
-							</div>
-
-							<div class="goods-edit-cart__count">
-								<div class="count-editor" data-max="5" data-min="1">
-									<button type="button" class="count-editor__minus">-</button>
-									<input type="text" value="2" class="count-editor__input">
-									<button type="button" class="count-editor__plus">+</button>
-								</div>
-							</div>
-						</div>
-
-						<div class="goods-edit-cart__col-remove">
-							<button type="button" class="goods-edit-cart__remove-icon">
-								<div class="icon-close"></div>
-							</button>
-						</div>
-					</div>	
-
-					
-				</div>
+				{{> goods-edit-cart }}
 			</div>
 		</div>
 
