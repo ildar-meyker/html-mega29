@@ -1,9 +1,8 @@
 .check-default {
 	position: relative;
-	display: block;
-	padding-left: 35/17 + em;
-	font-size: 17/16 + em;
-	margin-top: 13/17 + em;
+	display: flex;
+	margin-top: 7px;
+	cursor: pointer;
 
 	&:first-child {
 		margin-top: 0;
@@ -15,49 +14,56 @@
 		}
 	}
 
-	input {
-		position: absolute;
-		opacity: 0;
+	&__input {
+		flex: 0 0 auto;
+		width: 25/13 + em;
+
+		input {
+			position: absolute;
+			opacity: 0;
+		}
 	}
 
-	a {
-		color: #21a73f;
-	}
-
-	.icheckbox,
-	.iradio {
-		position: absolute;
-		top: 50%;
-		margin-top: -12/17 + em;
-		left: 0;
-		width: 24/17 + em;
-		height: 24/17 + em;
-		background: none;
+	&__text {
+		align-self: center;
 	}
 
 	.icheckbox {
-		border-radius: 4/17 + em;
-		background: #f2f3f5;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 18/12 + em;
+		height: 18/12 + em;
+		border-radius: 4px;
+		background: #e7e7e8;
 
 		&.checked {
 			background: #21a73f;
-			font-family: "icomoon" !important;
-			line-height: 24/17 + em;
-			text-align: center;
 			color: #fff;
 
 			&:before {
 				content: "\e90c";
+				font-family: "icomoon" !important;
+				line-height: 1;
 			}
 		}
 	}
 
 	.iradio {
-		border: 3/17 + em solid #2e2e2e;
+		width: 1em;
+		height: 1em;
+		transform: scale(1.1);
+		transform-origin: 0 0;
+		margin-left: 2/15 + em;
+		border: 3/15 + em solid #2e2e2e;
 		border-radius: 50%;
 
 		&.checked {
-			border: 7/17 + em solid #21a73f;
+			border: 5/15 + em solid #21a73f;
 		}
+	}
+
+	a {
+		color: #21a73f;
 	}
 }

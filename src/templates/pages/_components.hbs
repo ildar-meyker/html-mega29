@@ -735,14 +735,14 @@ layout: default.hbs
 			
 			<div class="elems-row ">
 				<div class="elems-h2">count-editor</div>
-				<div class="elems-item">
+				<div class="elems-item" style="font-size: 30px;">
 					<div class="count-editor" data-max="5" data-min="1">
 						<button type="button" class="count-editor__minus">-</button>
 						<input type="text" value="2" class="count-editor__input">
 						<button type="button" class="count-editor__plus">+</button>
 					</div>
 				</div>
-				<div class="elems-item">
+				<div class="elems-item" style="font-size: 30px;">
 					<div class="count-editor disabled" data-max="5" data-min="1">
 						<button type="button" class="count-editor__minus">-</button>
 						<input type="text" value="2" class="count-editor__input">
@@ -766,19 +766,20 @@ layout: default.hbs
 				<div class="elems-h2">check-default</div>
 
 				<label class="check-default">
-					<input type="checkbox">
-					<span>Применить бонусы</span>
+					<div class="check-default__input"><input type="checkbox" checked></div>
+					<div class="check-default__text">Применить бонусы</div>
 				</label>
 				
 				<label class="check-default check-default--radio">
-					<input type="radio" name="radio1" checked>
-					<span>Доставка</span>
+					<div class="check-default__input"><input type="radio" name="test-check-default" checked></div>
+					<div class="check-default__text">Доставка</div>
 				</label>
 
 				<label class="check-default check-default--radio">
-					<input type="radio" name="radio1">
-					<span>Доставка на основе зон в Яндекс картах (Архангельск до 5 000 <span class="rubl">₽</span> )</span>
+					<div class="check-default__input"><input type="radio" name="test-check-default"></div>
+					<div class="check-default__text">Доставка на основе зон в Яндекс картах (Архангельск до 5 000 <span class="rubl">₽</span> )</div>
 				</label>
+		
 			</div>
 
 			<div class="elems-row ">
@@ -1088,8 +1089,8 @@ layout: default.hbs
 							</div>
 						</div>
 						<label class="check-default panel-call__agree">
-							<input type="checkbox">
-							<span>Я согласен с <a href="#" target="_blank">обработку персональных данных</a></span>
+							<div class="check-default__input"><input type="checkbox"></div>
+							<div class="check-default__text">Я согласен с <a href="#" target="_blank">обработку персональных данных</a></div>
 						</label>
 						<div class="panel-call__submit">
 							<button type="button" class="button button-green">Заказать</button>

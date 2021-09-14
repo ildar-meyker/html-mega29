@@ -2255,6 +2255,14 @@ corresponds to the arrow we want to display */
   height: 100px;
   overflow: hidden; }
 
+.image-box {
+  background: #f2f3f5 no-repeat 50% 50%;
+  background-size: cover; }
+  .image-box--contain {
+    background-size: contain; }
+  .image-box--rounded {
+    border-radius: 5px; }
+
 .gap-5 {
   height: 5px; }
 
@@ -2363,6 +2371,15 @@ corresponds to the arrow we want to display */
   flex: 0 0 auto;
   width: 1%; }
 
+.desktop-only {
+  display: none; }
+
+@media (min-width: 992px) {
+  .desktop-only {
+    display: block; }
+  .mobile-only {
+    display: none; } }
+
 ::-ms-clear {
   display: none;
   width: 0;
@@ -2401,14 +2418,6 @@ img {
 
 a {
   transition: all 0.2s; }
-
-.image-box {
-  background: #f2f3f5 no-repeat 50% 50%;
-  background-size: cover; }
-  .image-box--contain {
-    background-size: contain; }
-  .image-box--rounded {
-    border-radius: 5px; }
 
 .h2 {
   margin-bottom: 15px;
@@ -2491,18 +2500,6 @@ a {
     .page__scroll.hidden {
       display: none; } }
 
-.page-catalog__desktop {
-  display: none; }
-
-@media (min-width: 992px) {
-  .page-catalog__mobile {
-    display: none; }
-  .page-catalog__desktop {
-    display: block; } }
-
-.page-cart__nav-path {
-  display: none; }
-
 .page-cart__intro {
   display: flex;
   flex-direction: column-reverse; }
@@ -2542,8 +2539,6 @@ a {
       font-size: 18px; } }
 
 @media (min-width: 992px) {
-  .page-cart__nav-path {
-    display: block; }
   .page-cart__intro {
     flex-direction: column; }
   .page-cart__header {
@@ -2621,6 +2616,44 @@ a {
       margin-top: 0; }
     .page-order-info__btns .button {
       font-size: 15px; } }
+
+.page-order-steps__total {
+  margin: 10px 0;
+  max-width: 400px; }
+
+.page-order-steps__agree {
+  margin: 20px 0;
+  font-size: 15px; }
+
+.page-order-steps__apply .button {
+  width: 100%;
+  font-size: 15px; }
+
+@media (min-width: 768px) {
+  .page-order-steps__total {
+    margin: 20px 0;
+    font-size: 18px; }
+  .page-order-steps__agree {
+    margin: 30px 0;
+    font-size: 18px; }
+  .page-order-steps__apply .button {
+    font-size: 18px; } }
+
+@media (min-width: 992px) {
+  .page-order-steps__total {
+    margin: 30px 0;
+    max-width: none; }
+  .page-order-steps__agree {
+    margin: 20px 0 10px 0;
+    font-size: 15px; }
+  .page-order-steps__apply {
+    max-width: 250px; }
+    .page-order-steps__apply .button {
+      font-size: 15px; }
+  .page-order-steps__apply-2 {
+    margin-top: 10px; }
+    .page-order-steps__apply-2 .button {
+      width: 100%; } }
 
 .rating {
   display: flex;
@@ -3167,44 +3200,50 @@ a {
 
 .check-default {
   position: relative;
-  display: block;
-  padding-left: 2.05882em;
-  font-size: 1.0625em;
-  margin-top: 0.76471em; }
+  display: flex;
+  margin-top: 7px;
+  cursor: pointer; }
   .check-default:first-child {
     margin-top: 0; }
   .check-default--radio.active {
     color: #21a73f; }
-  .check-default input {
-    position: absolute;
-    opacity: 0; }
-  .check-default a {
-    color: #21a73f; }
-  .check-default .icheckbox,
-  .check-default .iradio {
-    position: absolute;
-    top: 50%;
-    margin-top: -0.70588em;
-    left: 0;
-    width: 1.41176em;
-    height: 1.41176em;
-    background: none; }
+  .check-default__input {
+    flex: 0 0 auto;
+    width: 1.92308em; }
+    .check-default__input input {
+      position: absolute;
+      opacity: 0; }
+  .check-default__text {
+    align-self: center; }
   .check-default .icheckbox {
-    border-radius: 0.23529em;
-    background: #f2f3f5; }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 4px;
+    background: #e7e7e8; }
     .check-default .icheckbox.checked {
       background: #21a73f;
-      font-family: "icomoon" !important;
-      line-height: 1.41176em;
-      text-align: center;
       color: #fff; }
       .check-default .icheckbox.checked:before {
-        content: "\e90c"; }
+        content: "\e90c";
+        font-family: "icomoon" !important;
+        line-height: 1; }
   .check-default .iradio {
-    border: 0.17647em solid #2e2e2e;
+    width: 1em;
+    height: 1em;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+    margin-left: 0.13333em;
+    border: 0.2em solid #2e2e2e;
     border-radius: 50%; }
     .check-default .iradio.checked {
-      border: 0.41176em solid #21a73f; }
+      border: 0.33333em solid #21a73f; }
+  .check-default a {
+    color: #21a73f; }
 
 .check-border {
   position: relative;
@@ -3239,6 +3278,8 @@ a {
         content: "\e90c";
         font-family: "icomoon" !important;
         line-height: 1; }
+  .check-border a {
+    color: #21a73f; }
 
 .article {
   font-size: 15px;
@@ -4879,8 +4920,7 @@ a {
     font-size: 24px; } }
 
 .form-panel {
-  margin: 20px -10px 0 -10px;
-  background: #fff; }
+  margin: 20px -10px 0 -10px; }
   .form-panel:first-child {
     margin-top: 0; }
   .form-panel__header {
@@ -4896,9 +4936,11 @@ a {
       font-weight: 700; }
     .form-panel__header__step {
       font-size: 11px;
+      font-weight: 500;
       color: #e7e7e8; }
   .form-panel__body {
-    padding: 10px; }
+    padding: 10px;
+    background: #fff; }
   .form-panel__item {
     margin-top: 10px; }
     .form-panel__item:first-child {
@@ -4907,47 +4949,16 @@ a {
     display: block;
     margin-bottom: 5px;
     font-size: 15px; }
-  .form-panel__row {
-    display: flex;
-    flex-wrap: wrap; }
-  .form-panel__col {
-    flex: 0 0 auto;
-    width: 100%; }
-  .form-panel__list {
-    margin-top: -1.25em; }
-  .form-panel__sep {
-    border-top: 1px solid #f2f3f5;
-    margin: 1.25em -0.875em; }
   .form-panel__date {
-    margin-top: 0.9375em;
     width: 10em; }
-  .form-panel__total {
-    margin-top: 0.45455em;
-    font-size: 1.375em; }
-  .form-panel__attn {
-    font-size: 1.375em;
+  .form-panel__check {
+    padding: 0.3em 0;
+    font-size: 15px;
     font-weight: 700; }
-    .form-panel__attn span {
-      color: #ef1a1a; }
-  .form-panel__actions {
-    margin-top: 1.25em; }
-    .form-panel__actions button {
-      display: block;
-      width: 100%;
-      margin-top: 0.35294em;
-      padding: 0.52941em 0.88235em;
-      font-size: 1.0625em; }
-  .form-panel__auth__desc {
-    font-size: 0.75em; }
-  .form-panel__auth__icons {
-    display: flex;
-    margin-top: 7px; }
-    .form-panel__auth__icons__item {
-      padding: 0.45455em;
-      font-size: 1.375em;
-      line-height: 0; }
-      .form-panel__auth__icons__item--vk {
-        color: #627da1; }
+    .form-panel__check .check-default {
+      margin-top: 8px; }
+      .form-panel__check .check-default:first-child {
+        margin-top: 0; }
 
 @media (min-width: 768px) {
   .form-panel {
@@ -4967,11 +4978,25 @@ a {
       margin-top: 30px; }
     .form-panel__label {
       margin-bottom: 10px;
-      font-size: 18px; } }
+      font-size: 18px; }
+    .form-panel__check {
+      font-size: 18px; }
+      .form-panel__check .check-default {
+        margin-top: 10px; } }
 
 @media (min-width: 992px) {
   .form-panel {
     margin: 20px 0 0 0; }
+    .form-panel--col-6 .form-panel__row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -14px; }
+    .form-panel--col-6 .form-panel__item {
+      flex: 0 0 auto;
+      width: 50%;
+      padding: 0 14px; }
+      .form-panel--col-6 .form-panel__item:nth-child(-n + 2) {
+        margin-top: 0; }
     .form-panel__header {
       height: 60px;
       padding: 0 20px; }
@@ -4983,28 +5008,12 @@ a {
       padding: 20px; }
     .form-panel__item {
       margin-top: 20px; }
-    .form-panel__title {
-      font-size: 24px; }
     .form-panel__label {
       margin-bottom: 5px; }
-    .form-panel__row {
-      padding-right: 30px; }
-    .form-panel__col {
-      padding-right: 40px; }
-      .form-panel__col--6 {
-        width: 50% !important; }
-    .form-panel__attn {
-      font-size: 18px; }
-    .form-panel__actions {
-      display: flex; }
-      .form-panel__actions button {
-        padding: 0.625em 2.8125em;
-        width: auto;
-        margin-right: 12px;
-        margin-top: 0;
-        font-size: 16px; }
-    .form-panel__auth__desc {
-      font-size: 14px; } }
+      .form-panel__label--check {
+        margin-bottom: 13px; }
+    .form-panel__check .check-default {
+      margin-top: 18px; } }
 
 .form-card {
   border: 1px solid #e7e7e8;

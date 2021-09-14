@@ -94,6 +94,19 @@
 	overflow: hidden;
 }
 
+.image-box {
+	background: #f2f3f5 no-repeat 50% 50%;
+	background-size: cover;
+
+	&--contain {
+		background-size: contain;
+	}
+
+	&--rounded {
+		border-radius: 5px;
+	}
+}
+
 @for $i from 1 through 20 {
 	.gap-#{$i*5} {
 		height: #{$i * 5}px;
@@ -104,5 +117,22 @@
 	.col-#{$i} {
 		flex: 0 0 auto;
 		width: $i/12 * 1%;
+	}
+}
+
+.desktop-only {
+	display: none;
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+	.desktop-only {
+		display: block;
+	}
+
+	.mobile-only {
+		display: none;
 	}
 }

@@ -42,19 +42,6 @@ a {
 	transition: all 0.2s;
 }
 
-.image-box {
-	background: #f2f3f5 no-repeat 50% 50%;
-	background-size: cover;
-
-	&--contain {
-		background-size: contain;
-	}
-
-	&--rounded {
-		border-radius: 5px;
-	}
-}
-
 .h2 {
 	margin-bottom: 15px;
 	font-size: 20px;
