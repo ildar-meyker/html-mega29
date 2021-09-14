@@ -146,71 +146,88 @@
 	</header>
 	
 
-	<nav class="nav-path">
-	    <div class="page__center">
-	        <div class="nav-path__window">
-	            <a href="#">Главная</a>
-	            <i class="icon-arrow-right"></i>
-	            <a href="#">Инструмент</a>
-	            <i class="icon-arrow-right"></i>
-	            <a href="#">Электро-бензоинструмент</a>
-	            <i class="icon-arrow-right"></i>
-	            <a href="#">Подарков для мужчин</a>
-	            <i class="icon-arrow-right"></i>
-	            <a href="#">Лучший подарок мужчине</a>
-	            <i class="icon-arrow-right"></i>
-	            <span>Дрели электрические, перфораторы</span>
-	        </div>
-	    </div>
-	</nav>    
+	<div class="page-cart__nav-path">
+        <nav class="nav-path">
+            <div class="page__center">
+                <div class="nav-path__window">
+                    <a href="#">Главная</a>
+                    <i class="icon-arrow-right"></i>
+                    <a href="#">Инструмент</a>
+                    <i class="icon-arrow-right"></i>
+                    <a href="#">Электро-бензоинструмент</a>
+                    <i class="icon-arrow-right"></i>
+                    <a href="#">Подарков для мужчин</a>
+                    <i class="icon-arrow-right"></i>
+                    <a href="#">Лучший подарок мужчине</a>
+                    <i class="icon-arrow-right"></i>
+                    <span>Дрели электрические, перфораторы</span>
+                </div>
+            </div>
+        </nav>    </div>
+    
     <div class="page__center">
         <div class="layout-order__center">
             <div class="layout-order__main">
 
-                <section class="order-complete">
+                <section>
 
-                    <h1 class="h2">Заказ успешно сформирован</h1>
+                    <div class="form-panel">
+                        <div class="form-panel__header">
 
-                    <div class="form">
-                        <div class="form__header">
-
-                            <div class="order-complete__title">Информация о заказе</div>
+                            <div class="form-panel__header__title">Информация о заказе</div>
                             
-                            <div class="order-complete__menu">
-                                <a href="#" class="order-complete__menu__item">
-                                    <i class="icon-print"></i>
-                                </a>
-                                <a href="#" class="order-complete__menu__item">
-                                    <i class="icon-email"></i>
-                                </a>
-                                <a href="#" class="order-complete__menu__item">
-                                    <i class="icon-download"></i>
-                                </a>
+                            <div>
+                                <div class="nav-print">
+                                    <a href="#" class="nav-print__item">
+                                        <i class="icon-print"></i>
+                                    </a>
+                                    <a href="#" class="nav-print__item">
+                                        <i class="icon-email"></i>
+                                    </a>
+                                    <a href="#" class="nav-print__item">
+                                        <i class="icon-download"></i>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form__body">
                             
-                            <div class="order-complete__list">
+                        </div>
+                        <div class="form-panel__body">
 
-                                <div class="order-complete__item">
-                                    <label class="form__label">№ заказа</label>
-                                    <input type="text" class="input-readonly order-complete__number" value="11325" readonly>
+                            <div class="form-panel__item">
+                                <label class="form-panel__label">№ заказа</label>
+                                <input type="text" class="input-classic" value="11325" readonly>
+                            </div>
+
+                            <div class="form-panel__item">
+                                <label class="form-panel__label">Дата и время</label>
+                                <input type="text" class="input-classic" value="07.06.2021 13:29:21" readonly>
+                            </div>
+
+                            <div class="page-order-info__info">
+                                <div>
+                                    Статус: <span class="page-order-info__info__success">исполняется</span>
                                 </div>
-
-                                <div class="order-complete__item">
-                                    <label class="form__label">Дата и время</label>
-                                    <input type="text" class="input-readonly order-complete__date" value="07.06.2021 13:29:21" readonly>
+                                <div>
+                                    <button type="button" class="button-collapse collapsed" data-bs-toggle="collapse">
+                                        <span>Подробная информация</span>
+                                        <i class="icon-arrow-up"></i>
+                                    </button>
                                 </div>
-
                             </div>
 
                         </div>
 
                     </div>
                     
-                    <div class="order-complete__actions">
-                        <a href="#" class="button button-green">Перейти в личный кабинет</a>
-                        <a href="#" class="button button-outline-green">Продолжить покупки</a>
+                    
+
+                    <div class="page-order-info__btns">
+                        <div>
+                            <a href="#" class="button button-green">Перейти в личный кабинет</a>
+                        </div>
+                        <div>
+                            <a href="#" class="button button-outline-green">Продолжить покупки</a>
+                        </div>
                     </div>
 
                 </section>

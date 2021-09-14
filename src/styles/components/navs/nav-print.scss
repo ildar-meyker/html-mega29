@@ -1,0 +1,26 @@
+.nav-print {
+	display: flex;
+	align-items: center;
+
+	&__item {
+		margin-left: 4px;
+		font-size: 24px;
+		line-height: 0;
+	}
+}
+
+@media (min-width: 768px) {
+	.nav-print {
+		&__item {
+			font-size: 28px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.nav-print {
+		&__item {
+			font-size: 24px;
+		}
+	}
+}

@@ -40,6 +40,7 @@
 @import "components/pages/page";
 @import "components/pages/page-catalog";
 @import "components/pages/page-cart";
+@import "components/pages/page-order-info";
 
 @import "components/rating.scss";
 @import "components/labels.scss";
@@ -57,7 +58,6 @@
 @import "components/inputs/input-datepicker";
 @import "components/inputs/input-top-label";
 @import "components/inputs/input-label-up";
-@import "components/inputs/input-readonly";
 @import "components/inputs/count-editor";
 @import "components/inputs/check-default";
 @import "components/inputs/check-border";
@@ -83,8 +83,9 @@
 @import "components/navs/nav-catalog";
 @import "components/navs/nav-deep";
 @import "components/navs/nav-burger";
+@import "components/navs/nav-print";
 
-@import "components/forms/form";
+@import "components/forms/form-panel";
 @import "components/forms/form-card";
 @import "components/forms/form-sorting";
 @import "components/forms/form-filter";
@@ -96,7 +97,6 @@
 @import "components/promo-best";
 @import "components/promo-1";
 
-@import "components/order-complete";
 @import "components/order-info";
 @import "components/order-details";
 @import "components/my-cards";
