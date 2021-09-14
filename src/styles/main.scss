@@ -37,7 +37,9 @@
 //
 // COMPONENTS
 //
-@import "components/page";
+@import "components/pages/page";
+@import "components/pages/page-catalog";
+@import "components/pages/page-cart";
 
 @import "components/rating.scss";
 @import "components/labels.scss";
@@ -141,11 +143,9 @@
 @import "components/layouts/layout-order";
 @import "components/layouts/layout-profile";
 
-@import "components/pages/page-catalog";
-@import "components/pages/page-cart";
-
 @import "components/checkout-product";
 @import "components/checkout-cart";
 
 @import "components/brands";
 @import "components/notify";
+@import "components/auth-guest";

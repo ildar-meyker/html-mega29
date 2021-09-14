@@ -1,9 +1,11 @@
 .page-cart {
-	&__section {
-	}
-
 	&__nav-path {
 		display: none;
+	}
+
+	&__intro {
+		display: flex;
+		flex-direction: column-reverse;
 	}
 
 	&__header {
@@ -39,9 +41,6 @@
 
 @media (min-width: 768px) {
 	.page-cart {
-		&__section {
-		}
-
 		&__header {
 			&__title {
 				height: 60px;
@@ -70,7 +69,8 @@
 			display: block;
 		}
 
-		&__section {
+		&__intro {
+			flex-direction: column;
 		}
 
 		&__header {

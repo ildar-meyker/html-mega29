@@ -1,0 +1,112 @@
+---
+title: Корзина
+layout: default.hbs
+---
+
+<div class="page__wrapper" id="wrapper">
+
+	{{> header }}
+
+    <div class="page-cart__nav-path">
+        {{> nav-path }}
+    </div>
+
+    <div class="page__center">
+        <div class="layout-order__center">
+            <div class="layout-order__main">
+                
+
+                
+                
+                <section>
+                    <div class="page-cart__intro">
+
+                        <aside class="auth-guest">
+                            <div class="auth-guest__icon">
+                                <div class="icon-person"></div>
+                            </div>
+                            <div class="auth-guest__content">
+                                <h3 class="auth-guest__title">Войдите или зарегистрируйтесь</h3>
+                                <div class="auth-guest__desc">
+                                    Авторизуйтесь, чтобы воспользоваться бонусной картой.
+                                </div>
+                            </div>
+                            <div class="auth-guest__button">
+                                <button type="button" class="button button-outline-green">Войти</button>
+                            </div>
+                        </aside>
+
+                        <div class="page-cart__header">
+                            <div class="page__outer page__inner page-cart__header__title">
+                                В корзине
+                            </div>
+                            <div class="page-cart__header__remove">
+                                <button type="button" class="button button-icon">Удалить всё</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="page-cart__list">
+                        {{#repeat 4}}
+                        {{> goods-edit-cart }}
+                        {{/repeat}}
+                    </div>
+                </section>
+                
+            </div>
+            <div class="layout-order__side">
+
+                {{> checkout-cart }}
+
+                <div class="page-cart__order">
+                    <button type="button" class="button button-green button--full">Оформить заказ</button>
+                </div>
+                
+                {{> promo-best }}
+
+            </div>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="page__center">
+            
+            <div class="section__header">
+                <h3 class="section__header__title">В избранном</h3>
+                <div class="section__header__link">
+                    <a href="#" class="button-more">
+                        Смотреть все <i class="icon-arrow-right button-more__icon"></i>
+                    </a>
+                </div>
+            </div>
+
+            {{> slider-goods }}
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="page__center">
+            
+            <div class="section__header">
+                <h3 class="section__header__title">Вам понадобится</h3>
+                <div class="section__header__link">
+                    <a href="#" class="button-more">
+                        Смотреть все <i class="icon-arrow-right button-more__icon"></i>
+                    </a>
+                </div>
+            </div>
+
+            {{> slider-goods }}
+        </div>
+    </section>
+	
+	{{> benefits }}
+
+	{{> subscribe }}
+
+	{{> footer }}
+
+    {{> nav-bottom }}
+
+</div>
