@@ -1,180 +1,155 @@
 .my-cards {
-	&__wrapper {
-		padding: 25/16 + em 18/16 + em;
-		border: 2/16 + em solid #f2f3f5;
-		border-radius: 6/16 + em;
-		background: #fff;
-	}
-
-	&__title {
-		margin-bottom: 10/18 + em;
-		font-size: 18/16 + em;
+	&__header {
+		display: flex;
+		align-items: center;
+		height: 40px;
+		padding: 0 15px;
+		font-size: 18px;
 		font-weight: 700;
+		border: 1px solid #f2f3f5;
+		border-radius: 5px 5px 0 0;
+		background: #fff;
+		margin-bottom: -1px;
 	}
 
-	&__list {
+	&__body {
+		border: 1px solid #f2f3f5;
+		border-radius: 0 0 5px 5px;
+		background: #fff;
+		padding: 15px;
 	}
 
 	&__item {
-		position: relative;
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
-		border: 1px solid #f2f3f5;
-		padding: 17/16 + em 20/17 + em;
-		margin-bottom: -1/16 + em;
-		background: #fff;
-
-		&:first-child {
-			border-radius: 5/16 + em 5/16 + em 0 0;
-		}
-
-		&:last-child {
-			border-radius: 0 0 5/16 + em 5/16 + em;
-		}
-
-		&--new {
-			min-height: 155/16 + em;
-
-			.my-cards__image {
-				position: relative;
-				border-color: #e9e2e2;
-				background: none;
-
-				i {
-					position: absolute;
-					top: 50%;
-					left: 50%;
-					margin: -0.5em 0 0 -0.5em;
-					font-size: 32/16 + em;
-					color: #e7e7e8;
-				}
-			}
-		}
 	}
 
-	&__link {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		border: 0;
+	&__col-image {
 	}
 
-	&__image {
-		flex: 0 0 auto;
-		width: 100/16 + em;
-		border: 1px solid transparent;
-		border-radius: 5/16 + em;
-		background: #f2f3f5 url(../images/no-image--small.svg) no-repeat 50% 50%;
-		background-size: 50% auto;
-
-		&:before {
-			content: " ";
-			display: block;
-			padding-top: 75%;
-		}
+	&__col-desc {
 	}
 
-	&__desc {
-		flex: 0 0 auto;
-		padding-left: 10/16 + em;
+	&__demo {
+		background: #f68219 url(../images/image.svg) no-repeat 50% 50%;
+		background-size: 16% auto;
+		border-radius: 5px;
 	}
 
 	&__name {
-		font-size: 18/16 + em;
+		margin-top: 33px;
+		font-size: 24px;
+		font-weight: 700;
 	}
 
-	&__number {
-		margin-top: 10/13 + em;
-		font-size: 13/16 + em;
-		color: #adb5bd;
+	&__balance {
+		margin-top: 20px;
+		font-size: 20px;
+		font-weight: 700;
+	}
+
+	&__info {
+		margin-top: 23px;
+		font-size: 17px;
+		color: #979797;
 	}
 
 	&__menu {
-		margin-top: 15/13 + em;
+		margin-top: 18px;
 		display: flex;
 		flex-wrap: wrap;
-		font-size: 13/16 + em;
+		font-size: 15px;
 
-		a {
-			margin-right: 20/13 + em;
-			color: #21a73f;
+		> * {
+			margin: 7px 20px 0 0;
 		}
 	}
+}
 
-	&__score {
-		flex: 0 0 auto;
-		margin-top: 15/16 + em;
-		padding: 15/16 + em;
-		width: 100%;
-		text-align: center;
-
-		&__label {
-			font-size: 18/16 + em;
+@media (min-width: 768px) {
+	.my-cards {
+		&__header {
+			height: 80px;
+			padding: 0 35px;
+			font-size: 24px;
 		}
-		&__value {
-			font-size: 32/16 + em;
-			font-weight: 700;
-		}
-	}
 
-	&__add-new {
-		font-size: 18/16 + em;
-		color: #21a73f;
+		&__body {
+			padding: 35px;
+		}
+
+		&__item {
+		}
+
+		&__col-image {
+		}
+
+		&__col-desc {
+		}
+
+		&__demo {
+		}
+
+		&__name {
+			margin-top: 65px;
+			font-size: 32px;
+		}
+
+		&__balance {
+			margin-top: 17px;
+			font-size: 24px;
+		}
+
+		&__info {
+			margin-top: 22px;
+			font-size: 18px;
+		}
+
+		&__menu {
+			margin-top: 16px;
+			font-size: 18px;
+		}
 	}
 }
 
 @media (min-width: 992px) {
 	.my-cards {
-		&__wrapper {
-			max-width: 580px;
-			padding: 0;
-			border: 0;
-			background: none;
+		&__header {
+			height: 60px;
+			padding: 0 20px;
 		}
 
-		&__title {
-			margin-bottom: 7px;
+		&__body {
+			padding: 20px;
 		}
 
 		&__item {
-			padding: 16px;
+			display: flex;
+		}
 
-			&--new {
-				min-height: auto;
-			}
+		&__col-image {
+			flex: 0 0 auto;
+			width: 295px;
+		}
+
+		&__col-desc {
+			flex: 0 0 auto;
+			width: calc(100% - 295px);
+			padding-left: 20px;
+		}
+
+		&__demo {
 		}
 
 		&__name {
-			font-size: 14px;
+			margin-top: 0;
+		}
+
+		&__balance {
+		}
+
+		&__info {
 		}
 
 		&__menu {
-			font-size: 10px;
-		}
-
-		&__score {
-			width: auto;
-			margin: 0;
-			padding: 0;
-			text-align: right;
-			align-self: flex-start;
-			margin-left: auto;
-
-			&__label {
-				font-size: 14px;
-			}
-
-			&__value {
-				margin-top: 10px;
-				font-size: 24px;
-			}
-		}
-
-		&__add-new {
-			font-size: 14px;
 		}
 	}
 }

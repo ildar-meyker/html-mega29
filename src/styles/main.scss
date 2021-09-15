@@ -37,14 +37,20 @@
 //
 // COMPONENTS
 //
+
+@import "components/rating.scss";
+@import "components/labels.scss";
+@import "components/notify";
+@import "components/section";
+@import "components/article";
+@import "components/header";
+@import "components/footer";
+
 @import "components/pages/page";
 @import "components/pages/page-cart";
 @import "components/pages/page-order-info";
 @import "components/pages/page-order-steps";
 @import "components/pages/page-favorites";
-
-@import "components/rating.scss";
-@import "components/labels.scss";
 
 @import "components/buttons/button";
 @import "components/buttons/button-dialog";
@@ -62,14 +68,6 @@
 @import "components/inputs/count-editor";
 @import "components/inputs/check-default";
 @import "components/inputs/check-border";
-
-@import "components/article";
-@import "components/header";
-@import "components/footer";
-@import "components/error-404";
-@import "components/subscribe";
-@import "components/benefits";
-@import "components/table-areas";
 
 @import "components/news/news-cards";
 @import "components/news/news-list";
@@ -96,13 +94,8 @@
 @import "components/forms/form-1-click";
 @import "components/forms/form-review";
 
-@import "components/promo-best";
-@import "components/promo-1";
-
-@import "components/order-info";
-@import "components/order-details";
-@import "components/my-cards";
-@import "components/my-purchases";
+@import "components/promo/promo-best";
+@import "components/promo/promo-1";
 
 @import "components/goods/goods-cards";
 @import "components/goods/goods-simple";
@@ -110,19 +103,11 @@
 @import "components/goods/goods-list";
 @import "components/goods/goods-edit-cart";
 
-@import "components/shops-cards";
-
-@import "components/product-main";
-@import "components/product-props";
-@import "components/product-reviews";
-
 @import "components/panels/panel";
 @import "components/panels/panel-cart";
 @import "components/panels/panel-call";
 @import "components/panels/panel-city";
 @import "components/panels/panel-auth";
-
-@import "components/section";
 
 @import "components/popups/popup";
 @import "components/popups/popup-city";
@@ -145,9 +130,20 @@
 @import "components/layouts/layout-order";
 @import "components/layouts/layout-profile";
 
+@import "components/product-main";
+@import "components/product-props";
+@import "components/product-reviews";
 @import "components/checkout-product";
 @import "components/checkout-cart";
 
 @import "components/brands";
-@import "components/notify";
+@import "components/shops-cards";
 @import "components/auth-guest";
+@import "components/subscribe";
+@import "components/benefits";
+@import "components/table-areas";
+@import "components/error-404";
+@import "components/order-info";
+@import "components/order-details";
+@import "components/my-cards";
+@import "components/my-shopping";
