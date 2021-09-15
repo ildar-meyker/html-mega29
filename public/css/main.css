@@ -5042,13 +5042,13 @@ a {
     font-size: 15px; }
   .form-panel__date {
     width: 10em; }
-  .form-panel__check {
+  .form-panel__radio {
     padding: 0.3em 0;
     font-size: 15px;
     font-weight: 700; }
-    .form-panel__check .check-default {
+    .form-panel__radio .check-default {
       margin-top: 8px; }
-      .form-panel__check .check-default:first-child {
+      .form-panel__radio .check-default:first-child {
         margin-top: 0; }
 
 @media (min-width: 768px) {
@@ -5070,24 +5070,24 @@ a {
     .form-panel__label {
       margin-bottom: 10px;
       font-size: 18px; }
-    .form-panel__check {
+    .form-panel__radio {
       font-size: 18px; }
-      .form-panel__check .check-default {
+      .form-panel__radio .check-default {
         margin-top: 10px; } }
 
 @media (min-width: 992px) {
   .form-panel {
     margin: 20px 0 0 0; }
-    .form-panel--col-6 .form-panel__row {
+    .form-panel__row {
       display: flex;
       flex-wrap: wrap;
       margin: 0 -14px; }
-    .form-panel--col-6 .form-panel__item {
-      flex: 0 0 auto;
-      width: 50%;
-      padding: 0 14px; }
-      .form-panel--col-6 .form-panel__item:nth-child(-n + 2) {
-        margin-top: 0; }
+      .form-panel__row .form-panel__item {
+        flex: 0 0 auto;
+        width: 50%;
+        padding: 0 14px; }
+        .form-panel__row .form-panel__item:nth-child(-n + 2) {
+          margin-top: 0; }
     .form-panel__header {
       height: 60px;
       padding: 0 20px; }
@@ -5101,10 +5101,86 @@ a {
       margin-top: 20px; }
     .form-panel__label {
       margin-bottom: 5px; }
-      .form-panel__label--check {
+      .form-panel__label--radio {
         margin-bottom: 13px; }
-    .form-panel__check .check-default {
+    .form-panel__radio .check-default {
       margin-top: 18px; } }
+
+.form-profile__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  border: 1px solid #f1f1f1;
+  border-radius: 5px 5px 0 0;
+  padding: 0 15px;
+  background: #fff;
+  margin-bottom: -1px; }
+  .form-profile__header__title {
+    font-size: 13px;
+    font-weight: 700; }
+
+.form-profile__body {
+  padding: 15px;
+  border: 1px solid #f1f1f1;
+  border-radius: 0 0 5px 5px;
+  background: #fff; }
+
+.form-profile__agree {
+  margin: 20px 0;
+  font-size: 15px; }
+
+.form-profile__apply .button {
+  width: 100%; }
+
+.form-profile__oauth {
+  margin-top: 13px; }
+  .form-profile__oauth__label {
+    margin-bottom: 5px;
+    font-size: 11px; }
+
+.form-profile__sep {
+  border-top: 1px solid #f2f3f5;
+  margin: 18px -15px 13px -15px; }
+
+@media (min-width: 768px) {
+  .form-profile__header {
+    height: 80px;
+    padding: 0 35px; }
+    .form-profile__header__title {
+      font-size: 24px; }
+    .form-profile__header__step {
+      font-size: 18px; }
+  .form-profile__body {
+    padding: 50px 65px; }
+  .form-profile__agree {
+    margin: 30px 0;
+    font-size: 18px; }
+  .form-profile__oauth__label {
+    margin-bottom: 20px;
+    font-size: 18px; }
+  .form-profile__sep {
+    margin: 30px -65px; } }
+
+@media (min-width: 992px) {
+  .form-profile__header {
+    height: 60px;
+    padding: 0 20px; }
+  .form-profile__body {
+    padding: 20px; }
+  .form-profile__agree {
+    margin: 40px 0 15px 0;
+    font-size: 15px; }
+  .form-profile__apply {
+    width: 240px; }
+  .form-profile__oauth__label {
+    margin-bottom: 10px;
+    text-align: center; }
+  .form-profile__oauth__button {
+    max-width: 370px;
+    margin: 0 auto; }
+  .form-profile__sep {
+    margin: 25px -20px 20px -20px; } }
 
 .form-card {
   border: 1px solid #e7e7e8;
@@ -5656,7 +5732,8 @@ a {
   margin-bottom: 10px; }
 
 .form-review__agree {
-  margin: 20px 0; }
+  margin: 20px 0;
+  font-size: 15px; }
 
 @media (min-width: 768px) {
   .form-review__rating__label {
@@ -5664,7 +5741,8 @@ a {
   .form-review__item {
     margin-top: 30px; }
   .form-review__agree {
-    margin: 30px 0; } }
+    margin: 30px 0;
+    font-size: 18px; } }
 
 @media (min-width: 992px) {
   .form-review__rating__stars {
@@ -5674,7 +5752,8 @@ a {
   .form-review__agree {
     display: flex;
     justify-content: center;
-    margin: 30px 0 10px 0; }
+    margin: 30px 0 10px 0;
+    font-size: 15px; }
   .form-review__apply {
     max-width: 270px;
     margin: 0 auto; } }

@@ -44,7 +44,7 @@
 		margin-bottom: 5px;
 		font-size: 15px;
 
-		&--check {
+		&--radio {
 		}
 	}
 
@@ -52,7 +52,7 @@
 		width: 10em;
 	}
 
-	&__check {
+	&__radio {
 		padding: 0.3em 0;
 		font-size: 15px;
 		font-weight: 700;
@@ -98,11 +98,11 @@
 			margin-bottom: 10px;
 			font-size: 18px;
 
-			&--check {
+			&--radio {
 			}
 		}
 
-		&__check {
+		&__radio {
 			font-size: 18px;
 
 			.check-default {
@@ -116,12 +116,10 @@
 	.form-panel {
 		margin: 20px 0 0 0;
 
-		&--col-6 {
-			.form-panel__row {
-				display: flex;
-				flex-wrap: wrap;
-				margin: 0 -14px;
-			}
+		&__row {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -14px;
 
 			.form-panel__item {
 				flex: 0 0 auto;
@@ -158,12 +156,12 @@
 		&__label {
 			margin-bottom: 5px;
 
-			&--check {
+			&--radio {
 				margin-bottom: 13px;
 			}
 		}
 
-		&__check {
+		&__radio {
 			.check-default {
 				margin-top: 18px;
 			}
