@@ -7,7 +7,7 @@
   "description": "",
   "author": "",
   "scripts": {
-    "deploy": "gulp compress && gulp deploy && rm public/html-mega29.zip",
+    "deploy": "gulp compress && gulp deploy && rm public/archive.zip",
     "build": "export NODE_ENV=production gulp clean && grunt modernizr && gulp build",
     "dev": "gulp clean && grunt modernizr && gulp build && gulp browser"
   },
