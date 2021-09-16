@@ -2,6 +2,8 @@
 
 const isProduction = process.env.NODE_ENV == "production";
 
+const fs = require("fs");
+
 const webpack = require("webpack-stream");
 const compiler = require("webpack");
 
@@ -13,8 +15,6 @@ const sourcemaps = require("gulp-sourcemaps");
 const postcss = require("gulp-postcss");
 const cleancss = require("gulp-clean-css");
 const filelist = require("gulp-filelist");
-const uglify = require("gulp-uglify");
-const rigger = require("gulp-rigger");
 const rename = require("gulp-rename");
 const spritesmith = require("gulp.spritesmith");
 const rsync = require("gulp-rsync");
@@ -24,11 +24,34 @@ const server = require("browser-sync").create();
 const autoprefixer = require("autoprefixer");
 const del = require("del");
 
+const pkg = require("./package.json");
+
+if (pkg.name === "project-name") {
+	throw new Error(
+		"Project has a default name. Change it first in package.json."
+	);
+}
+
+if (pkg.repository.url === "") {
+	throw new Error("The repository url is not specified.");
+}
+
 require("gulp-grunt")(gulp);
 
 var path = {
 	assets: ["src/fonts/**", "src/video/**", "src/data/**", "src/robots.txt"],
 };
+
+gulp.task("create-config", function (cb) {
+	const content = {
+		name: pkg.name,
+		repository: {
+			url: pkg.repository.url,
+		},
+	};
+
+	fs.writeFile("./public/config.json", JSON.stringify(content), cb);
+});
 
 /*----------  Filelist  ----------*/
 
@@ -169,6 +192,7 @@ gulp.task(
 	gulp.parallel(
 		"copy",
 		"filelist",
+		"create-config",
 		"grunt-assemble",
 		gulp.series("sprite", "styles"),
 		"images",
@@ -181,7 +205,7 @@ gulp.task(
 gulp.task("compress", function () {
 	return gulp
 		.src("./public/**")
-		.pipe(zip("html-mega29.zip"))
+		.pipe(zip("archive.zip"))
 		.pipe(gulp.dest("./public/"));
 });
 
@@ -191,7 +215,9 @@ gulp.task("deploy", function () {
 			root: "public/",
 			hostname: "ildar-meyker.ru",
 			destination:
-				"/home/users/i/ildar-meyker/domains/ildar-meyker.ru/html/leeft/mega29/",
+				"/home/users/i/ildar-meyker/domains/ildar-meyker.ru/html/" +
+				pkg.name +
+				"/",
 		})
 	);
 });
