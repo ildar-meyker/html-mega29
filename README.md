@@ -2,12 +2,10 @@
 Выполнить в папке проекта:
 
 - npm install
-- bower install (инсталлирует то, чего нет в npm)
 - npm run start
 
 Доступно
 
-- npm run start
-- npm run dev 
-
-TODO:
+- npm run dev (то же самое, что npm run start)
+- npm run deploy (заливает на сервер) 
+- npm run build (без вотчера)
