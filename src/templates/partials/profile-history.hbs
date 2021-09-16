@@ -1,115 +1,137 @@
 
+<section class="my-history">
 
-
-
-<div class="order-info">
-
-    <aside class="sorting">
-        <div class="sorting__left">
+    <div class="my-history__sorting">
+        <div class="my-history__sorting__select">
             <select>
-                <option>Все</option>
-                <option>Исполняемые</option>
-                <option>Выполненные</option>
+                <option>Все магазины</option>
+                <option>Мега Архангельск</option>
+                <option>Мега Северодвинск</option>
+                <option>Мега Сыктывкар</option>
+                <option>Мега Лайт Соломбала</option>
+                <option>Мега Лайт Петромост</option>
+                <option>Мега Лайт в БУМ</option>
             </select>
         </div>
-        <div class="sorting__right">
-            <div class="sorting__count">Заказов: <span class="sorting__count__value">2</span></div>
-        </div>
-    </aside>
-
-    <div class="order-info__list">
-
-        <div class="order-info__item">
-            <div class="order-info__table">
-                <div class="order-info__row">
-                    <div class="order-info__prop">№ заказа</div>
-                    <div class="order-info__data">165-963</div>
-                </div>
-                <div class="order-info__row">
-                    <div class="order-info__prop">Дата создания</div>
-                    <div class="order-info__data">5.06.2021</div>
-                </div>
-                <div class="order-info__row">
-                    <div class="order-info__prop">Товары</div>
-                    <div class="order-info__data">5 шт</div>
-                </div>
-                <div class="order-info__row">
-                    <div class="order-info__prop">Сумма</div>
-                    <div class="order-info__data">
-                        7 965 <span class="rubl">₽</span>
-                    </div>
-                </div>
-                <div class="order-info__row">
-                    <div class="order-info__prop">Статус</div>
-                    <div class="order-info__data">
-                        <div class="order-info__progress">Исполняется</div>
-                    </div>
-                </div>
-            </div>
-            <div class="order-info__control">
-                <button type="button" class="order-info__toggle" data-bs-toggle="collapse" data-bs-target="#order-info-1">
-                    <span>Подробная информация</span>
-                    <i class="icon-arrow-down"></i>
-                </button>
-                <div class="order-info__menu">
-                    <a href="#"><i class="icon-print"></i></a>
-                    <a href="#"><i class="icon-email"></i></a>
-                    <a href="#"><i class="icon-download"></i></a>
-                </div>
-            </div>
-            <div class="order-info__crop collapse show" id="order-info-1">
-                <div class="order-info__body">
-                    {{> order-details }}
-                </div>
-            </div>
-        </div>
-
-        <div class="order-info__item">
-            <div class="order-info__table">
-                <div class="order-info__row">
-                    <div class="order-info__prop">№ заказа</div>
-                    <div class="order-info__data">165-963</div>
-                </div>
-                <div class="order-info__row">
-                    <div class="order-info__prop">Дата создания</div>
-                    <div class="order-info__data">5.06.2021</div>
-                </div>
-                <div class="order-info__row">
-                    <div class="order-info__prop">Товары</div>
-                    <div class="order-info__data">5 шт</div>
-                </div>
-                <div class="order-info__row">
-                    <div class="order-info__prop">Сумма</div>
-                    <div class="order-info__data">
-                        7 965 <span class="rubl">₽</span>
-                    </div>
-                </div>
-                <div class="order-info__row">
-                    <div class="order-info__prop">Статус</div>
-                    <div class="order-info__data">
-                        <div class="order-info__completed">Выполнен</div>
-                    </div>
-                </div>
-            </div>
-            <div class="order-info__control">
-                <button type="button" class="order-info__toggle collapsed" data-bs-toggle="collapse" data-bs-target="#order-info-2">
-                    <span>Подробная информация</span>
-                    <i class="icon-arrow-down"></i>
-                </button>
-                <div class="order-info__menu">
-                    <a href="#"><i class="icon-print"></i></a>
-                    <a href="#"><i class="icon-email"></i></a>
-                    <a href="#"><i class="icon-download"></i></a>
-                </div>
-            </div>
-            <div class="order-info__crop collapse" id="order-info-2">
-                <div class="order-info__body">
-                    {{> order-details }}
-                </div>
-            </div>
-        </div>
-        
+        <div class="my-history__sorting__count">Заказов: 44</div>
     </div>
 
-</div>
+    <div class="my-history__body">
+        <div class="my-history__head">
+            <div>
+                <div>№ заказа</div>
+                <div>Дата создания</div>
+            </div>
+            <div>
+                <div>Товары</div>
+                <div>Сумма</div>
+            </div>
+            <div>
+                <div>Статус</div>
+            </div>
+        </div>
+        <div class="my-history__item">
+            <div class="my-history__item__row">
+                <div>
+                    <div>165-963</div>
+                    <div>5.06.2021</div>
+                </div>
+                <div>
+                    <div>5 шт.</div>
+                    <div>7 965 ₽</div>
+                </div>
+                <div>
+                    <div class="my-history__collapse my-history__collapse--pending">
+                        <button type="button" class="button-collapse collapsed"
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#my-history-1">
+                            <span>Исполняется</span>
+                            <i class="icon-arrow-up"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse" id="my-history-1">
+                <div class="my-history__item__data">
+                    
+                    {{> goods-list }}
 
+                    <div class="my-history__repeat">
+                        <button type="button" class="button button-green">Повторить заказ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-history__item">
+            <div class="my-history__item__row">
+                <div>
+                    <div>165-963</div>
+                    <div>5.06.2021</div>
+                </div>
+                <div>
+                    <div>5 шт.</div>
+                    <div>7 965 ₽</div>
+                </div>
+                <div>
+                    <div class="my-history__collapse my-history__collapse--pending">
+                        <button type="button" class="button-collapse collapsed"
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#my-history-2">
+                            <span>Исполняется</span>
+                            <i class="icon-arrow-up"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse" id="my-history-2">
+                <div class="my-history__item__data">
+                    
+                    {{> goods-list }}
+
+                    <div class="my-history__repeat">
+                        <button type="button" class="button button-green">Повторить заказ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-history__item">
+            <div class="my-history__item__row">
+                <div>
+                    <div>165-963</div>
+                    <div>5.06.2021</div>
+                </div>
+                <div>
+                    <div>5 шт.</div>
+                    <div>7 965 ₽</div>
+                </div>
+                <div>
+                    <div class="my-history__collapse my-history__collapse--success">
+                        <button type="button" class="button-collapse collapsed"
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#my-history-3">
+                            <span>Выполнен</span>
+                            <i class="icon-arrow-up"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse" id="my-history-3">
+                <div class="my-history__item__data">
+                    
+                    {{> goods-list }}
+
+                    <div class="my-history__repeat">
+                        <button type="button" class="button button-green">Повторить заказ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="my-history__more">
+        <button class="button button-light-green button--full">
+            <span class="spinner-border"></span>
+            <span class="button__text">Показать ещё</span>
+        </button>
+    </div>
+</section>
